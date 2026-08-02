@@ -181,14 +181,16 @@ export interface TimelineStep {
   icon: LucideIcon;
 }
 
+/** Same six stages, same order, as the canonical process in
+ * content/process-steps.ts (see components/sections/our-process.tsx) — a
+ * compact restatement of that one process, not a second, different one. */
 export const pricingTimeline: TimelineStep[] = [
   { id: "discovery", icon: Compass },
-  { id: "planning", icon: Rows3 },
+  { id: "strategy", icon: Rows3 },
   { id: "design", icon: Palette },
   { id: "development", icon: Code2 },
   { id: "testing", icon: TestTube2 },
   { id: "launch", icon: Rocket },
-  { id: "support", icon: LifeBuoy },
 ];
 
 export interface ValueCard {

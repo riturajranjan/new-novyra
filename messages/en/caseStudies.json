@@ -95,11 +95,11 @@
   "processSteps": {
     "heading": "How a concept like this comes together",
     "discovery": "Discovery",
+    "strategy": "Strategy",
     "design": "Design",
     "development": "Development",
-    "testing": "Testing",
-    "launch": "Launch",
-    "growth": "Growth"
+    "testing": "QA",
+    "launch": "Launch"
   },
   "conceptBadge": "Concept — Not a Live Project",
   "preview": {

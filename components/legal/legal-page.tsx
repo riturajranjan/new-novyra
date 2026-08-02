@@ -7,8 +7,8 @@ interface LegalSection {
 }
 
 interface LegalPageProps {
-  /** "privacy" or "terms" — keyed under the `legal` message namespace. */
-  page: "privacy" | "terms";
+  /** Keyed under the `legal` message namespace. */
+  page: "privacy" | "terms" | "cookies" | "accessibility";
   locale: string;
 }
 

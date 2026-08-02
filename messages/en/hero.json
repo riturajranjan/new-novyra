@@ -28,10 +28,11 @@
   "workflow": {
     "label": "How a project moves",
     "stages": {
-      "scope": { "label": "Scope", "detail": "What you need, written down" },
+      "discovery": { "label": "Discovery", "detail": "What you need, written down" },
+      "strategy": { "label": "Strategy", "detail": "Roadmap before commitment" },
       "design": { "label": "Design", "detail": "Interfaces before code" },
-      "build": { "label": "Build", "detail": "Engineered, not assembled" },
-      "test": { "label": "Test", "detail": "Checked before it ships" },
+      "development": { "label": "Development", "detail": "Engineered, not assembled" },
+      "testing": { "label": "QA", "detail": "Checked before it ships" },
       "launch": { "label": "Launch", "detail": "Live, with support after" }
     }
   }

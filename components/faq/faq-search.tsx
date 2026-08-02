@@ -33,6 +33,7 @@ export function FaqSearch({ value, onChange }: FaqSearchProps) {
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           placeholder={t("placeholder")}
+          aria-label={t("placeholder")}
           // 16px below (not the `text-body-sm` token) on mobile only: iOS Safari
           // auto-zooms on focus for any input under 16px. Documented exception.
           className="text-[16px] sm:text-body-sm text-foreground placeholder:text-foreground-secondary/70 w-full bg-transparent outline-none"

@@ -95,11 +95,11 @@
   "processSteps": {
     "heading": "इस तरह का कॉन्सेप्ट कैसे तैयार होता है",
     "discovery": "डिस्कवरी",
+    "strategy": "स्ट्रैटेजी",
     "design": "डिज़ाइन",
     "development": "डेवलपमेंट",
-    "testing": "टेस्टिंग",
-    "launch": "लॉन्च",
-    "growth": "ग्रोथ"
+    "testing": "QA",
+    "launch": "लॉन्च"
   },
   "conceptBadge": "कॉन्सेप्ट — लाइव प्रोजेक्ट नहीं",
   "preview": {

@@ -14,7 +14,6 @@ import { ServicesBackground } from "@/components/services/services-background";
 import { ServiceNav } from "@/components/services/service-nav";
 import { ServicePreview } from "@/components/services/service-preview";
 import { ServiceDetails } from "@/components/services/service-details";
-import { ServiceProcess } from "@/components/services/service-process";
 import { ServiceCta } from "@/components/services/service-cta";
 import { serviceCategories } from "@/content/service-categories";
 import { easePremium } from "@/lib/motion";
@@ -70,8 +69,6 @@ export function ServicesShowcase() {
 
           <ServiceDetails category={activeCategory} />
         </div>
-
-        <ServiceProcess />
 
         <ServiceCta />
       </Container>

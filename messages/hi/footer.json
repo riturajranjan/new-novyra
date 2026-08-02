@@ -49,7 +49,9 @@
     "legalNavLabel": "कानूनी",
     "legal": {
       "privacyPolicy": "गोपनीयता नीति",
-      "terms": "नियम व शर्तें"
+      "terms": "नियम व शर्तें",
+      "cookies": "कुकीज़",
+      "accessibility": "एक्सेसिबिलिटी"
     }
   }
 }

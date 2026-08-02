@@ -24,7 +24,7 @@
   "entries": {
     "general-why-novyra": {
       "question": "Why should I choose Novyra Technologies?",
-      "answer": "We build websites, applications, and AI-powered solutions engineered for speed, scale, and real business results."
+      "answer": "Most agencies quote a price and go quiet until delivery. We run weekly demo calls on working software, give you a shared repository with every commit visible from day one, and hand over full source code ownership at the end — no vendor lock-in, no black box."
     },
     "general-industries": {
       "question": "Which industries do you work with?",
@@ -32,15 +32,15 @@
     },
     "general-process": {
       "question": "How does the project process work?",
-      "answer": "Every project follows Discovery → Planning → Design → Development → Testing → Launch → Support. You'll receive regular updates throughout the project, so you always know what's happening."
+      "answer": "Every project follows the same six steps: Discovery → Strategy → UI/UX Design → Development → QA → Launch & Support. You'll receive regular updates throughout, so you always know what's happening."
     },
     "general-international": {
       "question": "Can you work with international clients?",
-      "answer": "Yes. We work remotely with clients from anywhere in the world. Meetings, project tracking, and communication are handled online for a smooth collaboration experience."
+      "answer": "We work with clients remotely from anywhere in the world — meetings, project tracking, and communication are all handled online for a smooth collaboration experience."
     },
     "general-nda": {
       "question": "Do you sign NDAs?",
-      "answer": "Yes. We can sign a Non-Disclosure Agreement before starting your project. Your business ideas, documents, and sensitive information remain private and secure."
+      "answer": "We can sign a Non-Disclosure Agreement before starting your project, so your business ideas, documents, and sensitive information stay private and secure."
     },
     "pricing-cost": {
       "question": "How much does a project cost?",
@@ -52,19 +52,19 @@
     },
     "pricing-consultation-free": {
       "question": "Is the consultation free?",
-      "answer": "Yes. Your first consultation is completely free. We'll discuss your goals, recommend the right solution, and answer your questions without any obligation."
+      "answer": "Your first consultation is completely free — we'll discuss your goals, recommend the right solution, and answer your questions without any obligation."
     },
     "pricing-hidden-charges": {
       "question": "Are there any hidden charges?",
-      "answer": "No. We believe in complete pricing transparency. Everything included in your project is clearly mentioned before development begins."
+      "answer": "We believe in complete pricing transparency — everything included in your project is clearly listed before development begins, with nothing added later."
     },
     "pricing-milestones": {
       "question": "Can I pay in milestones?",
-      "answer": "Yes. Most projects follow milestone-based payments. This keeps the process transparent and ensures you only pay as work progresses."
+      "answer": "Most projects follow milestone-based payments, which keeps the process transparent and means you only pay as work actually progresses."
     },
     "pricing-upgrade": {
       "question": "Can I upgrade my package later?",
-      "answer": "Absolutely. Additional features can be added anytime. Your website or application can grow as your business grows."
+      "answer": "Additional features can be added anytime — your website or application is built to grow as your business does."
     },
     "dev-tech-stack": {
       "question": "Which technologies do you use?",
@@ -72,23 +72,23 @@
     },
     "dev-responsive": {
       "question": "Will my website be mobile responsive?",
-      "answer": "Yes. Every website is optimized for mobile, tablet, and desktop devices. Your visitors will enjoy a smooth experience on every screen size."
+      "answer": "Every website we build is optimized for mobile, tablet, and desktop, so visitors get a smooth experience on any screen size."
     },
     "dev-custom-software": {
       "question": "Do you build custom software?",
-      "answer": "Yes. Every project is built specifically for your business. We don't rely on generic templates for custom solutions."
+      "answer": "Every project is built specifically for your business — we don't rely on generic templates for custom solutions."
     },
     "dev-admin-dashboards": {
       "question": "Do you provide admin dashboards?",
-      "answer": "Yes. We develop secure and easy-to-use admin panels. You'll be able to manage content, users, and business data without technical knowledge."
+      "answer": "We develop secure, easy-to-use admin panels so you can manage content, users, and business data without needing technical knowledge."
     },
     "dev-api-integrations": {
       "question": "Can you integrate third-party APIs?",
-      "answer": "Yes. We integrate payment gateways, CRMs, AI services, analytics, and many other APIs. Your software can easily connect with the tools your business already uses."
+      "answer": "We integrate payment gateways, CRMs, AI services, analytics, and many other APIs, so your software connects easily with the tools you already use."
     },
     "support-post-launch": {
       "question": "Do you provide post-launch support?",
-      "answer": "Yes. Every project includes post-launch support. We'll help with bug fixes, updates, and technical assistance after launch."
+      "answer": "Every project includes a post-launch support window — we handle bug fixes, updates, and technical assistance after launch."
     },
     "support-response-time": {
       "question": "How quickly do you respond?",
@@ -96,39 +96,39 @@
     },
     "support-maintain-existing": {
       "question": "Can you maintain my existing website?",
-      "answer": "Yes. We provide maintenance for websites built by us or by other developers. We can improve performance, security, and add new features whenever needed."
+      "answer": "We provide maintenance for websites we built and for ones built by other developers, improving performance or security and adding new features whenever needed."
     },
     "support-monitoring": {
       "question": "Do you offer website monitoring?",
-      "answer": "Yes. Monitoring services are available with our maintenance plans. We can monitor uptime, performance, and security to keep your website running smoothly."
+      "answer": "Monitoring is available as part of our maintenance plans, covering uptime, performance, and security so your website keeps running smoothly."
     },
     "support-new-features": {
       "question": "Can I request new features later?",
-      "answer": "Absolutely. Your project is designed to be scalable, making future improvements simple and efficient."
+      "answer": "Your project is designed to be scalable from the start, so future improvements stay simple and efficient to add."
     },
     "seo-included": {
       "question": "Is SEO included?",
-      "answer": "Yes. Every website is built following technical SEO best practices. This helps search engines understand your website more effectively."
+      "answer": "Every website is built following technical SEO best practices, so search engines can understand and index it more effectively."
     },
     "seo-google": {
       "question": "Will my website be optimized for Google?",
-      "answer": "Yes. We optimize performance, metadata, structured data, and Core Web Vitals. A well-optimized website has a better chance of ranking higher in search results."
+      "answer": "We optimize performance, metadata, structured data, and Core Web Vitals — the factors that give a website a real chance at ranking higher."
     },
     "seo-speed": {
       "question": "Do you improve website speed?",
-      "answer": "Yes. Performance optimization is included in every project. Fast-loading websites improve user experience and SEO."
+      "answer": "Performance optimization is included in every project, since fast-loading pages improve both user experience and search rankings."
     },
     "seo-ongoing": {
       "question": "Do you provide ongoing SEO services?",
-      "answer": "Yes. Monthly SEO plans are available. We can help improve rankings, traffic, and website visibility over time."
+      "answer": "Monthly SEO plans are available if you want ongoing work on rankings, traffic, and visibility rather than a one-time setup."
     },
     "seo-migration": {
       "question": "Can you migrate my website without losing SEO?",
-      "answer": "Yes. We follow safe migration practices. Proper redirects and SEO planning help protect your existing search rankings."
+      "answer": "We follow safe migration practices — proper redirects and SEO planning protect your existing search rankings during the move."
     },
     "ai-integrate": {
       "question": "Can you integrate AI into my website?",
-      "answer": "Yes. We build AI-powered features and automation. AI can improve customer support, productivity, and business efficiency."
+      "answer": "We build AI-powered features and automation that can improve customer support, productivity, and overall business efficiency."
     },
     "ai-models": {
       "question": "Which AI models do you support?",
@@ -136,15 +136,15 @@
     },
     "ai-automate": {
       "question": "Can AI automate business tasks?",
-      "answer": "Yes. AI can automate repetitive work such as customer support, lead qualification, reporting, and content generation."
+      "answer": "AI can take over repetitive work like customer support replies, lead qualification, reporting, and content generation."
     },
     "ai-saas": {
       "question": "Do you build AI SaaS products?",
-      "answer": "Yes. We develop complete AI-powered SaaS platforms. From idea to deployment, we can build scalable AI applications tailored to your business."
+      "answer": "We develop complete AI-powered SaaS platforms from idea to deployment, built to scale and tailored to your business."
     },
     "ai-secure": {
       "question": "Is AI secure?",
-      "answer": "Yes. We follow industry best practices for security and privacy. Sensitive data is protected using secure authentication and encrypted communication."
+      "answer": "We follow industry best practices for security and privacy — sensitive data is protected with secure authentication and encrypted communication."
     },
     "integrations-payment": {
       "question": "Which payment gateways do you support?",
@@ -152,26 +152,26 @@
     },
     "integrations-crm-erp": {
       "question": "Can you connect my CRM or ERP?",
-      "answer": "Yes. We integrate popular CRM and ERP platforms. This helps centralize customer information and automate business processes."
+      "answer": "We integrate popular CRM and ERP platforms to help centralize customer information and automate business processes."
     },
     "integrations-analytics": {
       "question": "Do you integrate analytics tools?",
-      "answer": "Yes. We support Google Analytics, Google Tag Manager, Microsoft Clarity, Mixpanel, and more. These tools help you understand visitor behavior and measure business growth."
+      "answer": "We support Google Analytics, Google Tag Manager, Microsoft Clarity, Mixpanel, and more, so you can understand visitor behavior and measure growth."
     },
     "integrations-notifications": {
       "question": "Can you integrate email and notification services?",
-      "answer": "Yes. We integrate email, SMS, WhatsApp, and push notification services. Automated notifications help improve customer communication and engagement."
+      "answer": "We integrate email, SMS, WhatsApp, and push notification services to automate and improve customer communication."
     },
     "integrations-apis": {
       "question": "Can you connect my software with third-party APIs?",
-      "answer": "Yes. We build secure REST API, GraphQL, and webhook integrations. This allows your application to communicate seamlessly with external services and business tools."
+      "answer": "We build secure REST API, GraphQL, and webhook integrations so your application can communicate seamlessly with external services and business tools."
     }
   },
   "infoPanel": {
     "heading": "Have More Questions?",
     "description": "Our team is available to discuss your project requirements, recommend the right solution, and answer any technical or business questions.",
     "stats": {
-      "responseTime": "24 Hour Response",
+      "responseTime": "Typically Within 24 Hours",
       "freeConsultation": "Free Consultation",
       "dedicatedExperts": "Dedicated Experts",
       "noHiddenCharges": "No Hidden Charges"

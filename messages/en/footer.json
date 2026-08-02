@@ -49,7 +49,9 @@
     "legalNavLabel": "Legal",
     "legal": {
       "privacyPolicy": "Privacy Policy",
-      "terms": "Terms"
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "accessibility": "Accessibility"
     }
   }
 }

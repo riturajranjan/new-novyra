@@ -2,7 +2,8 @@
   "showcase": {
     "eyebrow": "Our Services",
     "title": "From Design to Deployment.",
-    "description": "Pick a service to see how it works, what you'll get, and how long it takes."
+    "description": "Pick a service to see how it works, what you'll get, and how long it takes.",
+    "previewBadge": "Illustrative Preview — Not a Real Product"
   },
   "nav": {
     "ariaLabel": "Novyra services"
@@ -145,20 +146,8 @@
       "sourceCodeOwnership": "Source Code Ownership"
     }
   },
-  "process": {
-    "eyebrow": "Our Process",
-    "heading": "How We Deliver",
-    "description": "A clear, structured path from your first message to a fully shipped product.",
-    "steps": {
-      "discovery": { "title": "Discovery", "description": "Understanding your goals, audience, and requirements." },
-      "design": { "title": "Design", "description": "Wireframes and visuals refined with your feedback." },
-      "development": { "title": "Development", "description": "Building with modern, scalable, well-tested code." },
-      "launch": { "title": "Launch", "description": "A smooth, tested rollout to production." },
-      "support": { "title": "Support", "description": "Ongoing help and improvements after launch." }
-    }
-  },
   "finalCta": {
-    "heading": "Ready to Start?",
+    "heading": "Found What You're Looking For?",
     "description": "Book a free consultation — no obligation, no pressure.",
     "primaryCta": "Book Free Consultation",
     "secondaryCta": "Chat on WhatsApp",

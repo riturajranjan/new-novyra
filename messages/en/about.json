@@ -104,14 +104,7 @@
   },
   "howWeWork": {
     "eyebrow": "Our Approach",
-    "title": "How Novyra Works.",
-    "steps": {
-      "discover": { "title": "Discover", "description": "Understand the business, audience, and goals." },
-      "define": { "title": "Define", "description": "Create the strategy, scope, and roadmap." },
-      "design": { "title": "Design", "description": "Build a clear, premium, and usable interface." },
-      "develop": { "title": "Develop", "description": "Engineer a scalable and production-ready product." },
-      "launch": { "title": "Launch", "description": "Deploy, test, optimize, and support." }
-    }
+    "title": "How Novyra Works."
   },
   "whyChoose": {
     "eyebrow": "Why Choose Novyra",

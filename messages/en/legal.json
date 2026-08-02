@@ -4,6 +4,7 @@
       "title": "Privacy Policy",
       "description": "How Novyra Technologies collects, uses, and protects the information you share with us."
     },
+    "breadcrumb": { "home": "Home", "current": "Privacy Policy" },
     "heading": "Privacy Policy",
     "updated": "Last updated: February 2026",
     "intro": "This page explains what information Novyra Technologies collects when you use this website or contact us, and how that information is used. It applies to novyratech.in and covers everything we actually do — nothing more.",
@@ -61,11 +62,100 @@
       }
     ]
   },
+  "cookies": {
+    "meta": {
+      "title": "Cookie Policy",
+      "description": "What cookies and local storage novyratech.in actually uses — and what it doesn't."
+    },
+    "breadcrumb": { "home": "Home", "current": "Cookie Policy" },
+    "heading": "Cookie Policy",
+    "updated": "Last updated: February 2026",
+    "intro": "This page lists every cookie and browser storage item novyratech.in sets, in full — there's nothing beyond what's listed here.",
+    "sections": [
+      {
+        "heading": "Cookies we set",
+        "paragraphs": [
+          "NEXT_LOCALE — a functional cookie that remembers whether you're viewing the site in English or Hindi, so you don't have to reselect it on every visit. It expires after one year.",
+          "This is the only cookie this website sets. We do not use analytics cookies, advertising cookies, or any third-party tracking cookies."
+        ]
+      },
+      {
+        "heading": "Local storage",
+        "paragraphs": [
+          "We use your browser's local storage (not a cookie) to remember your light/dark theme preference. It stays on your device and is never sent to our servers."
+        ]
+      },
+      {
+        "heading": "No third-party tracking",
+        "paragraphs": [
+          "This site doesn't load Google Analytics, advertising pixels, or any other third-party tracking script. If that changes in the future, this page will be updated before it does."
+        ]
+      },
+      {
+        "heading": "Managing cookies",
+        "paragraphs": [
+          "You can clear or block the NEXT_LOCALE cookie through your browser settings at any time — doing so just means the site will default back to English on your next visit."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": [
+          "If this policy changes, we'll update this page and revise the date above."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Questions about this policy can be sent to hello@novyratech.in."
+        ]
+      }
+    ]
+  },
+  "accessibility": {
+    "meta": {
+      "title": "Accessibility Statement",
+      "description": "Novyra Technologies' approach to building an accessible website, and how to report a barrier."
+    },
+    "breadcrumb": { "home": "Home", "current": "Accessibility" },
+    "heading": "Accessibility Statement",
+    "updated": "Last updated: February 2026",
+    "intro": "We want this website to be usable by as many people as possible, including people using assistive technology. This page describes what we've done, honestly, without claiming a certification we don't hold.",
+    "sections": [
+      {
+        "heading": "What we do",
+        "paragraphs": [
+          "We build with semantic HTML, labelled form fields, and a visible focus state on every interactive element, so the site can be navigated by keyboard alone.",
+          "Every meaningful image and icon has descriptive or hidden alt text, and decorative elements are marked so screen readers skip them.",
+          "Animations respect your operating system's \"reduce motion\" setting — when it's on, this site's motion is minimized or removed rather than played anyway.",
+          "We aim to meet WCAG 2.1 Level AA guidelines. We haven't commissioned a third-party accessibility audit yet, so we describe this as a goal we design against, not a certified result."
+        ]
+      },
+      {
+        "heading": "Known limitations",
+        "paragraphs": [
+          "As a new site, we haven't yet tested every page with every assistive technology combination. If you find something that doesn't work for you, we'd genuinely like to know so we can fix it."
+        ]
+      },
+      {
+        "heading": "Reporting a barrier",
+        "paragraphs": [
+          "If you encounter an accessibility barrier anywhere on this site, email hello@novyratech.in with the page and what happened — we'll look into it and respond."
+        ]
+      },
+      {
+        "heading": "Changes to this statement",
+        "paragraphs": [
+          "If our approach changes, we'll update this page and revise the date above."
+        ]
+      }
+    ]
+  },
   "terms": {
     "meta": {
       "title": "Terms of Service",
       "description": "The terms that apply to using novyratech.in and engaging Novyra Technologies for a project."
     },
+    "breadcrumb": { "home": "Home", "current": "Terms" },
     "heading": "Terms of Service",
     "updated": "Last updated: February 2026",
     "intro": "These terms apply to your use of novyratech.in and, where relevant, to project engagements with Novyra Technologies. Project-specific terms (scope, pricing, timeline, and deliverables) are confirmed in writing for every engagement and take precedence over this general page where they differ.",

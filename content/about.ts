@@ -21,10 +21,7 @@ import {
   MessageCircle,
   MessagesSquare,
   Palette,
-  PenTool,
-  Route,
   Rocket,
-  Search,
   Server,
   ShieldCheck,
   ShoppingCart,
@@ -130,24 +127,6 @@ export const principleModules: PrincipleModule[] = [
   { id: "business-value", number: "03", icon: TrendingUp, accent: "cyan" },
   { id: "built-to-scale", number: "04", icon: Layers, accent: "emerald" },
   { id: "partnership", number: "05", icon: Handshake, accent: "pink" },
-];
-
-/** ---- Section 6: How Novyra Works — a compact 5-step strip, deliberately
- * distinct from the homepage's 6-step OurProcess timeline (see
- * content/process-steps.ts) so the two sections don't read as duplicates. ---- */
-export interface WorkStep {
-  id: string;
-  number: string;
-  icon: LucideIcon;
-  accent: AccentColor;
-}
-
-export const howWeWorkSteps: WorkStep[] = [
-  { id: "discover", number: "01", icon: Search, accent: "blue" },
-  { id: "define", number: "02", icon: Route, accent: "cyan" },
-  { id: "design", number: "03", icon: PenTool, accent: "purple" },
-  { id: "develop", number: "04", icon: Code2, accent: "pink" },
-  { id: "launch", number: "05", icon: Rocket, accent: "emerald" },
 ];
 
 /** ---- Section 7: Why Choose Novyra — six honest, capability-based reasons ---- */

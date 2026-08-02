@@ -25,7 +25,7 @@ export function WebsiteMockup({ accent }: { accent: AccentColor }) {
           <span className="bg-foreground/15 h-2 w-2 rounded-full" />
           <span className="bg-foreground/15 h-2 w-2 rounded-full" />
           <span className="bg-foreground/5 text-foreground-secondary ml-2 h-5 flex-1 truncate rounded-full px-3 text-[10px] leading-5">
-            novyra.studio
+            example-client-site.com
           </span>
         </div>
 

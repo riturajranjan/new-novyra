@@ -5,16 +5,18 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { AboutBackground } from "@/components/about/about-background";
-import { howWeWorkSteps } from "@/content/about";
+import { processSteps } from "@/content/process-steps";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
-/** "How Novyra Works" — a compact, icon-forward horizontal strip (five
- * steps, one flowing gradient line), deliberately editorial rather than
- * the homepage's six-step glass-card timeline (see components/sections/
- * our-process.tsx) so the two sections read as distinct, not duplicated. */
+/** "How Novyra Works" — a compact, icon-forward horizontal strip of the
+ * same six canonical steps as the homepage's OurProcess timeline (see
+ * components/sections/our-process.tsx and content/process-steps.ts) —
+ * same data, same wording, just this page's own condensed layout rather
+ * than the full glass-card version. */
 export function HowNovyraWorks() {
   const t = useTranslations("about.howWeWork");
+  const tSteps = useTranslations("process");
 
   return (
     <section className="relative isolate py-14 md:py-20">
@@ -35,13 +37,13 @@ export function HowNovyraWorks() {
             className="absolute top-6 right-[10%] left-[10%] hidden h-px md:block"
             style={{
               backgroundImage:
-                "linear-gradient(90deg, var(--color-brand-blue), var(--color-brand-cyan), var(--color-brand-purple), var(--color-brand-pink), var(--color-brand-emerald))",
+                "linear-gradient(90deg, var(--color-brand-blue), var(--color-brand-cyan), var(--color-brand-purple), var(--color-brand-pink), var(--color-brand-amber), var(--color-brand-emerald))",
               opacity: 0.3,
             }}
           />
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5 md:gap-4">
-            {howWeWorkSteps.map((step) => {
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 md:gap-4">
+            {processSteps.map((step) => {
               const Icon = step.icon;
               return (
                 <motion.div
@@ -62,9 +64,9 @@ export function HowNovyraWorks() {
                   <span className="text-caption font-semibold" style={{ color: accentStroke[step.accent] }}>
                     {step.number}
                   </span>
-                  <h3 className="text-body-lg font-semibold text-foreground">{t(`steps.${step.id}.title`)}</h3>
+                  <h3 className="text-body-lg font-semibold text-foreground">{tSteps(`steps.${step.id}.title`)}</h3>
                   <p className="text-body-sm text-foreground-secondary max-w-[220px] text-pretty md:mx-auto">
-                    {t(`steps.${step.id}.description`)}
+                    {tSteps(`steps.${step.id}.description`)}
                   </p>
                 </motion.div>
               );

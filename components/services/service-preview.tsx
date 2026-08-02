@@ -2,6 +2,7 @@
 
 import { useRef, type PointerEvent } from "react";
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
+import { Eye } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { easePowerOut, easePremium } from "@/lib/motion";
@@ -117,6 +118,14 @@ export function ServicePreview({ category }: { category: ServiceCategory }) {
                 {t(`categories.${category.id}.subtitle`)}
               </p>
             </div>
+
+            {/* Persistent, high-contrast disclosure — same treatment as the
+                "Concept" badge on the case-studies section — so the mockup
+                inside can't be mistaken for a real product or client site. */}
+            <span className="border-brand-amber/50 bg-brand-amber/15 text-brand-amber text-caption ml-auto hidden shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 font-semibold tracking-wide uppercase sm:inline-flex">
+              <Eye className="h-3.5 w-3.5" aria-hidden />
+              {t("showcase.previewBadge")}
+            </span>
           </div>
 
           {/* Switching services slides the preview horizontally — no scale,

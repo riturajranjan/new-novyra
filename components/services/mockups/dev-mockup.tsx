@@ -24,7 +24,7 @@ const status = [
   { id: "deployment", icon: Rocket },
 ];
 
-const terminalLines = ["$ npm run build", "✓ Compiled successfully", "$ npm run deploy", "✓ Live at novyra.app"];
+const terminalLines = ["$ npm run build", "✓ Compiled successfully", "$ npm run deploy", "✓ Live at example-client-app.com"];
 
 const toneClass: Record<"keyword" | "string" | "plain" | "comment", string> = {
   keyword: "text-brand-purple",

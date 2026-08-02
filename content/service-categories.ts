@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Code, Code2, Compass, LayoutDashboard, LayoutTemplate, LifeBuoy, Megaphone, Palette, Rocket, Sparkles } from "lucide-react";
+import { Code, LayoutDashboard, LayoutTemplate, Megaphone, Palette, Sparkles } from "lucide-react";
 import type { AccentColor } from "@/content/hero-screens";
 
 export type ServiceVisual = "website" | "development" | "saas" | "automation" | "marketing" | "design";
@@ -77,18 +77,3 @@ export const serviceCategories: ServiceCategory[] = [
   },
 ];
 
-export interface ProcessStep {
-  id: string;
-  icon: LucideIcon;
-}
-
-/** The horizontal delivery process below the service switcher — title/
- * description text lives in messages/{locale}/services.json under
- * `process.steps.<id>`, same split as everything else in this file. */
-export const serviceProcessSteps: ProcessStep[] = [
-  { id: "discovery", icon: Compass },
-  { id: "design", icon: Palette },
-  { id: "development", icon: Code2 },
-  { id: "launch", icon: Rocket },
-  { id: "support", icon: LifeBuoy },
-];

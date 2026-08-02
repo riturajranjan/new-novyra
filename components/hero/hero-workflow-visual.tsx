@@ -1,29 +1,21 @@
 "use client";
 
-import { Compass, PenTool, Code2, Bug, Rocket } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { processSteps } from "@/content/process-steps";
 import { accentStroke, accentTint } from "@/lib/accent";
-import type { AccentColor } from "@/content/hero-screens";
-
-const STAGES: { id: string; icon: typeof Compass; accent: AccentColor }[] = [
-  { id: "scope", icon: Compass, accent: "blue" },
-  { id: "design", icon: PenTool, accent: "purple" },
-  { id: "build", icon: Code2, accent: "pink" },
-  { id: "test", icon: Bug, accent: "amber" },
-  { id: "launch", icon: Rocket, accent: "emerald" },
-];
 
 /** The hero's centerpiece — what Novyra's own delivery workflow looks like,
  * not a stock product-dashboard render. Earlier this slot held a generic
  * purchased "SaaS dashboard" image complete with invented revenue and user
  * counts ($45,231, 12.4K users, an "AI Assistant" widget) — exactly the
  * fabricated-metrics problem this rebuild removes everywhere else, so it
- * had to go here too. This is real information instead: the five stages
- * every engagement actually moves through (see content/process-steps.ts
- * for the same five, spelled out on the homepage's own process section),
- * connected by the same traveling-pulse rail technique already used there
- * — one visual language for "how Novyra works," not two competing ones. */
+ * had to go here too. This is real information instead: the same six
+ * stages every engagement actually moves through, imported directly from
+ * content/process-steps.ts (the homepage's own process section reads from
+ * the same array) so this preview can't drift out of sync with it again —
+ * connected by the same traveling-pulse rail technique already used there,
+ * one visual language for "how Novyra works," not two competing ones. */
 export function HeroWorkflowVisual() {
   const t = useTranslations("hero.workflow");
   const reduceMotion = useReducedMotion();
@@ -50,7 +42,7 @@ export function HeroWorkflowVisual() {
           <span
             aria-hidden
             className="absolute top-5 bottom-5 left-[19px] w-px"
-            style={{ background: "linear-gradient(to bottom, var(--color-brand-blue), var(--color-brand-purple), var(--color-brand-pink), var(--color-brand-amber), var(--color-brand-emerald))" }}
+            style={{ background: "linear-gradient(to bottom, var(--color-brand-blue), var(--color-brand-cyan), var(--color-brand-purple), var(--color-brand-pink), var(--color-brand-amber), var(--color-brand-emerald))" }}
           />
           {!reduceMotion ? (
             <motion.span
@@ -62,7 +54,7 @@ export function HeroWorkflowVisual() {
             />
           ) : null}
 
-          {STAGES.map((stage, i) => {
+          {processSteps.map((stage, i) => {
             const Icon = stage.icon;
             const stroke = accentStroke[stage.accent];
             return (

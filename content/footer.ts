@@ -90,4 +90,6 @@ export const socialLinks: SocialLink[] = [
 export const legalLinks: FooterLink[] = [
   { id: "privacyPolicy", href: "/privacy" },
   { id: "terms", href: "/terms" },
+  { id: "cookies", href: "/cookies" },
+  { id: "accessibility", href: "/accessibility" },
 ];

@@ -162,15 +162,14 @@
     "postLaunchSupport": "Post-launch Support"
   },
   "timeline": {
-    "heading": "From First Call to Launch — and Beyond",
+    "heading": "The Same Six Steps, Every Project",
     "steps": {
       "discovery": "Discovery",
-      "planning": "Planning",
+      "strategy": "Strategy",
       "design": "Design",
       "development": "Development",
-      "testing": "Testing",
-      "launch": "Launch",
-      "support": "Support"
+      "testing": "QA",
+      "launch": "Launch"
     }
   },
   "whyItWorks": {
@@ -200,6 +199,6 @@
     "description": "Tell us about your project — we'll recommend the right plan.",
     "primaryCta": "Book Free Consultation",
     "secondaryCta": "Request Custom Quote",
-    "trustNote": "No obligation · Response within 24 hours"
+    "trustNote": "No obligation · Typically within 24 hours"
   }
 }

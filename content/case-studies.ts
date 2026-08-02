@@ -80,10 +80,11 @@ export const conceptBuilds: ConceptBuild[] = [
 export const homepageConceptIds = ["hospital-platform", "school-erp", "ai-saas-dashboard"] as const;
 
 /** Structural ids only — labels live in messages/{locale}/caseStudies.json
- * under `processSteps`, keyed by `id`. The generic delivery process every
- * concept (and every real project) would move through — not a specific
- * historical timeline for a specific past client. */
-export const processStepIds = ["discovery", "design", "development", "testing", "launch", "growth"] as const;
+ * under `processSteps`, keyed by `id`. Same six stages, same order, as the
+ * canonical process in content/process-steps.ts (see components/sections/
+ * our-process.tsx) — this is a compact restatement of that one process,
+ * not a second, different one. */
+export const processStepIds = ["discovery", "strategy", "design", "development", "testing", "launch"] as const;
 
 export type ProcessStepId = (typeof processStepIds)[number];
 

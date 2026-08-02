@@ -146,6 +146,7 @@ export function PlanSpotlight({ plan, mode, panelId }: PlanSpotlightProps) {
                     </span>
                   </div>
                 ) : null}
+                {plan.hasPriceLabel ? <p className="text-caption pt-0.5 text-white/40">{t("priceNote.finalPricingScope")}</p> : null}
               </div>
             </div>
 

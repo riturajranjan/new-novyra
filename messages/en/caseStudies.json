@@ -1,9 +1,9 @@
 {
   "section": {
-    "eyebrow": "Concept Showcase",
-    "titleLine1": "Concept Builds, Real Capability.",
-    "titleLine2": "Designed to Scale.",
-    "description": "Explore concept builds across healthcare, education, retail, and SaaS — each one showing how we'd approach a real-world product challenge, from architecture to launch."
+    "eyebrow": "Product Concepts and Internal Builds",
+    "titleLine1": "How We Think Through",
+    "titleLine2": "a Real Product Problem.",
+    "description": "Each concept below explores a real operational problem, the approach we'd take, and the technical decisions behind it — not a client outcome, since none of these shipped for a paying client."
   },
   "filters": {
     "All": "All",
@@ -21,44 +21,74 @@
   "builds": {
     "hospital-platform": {
       "industryLabel": "Healthcare",
-      "title": "Hospital Management Platform",
-      "description": "A concept exploration for how a multi-department hospital could centralise patient records, scheduling, and staff access in one platform.",
-      "highlights": ["6 core modules", "Role-based dashboards for every staff type", "Built for HIPAA-conscious data handling"],
+      "title": "Healthcare Operations Concept",
+      "description": "The problem explored: a multi-department hospital tracking patient records, scheduling, and staff access across disconnected spreadsheets and paper logs.",
+      "highlights": [
+        "One patient record shared across departments instead of re-entered at each desk",
+        "Dashboards scoped by role, so a nurse and a billing clerk see only what applies to them",
+        "Appointment scheduling that respects each department's own hours and staff availability"
+      ],
+      "demonstrates": "How we'd structure role-based access and a shared data model across departments that don't normally share systems.",
       "timeline": "8–10 weeks"
     },
     "school-erp": {
       "industryLabel": "Education",
-      "title": "School ERP Platform",
-      "description": "A concept for managing attendance, fees, and communication across students, teachers, and parents in one place.",
-      "highlights": ["Parent-teacher portal", "Attendance & fee tracking", "Role-based access for every user type"],
+      "title": "Education Management Concept",
+      "description": "The problem explored: attendance, fees, and parent communication handled through separate tools that don't talk to each other.",
+      "highlights": [
+        "A single attendance record that drives fee status and parent notifications automatically",
+        "Parent-teacher portal scoped to one child's data, not the whole school's",
+        "Role-based access so a teacher, an accountant, and a parent each see a different view"
+      ],
+      "demonstrates": "How we'd design one data model that serves three different user types without exposing data they shouldn't see.",
       "timeline": "8–10 weeks"
     },
     "restaurant-website": {
       "industryLabel": "Hospitality",
-      "title": "Restaurant Website",
-      "description": "A concept for a premium restaurant presence — menu, reservations, and location, built to load instantly on mobile.",
-      "highlights": ["Mobile-first menu browsing", "Reservation request flow", "Built for local SEO"],
+      "title": "Restaurant Web Presence Concept",
+      "description": "The problem explored: a restaurant losing reservations to a slow, desktop-first site when most visits happen on a phone at dinner time.",
+      "highlights": [
+        "Menu structured for one-thumb browsing, not a scanned PDF",
+        "Reservation request flow that works in under 30 seconds on mobile",
+        "Page structure built around local search intent, not generic copy"
+      ],
+      "demonstrates": "How we'd prioritize mobile load speed and conversion structure for a location-based business.",
       "timeline": "2–4 weeks"
     },
     "real-estate-crm": {
       "industryLabel": "Real Estate",
-      "title": "Real Estate CRM",
-      "description": "A concept CRM for tracking listings, leads, and follow-ups across a real estate sales team.",
-      "highlights": ["Pipeline & lead tracking", "Listing management dashboard", "Team-wide visibility on follow-ups"],
+      "title": "Real Estate Operations Concept",
+      "description": "The problem explored: a sales team losing track of which lead was last contacted, and by whom, across a shared inbox and a spreadsheet.",
+      "highlights": [
+        "One pipeline view so no lead sits untouched without the team noticing",
+        "Listing management tied directly to the leads attached to it",
+        "Follow-up visibility shared across the team, not locked to one agent's inbox"
+      ],
+      "demonstrates": "How we'd design a shared pipeline that stays accurate without extra manual logging.",
       "timeline": "6–8 weeks"
     },
     "business-website": {
       "industryLabel": "Business",
-      "title": "Business Website",
-      "description": "A concept for a premium business presence built to establish credibility and generate qualified enquiries.",
-      "highlights": ["Conversion-focused page structure", "Lead capture built in", "SEO-ready from day one"],
+      "title": "Business Website Concept",
+      "description": "The problem explored: a service business whose site describes what they do but gives visitors no clear next step.",
+      "highlights": [
+        "Page structure built around one clear action per screen, not a wall of text",
+        "Lead capture placed where intent is highest, not just in the footer",
+        "Technical SEO handled at build time, not bolted on afterward"
+      ],
+      "demonstrates": "How we'd structure a site around a single conversion goal instead of trying to say everything at once.",
       "timeline": "2–4 weeks"
     },
     "ai-saas-dashboard": {
       "industryLabel": "SaaS",
-      "title": "AI SaaS Dashboard",
-      "description": "A concept for a multi-tenant SaaS dashboard with AI-assisted workflows layered into everyday admin tasks.",
-      "highlights": ["Multi-tenant architecture", "AI-assisted workflow automation", "Usage analytics built in"],
+      "title": "SaaS Administration Concept",
+      "description": "The problem explored: an admin dashboard for a multi-tenant product where every customer's data has to stay isolated while the AI features stay useful.",
+      "highlights": [
+        "Tenant isolation enforced at the data layer, not just hidden in the UI",
+        "AI-assisted actions scoped to the data the requesting tenant actually owns",
+        "Usage analytics built as a first-class feature, not an afterthought query"
+      ],
+      "demonstrates": "How we'd approach multi-tenant data isolation and where AI features should — and shouldn't — have access.",
       "timeline": "6–9 weeks"
     }
   },
@@ -77,14 +107,16 @@
     "illustrativeData": "Illustrative Data"
   },
   "card": {
-    "buildHighlights": "Build Highlights",
+    "buildHighlights": "Key Workflows",
+    "demonstrates": "What This Demonstrates",
     "estimatedTimeline": "Est. {timeline}",
     "startSimilarProject": "Start a Similar Project",
-    "seeFullApproach": "See the Full Approach"
+    "seeFullApproach": "See How We'd Build This"
   },
+  "viewAll": "View All Concepts",
   "cta": {
-    "heading": "Ready to Bring Your Idea to Life?",
-    "description": "Let's create a digital product that delivers measurable business results.",
+    "heading": "Have a Similar Problem to Solve?",
+    "description": "Tell us what you're working on and we'll show you how we'd approach it.",
     "bookConsultation": "Book Free Consultation",
     "requestQuote": "Request Custom Quote"
   }

@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import {
   Building2,
   CalendarCheck,
+  ClipboardList,
   FileCode2,
   GraduationCap,
   HeartPulse,
@@ -30,6 +31,7 @@ export interface TrustBarItem {
 /** Structural data only — label/detail text lives in
  * messages/{locale}/promise.json under `trustBar.<id>`. */
 export const trustBarItems: TrustBarItem[] = [
+  { id: "scope-first", icon: ClipboardList },
   { id: "direct-access", icon: MessagesSquare },
   { id: "fixed-price-clarity", icon: Wallet },
   { id: "weekly-demos", icon: CalendarCheck },

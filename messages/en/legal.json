@@ -1,0 +1,124 @@
+{
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "How Novyra Technologies collects, uses, and protects the information you share with us."
+    },
+    "heading": "Privacy Policy",
+    "updated": "Last updated: February 2026",
+    "intro": "This page explains what information Novyra Technologies collects when you use this website or contact us, and how that information is used. It applies to novyratech.in and covers everything we actually do — nothing more.",
+    "sections": [
+      {
+        "heading": "Information we collect",
+        "paragraphs": [
+          "When you submit the contact or consultation form, we collect the details you provide: name, email, phone number, company (optional), the type of project you're enquiring about, your budget range, and your message.",
+          "We do not collect payment information through this website, and we do not require an account to browse or contact us."
+        ]
+      },
+      {
+        "heading": "How we use it",
+        "paragraphs": [
+          "We use the information you submit to respond to your enquiry, send you a confirmation email, and follow up about your project. Your enquiry is stored in our database so our team can track and respond to it.",
+          "We do not sell, rent, or trade your information to third parties for marketing purposes."
+        ]
+      },
+      {
+        "heading": "Cookies and local storage",
+        "paragraphs": [
+          "This site uses one functional cookie (NEXT_LOCALE) to remember your language preference, and browser local storage to remember your light/dark theme preference. Neither is used for advertising or cross-site tracking.",
+          "We do not currently use third-party analytics, advertising, or tracking scripts on this website."
+        ]
+      },
+      {
+        "heading": "Sharing your information",
+        "paragraphs": [
+          "We use a transactional email service to send enquiry confirmations and notify our team — your message content passes through that service solely to deliver the email. We do not share your information with any other third party except where required by law."
+        ]
+      },
+      {
+        "heading": "Data retention and your rights",
+        "paragraphs": [
+          "We retain enquiry records for as long as reasonably needed to respond to you and maintain business records. You can request access to, correction of, or deletion of your information at any time by emailing hello@novyratech.in."
+        ]
+      },
+      {
+        "heading": "Security",
+        "paragraphs": [
+          "We take reasonable technical measures to protect the information you share with us. No method of storage or transmission over the internet is completely secure, so we can't guarantee absolute security."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "paragraphs": [
+          "If this policy changes, we'll update this page and revise the date above."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Questions about this policy or your data can be sent to hello@novyratech.in."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms of Service",
+      "description": "The terms that apply to using novyratech.in and engaging Novyra Technologies for a project."
+    },
+    "heading": "Terms of Service",
+    "updated": "Last updated: February 2026",
+    "intro": "These terms apply to your use of novyratech.in and, where relevant, to project engagements with Novyra Technologies. Project-specific terms (scope, pricing, timeline, and deliverables) are confirmed in writing for every engagement and take precedence over this general page where they differ.",
+    "sections": [
+      {
+        "heading": "Using this website",
+        "paragraphs": [
+          "You may browse this website and use the contact form to reach us. Please don't attempt to disrupt the site, submit false information through our forms, or use automated tools to scrape or abuse the site."
+        ]
+      },
+      {
+        "heading": "Content and ownership",
+        "paragraphs": [
+          "The design, code, and written content of this website belong to Novyra Technologies unless otherwise noted. You're welcome to reference or link to this site; please don't reproduce it wholesale without asking."
+        ]
+      },
+      {
+        "heading": "Project engagements",
+        "paragraphs": [
+          "Every paid engagement starts with a written scope covering deliverables, timeline, and price before development begins. Work outside that scope is handled as a separate, agreed change rather than assumed to be included.",
+          "Unless a project's written scope states otherwise, full source code ownership transfers to the client on final payment. Pricing shown on this site starts from the listed figures and is confirmed exactly once scope is defined — see the pricing section for current starting prices."
+        ]
+      },
+      {
+        "heading": "Payments",
+        "paragraphs": [
+          "Payment terms (milestones, schedule, and method) are agreed in writing before work begins and are specific to each engagement."
+        ]
+      },
+      {
+        "heading": "Limitation of liability",
+        "paragraphs": [
+          "This website and its content are provided as-is. To the extent permitted by law, Novyra Technologies is not liable for indirect or consequential loss arising from your use of this site. This does not limit liability for matters that cannot be limited under applicable law."
+        ]
+      },
+      {
+        "heading": "Governing law",
+        "paragraphs": [
+          "These terms are governed by the laws of India."
+        ]
+      },
+      {
+        "heading": "Changes to these terms",
+        "paragraphs": [
+          "If these terms change, we'll update this page and revise the date above."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Questions about these terms can be sent to hello@novyratech.in."
+        ]
+      }
+    ]
+  }
+}

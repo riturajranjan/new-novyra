@@ -16,7 +16,7 @@ export function ContactCta() {
   const t = useTranslations("contact");
 
   return (
-    <section id="contact" className="relative isolate py-14 md:py-20">
+    <section id="contact" className="relative isolate scroll-mt-24 py-14 md:py-20">
       <ContactCtaBackground />
 
       <Container className="flex flex-col gap-10 md:gap-16">

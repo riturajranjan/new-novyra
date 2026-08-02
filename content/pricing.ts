@@ -63,7 +63,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: Rocket,
     accent: "blue",
     hasPriceLabel: true,
-    price: { project: "₹12,999", retainer: "₹7,999" },
+    price: { project: "₹29,999", retainer: "₹17,999" },
     priceSuffix: { project: "+", retainer: "+/mo" },
     features: [
       "responsiveWebsite",
@@ -76,7 +76,7 @@ export const pricingPlans: PricingPlan[] = [
       "googleAnalytics",
       "twoWeeksSupport",
     ],
-    ctaHref: "/contact",
+    ctaHref: "/#contact",
   },
   {
     id: "professional",
@@ -84,7 +84,7 @@ export const pricingPlans: PricingPlan[] = [
     accent: "purple",
     featured: true,
     hasPriceLabel: true,
-    price: { project: "₹24,999", retainer: "₹15,999" },
+    price: { project: "₹79,999", retainer: "₹49,999" },
     priceSuffix: { project: "+", retainer: "+/mo" },
     inheritsFrom: "starter",
     features: [
@@ -101,14 +101,14 @@ export const pricingPlans: PricingPlan[] = [
       "securityHardening",
       "oneMonthSupport",
     ],
-    ctaHref: "/contact",
+    ctaHref: "/#contact",
   },
   {
     id: "business",
     icon: Briefcase,
     accent: "cyan",
     hasPriceLabel: true,
-    price: { project: "₹49,999", retainer: "₹24,999" },
+    price: { project: "₹1,49,999", retainer: "₹74,999" },
     priceSuffix: { project: "+", retainer: "+/mo" },
     inheritsFrom: "professional",
     features: [
@@ -123,7 +123,7 @@ export const pricingPlans: PricingPlan[] = [
       "cloudDeployment",
       "trainingSessions",
     ],
-    ctaHref: "/contact",
+    ctaHref: "/#contact",
   },
   {
     id: "enterprise",
@@ -144,7 +144,7 @@ export const pricingPlans: PricingPlan[] = [
       "dedicatedProjectManager",
       "ongoingMaintenance",
     ],
-    ctaHref: "/contact",
+    ctaHref: "/#contact",
   },
 ];
 

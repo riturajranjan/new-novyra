@@ -141,6 +141,14 @@ export const techCategories: TechCategory[] = [
       { name: "GitHub Actions", color: "#8B5CF6" },
     ],
   },
+  {
+    id: "ai",
+    icon: Sparkles,
+    items: [
+      { name: "OpenAI", color: "#94A3B8" },
+      { name: "Vercel AI SDK", color: "#A78BFA" },
+    ],
+  },
 ];
 
 export interface TrustMetric {
@@ -153,7 +161,6 @@ export interface TrustMetric {
  * no data to back. Structural data only — label/value text lives in
  * messages/{locale}/whyChoose.json under `trustMetrics.<id>`. */
 export const trustMetrics: TrustMetric[] = [
-  { id: "modern-technologies" },
   { id: "engineering-disciplines" },
   { id: "lighthouse-target" },
   { id: "typescript-codebase" },

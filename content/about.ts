@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  Accessibility,
   AppWindow,
   Braces,
   Briefcase,
@@ -8,6 +9,7 @@ import {
   Cloud,
   Code2,
   Compass,
+  FileCode2,
   Gauge,
   Gem,
   GraduationCap,
@@ -33,7 +35,6 @@ import {
   Target,
   Telescope,
   TrendingUp,
-  Users,
 } from "lucide-react";
 import type { AccentColor } from "@/content/hero-screens";
 
@@ -107,12 +108,12 @@ export interface BentoItem {
 }
 
 export const whatWeBuildItems: BentoItem[] = [
-  { id: "web-design", icon: Code2, accent: "blue", span: 3, href: "/services/web-design-development" },
-  { id: "digital-marketing", icon: Megaphone, accent: "pink", span: 3, href: "/services/digital-marketing" },
-  { id: "web-applications", icon: AppWindow, accent: "cyan", span: 2, href: "/services/web-applications" },
-  { id: "graphic-design", icon: Palette, accent: "purple", span: 2, href: "/services/graphic-design" },
-  { id: "saas-development", icon: Layers, accent: "emerald", span: 2, href: "/services/saas-development" },
-  { id: "ai-solutions", icon: Sparkles, accent: "amber", span: 6, href: "/services" },
+  { id: "web-design", icon: Code2, accent: "blue", span: 3, href: "/#services" },
+  { id: "digital-marketing", icon: Megaphone, accent: "pink", span: 3, href: "/#services" },
+  { id: "web-applications", icon: AppWindow, accent: "cyan", span: 2, href: "/#services" },
+  { id: "graphic-design", icon: Palette, accent: "purple", span: 2, href: "/#services" },
+  { id: "saas-development", icon: Layers, accent: "emerald", span: 2, href: "/#services" },
+  { id: "ai-solutions", icon: Sparkles, accent: "amber", span: 6, href: "/#services" },
 ];
 
 /** ---- Section 5: Core Principles ---- */
@@ -264,11 +265,34 @@ export const ownershipCommitments: OwnershipCommitment[] = [
   { id: "flexible-expertise", icon: Shuffle, accent: "purple" },
 ];
 
+/** Real founder details — name, role, and links are proper nouns/personal
+ * identity, so (like companyInfo in content/footer.ts) they live here
+ * un-translated rather than in messages/{locale}. Only the bio paragraph
+ * and expertise chip labels are translated, via about.json `founder.*`. */
+export const founderProfile = {
+  name: "Ritu Raj Ranjan",
+  initials: "RR",
+  linkedin: "https://linkedin.com/in/rranjan01",
+  github: "https://github.com/riturajranjan",
+};
+
+export interface ExpertiseItem {
+  id: string;
+  icon: LucideIcon;
+}
+
+/** A representative subset of the full skill list — label text lives in
+ * messages/{locale}/about.json under `founder.expertise.<id>`. */
+export const founderExpertise: ExpertiseItem[] = [
+  { id: "react-nextjs", icon: Code2 },
+  { id: "typescript-node", icon: FileCode2 },
+  { id: "saas-architecture", icon: Layers },
+  { id: "ai-integrations", icon: Sparkles },
+  { id: "performance", icon: Gauge },
+  { id: "accessibility", icon: Accessibility },
+];
+
 /** ---- Section 11: Final CTA ---- */
 export const ctaTags = ["website", "saas", "ai", "erp", "marketing"];
 
 export const whatsappHref = "https://wa.me/917903724407";
-
-/** Shared icon for places that reference "the team" generically without a
- * per-person identity (e.g. a founder-direction visual accent). */
-export const teamIcon = Users;

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "@/i18n/navigation";
 import { isAnyModalOpen } from "@/lib/modal-registry";
 
 const SUBMITTED_KEY = "novyra_enquiry_submitted";
@@ -17,8 +16,7 @@ const DISMISS_COOLDOWN_MS = 24 * 60 * 60 * 1000;
  *   *timestamp* is stored, and the 24h window is computed at read time
  *   (`novyra_enquiry_dismissed_at`), rather than storing a precomputed
  *   future unlock time
- * - not shown on the Contact page, or while another modal (the mobile nav
- *   drawer) is already open
+ * - not shown while another modal (the mobile nav drawer) is already open
  * - at most once per browser session otherwise
  * - appears 3s after mount if none of the above suppress it
  *
@@ -29,11 +27,8 @@ const DISMISS_COOLDOWN_MS = 24 * 60 * 60 * 1000;
  * and event handlers, so there's no hydration mismatch risk. */
 export function useLeadPopupTrigger() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === "/contact" || pathname.startsWith("/contact/")) return;
-
     try {
       if (localStorage.getItem(SUBMITTED_KEY) === "true") return;
       const dismissedAt = Number(localStorage.getItem(DISMISSED_AT_KEY) ?? 0);
@@ -54,7 +49,7 @@ export function useLeadPopupTrigger() {
     }, SHOW_DELAY_MS);
 
     return () => clearTimeout(timer);
-  }, [pathname]);
+  }, []);
 
   function dismiss() {
     setOpen(false);

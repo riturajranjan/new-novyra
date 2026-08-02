@@ -7,8 +7,6 @@ import { FooterBackground } from "@/components/footer/footer-background";
 import { FooterHero } from "@/components/footer/footer-hero";
 import { CompanyInfoCard } from "@/components/footer/company-info-card";
 import { FooterNavColumn } from "@/components/footer/footer-nav-column";
-import { TechCapsuleGrid } from "@/components/footer/tech-capsule-grid";
-import { NewsletterCard } from "@/components/footer/newsletter-card";
 import { SocialGrid } from "@/components/footer/social-grid";
 import { FooterBottom } from "@/components/footer/footer-bottom";
 import { footerColumns } from "@/content/footer";
@@ -77,11 +75,8 @@ export function Footer() {
             ))}
           </div>
 
-          {/* <TechCapsuleGrid /> */}
-
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.2fr_auto] lg:items-center">
-            <NewsletterCard />
-            {/* <SocialGrid /> */}
+          <div className="flex justify-center lg:justify-end">
+            <SocialGrid />
           </div>
 
           <FooterBottom />

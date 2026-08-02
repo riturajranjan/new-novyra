@@ -76,6 +76,7 @@ export function TrustedTechnologies() {
             <TechCategoryCard key={category.id} category={category} index={i} />
           ))}
         </div>
+        <p className="text-body-sm text-foreground-secondary relative mt-6 max-w-2xl text-pretty">{t("trustedTechnologies.stackReason")}</p>
       </div>
 
       {/* feature strip */}
@@ -116,7 +117,7 @@ export function TrustedTechnologies() {
 
       {/* trust metrics */}
       <div className="glass shadow-card rounded-3xl px-5 py-6 md:px-10 md:py-8">
-        <div className="grid grid-cols-2 gap-5 sm:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
           {trustMetrics.map((metric, i) => (
             <motion.div
               key={metric.id}

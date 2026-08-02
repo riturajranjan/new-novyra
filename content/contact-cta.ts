@@ -19,7 +19,7 @@ export interface QuickContactCard {
  * title/detail/note text lives in messages/{locale}/contact.json under
  * `quickContactCards.<id>`. */
 export const quickContactCards: QuickContactCard[] = [
-  { id: "schedule-call", icon: Calendar, accent: "blue", href: "/contact" },
+  { id: "schedule-call", icon: Calendar, accent: "blue", href: "/#contact" },
   { id: "email", icon: Mail, accent: "purple", href: "mailto:hello@novyratech.in" },
   { id: "call", icon: Phone, accent: "cyan", href: "tel:+917903724407" },
   { id: "whatsapp", icon: MessageCircle, accent: "emerald", href: "https://wa.me/917903724407" },

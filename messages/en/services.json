@@ -9,7 +9,7 @@
   },
   "categories": {
     "web-design": {
-      "label": "Web Design",
+      "label": "Website",
       "subtitle": "Modern business websites",
       "description": "A website that builds trust the moment it loads.",
       "bestFor": ["Startups", "Small Businesses", "Personal Brands", "Portfolios"],
@@ -29,7 +29,7 @@
       "cta": "View Portfolio"
     },
     "web-development": {
-      "label": "Web Development",
+      "label": "Web Application",
       "subtitle": "Custom scalable applications",
       "description": "Web applications built to handle real traffic and grow with your business.",
       "bestFor": ["Startups", "Businesses", "Healthcare", "Education"],
@@ -51,7 +51,7 @@
       "cta": "View Service"
     },
     "saas-development": {
-      "label": "SaaS Development",
+      "label": "SaaS Product",
       "subtitle": "Cloud software platforms",
       "description": "Multi-tenant platforms for healthcare, education, and growing businesses.",
       "bestFor": ["Healthcare Providers", "Educational Institutions", "Growing Businesses", "Multi-location Operations"],
@@ -70,8 +70,28 @@
       "timeline": "6–14 Weeks",
       "cta": "Request a Quote"
     },
+    "automation-ai": {
+      "label": "Automation & AI",
+      "subtitle": "Trigger → workflow → action → report",
+      "description": "Remove repetitive manual work by connecting the tools your team already uses.",
+      "bestFor": ["Operations Teams", "Customer Support", "Growing Businesses", "Multi-step Approval Chains"],
+      "keyBenefits": [
+        "Fewer manual handoffs between tools",
+        "Consistent execution — no missed steps",
+        "AI-assisted decisions where they actually help",
+        "A clear report after every run, not a black box"
+      ],
+      "deliverables": [
+        "Workflow Mapping",
+        "Trigger & Action Setup",
+        "AI-assisted Steps Where Useful",
+        "Run Reports & Alerts"
+      ],
+      "timeline": "3–6 Weeks",
+      "cta": "Book a Consultation"
+    },
     "digital-marketing": {
-      "label": "Digital Marketing",
+      "label": "Digital Growth",
       "subtitle": "SEO & Growth",
       "description": "Growth infrastructure — campaigns, content, and tracking — built and measured honestly.",
       "bestFor": ["Local Businesses", "E-commerce Brands", "B2B Companies", "Service Providers"],
@@ -91,7 +111,7 @@
       "cta": "Book a Consultation"
     },
     "graphic-design": {
-      "label": "Graphic Design",
+      "label": "Brand Design",
       "subtitle": "Brand identity & creatives",
       "description": "Brand identity that holds up at any size, from a favicon to a billboard.",
       "bestFor": ["New Brands", "Rebrands", "Marketing Teams", "Product Launches"],
@@ -138,7 +158,7 @@
     }
   },
   "finalCta": {
-    "heading": "Let's Build Something Great",
+    "heading": "Ready to Start?",
     "description": "Book a free consultation — no obligation, no pressure.",
     "primaryCta": "Book Free Consultation",
     "secondaryCta": "Chat on WhatsApp",
@@ -168,6 +188,16 @@
         "hospitalErp": "Hospital ERP",
         "schoolErp": "School ERP"
       }
+    },
+    "automation": {
+      "stages": {
+        "trigger": "Trigger",
+        "workflow": "Workflow",
+        "action": "Action",
+        "report": "Report"
+      },
+      "exampleLabel": "Example",
+      "exampleText": "New enquiry submitted → assign to the right team → send confirmation → log to CRM"
     },
     "dev": {
       "status": {

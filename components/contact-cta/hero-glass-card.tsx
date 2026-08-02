@@ -74,7 +74,7 @@ export function HeroGlassCard() {
         <div className="flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
           <Magnetic className="w-full sm:w-auto">
             <RippleLink
-              href="/contact"
+              href="/#contact"
               className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
             >
               <span
@@ -86,13 +86,13 @@ export function HeroGlassCard() {
             </RippleLink>
           </Magnetic>
           <Magnetic className="w-full sm:w-auto">
-            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "glass", size: "lg" }), "w-full sm:w-auto")}>
+            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "glass", size: "lg" }), "w-full sm:w-auto")}>
               <FileText className="h-4 w-4" aria-hidden />
               {t("requestQuote")}
             </RippleLink>
           </Magnetic>
           <Magnetic className="w-full sm:w-auto">
-            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
+            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
               <CalendarClock className="h-4 w-4" aria-hidden />
               {t("scheduleCall")}
             </RippleLink>

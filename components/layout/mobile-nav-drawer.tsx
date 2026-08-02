@@ -18,7 +18,7 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { registerModalClosed, registerModalOpen } from "@/lib/modal-registry";
-import { navItems, type NavItem } from "@/content/nav";
+import { navItems, type NavItem, type NavLeaf } from "@/content/nav";
 
 interface MobileNavDrawerProps {
   open: boolean;
@@ -105,42 +105,69 @@ function NavRow({
 /** Nested submenu — a thin guide line + a small dot per item rather than
  * repeating the parent row's full icon+chip treatment, so it reads as
  * "inside" the accordion, not a second list of equal-weight rows. */
+function SubMenuRow({ item, child, i, pathname, onNavigate }: { item: NavItem; child: NavLeaf; i: number; pathname: string; onNavigate: () => void }) {
+  const t = useTranslations("nav");
+  const isActive = pathname === stripHash(child.href);
+
+  return (
+    <motion.li initial={{ opacity: 0, x: -6 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.22, delay: i * 0.025, ease: "easeOut" }}>
+      <Link
+        href={child.href}
+        onClick={onNavigate}
+        aria-current={isActive ? "page" : undefined}
+        className={cn(
+          "relative flex min-h-12 items-center gap-2.5 rounded-lg py-2 pl-7.25 pr-3 text-[15px] transition-colors duration-150",
+          isActive ? "bg-white/6 font-semibold text-white" : "font-medium text-white/60 hover:bg-white/4 hover:text-white/90",
+        )}
+      >
+        <span
+          aria-hidden
+          className="absolute left-4.75 h-1.5 w-1.5 shrink-0 rounded-full"
+          style={{ backgroundColor: isActive ? "var(--color-brand-blue)" : "rgba(255,255,255,0.25)" }}
+        />
+        <span className="truncate">{t(`${item.id}.children.${child.id}.label`)}</span>
+      </Link>
+    </motion.li>
+  );
+}
+
+/** Nested submenu — a thin guide line + a small dot per item rather than
+ * repeating the parent row's full icon+chip treatment, so it reads as
+ * "inside" the accordion, not a second list of equal-weight rows. The
+ * "services" item's children additionally split into "Build"/"Improve"
+ * sub-groups (a small uppercase label per group) — every other dropdown
+ * (currently just "about") renders as one flat list. */
 function SubMenu({ item, pathname, onNavigate }: { item: NavItem; pathname: string; onNavigate: () => void }) {
   const t = useTranslations("nav");
+  const isServices = item.id === "services";
 
   return (
     <div className="relative py-1 pl-5.75">
       <span aria-hidden className="absolute top-0 bottom-0 left-5.75 w-px bg-white/10" />
-      <ul className="flex flex-col gap-0.5">
-        {item.children!.map((child, i) => {
-          const isActive = pathname === stripHash(child.href);
-          return (
-            <motion.li
-              key={child.id}
-              initial={{ opacity: 0, x: -6 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.22, delay: i * 0.025, ease: "easeOut" }}
-            >
-              <Link
-                href={child.href}
-                onClick={onNavigate}
-                aria-current={isActive ? "page" : undefined}
-                className={cn(
-                  "relative flex min-h-12 items-center gap-2.5 rounded-lg py-2 pl-7.25 pr-3 text-[15px] transition-colors duration-150",
-                  isActive ? "bg-white/6 font-semibold text-white" : "font-medium text-white/60 hover:bg-white/4 hover:text-white/90",
-                )}
-              >
-                <span
-                  aria-hidden
-                  className="absolute left-4.75 h-1.5 w-1.5 shrink-0 rounded-full"
-                  style={{ backgroundColor: isActive ? "var(--color-brand-blue)" : "rgba(255,255,255,0.25)" }}
-                />
-                <span className="truncate">{t(`${item.id}.children.${child.id}.label`)}</span>
-              </Link>
-            </motion.li>
-          );
-        })}
-      </ul>
+      {isServices ? (
+        <div className="flex flex-col gap-3">
+          {(["build", "improve"] as const).map((group) => (
+            <div key={group} className="flex flex-col gap-0.5">
+              <span className="px-7.25 text-[11px] font-semibold tracking-[0.14em] text-white/40 uppercase">
+                {t(`services.groups.${group}`)}
+              </span>
+              <ul className="flex flex-col gap-0.5">
+                {item.children!
+                  .filter((child) => child.group === group)
+                  .map((child, i) => (
+                    <SubMenuRow key={child.id} item={item} child={child} i={i} pathname={pathname} onNavigate={onNavigate} />
+                  ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <ul className="flex flex-col gap-0.5">
+          {item.children!.map((child, i) => (
+            <SubMenuRow key={child.id} item={item} child={child} i={i} pathname={pathname} onNavigate={onNavigate} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
@@ -502,7 +529,7 @@ export function MobileNavDrawer({ open, onClose, triggerRef }: MobileNavDrawerPr
               <MobileControlDock />
 
               <Link
-                href="/contact"
+                href="/#contact"
                 onClick={handleNavigate}
                 className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative flex-col gap-0 overflow-hidden py-2.5!")}
               >

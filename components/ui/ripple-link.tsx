@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type PointerEvent, type ReactNode } from "react";
+import { useState, type CSSProperties, type PointerEvent, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -11,13 +11,14 @@ interface RippleLinkProps {
   children: ReactNode;
   target?: string;
   rel?: string;
+  style?: CSSProperties;
 }
 
 let rippleId = 0;
 
 /** A Link with a Material-style click ripple — purely a visual click
  * acknowledgment layered inside the existing button, no size/layout change. */
-export function RippleLink({ href, className, children, target, rel }: RippleLinkProps) {
+export function RippleLink({ href, className, children, target, rel, style }: RippleLinkProps) {
   const reduceMotion = useReducedMotion();
   const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
 
@@ -29,7 +30,7 @@ export function RippleLink({ href, className, children, target, rel }: RippleLin
   }
 
   return (
-    <Link href={href} target={target} rel={rel} className={cn("relative overflow-hidden", className)} onPointerDown={handlePointerDown}>
+    <Link href={href} target={target} rel={rel} style={style} className={cn("relative overflow-hidden", className)} onPointerDown={handlePointerDown}>
       {children}
       <AnimatePresence>
         {ripples.map((r) => (

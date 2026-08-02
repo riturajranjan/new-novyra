@@ -89,7 +89,7 @@ function CenterPanel({ id, item, label, description, solutions, solutionsLabel, 
           </div>
 
           <Link
-            href="/services"
+            href="/#services"
             className="mt-3 inline-flex items-center gap-1.5 text-caption font-semibold"
             style={{ color: item.color }}
           >

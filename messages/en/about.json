@@ -40,7 +40,7 @@
     ],
     "tiles": {
       "strategy": { "label": "Strategy", "description": "Clear direction before a single screen is designed." },
-      "product-design": { "label": "Product Design", "description": "Interfaces built to be used, not just admired." },
+      "product-design": { "label": "Product Design", "description": "Interfaces designed around how people actually use them." },
       "engineering": { "label": "Engineering", "description": "Scalable, production-grade code from day one." },
       "growth": { "label": "Growth", "description": "Systems that help businesses reach more customers." }
     }
@@ -56,7 +56,7 @@
       "label": "Vision",
       "headline": "Where We're Headed",
       "paragraph": "Become the technology partner businesses rely on to build their most important digital products.",
-      "chips": ["Scalable", "Intelligent", "Future-ready"]
+      "chips": ["Scalable", "Intelligent", "Maintainable"]
     }
   },
   "whatWeBuild": {
@@ -98,8 +98,8 @@
       "clarity": { "title": "Clarity Over Complexity", "statement": "Every product should be easy to understand and easy to use." },
       "quality": { "title": "Quality Without Excess", "statement": "We build what a product needs — nothing bloated, nothing wasted." },
       "business-value": { "title": "Business Value First", "statement": "Every feature is judged by the outcome it creates for the business." },
-      "built-to-scale": { "title": "Built to Scale", "statement": "Architecture that holds up as usage and complexity grow." },
-      "partnership": { "title": "Long-Term Partnership", "statement": "We stay involved after launch, not just until handover." }
+      "built-to-scale": { "title": "Architecture That Holds Up", "statement": "Handles real usage and complexity as a product grows past its first version." },
+      "partnership": { "title": "Long-Term Partnership", "statement": "We stay involved after launch — support doesn't end at handover." }
     }
   },
   "howWeWork": {
@@ -188,13 +188,22 @@
     "statement": "We choose technology based on product needs — not trends alone."
   },
   "founder": {
-    "eyebrow": "Built With Ownership",
+    "eyebrow": "Founder",
     "title": "Direct Collaboration. Clear Ownership. Better Outcomes.",
-    "visualLabel": "Design · Development · Strategy",
-    "paragraphs": [
-      "Every project is handled with direct communication, focused execution, and close attention to product quality.",
-      "We work with a growing network of design, development, and digital specialists based on each project's requirements."
+    "role": "Founder & Software Engineer",
+    "tagline": "Engineering Software That Scales.",
+    "bio": [
+      "I'm the founder of Novyra Technologies. I work directly with clients from discovery to deployment — no account managers, no handoffs between teams.",
+      "My focus is clean architecture, performance, accessibility, and code that's still easy to maintain a year after launch."
     ],
+    "expertise": {
+      "react-nextjs": "React & Next.js",
+      "typescript-node": "TypeScript & Node.js",
+      "saas-architecture": "SaaS Architecture",
+      "ai-integrations": "AI Integrations",
+      "performance": "Performance Optimization",
+      "accessibility": "Accessibility"
+    },
     "commitments": {
       "direct-communication": "Direct Communication",
       "focused-delivery": "Focused Delivery",

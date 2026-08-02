@@ -141,7 +141,7 @@ export function SolutionAdvisor() {
   }
 
   return (
-    <section className="relative isolate py-14 md:py-20">
+    <section id="advisor" className="relative isolate scroll-mt-24 py-14 md:py-20">
       <AdvisorCanvasBackground />
 
       <Container className="flex flex-col items-center gap-5">

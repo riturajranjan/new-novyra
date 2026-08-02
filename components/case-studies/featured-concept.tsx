@@ -82,7 +82,14 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
             </ul>
           </div>
 
-          <div className="border-border-subtle flex flex-wrap items-center gap-4 border-t pt-4">
+          <div className="border-border-subtle flex flex-col gap-1.5 border-t pt-4">
+            <p className="text-caption font-semibold tracking-wide uppercase" style={{ color: stroke }}>
+              {tCard("demonstrates")}
+            </p>
+            <p className="text-body-sm text-foreground-secondary">{tBuild("demonstrates")}</p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4">
             <div className="flex flex-wrap gap-1.5">
               {build.techStack.map((tech) => (
                 <span key={tech} className="border-border-subtle text-caption text-foreground-secondary rounded-full border px-2.5 py-1">
@@ -96,11 +103,11 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group flex-1")}>
+            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group flex-1")}>
               {tCard("startSimilarProject")}
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
             </RippleLink>
-            <RippleLink href="/services" className={cn(buttonVariants({ variant: "outline", size: "md" }), "flex-1")}>
+            <RippleLink href="/#services" className={cn(buttonVariants({ variant: "outline", size: "md" }), "flex-1")}>
               {tCard("seeFullApproach")}
             </RippleLink>
           </div>

@@ -1,9 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Award,
-  GraduationCap,
   Globe,
-  HeartPulse,
   LayoutDashboard,
   LineChart,
   Lightbulb,
@@ -18,7 +16,6 @@ import {
   Target,
   TrendingUp,
   UserCog,
-  Users,
   Workflow,
 } from "lucide-react";
 
@@ -48,13 +45,16 @@ export interface AdvisorOption extends AdvisorOptionMeta {
 
 /** Step 1 — what the visitor wants to build. Every option maps back to one
  * of Novyra's five real service lines, never an invented offering. */
+/** Five entry points mapping to Novyra's real service lines — not eight,
+ * since three of the original eight (Hospital Platform, School ERP, CRM
+ * System) were industry-specific dressings of the same underlying service
+ * (saas-development) presented as if they were separate off-the-shelf
+ * products. They're still reachable as industry examples inside the SaaS
+ * Product recommendation itself, just not as competing top-level buttons. */
 export const needOptions: AdvisorOptionMeta[] = [
   { id: "business-website", icon: Globe },
   { id: "ecommerce", icon: ShoppingCart },
-  { id: "hospital-software", icon: HeartPulse },
-  { id: "school-erp", icon: GraduationCap },
   { id: "saas-product", icon: LayoutDashboard },
-  { id: "crm", icon: Users },
   { id: "branding", icon: Palette },
   { id: "digital-marketing", icon: Megaphone },
 ];
@@ -147,44 +147,6 @@ const recommendations: Record<string, NeedRecommendation> = {
     },
     timelineUnit: "weeks",
   },
-  "hospital-software": {
-    serviceId: "saas-development",
-    roadmap: [
-      "workflow-data-planning",
-      "platform-ux-design",
-      "core-records-development",
-      "scheduling-roles-setup",
-      "reporting-dashboards",
-      "launch-support",
-    ],
-    timelineByStage: {
-      idea: "8–9",
-      starting: "8–10",
-      growing: "10–12",
-      scaling: "12–16",
-      established: "14–20",
-    },
-    timelineUnit: "weeks",
-  },
-  "school-erp": {
-    serviceId: "saas-development",
-    roadmap: [
-      "workflow-data-planning",
-      "platform-ux-design",
-      "core-records-development",
-      "portal-roles-setup",
-      "reporting-dashboards",
-      "launch-support",
-    ],
-    timelineByStage: {
-      idea: "8–9",
-      starting: "8–10",
-      growing: "10–12",
-      scaling: "12–15",
-      established: "13–18",
-    },
-    timelineUnit: "weeks",
-  },
   "saas-product": {
     serviceId: "saas-development",
     roadmap: [
@@ -201,25 +163,6 @@ const recommendations: Record<string, NeedRecommendation> = {
       growing: "9–11",
       scaling: "11–14",
       established: "12–16",
-    },
-    timelineUnit: "weeks",
-  },
-  crm: {
-    serviceId: "saas-development",
-    roadmap: [
-      "workflow-pipeline-planning",
-      "crm-ux-design",
-      "core-records-development",
-      "pipeline-roles-setup",
-      "reporting-dashboards",
-      "launch-support",
-    ],
-    timelineByStage: {
-      idea: "6–7",
-      starting: "6–8",
-      growing: "8–10",
-      scaling: "10–13",
-      established: "11–15",
     },
     timelineUnit: "weeks",
   },
@@ -269,20 +212,11 @@ const ROADMAP_PHASE_STATUS: Record<string, RoadmapStatusCategory> = {
   "nextjs-storefront-build": "development",
   "payments-checkout": "setup",
   "order-management-setup": "setup",
-  "workflow-data-planning": "planning",
-  "platform-ux-design": "design",
-  "core-records-development": "development",
-  "scheduling-roles-setup": "setup",
-  "reporting-dashboards": "development",
-  "portal-roles-setup": "setup",
   "product-architecture-planning": "planning",
   "core-platform-ux-design": "design",
   "multi-tenant-development": "development",
   "billing-onboarding-setup": "setup",
   "admin-dashboards": "development",
-  "workflow-pipeline-planning": "planning",
-  "crm-ux-design": "design",
-  "pipeline-roles-setup": "setup",
   "brand-discovery": "planning",
   "logo-identity-design": "design",
   "brand-guidelines": "design",

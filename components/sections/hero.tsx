@@ -18,7 +18,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { HeroBackground } from "@/components/hero/hero-background";
 import { HeroBadge } from "@/components/hero/hero-badge";
 import { HeroTrustSection } from "@/components/hero/hero-trust-section";
-import { HeroImageShowcase } from "@/components/hero/hero-image-showcase";
+import { HeroWorkflowVisual } from "@/components/hero/hero-workflow-visual";
 import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP);
@@ -173,7 +173,7 @@ export function Hero() {
             <div className="w-full min-[430px]:w-auto">
               <Magnetic className="w-full min-[430px]:w-auto">
                 <RippleLink
-                  href="/contact"
+                  href="/#contact"
                   className={cn(
                     buttonVariants({ variant: "gradient", size: "lg" }),
                     "group min-h-13 w-full min-w-0 transition-[transform,box-shadow] duration-base ease-soft hover:scale-[1.015] hover:shadow-[0_14px_32px_-10px_rgba(99,102,241,0.5)] min-[430px]:w-auto min-[430px]:min-w-52.5",
@@ -189,7 +189,7 @@ export function Hero() {
             <div className="w-full min-[430px]:w-auto">
               <Magnetic className="w-full min-[430px]:w-auto">
                 <RippleLink
-                  href="/services"
+                  href="/#process"
                   className={cn(
                     buttonVariants({ variant: "glass", size: "lg" }),
                     "group min-h-13 w-full min-w-0 transition-[transform,box-shadow] duration-base ease-soft hover:scale-[1.015] hover:shadow-card-hover min-[430px]:w-auto min-[430px]:min-w-55",
@@ -210,7 +210,7 @@ export function Hero() {
         <div
           data-hero-image
           className="w-full hidden md:flex lg:justify-self-end xl:-translate-x-4">
-          <HeroImageShowcase />
+          <HeroWorkflowVisual />
         </div>
       </Container>
     </section>

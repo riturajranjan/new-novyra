@@ -1,39 +1,35 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { buttonVariants } from "@/components/ui/button";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { CaseStudiesBackground } from "@/components/case-studies/case-studies-background";
-import { FilterBar } from "@/components/case-studies/filter-bar";
 import { FeaturedConcept } from "@/components/case-studies/featured-concept";
 import { ConceptCard } from "@/components/case-studies/concept-card";
-import { conceptBuilds, processStepIds, techStackBadges, type CaseStudyFilter } from "@/content/case-studies";
+import { conceptBuilds, homepageConceptIds, processStepIds, techStackBadges } from "@/content/case-studies";
 import { easePremium } from "@/lib/motion";
 import { cn } from "@/lib/utils";
+
+const [featuredId, ...restIds] = homepageConceptIds;
+const featuredBuild = conceptBuilds.find((build) => build.id === featuredId)!;
+const restBuilds = restIds.map((id) => conceptBuilds.find((build) => build.id === id)!);
 
 /** "Case Studies" — reframed honestly as a concept showcase. Novyra is a
  * new studio without completed client engagements to cite yet, so every
  * build here is explicitly labeled a concept exploration: no invented
  * client names, no fabricated outcome percentages, no fake testimonial.
- * The premium interaction design (filters, featured hero, bento grid,
- * process timeline) stands on its own without needing false claims. */
+ * The homepage shows three fixed picks (no category filter — with only
+ * three items on screen, filtering by industry has nothing useful to do);
+ * the full six, filterable, live on the dedicated /work page. */
 export function CaseStudies() {
   const t = useTranslations("caseStudies");
-  const [filter, setFilter] = useState<CaseStudyFilter>("All");
-
-  const filtered = useMemo(
-    () => (filter === "All" ? conceptBuilds : conceptBuilds.filter((build) => build.category === filter)),
-    [filter],
-  );
-  const [featured, ...rest] = filtered.length > 0 ? filtered : conceptBuilds;
 
   return (
-    <section id="case-studies" className="relative isolate overflow-hidden py-14 md:py-20">
+    <section id="work" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-20">
       <CaseStudiesBackground />
 
       <Container className="flex flex-col gap-10 md:gap-14">
@@ -48,19 +44,9 @@ export function CaseStudies() {
           description={t("section.description")}
         />
 
-        <FilterBar active={filter} onSelect={setFilter} />
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={featured.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <FeaturedConcept build={featured} />
-          </motion.div>
-        </AnimatePresence>
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "150px" }} transition={{ duration: 0.3 }}>
+          <FeaturedConcept build={featuredBuild} />
+        </motion.div>
 
         {/* process timeline */}
         <div className="flex flex-col items-center gap-6">
@@ -106,14 +92,20 @@ export function CaseStudies() {
           ))}
         </div>
 
-        {/* more concepts bento grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {rest.map((build, i) => (
-              <ConceptCard key={build.id} build={build} index={i} wide={i === 0} />
-            ))}
-          </AnimatePresence>
+        {/* two more concepts */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {restBuilds.map((build, i) => (
+            <ConceptCard key={build.id} build={build} index={i} />
+          ))}
         </div>
+
+        <RippleLink
+          href="/work"
+          className="text-body-sm border-border-subtle hover:border-brand-blue/40 mx-auto inline-flex items-center gap-1.5 rounded-pill border px-5 py-2.5 font-semibold text-foreground transition-colors duration-fast"
+        >
+          {t("viewAll")}
+          <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+        </RippleLink>
 
         {/* CTA */}
         <div className="glass-strong shadow-card relative flex flex-col items-center gap-6 overflow-hidden rounded-hero p-8 text-center sm:flex-row sm:justify-between sm:p-10 sm:text-left">
@@ -127,7 +119,7 @@ export function CaseStudies() {
           </div>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <RippleLink
-              href="/contact"
+              href="/#contact"
               className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
             >
               <span
@@ -137,7 +129,7 @@ export function CaseStudies() {
               {t("cta.bookConsultation")}
               <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
             </RippleLink>
-            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
+            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
               {t("cta.requestQuote")}
             </RippleLink>
           </div>

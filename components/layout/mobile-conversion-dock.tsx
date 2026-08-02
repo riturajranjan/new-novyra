@@ -75,7 +75,7 @@ export function MobileConversionDock() {
             right: 16,
           }}
         >
-          <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "min-w-0 flex-1")}>
+          <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "min-w-0 flex-1")}>
             <Calendar className="h-4 w-4 shrink-0" aria-hidden />
             <span className="truncate">{t("bookACall")}</span>
           </RippleLink>

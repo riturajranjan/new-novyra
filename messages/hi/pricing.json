@@ -105,7 +105,8 @@
     "oneTimePayment": "एकमुश्त भुगतान",
     "noHiddenCharges": "कोई छिपा शुल्क नहीं",
     "billedMonthly": "मासिक बिलिंग",
-    "cancelAnytime": "कभी भी रद्द करें"
+    "cancelAnytime": "कभी भी रद्द करें",
+    "finalPricingScope": "अंतिम कीमत लिखित स्कोप के अनुसार तय होती है।"
   },
   "spotlightTrust": {
     "freeConsultation": "निःशुल्क परामर्श"

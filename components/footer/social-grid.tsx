@@ -2,7 +2,6 @@
 
 import { useRef, type PointerEvent } from "react";
 import { motion, useMotionTemplate, useMotionValue, useReducedMotion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import { socialGlyphs } from "@/components/footer/social-icons";
 import { socialLinks } from "@/content/footer";
 import { easePremium } from "@/lib/motion";
@@ -72,17 +71,10 @@ function SocialCard({ link, index, label }: { link: (typeof socialLinks)[number]
  * edge on hover, and a disabled treatment for the one platform that isn't
  * live yet. */
 export function SocialGrid() {
-  const t = useTranslations("footer.social");
-
   return (
     <div className={cn("flex flex-wrap items-center justify-center gap-2")}>
       {socialLinks.map((link, i) => (
-        <SocialCard
-          key={link.id}
-          link={link}
-          index={i}
-          label={link.id === "youtube" ? t("youtubeComingSoon") : socialNames[link.id]}
-        />
+        <SocialCard key={link.id} link={link} index={i} label={socialNames[link.id]} />
       ))}
     </div>
   );

@@ -27,6 +27,9 @@ const namespaces = [
   "leadPopup",
   "about",
   "mobileCta",
+  "legal",
+  "coreServices",
+  "work",
 ] as const;
 
 async function loadMessages(locale: string) {

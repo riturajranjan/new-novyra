@@ -27,7 +27,7 @@ export function ServiceCta() {
 
       <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
         <RippleLink
-          href="/contact"
+          href="/#contact"
           className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
         >
           <span
@@ -37,7 +37,7 @@ export function ServiceCta() {
           {t("finalCta.primaryCta")}
           <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
         </RippleLink>
-        <RippleLink href="/contact" className={cn(buttonVariants({ variant: "glass", size: "lg" }), "w-full sm:w-auto")}>
+        <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "glass", size: "lg" }), "w-full sm:w-auto")}>
           <MessageCircle className="h-4 w-4" aria-hidden />
           {t("finalCta.secondaryCta")}
         </RippleLink>

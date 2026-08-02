@@ -6,31 +6,34 @@
     "children": {
       "aboutUs": { "label": "About Us", "description": "Who we are." },
       "mission": { "label": "Mission & Vision", "description": "What drives us." },
-      "whyChooseUs": { "label": "Why Choose Us", "description": "Why businesses trust Novyra." },
+      "whyChooseUs": { "label": "Why Choose Us", "description": "How we work." },
       "faq": { "label": "FAQ", "description": "Quick answers." }
     }
   },
   "services": {
     "label": "Services",
-    "helper": "Explore what we build.",
-    "exploreAll": "Explore All Services",
+    "helper": "What we build and improve.",
+    "exploreAll": "Explore Services",
     "getRecommendation": "Get a Recommendation",
+    "groups": {
+      "build": "Build",
+      "improve": "Improve"
+    },
     "children": {
-      "webDesign": { "label": "Web Design & Development", "description": "Premium business websites." },
-      "digitalMarketing": { "label": "Digital Marketing", "description": "SEO, ads, and growth." },
-      "webApplications": { "label": "Web Applications", "description": "Custom scalable platforms." },
-      "graphicDesign": { "label": "Graphic & Logo Design", "description": "Brand identity and visuals." },
-      "saasDevelopment": { "label": "SaaS Development", "description": "Cloud products built to scale." }
+      "websites": { "label": "Business Websites", "description": "Websites and digital experiences." },
+      "webApplications": { "label": "Web Applications", "description": "Custom operational platforms." },
+      "saasProducts": { "label": "SaaS Products", "description": "Multi-tenant subscription software." },
+      "automationAi": { "label": "Automation & AI", "description": "Reduce repetitive manual work." },
+      "digitalGrowth": { "label": "Digital Growth", "description": "SEO, campaigns, and reporting." },
+      "brandDesign": { "label": "Brand Design", "description": "Logo, type, and visual identity." }
     }
   },
   "recommendationCard": {
     "title": "Need help choosing?",
     "body": "Tell us what you're building and we'll recommend the right service."
   },
-  "solutions": { "label": "Solutions" },
-  "products": { "label": "Products" },
+  "work": { "label": "Work" },
+  "process": { "label": "Process" },
   "pricing": { "label": "Pricing" },
-  "blog": { "label": "Blog" },
-  "clients": { "label": "Clients" },
-  "contact": { "label": "Contact Us" }
+  "contact": { "label": "Contact" }
 }

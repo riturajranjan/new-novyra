@@ -73,6 +73,12 @@ export const conceptBuilds: ConceptBuild[] = [
   },
 ];
 
+/** The three shown on the homepage teaser (see components/sections/case-
+ * studies.tsx) — matching the brief's "Healthcare Operations, Education
+ * Management, SaaS Administration" set. The full six, including these
+ * three, live on the dedicated /work page (app/[locale]/work/page.tsx). */
+export const homepageConceptIds = ["hospital-platform", "school-erp", "ai-saas-dashboard"] as const;
+
 /** Structural ids only — labels live in messages/{locale}/caseStudies.json
  * under `processSteps`, keyed by `id`. The generic delivery process every
  * concept (and every real project) would move through — not a specific

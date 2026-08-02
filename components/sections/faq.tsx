@@ -36,7 +36,7 @@ export function Faq() {
   }, [query, category, t]);
 
   return (
-    <section id="faq" className="relative isolate py-14 md:py-20">
+    <section id="faq" className="relative isolate scroll-mt-24 py-14 md:py-20">
       <FaqBackground />
 
       <Container className="flex flex-col gap-10 md:gap-14">

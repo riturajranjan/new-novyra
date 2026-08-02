@@ -33,7 +33,7 @@
     },
     "performance": {
       "title": "95+ Lighthouse Target",
-      "description": "A performance budget the team designs and builds against, not an afterthought.",
+      "description": "A performance budget the team designs and builds against from day one.",
       "bullets": ["Optimised images and lazy loading", "Minimal JavaScript payloads", "Edge-ready hosting on Vercel"],
       "metricLabel": "Performance Target",
       "metricValue": "95+"
@@ -57,20 +57,22 @@
     },
     "post-launch": {
       "title": "Post-Launch Support",
-      "description": "Launch day isn't the finish line — the team that built it stays on to support it.",
+      "description": "Support continues after launch — the same team that built it stays on.",
       "bullets": ["Monitoring and bug fixes after launch", "Guidance from the team that built it, not a new one"]
     }
   },
   "trustedTechnologies": {
     "eyebrow": "Trusted Technologies",
     "heading": "Powered by Modern Technologies",
-    "description": "We choose technologies for what they deliver — speed, security, and code that's easy to maintain."
+    "description": "We choose technologies for what they deliver — speed, security, and code that's easy to maintain.",
+    "stackReason": "We choose the stack based on maintainability, deployment needs, team ownership, and expected scale — not on what's trending."
   },
   "techCategories": {
     "frontend": { "label": "Frontend", "reason": "For fast, accessible interfaces users enjoy using." },
     "backend": { "label": "Backend", "reason": "For APIs that stay reliable under real load." },
     "database": { "label": "Database", "reason": "For data that stays consistent as you scale." },
-    "cloud-devops": { "label": "Cloud & DevOps", "reason": "For deployments that ship without downtime." }
+    "cloud-devops": { "label": "Cloud & DevOps", "reason": "For deployments that ship without downtime." },
+    "ai": { "label": "AI", "reason": "For features that assist, automate, and stay grounded in real data." }
   },
   "featureStrip": {
     "full-stack-engineering": { "label": "Full-Stack Engineering", "detail": "Every skill under one roof" },
@@ -79,7 +81,6 @@
     "long-term-partnership": { "label": "Long-Term Partnership", "detail": "Support after launch" }
   },
   "trustMetrics": {
-    "modern-technologies": { "label": "Modern Technologies", "value": "19" },
     "engineering-disciplines": { "label": "Engineering Disciplines", "value": "4" },
     "lighthouse-target": { "label": "Lighthouse Target", "value": "95+" },
     "typescript-codebase": { "label": "TypeScript Codebase", "value": "100%" }

@@ -2,20 +2,20 @@
   "badge": {
     "items": {
       "websites": "Websites",
-      "saas": "SaaS",
-      "ai": "AI",
-      "growth": "Growth"
+      "webApps": "Web Apps",
+      "automation": "Automation",
+      "ai": "AI"
     }
   },
   "headline": {
-    "before": "Engineering",
-    "highlight": "Software",
-    "after": "That Scales."
+    "before": "Software built around",
+    "highlight": "how your business",
+    "after": "works."
   },
-  "description": "We design and build the software businesses run on — modern websites, platforms, and applications engineered to scale.",
+  "description": "Novyra designs and builds business websites, custom applications, SaaS products, and automation systems — from first scope to production launch.",
   "cta": {
     "primary": "Start a Project",
-    "secondary": "Explore Services"
+    "secondary": "See How We Work"
   },
   "trust": {
     "items": {
@@ -25,5 +25,14 @@
       "productionReady": "Production Ready"
     }
   },
-  "imageAlt": "Preview of a Novyra-built product dashboard, showing growth analytics, an AI assistant, and project progress"
+  "workflow": {
+    "label": "How a project moves",
+    "stages": {
+      "scope": { "label": "Scope", "detail": "What you need, written down" },
+      "design": { "label": "Design", "detail": "Interfaces before code" },
+      "build": { "label": "Build", "detail": "Engineered, not assembled" },
+      "test": { "label": "Test", "detail": "Checked before it ships" },
+      "launch": { "label": "Launch", "detail": "Live, with support after" }
+    }
+  }
 }

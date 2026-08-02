@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { companyInfo } from "@/content/footer";
@@ -47,6 +47,14 @@ export function CompanyInfoCard() {
           className="text-body-sm text-foreground-secondary hover:text-foreground flex items-center gap-2 transition-colors duration-fast">
           <Phone className="text-brand-blue h-3.5 w-3.5 shrink-0" aria-hidden />
           {companyInfo.phone}
+        </a>
+        <a
+          href={companyInfo.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-body-sm text-foreground-secondary hover:text-foreground flex items-center gap-2 transition-colors duration-fast">
+          <MessageCircle className="text-brand-blue h-3.5 w-3.5 shrink-0" aria-hidden />
+          {t("whatsapp")}
         </a>
         <div className="text-body-sm text-foreground-secondary flex items-center gap-2">
           <MapPin

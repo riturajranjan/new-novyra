@@ -1,7 +1,7 @@
 {
   "hero": {
-    "heading": "Let's Build The Future Together.",
-    "description": "Whether you're launching your first website, building an enterprise platform, or creating an AI-powered product, Novyra Technologies is ready to help you build something exceptional."
+    "heading": "Have a project in mind?",
+    "description": "Tell us what you're building. We'll reply with next steps, not a sales pitch."
   },
   "ctas": {
     "bookConsultation": "Book Free Consultation",
@@ -9,78 +9,47 @@
     "whatsapp": "WhatsApp"
   },
   "companyInfo": {
-    "description": "Building premium digital products for ambitious businesses worldwide.",
-    "location": "India"
+    "description": "An engineering-led studio building websites, applications, and automation for growing businesses.",
+    "location": "India",
+    "whatsapp": "WhatsApp"
   },
   "columns": {
     "company": {
       "title": "Company",
       "links": {
         "about": "About",
-        "solutions": "Solutions",
-        "caseStudies": "Case Studies",
-        "pricing": "Pricing",
-        "blog": "Blog",
-        "contact": "Contact",
-        "careers": "Careers (Coming Soon)"
+        "process": "Process",
+        "work": "Work",
+        "contact": "Contact"
       }
     },
     "services": {
       "title": "Services",
       "links": {
-        "businessWebsites": "Business Websites",
-        "webApplications": "Custom Web Applications",
-        "saasDevelopment": "SaaS Development",
-        "aiDevelopment": "AI Development",
-        "healthcareSolutions": "Healthcare Solutions",
-        "schoolErp": "School ERP",
-        "hospitalErp": "Hospital ERP",
-        "crmSystems": "CRM Systems",
-        "digitalMarketing": "Digital Marketing",
-        "uiUxDesign": "UI/UX Design",
-        "seoOptimization": "SEO Optimization",
-        "websiteRedesign": "Website Redesign"
+        "websites": "Websites",
+        "webApplications": "Applications",
+        "saasProducts": "SaaS",
+        "automationAi": "Automation",
+        "digitalGrowth": "Digital Growth",
+        "brandDesign": "Brand Design"
       }
     },
     "resources": {
       "title": "Resources",
       "links": {
+        "pricing": "Pricing",
         "faq": "FAQ",
-        "projectProcess": "Project Process",
-        "technologyStack": "Technology Stack",
         "privacyPolicy": "Privacy Policy",
-        "termsConditions": "Terms & Conditions",
-        "cookiePolicy": "Cookie Policy",
-        "freeConsultation": "Free Consultation",
-        "websiteAudit": "Website Audit",
-        "roadmapPlanner": "Roadmap Planner"
+        "termsConditions": "Terms"
       }
     }
-  },
-  "techStack": {
-    "heading": "The Stack Behind Every Build"
-  },
-  "newsletter": {
-    "heading": "Stay Updated",
-    "description": "Receive occasional product updates.",
-    "emailPlaceholder": "you@company.com",
-    "emailAriaLabel": "Email address",
-    "subscribe": "Subscribe",
-    "successMessage": "You're subscribed — welcome aboard.",
-    "errorMessage": "Enter a valid email address."
-  },
-  "social": {
-    "youtubeComingSoon": "YouTube (Coming Soon)"
   },
   "bottom": {
     "copyright": "© 2026 Novyra Technologies. All Rights Reserved.",
     "legalNavLabel": "Legal",
     "legal": {
       "privacyPolicy": "Privacy Policy",
-      "terms": "Terms",
-      "cookies": "Cookies",
-      "accessibility": "Accessibility",
-      "sitemap": "Sitemap"
+      "terms": "Terms"
     }
   }
 }

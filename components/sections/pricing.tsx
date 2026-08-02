@@ -64,7 +64,7 @@ export function Pricing() {
   const mounted = useIsMounted();
 
   return (
-    <section id="pricing" className="relative isolate overflow-hidden py-14 md:py-20">
+    <section id="pricing" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-20">
       <PricingBackground />
 
       <Container className="flex flex-col gap-6 md:gap-7">
@@ -174,7 +174,7 @@ export function Pricing() {
           <div className="flex w-full flex-col items-center gap-3 sm:w-auto sm:items-end">
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <RippleLink
-                href="/contact"
+                href="/#contact"
                 className={cn(
                   buttonVariants({ variant: "gradient", size: "lg" }),
                   "group relative w-full overflow-hidden sm:w-auto",
@@ -190,7 +190,7 @@ export function Pricing() {
                 />
               </RippleLink>
               <RippleLink
-                href="/contact"
+                href="/#contact"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                   "group w-full sm:w-auto",

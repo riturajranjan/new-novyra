@@ -1,8 +1,8 @@
 import type { LucideIcon } from "lucide-react";
-import { Code, Code2, Compass, LayoutDashboard, LayoutTemplate, LifeBuoy, Megaphone, Palette, Rocket } from "lucide-react";
+import { Code, Code2, Compass, LayoutDashboard, LayoutTemplate, LifeBuoy, Megaphone, Palette, Rocket, Sparkles } from "lucide-react";
 import type { AccentColor } from "@/content/hero-screens";
 
-export type ServiceVisual = "website" | "development" | "saas" | "marketing" | "design";
+export type ServiceVisual = "website" | "development" | "saas" | "automation" | "marketing" | "design";
 
 export interface ServiceCta {
   href: string;
@@ -33,7 +33,7 @@ export const serviceCategories: ServiceCategory[] = [
     accent: "blue",
     technologies: ["Figma", "Next.js", "Tailwind CSS", "Framer Motion"],
     visual: "website",
-    cta: { href: "/portfolio" },
+    cta: { href: "/#contact" },
   },
   {
     id: "web-development",
@@ -41,7 +41,7 @@ export const serviceCategories: ServiceCategory[] = [
     accent: "cyan",
     technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
     visual: "development",
-    cta: { href: "/services" },
+    cta: { href: "/#contact" },
   },
   {
     id: "saas-development",
@@ -49,7 +49,15 @@ export const serviceCategories: ServiceCategory[] = [
     accent: "purple",
     technologies: ["Next.js", "Node.js", "PostgreSQL", "REST/GraphQL APIs"],
     visual: "saas",
-    cta: { href: "/contact" },
+    cta: { href: "/#contact" },
+  },
+  {
+    id: "automation-ai",
+    icon: Sparkles,
+    accent: "amber",
+    technologies: ["OpenAI", "Vercel AI SDK", "Node.js", "Webhooks"],
+    visual: "automation",
+    cta: { href: "/#contact" },
   },
   {
     id: "digital-marketing",
@@ -57,7 +65,7 @@ export const serviceCategories: ServiceCategory[] = [
     accent: "pink",
     technologies: ["Google Ads", "Meta Ads Manager", "SEO Tooling", "Analytics"],
     visual: "marketing",
-    cta: { href: "/contact" },
+    cta: { href: "/#contact" },
   },
   {
     id: "graphic-design",
@@ -65,7 +73,7 @@ export const serviceCategories: ServiceCategory[] = [
     accent: "emerald",
     technologies: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
     visual: "design",
-    cta: { href: "/portfolio" },
+    cta: { href: "/#contact" },
   },
 ];
 

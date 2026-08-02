@@ -105,7 +105,8 @@
     "oneTimePayment": "One-time payment",
     "noHiddenCharges": "No hidden charges",
     "billedMonthly": "Billed monthly",
-    "cancelAnytime": "Cancel anytime"
+    "cancelAnytime": "Cancel anytime",
+    "finalPricingScope": "Final pricing follows written scope."
   },
   "spotlightTrust": {
     "freeConsultation": "Free consultation"

@@ -11,9 +11,9 @@ export interface HeroBadgeItem {
  * text lives in messages/{locale}/hero.json under `badge.items.<id>`. */
 export const heroBadgeItems: HeroBadgeItem[] = [
   { id: "websites", accent: "blue" },
-  { id: "saas", accent: "purple" },
+  { id: "webApps", accent: "purple" },
+  { id: "automation", accent: "cyan" },
   { id: "ai", accent: "pink" },
-  { id: "growth", accent: "cyan" },
 ];
 
 export interface HeroTrustItem {

@@ -51,7 +51,7 @@ export function ServicesShowcase() {
   }, [previewInView]);
 
   return (
-    <section className="relative isolate overflow-hidden py-14 md:py-20">
+    <section id="services" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-20">
       <ServicesBackground />
 
       <Container className="flex flex-col gap-8 md:gap-10">
@@ -99,7 +99,7 @@ export function ServicesShowcase() {
                     </span>
                   </div>
                   <RippleLink
-                    href="/contact"
+                    href="/#contact"
                     className={cn(buttonVariants({ variant: "gradient", size: "md" }), "shrink-0")}
                   >
                     {t("finalCta.primaryCta")}

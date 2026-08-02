@@ -24,17 +24,14 @@
   "needOptions": {
     "business-website": { "label": "Business Website", "description": "Build trust and generate inquiries", "badge": "Popular Choice", "timeline": "2–4 Weeks" },
     "ecommerce": { "label": "eCommerce Store", "description": "Sell products online", "badge": "Fast Launch", "timeline": "4–6 Weeks" },
-    "hospital-software": { "label": "Hospital Platform", "description": "Digitise healthcare operations", "badge": "Enterprise Ready", "timeline": "8–10 Weeks" },
-    "school-erp": { "label": "School ERP", "description": "Manage academics and administration", "badge": "Enterprise Ready", "timeline": "8–10 Weeks" },
-    "saas-product": { "label": "SaaS Product", "description": "Launch a scalable platform", "badge": "Scalable Platform", "timeline": "6–9 Weeks" },
-    "crm": { "label": "CRM System", "description": "Organise leads and customers", "badge": "Built for Teams", "timeline": "6–8 Weeks" },
+    "saas-product": { "label": "SaaS Product", "description": "A scalable platform — hospital, school, CRM, or your own", "badge": "Scalable Platform", "timeline": "6–9 Weeks" },
     "branding": { "label": "Brand Identity", "description": "Create a professional visual system", "badge": "Fast Launch", "timeline": "2–3 Weeks" },
     "digital-marketing": { "label": "Digital Marketing", "description": "Build visibility and generate leads", "badge": "Popular Choice", "timeline": "3–4 Weeks" }
   },
   "goalOptions": {
     "generate-leads": { "label": "Generate More Leads", "description": "Turn visitors into enquiries", "badge": "Fast Growth", "timeline": "2–4 Weeks" },
     "sell-online": { "label": "Sell Online", "description": "Open a direct online sales channel", "badge": "Popular", "timeline": "4–6 Weeks" },
-    "automate-operations": { "label": "Automate Operations", "description": "Remove manual, repetitive work", "badge": "AI Recommended", "timeline": "6–8 Weeks" },
+    "automate-operations": { "label": "Automate Operations", "description": "Remove manual, repetitive work", "badge": "Popular Choice", "timeline": "6–8 Weeks" },
     "launch-mvp": { "label": "Launch an MVP", "description": "Prove the concept with the smallest scope", "badge": "Quick Launch", "timeline": "3–5 Weeks" },
     "improve-brand": { "label": "Improve Brand Presence", "description": "Build a consistent, recognisable identity", "badge": "Enterprise", "timeline": "2–3 Weeks" },
     "manage-customers": { "label": "Manage Customers", "description": "Keep every lead and client organised", "badge": "High ROI", "timeline": "6–8 Weeks" },
@@ -61,29 +58,11 @@
       "technology": ["Next.js", "Stripe", "Headless commerce backend"],
       "deliverables": ["Product catalog & search", "Cart & checkout flow", "Payment integration", "Order management dashboard", "Mobile-optimised storefront", "Analytics setup"]
     },
-    "hospital-software": {
-      "service": "Hospital Platform Package",
-      "insight": "Healthcare platforms succeed on clarity — clean records, fast scheduling, and access that matches each role.",
-      "technology": ["Next.js", "Node.js", "PostgreSQL"],
-      "deliverables": ["Patient records module", "Appointment scheduling", "Staff & admin dashboards", "Role-based access control", "Reporting views", "Deployment & support"]
-    },
-    "school-erp": {
-      "service": "School ERP Package",
-      "insight": "A good school platform gives every group — admin, teachers, parents — exactly the view they need, nothing more.",
-      "technology": ["Next.js", "Node.js", "PostgreSQL"],
-      "deliverables": ["Student & attendance management", "Fee & admin dashboard", "Parent-teacher portal", "Role-based access control", "Reporting views", "Deployment & support"]
-    },
     "saas-product": {
       "service": "SaaS Launch Package",
-      "insight": "Launching a platform is about proving the core loop first, then layering in billing and scale once it's working.",
+      "insight": "Launching a platform is about proving the core loop first, then layering in billing and scale once it's working — the same pattern whether it's a hospital, school, CRM, or your own product.",
       "technology": ["Next.js", "Node.js", "PostgreSQL", "Stripe billing"],
-      "deliverables": ["Multi-tenant architecture", "Subscription billing", "Admin & user dashboards", "API layer", "Onboarding flow", "Deployment & support"]
-    },
-    "crm": {
-      "service": "CRM Platform Package",
-      "insight": "A CRM only earns its keep if the team actually uses it — so this build centers a clean, searchable customer record.",
-      "technology": ["Next.js", "Node.js", "PostgreSQL"],
-      "deliverables": ["Contact & pipeline management", "Sales dashboard", "Role-based access control", "Reporting views", "Notifications & reminders", "Deployment & support"]
+      "deliverables": ["Multi-tenant architecture", "Role-based dashboards", "Subscription billing", "API layer", "Onboarding flow", "Deployment & support"]
     },
     "branding": {
       "service": "Brand Identity Package",
@@ -120,20 +99,11 @@
     "nextjs-storefront-build": { "title": "Next.js Storefront Build", "description": "Build the storefront on a fast, modern, production-grade stack." },
     "payments-checkout": { "title": "Payments and Checkout", "description": "Integrate secure payments and a frictionless checkout flow." },
     "order-management-setup": { "title": "Order Management Setup", "description": "Set up order tracking and fulfilment for the storefront." },
-    "workflow-data-planning": { "title": "Workflow and Data Planning", "description": "Map the core workflows and the data model the platform runs on." },
-    "platform-ux-design": { "title": "Platform UX Design", "description": "Design an interface tailored to how each role actually works." },
-    "core-records-development": { "title": "Core Records Development", "description": "Build the core records system the whole platform relies on." },
-    "scheduling-roles-setup": { "title": "Scheduling and Roles Setup", "description": "Configure scheduling and role-based access for every user type." },
-    "reporting-dashboards": { "title": "Reporting Dashboards", "description": "Build dashboards that turn platform data into clear reporting." },
-    "portal-roles-setup": { "title": "Portal and Roles Setup", "description": "Configure the parent-teacher portal and role-based access." },
     "product-architecture-planning": { "title": "Product and Architecture Planning", "description": "Define the product scope and the architecture it's built on." },
     "core-platform-ux-design": { "title": "Core Platform UX Design", "description": "Design the core product experience for every user role." },
     "multi-tenant-development": { "title": "Multi-tenant Development", "description": "Build the multi-tenant architecture the platform runs on." },
     "billing-onboarding-setup": { "title": "Billing and Onboarding Setup", "description": "Set up subscription billing and a smooth onboarding flow." },
     "admin-dashboards": { "title": "Admin Dashboards", "description": "Build admin dashboards for managing the platform day to day." },
-    "workflow-pipeline-planning": { "title": "Workflow and Pipeline Planning", "description": "Map the sales pipeline and the workflows around it." },
-    "crm-ux-design": { "title": "CRM UX Design", "description": "Design an interface built around a clear, searchable customer record." },
-    "pipeline-roles-setup": { "title": "Pipeline and Roles Setup", "description": "Configure the sales pipeline and role-based access controls." },
     "brand-discovery": { "title": "Brand Discovery", "description": "Understand the brand, audience, and positioning before design begins." },
     "logo-identity-design": { "title": "Logo and Identity Design", "description": "Design the logo suite and core visual identity." },
     "brand-guidelines": { "title": "Brand Guidelines", "description": "Document how the identity is used consistently everywhere." },
@@ -163,12 +133,12 @@
     "ariaLabel": "Advisor journey"
   },
   "orb": {
-    "label": "AI Advisor"
+    "label": "Solution Advisor"
   },
   "result": {
-    "badge": "AI Recommended",
+    "badge": "Recommended for You",
     "eyebrow": "Your Recommended Roadmap",
-    "description": "Based on your business goals, growth stage, and priorities, we've created a tailored implementation roadmap designed for the fastest path to success.",
+    "description": "Based on what you're building, your current stage, and your priorities, here's a starting roadmap — refined into a fixed scope after a free consultation.",
     "insightLabel": "AI Insight",
     "deliverablesLabel": "Suggested Deliverables",
     "overviewLabel": "Project Overview",

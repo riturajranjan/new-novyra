@@ -10,6 +10,7 @@ import type { AccentColor } from "@/content/hero-screens";
 import { WebsiteMockup } from "@/components/services/mockups/website-mockup";
 import { DevMockup } from "@/components/services/mockups/dev-mockup";
 import { SaasMockup } from "@/components/services/mockups/saas-mockup";
+import { AutomationMockup } from "@/components/services/mockups/automation-mockup";
 import { MarketingMockup } from "@/components/services/mockups/marketing-mockup";
 import { DesignMockup } from "@/components/services/mockups/design-mockup";
 
@@ -17,6 +18,7 @@ const visualMap: Record<ServiceVisual, (accent: AccentColor) => React.JSX.Elemen
   website: (accent) => <WebsiteMockup accent={accent} />,
   development: (accent) => <DevMockup accent={accent} />,
   saas: (accent) => <SaasMockup accent={accent} />,
+  automation: (accent) => <AutomationMockup accent={accent} />,
   marketing: (accent) => <MarketingMockup accent={accent} />,
   design: (accent) => <DesignMockup accent={accent} />,
 };

@@ -91,7 +91,7 @@ export function AboutCta() {
               <div className="relative z-10 mx-auto mt-8 grid w-full max-w-125 grid-cols-1 gap-3 sm:grid-cols-2">
                 <Magnetic className="w-full">
                   <RippleLink
-                    href="/contact"
+                    href="/#contact"
                     className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group min-h-13 w-full")}
                   >
                     {t("primary")}
@@ -103,7 +103,7 @@ export function AboutCta() {
                 </Magnetic>
                 <Magnetic className="w-full">
                   <RippleLink
-                    href="/contact"
+                    href="/#contact"
                     className={cn(buttonVariants({ variant: "glass", size: "lg" }), "min-h-13 w-full")}
                   >
                     {t("secondary")}

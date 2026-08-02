@@ -283,18 +283,44 @@ export function NavDesktop() {
                         </span>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-3">
-                        {item.children!.map((child) => (
-                          <motion.div key={child.id} variants={itemVariants}>
-                            <MenuRow
-                              leaf={child}
-                              title={t(`${item.id}.children.${child.id}.label`)}
-                              description={t(`${item.id}.children.${child.id}.description`)}
-                              onNavigate={() => setOpenKey(null)}
-                            />
-                          </motion.div>
-                        ))}
-                      </div>
+                      {isServices ? (
+                        <div className="grid grid-cols-2 gap-x-3 gap-y-4">
+                          {(["build", "improve"] as const).map((group) => (
+                            <div key={group} className="flex flex-col gap-2">
+                              <span className="px-1 text-[11px] font-semibold tracking-[0.14em] text-foreground-secondary/60 uppercase">
+                                {t(`services.groups.${group}`)}
+                              </span>
+                              <div className="flex flex-col gap-1">
+                                {item.children!
+                                  .filter((child) => child.group === group)
+                                  .map((child) => (
+                                    <motion.div key={child.id} variants={itemVariants}>
+                                      <MenuRow
+                                        leaf={child}
+                                        title={t(`${item.id}.children.${child.id}.label`)}
+                                        description={t(`${item.id}.children.${child.id}.description`)}
+                                        onNavigate={() => setOpenKey(null)}
+                                      />
+                                    </motion.div>
+                                  ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="grid grid-cols-2 gap-3">
+                          {item.children!.map((child) => (
+                            <motion.div key={child.id} variants={itemVariants}>
+                              <MenuRow
+                                leaf={child}
+                                title={t(`${item.id}.children.${child.id}.label`)}
+                                description={t(`${item.id}.children.${child.id}.description`)}
+                                onNavigate={() => setOpenKey(null)}
+                              />
+                            </motion.div>
+                          ))}
+                        </div>
+                      )}
 
                       <motion.div
                         variants={itemVariants}

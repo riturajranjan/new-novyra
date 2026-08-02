@@ -21,7 +21,7 @@ export function WhyChooseNovyra() {
   const t = useTranslations("whyChoose");
 
   return (
-    <section id="why-choose-novyra" className="relative isolate overflow-hidden py-14 md:py-20">
+    <section id="why-choose-novyra" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-20">
       <WhyChooseBackground />
 
       <Container className="flex flex-col gap-10 md:gap-16">
@@ -94,36 +94,6 @@ export function WhyChooseNovyra() {
         </div>
 
         <TrustedTechnologies />
-
-        {/* CTA */}
-        {/* <div className="glass-strong shadow-card relative flex flex-col items-center gap-5 overflow-hidden rounded-hero p-6 text-center sm:flex-row sm:justify-between sm:text-left md:gap-6 md:p-10">
-          <div
-            aria-hidden
-            className="bg-gradient-brand pointer-events-none absolute -inset-16 -z-10 rounded-full opacity-20 blur-3xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h3 className="text-title-lg text-foreground font-semibold">Ready to Build Something Amazing?</h3>
-            <p className="text-body-sm text-foreground-secondary max-w-md">
-              Tell us what you&apos;re planning, and we&apos;ll help you define the right next step.
-            </p>
-          </div>
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <RippleLink
-              href="/contact"
-              className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
-            >
-              <span
-                aria-hidden
-                className="bg-gradient-shimmer pointer-events-none absolute inset-0 -translate-x-full transition-transform duration-700 ease-out group-hover:translate-x-full"
-              />
-              Start Your Project
-              <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
-            </RippleLink>
-            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
-              Schedule a Call
-            </RippleLink>
-          </div>
-        </div> */}
       </Container>
     </section>
   );

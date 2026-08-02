@@ -1,11 +1,12 @@
 {
   "sectionHeading": {
     "eyebrow": "Our Promise",
-    "titleLine1": "No Track Record to Show Yet.",
-    "titleHighlight": "A Standard to Hold To.",
-    "description": "Novyra is a new studio, so we won't invent client stories we don't have. Here's exactly how we operate — commitments you can hold us to from the very first project."
+    "titleLine1": "New studio.",
+    "titleHighlight": "Clear standard.",
+    "description": "Novyra is a new studio. We will not invent client stories, inflated numbers, or results we cannot prove. Instead, every engagement follows a visible delivery standard."
   },
   "trustBar": {
+    "scope-first": { "label": "Scope Before Build", "detail": "Written before development starts" },
     "direct-access": { "label": "Direct Access", "detail": "No account managers" },
     "fixed-price-clarity": { "label": "Fixed-Price Clarity", "detail": "Know the cost upfront" },
     "weekly-demos": { "label": "Weekly Demos", "detail": "See real progress weekly" },

@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "heading": "Let's Build The Future Together.",
+    "description": "Whether you're launching your first website, building an enterprise platform, or creating an AI-powered product, Novyra Technologies is ready to help you build something exceptional."
+  },
+  "ctas": {
+    "bookConsultation": "Book Free Consultation",
+    "scheduleCall": "Schedule Discovery Call",
+    "whatsapp": "WhatsApp"
+  },
+  "companyInfo": {
+    "description": "Building premium digital products for ambitious businesses worldwide.",
+    "location": "India"
+  },
+  "columns": {
+    "company": {
+      "title": "Company",
+      "links": {
+        "about": "About",
+        "solutions": "Solutions",
+        "caseStudies": "Case Studies",
+        "pricing": "Pricing",
+        "blog": "Blog",
+        "contact": "Contact",
+        "careers": "Careers (Coming Soon)"
+      }
+    },
+    "services": {
+      "title": "Services",
+      "links": {
+        "businessWebsites": "Business Websites",
+        "webApplications": "Custom Web Applications",
+        "saasDevelopment": "SaaS Development",
+        "aiDevelopment": "AI Development",
+        "healthcareSolutions": "Healthcare Solutions",
+        "schoolErp": "School ERP",
+        "hospitalErp": "Hospital ERP",
+        "crmSystems": "CRM Systems",
+        "digitalMarketing": "Digital Marketing",
+        "uiUxDesign": "UI/UX Design",
+        "seoOptimization": "SEO Optimization",
+        "websiteRedesign": "Website Redesign"
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "links": {
+        "faq": "FAQ",
+        "projectProcess": "Project Process",
+        "technologyStack": "Technology Stack",
+        "privacyPolicy": "Privacy Policy",
+        "termsConditions": "Terms & Conditions",
+        "cookiePolicy": "Cookie Policy",
+        "freeConsultation": "Free Consultation",
+        "websiteAudit": "Website Audit",
+        "roadmapPlanner": "Roadmap Planner"
+      }
+    }
+  },
+  "techStack": {
+    "heading": "The Stack Behind Every Build"
+  },
+  "newsletter": {
+    "heading": "Stay Updated",
+    "description": "Receive occasional product updates.",
+    "emailPlaceholder": "you@company.com",
+    "emailAriaLabel": "Email address",
+    "subscribe": "Subscribe",
+    "successMessage": "You're subscribed — welcome aboard.",
+    "errorMessage": "Enter a valid email address."
+  },
+  "social": {
+    "youtubeComingSoon": "YouTube (Coming Soon)"
+  },
+  "bottom": {
+    "copyright": "© 2026 Novyra Technologies. All Rights Reserved.",
+    "legalNavLabel": "Legal",
+    "legal": {
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "accessibility": "Accessibility",
+      "sitemap": "Sitemap"
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "About Novyra Technologies | Digital Product & SaaS Development Company",
+    "description": "Learn about Novyra Technologies, our mission, values, and approach to building premium websites, SaaS platforms, web applications, AI-powered products, and digital growth solutions."
+  },
+  "hero": {
+    "eyebrow": "About Novyra",
+    "headline": {
+      "before": "We Build",
+      "highlight": "Digital Products",
+      "after": "That Help Businesses Move Forward."
+    },
+    "description": "Novyra Technologies designs and develops premium websites, SaaS platforms, AI-powered products, web applications, and digital growth systems for modern businesses.",
+    "cta": { "primary": "Start a Project", "secondary": "Explore Our Services" },
+    "trust": {
+      "full-stack-engineering": "Full-Stack Engineering",
+      "scalable-solutions": "Scalable Solutions",
+      "security-focused": "Security Focused",
+      "pixel-perfect-ui": "Pixel-Perfect UI"
+    },
+    "ecosystem": {
+      "centerTitle": "NOVYRA",
+      "centerSubtitle": "Design · Build · Scale",
+      "nodes": {
+        "web-design": "Web Design",
+        "saas": "SaaS",
+        "ai": "AI",
+        "marketing": "Digital Marketing",
+        "web-apps": "Web Applications"
+      }
+    }
+  },
+  "intro": {
+    "eyebrow": "Who We Are",
+    "title": "A Digital Product Partner, Not Just a Service Provider.",
+    "paragraphs": [
+      "Novyra Technologies helps businesses turn ideas into practical, scalable, and high-quality digital products.",
+      "We combine strategy, design, engineering, and growth to deliver modern websites, SaaS platforms, business applications, and AI-enabled experiences.",
+      "We focus on clarity, usability, performance, scalability, and long-term value."
+    ],
+    "tiles": {
+      "strategy": { "label": "Strategy", "description": "Clear direction before a single screen is designed." },
+      "product-design": { "label": "Product Design", "description": "Interfaces built to be used, not just admired." },
+      "engineering": { "label": "Engineering", "description": "Scalable, production-grade code from day one." },
+      "growth": { "label": "Growth", "description": "Systems that help businesses reach more customers." }
+    }
+  },
+  "missionVision": {
+    "mission": {
+      "label": "Mission",
+      "headline": "Why We Build",
+      "paragraph": "Build accessible, modern, and scalable digital solutions that help businesses operate better, reach more customers, and grow with confidence.",
+      "chips": ["Useful", "Reliable", "Accessible"]
+    },
+    "vision": {
+      "label": "Vision",
+      "headline": "Where We're Headed",
+      "paragraph": "Become the technology partner businesses rely on to build their most important digital products.",
+      "chips": ["Scalable", "Intelligent", "Future-ready"]
+    }
+  },
+  "whatWeBuild": {
+    "eyebrow": "What We Build",
+    "titleLine1": "From Business Websites",
+    "titleHighlight": "To Scalable Digital Platforms.",
+    "explore": "Explore",
+    "items": {
+      "web-design": {
+        "label": "Web Design & Development",
+        "description": "Premium websites designed to build trust and generate enquiries."
+      },
+      "digital-marketing": {
+        "label": "Digital Marketing",
+        "description": "SEO, content, campaigns, and digital growth systems."
+      },
+      "web-applications": {
+        "label": "Web Applications",
+        "description": "Custom platforms that simplify workflows and business operations."
+      },
+      "graphic-design": {
+        "label": "Graphic & Logo Design",
+        "description": "Visual identities that help brands look clear and professional."
+      },
+      "saas-development": {
+        "label": "SaaS Development",
+        "description": "Scalable cloud products built for real users and growing teams."
+      },
+      "ai-solutions": {
+        "label": "AI-Powered Solutions",
+        "description": "Practical AI features that automate, assist, and improve decisions."
+      }
+    }
+  },
+  "principles": {
+    "eyebrow": "What Guides Us",
+    "title": "Principles Behind Every Build.",
+    "items": {
+      "clarity": { "title": "Clarity Over Complexity", "statement": "Every product should be easy to understand and easy to use." },
+      "quality": { "title": "Quality Without Excess", "statement": "We build what a product needs — nothing bloated, nothing wasted." },
+      "business-value": { "title": "Business Value First", "statement": "Every feature is judged by the outcome it creates for the business." },
+      "built-to-scale": { "title": "Built to Scale", "statement": "Architecture that holds up as usage and complexity grow." },
+      "partnership": { "title": "Long-Term Partnership", "statement": "We stay involved after launch, not just until handover." }
+    }
+  },
+  "howWeWork": {
+    "eyebrow": "Our Approach",
+    "title": "How Novyra Works.",
+    "steps": {
+      "discover": { "title": "Discover", "description": "Understand the business, audience, and goals." },
+      "define": { "title": "Define", "description": "Create the strategy, scope, and roadmap." },
+      "design": { "title": "Design", "description": "Build a clear, premium, and usable interface." },
+      "develop": { "title": "Develop", "description": "Engineer a scalable and production-ready product." },
+      "launch": { "title": "Launch", "description": "Deploy, test, optimize, and support." }
+    }
+  },
+  "whyChoose": {
+    "eyebrow": "Why Choose Novyra",
+    "title": "Built Around Your Business, Not Around Templates.",
+    "reasons": {
+      "custom-ui": "Custom UI, Not Templates",
+      "modern-stack": "Modern Technology Stack",
+      "responsive": "Responsive by Default",
+      "performance-seo": "Performance and SEO Focused",
+      "communication": "Clear Communication",
+      "post-launch-support": "Post-launch Support"
+    }
+  },
+  "industries": {
+    "eyebrow": "Industries We Support",
+    "titleLine1": "Solutions Built Around",
+    "titleLine2": "Real Business Needs.",
+    "description": "We adapt strategy, design, and technology to the way each industry operates.",
+    "solutionsLabel": "Solutions",
+    "explore": "Explore {industry} Solutions",
+    "tablistLabel": "Industries",
+    "items": {
+      "healthcare": {
+        "label": "Healthcare",
+        "description": "Digital platforms for patient communication and healthcare operations.",
+        "solutions": ["Hospital Website", "Appointment System", "Hospital ERP", "Patient Enquiries"]
+      },
+      "education": {
+        "label": "Education",
+        "description": "Modern platforms for schools, institutes, and digital learning.",
+        "solutions": ["School Website", "School ERP", "Student Portal", "AI Learning Tools"]
+      },
+      "startups": {
+        "label": "Startups",
+        "description": "Fast, scalable digital products for validating and launching ideas.",
+        "solutions": ["MVP", "SaaS Platform", "Landing Page", "Product Design"]
+      },
+      "local-businesses": {
+        "label": "Local Businesses",
+        "description": "Professional digital presence and lead-generation systems.",
+        "solutions": ["Business Website", "Local SEO", "WhatsApp Enquiries", "Digital Marketing"]
+      },
+      "professional-services": {
+        "label": "Professional Services",
+        "description": "Trust-focused websites and workflow tools for service businesses.",
+        "solutions": ["Corporate Website", "Lead Management", "Client Portal", "CRM"]
+      },
+      "ecommerce": {
+        "label": "eCommerce",
+        "description": "Conversion-focused online stores and commerce operations.",
+        "solutions": ["Online Store", "Payments", "Order Management", "Analytics"]
+      },
+      "saas": {
+        "label": "SaaS",
+        "description": "Scalable subscription platforms built for real product growth.",
+        "solutions": ["Dashboard", "Authentication", "Billing", "Multi-role Access"]
+      },
+      "growing-enterprises": {
+        "label": "Growing Enterprises",
+        "description": "Integrated applications and automation for expanding teams.",
+        "solutions": ["ERP", "CRM", "Automation", "Analytics"]
+      }
+    }
+  },
+  "techPhilosophy": {
+    "eyebrow": "Technology Philosophy",
+    "title": "Modern Technology. Practical Business Value.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud",
+      "ai": "AI"
+    },
+    "statement": "We choose technology based on product needs — not trends alone."
+  },
+  "founder": {
+    "eyebrow": "Built With Ownership",
+    "title": "Direct Collaboration. Clear Ownership. Better Outcomes.",
+    "visualLabel": "Design · Development · Strategy",
+    "paragraphs": [
+      "Every project is handled with direct communication, focused execution, and close attention to product quality.",
+      "We work with a growing network of design, development, and digital specialists based on each project's requirements."
+    ],
+    "commitments": {
+      "direct-communication": "Direct Communication",
+      "focused-delivery": "Focused Delivery",
+      "flexible-expertise": "Flexible Expertise"
+    }
+  },
+  "cta": {
+    "title": "Have an Idea Worth Building?",
+    "description": "Tell us what you are planning, and we will help you define the right digital approach, scope, and next step.",
+    "primary": "Book Free Consultation",
+    "secondary": "Start a Project",
+    "whatsapp": "Chat on WhatsApp",
+    "tags": {
+      "website": "Website",
+      "saas": "SaaS",
+      "ai": "AI",
+      "erp": "ERP",
+      "marketing": "Marketing"
+    }
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "About"
+  }
+}

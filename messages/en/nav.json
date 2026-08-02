@@ -1,0 +1,36 @@
+{
+  "about": {
+    "label": "About",
+    "helper": "Learn more about Novyra.",
+    "explore": "Explore About",
+    "children": {
+      "aboutUs": { "label": "About Us", "description": "Who we are." },
+      "mission": { "label": "Mission & Vision", "description": "What drives us." },
+      "whyChooseUs": { "label": "Why Choose Us", "description": "Why businesses trust Novyra." },
+      "faq": { "label": "FAQ", "description": "Quick answers." }
+    }
+  },
+  "services": {
+    "label": "Services",
+    "helper": "Explore what we build.",
+    "exploreAll": "Explore All Services",
+    "getRecommendation": "Get a Recommendation",
+    "children": {
+      "webDesign": { "label": "Web Design & Development", "description": "Premium business websites." },
+      "digitalMarketing": { "label": "Digital Marketing", "description": "SEO, ads, and growth." },
+      "webApplications": { "label": "Web Applications", "description": "Custom scalable platforms." },
+      "graphicDesign": { "label": "Graphic & Logo Design", "description": "Brand identity and visuals." },
+      "saasDevelopment": { "label": "SaaS Development", "description": "Cloud products built to scale." }
+    }
+  },
+  "recommendationCard": {
+    "title": "Need help choosing?",
+    "body": "Tell us what you're building and we'll recommend the right service."
+  },
+  "solutions": { "label": "Solutions" },
+  "products": { "label": "Products" },
+  "pricing": { "label": "Pricing" },
+  "blog": { "label": "Blog" },
+  "clients": { "label": "Clients" },
+  "contact": { "label": "Contact Us" }
+}

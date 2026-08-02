@@ -1,0 +1,52 @@
+{
+  "sectionHeading": {
+    "eyebrow": "How We Work",
+    "titleLine1": "From Idea to Launch,",
+    "titleHighlight": "A Clear, Six-Step Process",
+    "description": "The same six steps, every project — clear communication, consistent quality, predictable delivery."
+  },
+  "trustPoints": {
+    "transparent-process": "Transparent process",
+    "regular-updates": "Regular updates",
+    "post-launch-support": "Post-launch support"
+  },
+  "timelineAriaLabel": "Our process",
+  "steps": {
+    "discovery": {
+      "title": "Discovery",
+      "description": "We learn your business, your users, and what success looks like.",
+      "deliverables": ["Requirement discussion", "Business analysis", "Project scope", "Feature planning"]
+    },
+    "strategy": {
+      "title": "Strategy",
+      "description": "We turn goals into a roadmap — scope, technology, and timeline.",
+      "deliverables": ["Solution roadmap", "User journey", "Technical planning", "Timeline definition"]
+    },
+    "design": {
+      "title": "UI/UX Design",
+      "description": "We design an interface that's clear, on-brand, and built to convert.",
+      "deliverables": ["Wireframes", "Visual direction", "Responsive UI", "Interactive prototype"]
+    },
+    "development": {
+      "title": "Development",
+      "description": "We build it with production-grade code, not a prototype.",
+      "deliverables": ["Frontend development", "Backend integration", "Admin dashboard", "API and database setup"]
+    },
+    "testing": {
+      "title": "QA",
+      "description": "We test performance, security, and every critical user journey.",
+      "deliverables": ["Device testing", "Browser testing", "Performance checks", "Bug fixing"]
+    },
+    "launch": {
+      "title": "Launch & Support",
+      "description": "We deploy, then stay on to support what we built.",
+      "deliverables": ["Production deployment", "Analytics setup", "Basic SEO setup", "Post-launch support"]
+    }
+  },
+  "cta": {
+    "heading": "Ready to Start?",
+    "description": "Book a free strategy session and leave with a clear roadmap for your project.",
+    "startProject": "Start Your Project",
+    "scheduleCall": "Schedule Discovery Call"
+  }
+}

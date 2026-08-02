@@ -1,0 +1,236 @@
+{
+  "showcase": {
+    "eyebrow": "Our Services",
+    "title": "From Design to Deployment.",
+    "description": "Pick a service to see how it works, what you'll get, and how long it takes."
+  },
+  "nav": {
+    "ariaLabel": "Novyra services"
+  },
+  "categories": {
+    "web-design": {
+      "label": "Web Design",
+      "subtitle": "Modern business websites",
+      "description": "A website that builds trust the moment it loads.",
+      "bestFor": ["Startups", "Small Businesses", "Personal Brands", "Portfolios"],
+      "keyBenefits": [
+        "Stronger first impression with visitors",
+        "Higher on-page engagement and conversion",
+        "Consistent brand experience across devices",
+        "Faster page loads from lean, modern markup"
+      ],
+      "deliverables": [
+        "Responsive Page Designs",
+        "UI Component Library",
+        "Interactive Prototypes",
+        "Design System Handoff"
+      ],
+      "timeline": "2–4 Weeks",
+      "cta": "View Portfolio"
+    },
+    "web-development": {
+      "label": "Web Development",
+      "subtitle": "Custom scalable applications",
+      "description": "Web applications built to handle real traffic and grow with your business.",
+      "bestFor": ["Startups", "Businesses", "Healthcare", "Education"],
+      "keyBenefits": [
+        "Fast, SEO-friendly pages out of the box",
+        "Secure by default, built on modern standards",
+        "Easy to extend as your business grows",
+        "Clean handover with documented code"
+      ],
+      "deliverables": [
+        "Responsive UI",
+        "Admin Panel",
+        "Authentication",
+        "API Integration",
+        "CMS",
+        "Deployment"
+      ],
+      "timeline": "3–8 Weeks",
+      "cta": "View Service"
+    },
+    "saas-development": {
+      "label": "SaaS Development",
+      "subtitle": "Cloud software platforms",
+      "description": "Multi-tenant platforms for healthcare, education, and growing businesses.",
+      "bestFor": ["Healthcare Providers", "Educational Institutions", "Growing Businesses", "Multi-location Operations"],
+      "keyBenefits": [
+        "One platform to run daily operations",
+        "Role-based access for every user type",
+        "Built to scale as usage grows",
+        "Actionable reporting out of the box"
+      ],
+      "deliverables": [
+        "Multi-role Dashboard",
+        "Database & API Layer",
+        "Reporting & Analytics",
+        "Admin Console"
+      ],
+      "timeline": "6–14 Weeks",
+      "cta": "Request a Quote"
+    },
+    "digital-marketing": {
+      "label": "Digital Marketing",
+      "subtitle": "SEO & Growth",
+      "description": "Growth infrastructure — campaigns, content, and tracking — built and measured honestly.",
+      "bestFor": ["Local Businesses", "E-commerce Brands", "B2B Companies", "Service Providers"],
+      "keyBenefits": [
+        "Clearer visibility into what's driving results",
+        "Consistent lead flow from owned channels",
+        "Coordinated content and ad calendars",
+        "Transparent, trackable performance reporting"
+      ],
+      "deliverables": [
+        "SEO Audit & Roadmap",
+        "Ad Campaign Setup",
+        "Content Calendar",
+        "Performance Dashboard"
+      ],
+      "timeline": "Ongoing — Monthly Retainer",
+      "cta": "Book a Consultation"
+    },
+    "graphic-design": {
+      "label": "Graphic Design",
+      "subtitle": "Brand identity & creatives",
+      "description": "Brand identity that holds up at any size, from a favicon to a billboard.",
+      "bestFor": ["New Brands", "Rebrands", "Marketing Teams", "Product Launches"],
+      "keyBenefits": [
+        "Consistent, recognizable brand identity",
+        "Assets ready for print and digital",
+        "Faster turnaround on new marketing material",
+        "A cohesive look across every touchpoint"
+      ],
+      "deliverables": [
+        "Logo Suite",
+        "Brand Guidelines",
+        "Business Card Design",
+        "Social Media Kit",
+        "Editable Source Files"
+      ],
+      "timeline": "1–3 Weeks",
+      "cta": "View Portfolio"
+    }
+  },
+  "details": {
+    "perfectFor": "Perfect For",
+    "technologies": "Technologies",
+    "timeline": "Timeline",
+    "deliverables": "Deliverables",
+    "requestQuote": "Request Free Quote",
+    "viewService": "View Service",
+    "trust": {
+      "freeConsultation": "Free Consultation",
+      "transparentPricing": "Transparent Pricing",
+      "sourceCodeOwnership": "Source Code Ownership"
+    }
+  },
+  "process": {
+    "eyebrow": "Our Process",
+    "heading": "How We Deliver",
+    "description": "A clear, structured path from your first message to a fully shipped product.",
+    "steps": {
+      "discovery": { "title": "Discovery", "description": "Understanding your goals, audience, and requirements." },
+      "design": { "title": "Design", "description": "Wireframes and visuals refined with your feedback." },
+      "development": { "title": "Development", "description": "Building with modern, scalable, well-tested code." },
+      "launch": { "title": "Launch", "description": "A smooth, tested rollout to production." },
+      "support": { "title": "Support", "description": "Ongoing help and improvements after launch." }
+    }
+  },
+  "finalCta": {
+    "heading": "Let's Build Something Great",
+    "description": "Book a free consultation — no obligation, no pressure.",
+    "primaryCta": "Book Free Consultation",
+    "secondaryCta": "Chat on WhatsApp",
+    "trust": {
+      "freeConsultation": "Free Consultation",
+      "transparentPricing": "Transparent Pricing",
+      "directDeveloperAccess": "Direct Developer Access"
+    }
+  },
+  "mockups": {
+    "saas": {
+      "nav": {
+        "dashboard": "Dashboard",
+        "users": "Users",
+        "analytics": "Analytics",
+        "billing": "Billing",
+        "roles": "Roles"
+      },
+      "highlights": {
+        "roleBasedAccess": "Role-Based Access",
+        "customReports": "Custom Reports",
+        "realtimeAnalytics": "Real-time Analytics"
+      },
+      "modulesTitle": "Platform Modules",
+      "modules": {
+        "crm": "CRM",
+        "hospitalErp": "Hospital ERP",
+        "schoolErp": "School ERP"
+      }
+    },
+    "dev": {
+      "status": {
+        "api": { "label": "API", "state": "Operational" },
+        "database": { "label": "Database", "state": "Connected" },
+        "cms": { "label": "CMS", "state": "Synced" },
+        "auth": { "label": "Authentication", "state": "Enabled" },
+        "deployment": { "label": "Deployment", "state": "Production" }
+      }
+    },
+    "marketing": {
+      "seoScoreLabel": "SEO Score",
+      "keywordRankingTitle": "Keyword Ranking",
+      "leadFunnelTitle": "Lead Funnel",
+      "campaignTimelineTitle": "Campaign Timeline",
+      "channels": {
+        "googleAds": "Google Ads",
+        "metaAds": "Meta Ads"
+      },
+      "funnel": {
+        "visitors": "Visitors",
+        "leads": "Leads",
+        "customers": "Customers"
+      },
+      "timeline": {
+        "plan": "Plan",
+        "launch": "Launch",
+        "optimize": "Optimize",
+        "report": "Report"
+      }
+    },
+    "website": {
+      "navLinks": {
+        "home": "Home",
+        "work": "Work",
+        "services": "Services",
+        "contact": "Contact"
+      },
+      "quickLinks": {
+        "features": "Features",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact"
+      },
+      "hero": {
+        "badge": "Premium Website",
+        "title": "Build Better.\nLaunch Faster.",
+        "description": "Modern websites designed to convert.",
+        "cta": "Start Project",
+        "secondaryCta": "View Work"
+      }
+    },
+    "design": {
+      "items": {
+        "logo": "Logo",
+        "brandKit": "Brand Kit",
+        "businessCard": "Business Card",
+        "instagramPost": "Instagram Post",
+        "websiteBanner": "Website Banner",
+        "brochure": "Brochure",
+        "packaging": "Packaging",
+        "presentation": "Presentation"
+      }
+    }
+  }
+}

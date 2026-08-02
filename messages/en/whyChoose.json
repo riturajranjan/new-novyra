@@ -1,0 +1,87 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Why Choose Novyra",
+    "titleBefore": "Why Businesses",
+    "titleHighlight": "Choose Novyra",
+    "description": "From strategy and product design to engineering, AI automation, SEO, and long-term support — we build digital products that scale with your business."
+  },
+  "heroBento": {
+    "heading": "Full Product Coverage, Not a Freelancer Handoff.",
+    "description": "Design, engineering, QA, and growth — covered end-to-end, without juggling multiple freelancers."
+  },
+  "heroBadges": {
+    "ai-powered": "AI-Powered",
+    "enterprise-grade": "Enterprise-Grade"
+  },
+  "capabilityChips": {
+    "ui-ux": "UI/UX Design",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai-automation": "AI Automation",
+    "seo": "SEO",
+    "cloud": "Cloud",
+    "qa": "QA",
+    "project-management": "Project Management",
+    "api-development": "API Development",
+    "analytics": "Analytics"
+  },
+  "featureCards": {
+    "seo-architecture": {
+      "title": "SEO First Architecture",
+      "description": "Every build starts with a structure search engines can actually read.",
+      "bullets": ["Semantic markup and clean URL structure", "Fast, crawlable page architecture", "Structured data where it matters"]
+    },
+    "performance": {
+      "title": "95+ Lighthouse Target",
+      "description": "A performance budget the team designs and builds against, not an afterthought.",
+      "bullets": ["Optimised images and lazy loading", "Minimal JavaScript payloads", "Edge-ready hosting on Vercel"],
+      "metricLabel": "Performance Target",
+      "metricValue": "95+"
+    },
+    "custom-ui": {
+      "title": "Fully Custom UI/UX",
+      "description": "Designed around your brand in Figma, never a recycled template.",
+      "bullets": ["Designed for your brand, not a template", "Responsive across every device"]
+    },
+    "cms-dashboard": {
+      "title": "CMS & Admin Dashboard",
+      "description": "Manage content and operations without needing a developer on call.",
+      "bullets": ["Edit content without touching code", "Role-based access control"],
+      "metricLabel": "Response Time Target",
+      "metricValue": "<200ms"
+    },
+    "ai-integrations": {
+      "title": "AI & Third-Party Integrations",
+      "description": "Payments, CRM, analytics, and AI-assisted workflows wired in cleanly.",
+      "bullets": ["Payment, CRM, and analytics integrations", "AI-assisted workflows where useful"]
+    },
+    "post-launch": {
+      "title": "Post-Launch Support",
+      "description": "Launch day isn't the finish line — the team that built it stays on to support it.",
+      "bullets": ["Monitoring and bug fixes after launch", "Guidance from the team that built it, not a new one"]
+    }
+  },
+  "trustedTechnologies": {
+    "eyebrow": "Trusted Technologies",
+    "heading": "Powered by Modern Technologies",
+    "description": "We choose technologies for what they deliver — speed, security, and code that's easy to maintain."
+  },
+  "techCategories": {
+    "frontend": { "label": "Frontend", "reason": "For fast, accessible interfaces users enjoy using." },
+    "backend": { "label": "Backend", "reason": "For APIs that stay reliable under real load." },
+    "database": { "label": "Database", "reason": "For data that stays consistent as you scale." },
+    "cloud-devops": { "label": "Cloud & DevOps", "reason": "For deployments that ship without downtime." }
+  },
+  "featureStrip": {
+    "full-stack-engineering": { "label": "Full-Stack Engineering", "detail": "Every skill under one roof" },
+    "ai-powered-development": { "label": "AI-Powered Development", "detail": "Smarter workflows & automation" },
+    "enterprise-architecture": { "label": "Enterprise Architecture", "detail": "Scalable & secure codebase" },
+    "long-term-partnership": { "label": "Long-Term Partnership", "detail": "Support after launch" }
+  },
+  "trustMetrics": {
+    "modern-technologies": { "label": "Modern Technologies", "value": "19" },
+    "engineering-disciplines": { "label": "Engineering Disciplines", "value": "4" },
+    "lighthouse-target": { "label": "Lighthouse Target", "value": "95+" },
+    "typescript-codebase": { "label": "TypeScript Codebase", "value": "100%" }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "badge": {
+    "items": {
+      "websites": "Websites",
+      "saas": "SaaS",
+      "ai": "AI",
+      "growth": "Growth"
+    }
+  },
+  "headline": {
+    "before": "Engineering",
+    "highlight": "Software",
+    "after": "That Scales."
+  },
+  "description": "We design and build the software businesses run on — modern websites, platforms, and applications engineered to scale.",
+  "cta": {
+    "primary": "Start a Project",
+    "secondary": "Explore Services"
+  },
+  "trust": {
+    "items": {
+      "nextjsSpecialists": "React & Next.js Specialists",
+      "aiPoweredDevelopment": "AI-Powered Development",
+      "enterpriseArchitecture": "Enterprise Architecture",
+      "productionReady": "Production Ready"
+    }
+  },
+  "imageAlt": "Preview of a Novyra-built product dashboard, showing growth analytics, an AI assistant, and project progress"
+}

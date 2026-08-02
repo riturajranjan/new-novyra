@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "heading": "आइए मिलकर भविष्य का निर्माण करें।",
+    "description": "चाहे आप अपनी पहली वेबसाइट लॉन्च कर रहे हों, एक एंटरप्राइज़ प्लेटफ़ॉर्म बना रहे हों, या AI-संचालित प्रोडक्ट तैयार कर रहे हों — Novyra Technologies आपके साथ कुछ शानदार बनाने के लिए तैयार है।"
+  },
+  "ctas": {
+    "bookConsultation": "मुफ़्त परामर्श बुक करें",
+    "scheduleCall": "डिस्कवरी कॉल शेड्यूल करें",
+    "whatsapp": "WhatsApp"
+  },
+  "companyInfo": {
+    "description": "दुनिया भर के महत्वाकांक्षी व्यवसायों के लिए प्रीमियम डिजिटल प्रोडक्ट बनाना।",
+    "location": "भारत"
+  },
+  "columns": {
+    "company": {
+      "title": "कंपनी",
+      "links": {
+        "about": "परिचय",
+        "solutions": "समाधान",
+        "caseStudies": "केस स्टडीज़",
+        "pricing": "प्राइसिंग",
+        "blog": "ब्लॉग",
+        "contact": "संपर्क करें",
+        "careers": "करियर (जल्द आ रहा है)"
+      }
+    },
+    "services": {
+      "title": "सेवाएं",
+      "links": {
+        "businessWebsites": "बिज़नेस वेबसाइट्स",
+        "webApplications": "कस्टम वेब एप्लिकेशन",
+        "saasDevelopment": "SaaS डेवलपमेंट",
+        "aiDevelopment": "AI डेवलपमेंट",
+        "healthcareSolutions": "हेल्थकेयर समाधान",
+        "schoolErp": "स्कूल ERP",
+        "hospitalErp": "हॉस्पिटल ERP",
+        "crmSystems": "CRM सिस्टम",
+        "digitalMarketing": "डिजिटल मार्केटिंग",
+        "uiUxDesign": "UI/UX डिज़ाइन",
+        "seoOptimization": "SEO ऑप्टिमाइज़ेशन",
+        "websiteRedesign": "वेबसाइट रीडिज़ाइन"
+      }
+    },
+    "resources": {
+      "title": "संसाधन",
+      "links": {
+        "faq": "सामान्य प्रश्न",
+        "projectProcess": "प्रोजेक्ट प्रक्रिया",
+        "technologyStack": "टेक्नोलॉजी स्टैक",
+        "privacyPolicy": "गोपनीयता नीति",
+        "termsConditions": "नियम व शर्तें",
+        "cookiePolicy": "कुकी नीति",
+        "freeConsultation": "मुफ़्त परामर्श",
+        "websiteAudit": "वेबसाइट ऑडिट",
+        "roadmapPlanner": "रोडमैप प्लानर"
+      }
+    }
+  },
+  "techStack": {
+    "heading": "हर बिल्ड के पीछे की टेक्नोलॉजी"
+  },
+  "newsletter": {
+    "heading": "अपडेट रहें",
+    "description": "समय-समय पर प्रोडक्ट अपडेट पाएं।",
+    "emailPlaceholder": "you@company.com",
+    "emailAriaLabel": "ईमेल पता",
+    "subscribe": "सब्सक्राइब करें",
+    "successMessage": "आप सब्सक्राइब हो गए हैं — आपका स्वागत है।",
+    "errorMessage": "एक मान्य ईमेल पता दर्ज करें।"
+  },
+  "social": {
+    "youtubeComingSoon": "YouTube (जल्द आ रहा है)"
+  },
+  "bottom": {
+    "copyright": "© 2026 Novyra Technologies. सर्वाधिकार सुरक्षित।",
+    "legalNavLabel": "कानूनी",
+    "legal": {
+      "privacyPolicy": "गोपनीयता नीति",
+      "terms": "नियम",
+      "cookies": "कुकीज़",
+      "accessibility": "एक्सेसिबिलिटी",
+      "sitemap": "साइटमैप"
+    }
+  }
+}

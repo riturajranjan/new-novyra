@@ -1,0 +1,204 @@
+{
+  "eyebrow": "मूल्य निर्धारण",
+  "heading": {
+    "line1": "पारदर्शी मूल्य निर्धारण जो",
+    "highlight": "आपके व्यवसाय के साथ बढ़ता है"
+  },
+  "description": "अपने लक्ष्यों के अनुरूप एंगेजमेंट मॉडल चुनें — हर प्लान में आधुनिक इंजीनियरिंग, पारदर्शी माइलस्टोन और समर्पित सहायता शामिल है।",
+  "radiogroupAriaLabel": "एक प्राइसिंग प्लान चुनें",
+  "toggleAriaLabel": "बिलिंग मोड चुनें",
+  "billingModes": {
+    "project": "प्रोजेक्ट आधारित",
+    "retainer": "मासिक रिटेनर"
+  },
+  "plans": {
+    "starter": {
+      "name": "स्टार्टर",
+      "tagline": "स्टार्टअप्स और छोटे व्यवसायों के लिए।",
+      "priceLabel": "शुरुआती कीमत",
+      "cta": "शुरू करें",
+      "features": {
+        "responsiveWebsite": "रिस्पॉन्सिव वेबसाइट",
+        "modernUiDesign": "आधुनिक UI डिज़ाइन",
+        "mobileOptimized": "मोबाइल ऑप्टिमाइज़्ड",
+        "contactForms": "संपर्क फ़ॉर्म",
+        "basicSeo": "बेसिक SEO",
+        "cmsIntegration": "CMS इंटीग्रेशन",
+        "performanceOptimized": "परफॉर्मेंस ऑप्टिमाइज़्ड",
+        "googleAnalytics": "गूगल एनालिटिक्स",
+        "twoWeeksSupport": "2 सप्ताह सहायता"
+      }
+    },
+    "professional": {
+      "name": "प्रोफेशनल",
+      "tagline": "बढ़ते व्यवसायों के लिए सबसे लोकप्रिय।",
+      "priceLabel": "शुरुआती कीमत",
+      "cta": "निःशुल्क परामर्श बुक करें",
+      "features": {
+        "premiumUiUx": "प्रीमियम UI/UX",
+        "customDevelopment": "कस्टम डेवलपमेंट",
+        "advancedSeo": "एडवांस्ड SEO",
+        "blogSystem": "ब्लॉग सिस्टम",
+        "dashboard": "डैशबोर्ड",
+        "apiIntegration": "API इंटीग्रेशन",
+        "aiFeatures": "AI फीचर्स",
+        "authentication": "ऑथेंटिकेशन",
+        "analyticsDashboard": "एनालिटिक्स डैशबोर्ड",
+        "performanceOptimization": "परफॉर्मेंस ऑप्टिमाइज़ेशन",
+        "securityHardening": "सुरक्षा सुदृढ़ीकरण",
+        "oneMonthSupport": "एक माह सहायता"
+      }
+    },
+    "business": {
+      "name": "बिजनेस",
+      "tagline": "बढ़ते व्यवसायों के लिए।",
+      "priceLabel": "शुरुआती कीमत",
+      "cta": "परामर्श शेड्यूल करें",
+      "features": {
+        "crm": "CRM",
+        "erp": "ERP",
+        "automation": "ऑटोमेशन",
+        "aiIntegration": "AI इंटीग्रेशन",
+        "paymentGateway": "पेमेंट गेटवे",
+        "notifications": "नोटिफिकेशन",
+        "reports": "रिपोर्ट्स",
+        "multiUserRoles": "मल्टी-यूज़र रोल्स",
+        "cloudDeployment": "क्लाउड डिप्लॉयमेंट",
+        "trainingSessions": "प्रशिक्षण सत्र"
+      }
+    },
+    "enterprise": {
+      "name": "एंटरप्राइज़",
+      "tagline": "बड़े संगठनों के लिए।",
+      "priceLabel": "",
+      "cta": "सेल्स से बात करें",
+      "features": {
+        "dedicatedTeam": "समर्पित टीम",
+        "architecturePlanning": "आर्किटेक्चर प्लानिंग",
+        "enterpriseSecurity": "एंटरप्राइज़ सुरक्षा",
+        "devOps": "DevOps",
+        "monitoring": "मॉनिटरिंग",
+        "slaSupport": "SLA सहायता",
+        "priorityDevelopment": "प्राथमिकता विकास",
+        "unlimitedScalability": "असीमित स्केलेबिलिटी",
+        "dedicatedProjectManager": "समर्पित प्रोजेक्ट मैनेजर",
+        "ongoingMaintenance": "सतत रखरखाव"
+      }
+    }
+  },
+  "featureCategories": {
+    "Design": "डिज़ाइन",
+    "Engineering": "इंजीनियरिंग",
+    "Integrations": "इंटीग्रेशन",
+    "AI": "AI",
+    "Security": "सुरक्षा",
+    "Growth": "ग्रोथ",
+    "Support": "सहायता"
+  },
+  "bestValue": "बेहतरीन वैल्यू",
+  "popular": "सर्वाधिक लोकप्रिय",
+  "selected": "चयनित",
+  "viewAllFeatures": "सभी सुविधाएं देखें (+{count})",
+  "showLess": "कम दिखाएं",
+  "viewCompletePackage": "पूरा पैकेज देखें",
+  "priceNote": {
+    "oneTimePayment": "एकमुश्त भुगतान",
+    "noHiddenCharges": "कोई छिपा शुल्क नहीं",
+    "billedMonthly": "मासिक बिलिंग",
+    "cancelAnytime": "कभी भी रद्द करें"
+  },
+  "spotlightTrust": {
+    "freeConsultation": "निःशुल्क परामर्श"
+  },
+  "comparePanel": {
+    "title": "सभी योजनाओं की तुलना करें",
+    "description": "स्टार्टर, प्रोफेशनल, बिजनेस और एंटरप्राइज़ की हर सुविधा की समीक्षा करें।",
+    "openLabel": "पूरी तुलना खोलें",
+    "closeLabel": "तुलना बंद करें",
+    "featureColumnHeader": "सुविधा"
+  },
+  "compareRows": {
+    "responsiveDesign": { "label": "रिस्पॉन्सिव डिज़ाइन" },
+    "seo": {
+      "label": "SEO",
+      "values": { "starter": "बेसिक", "professional": "एडवांस्ड", "business": "एडवांस्ड", "enterprise": "एडवांस्ड" }
+    },
+    "cms": { "label": "CMS" },
+    "dashboard": { "label": "डैशबोर्ड" },
+    "aiIntegration": {
+      "label": "AI इंटीग्रेशन",
+      "values": { "professional": "बेसिक" }
+    },
+    "paymentGateway": { "label": "पेमेंट गेटवे" },
+    "apiSupport": { "label": "API सहायता" },
+    "analytics": {
+      "label": "एनालिटिक्स",
+      "values": { "starter": "बेसिक", "professional": "एडवांस्ड" }
+    },
+    "performance": { "label": "परफॉर्मेंस" },
+    "security": {
+      "label": "सुरक्षा",
+      "values": { "professional": "सुदृढ़", "enterprise": "एंटरप्राइज़-ग्रेड" }
+    },
+    "hostingAssistance": { "label": "होस्टिंग सहायता" },
+    "maintenance": {
+      "label": "रखरखाव",
+      "values": { "starter": "2 सप्ताह", "professional": "1 माह", "business": "1 माह", "enterprise": "सतत" }
+    },
+    "training": { "label": "प्रशिक्षण" }
+  },
+  "compareGroups": {
+    "essentials": { "title": "आवश्यक सुविधाएं" },
+    "designAndDevelopment": { "title": "डिज़ाइन और डेवलपमेंट" },
+    "growthAndAnalytics": { "title": "ग्रोथ और एनालिटिक्स" },
+    "advancedFeatures": { "title": "एडवांस्ड सुविधाएं" },
+    "supportAndDelivery": { "title": "सहायता और डिलीवरी" }
+  },
+  "trustStrip": {
+    "milestonePayments": "माइलस्टोन भुगतान",
+    "sourceCodeOwnership": "सोर्स कोड स्वामित्व",
+    "transparentScope": "पारदर्शी स्कोप",
+    "postLaunchSupport": "लॉन्च के बाद सहायता"
+  },
+  "timeline": {
+    "heading": "पहली कॉल से लॉन्च तक — और उससे आगे",
+    "steps": {
+      "discovery": "डिस्कवरी",
+      "planning": "प्लानिंग",
+      "design": "डिज़ाइन",
+      "development": "डेवलपमेंट",
+      "testing": "टेस्टिंग",
+      "launch": "लॉन्च",
+      "support": "सहायता"
+    }
+  },
+  "whyItWorks": {
+    "heading": "हमारा मूल्य निर्धारण क्यों कारगर है",
+    "description": "स्पष्टता पर आधारित मूल्य निर्धारण मॉडल, आश्चर्य नहीं।",
+    "cards": {
+      "transparentPricing": {
+        "title": "पारदर्शी मूल्य निर्धारण",
+        "description": "कोई छिपा शुल्क नहीं — जिस कोटेशन पर आप सहमत होते हैं, वही आप भुगतान करते हैं।"
+      },
+      "scalablePackages": {
+        "title": "स्केलेबल पैकेज",
+        "description": "जहां उचित हो वहां से शुरू करें और अपनी ज़रूरतों के बढ़ने पर कभी भी अपग्रेड करें।"
+      },
+      "dedicatedTeam": {
+        "title": "समर्पित टीम",
+        "description": "आपके प्रोजेक्ट पर असली इंजीनियर और डिज़ाइनर, कोई घूमता हुआ पूल नहीं।"
+      },
+      "postLaunchSupport": {
+        "title": "लॉन्च के बाद सहायता",
+        "description": "हम लॉन्च के बाद भी बने रहते हैं ताकि समस्याओं को ठीक कर सकें और चीज़ें सुचारू रूप से चलें।"
+      }
+    }
+  },
+  "finalCta": {
+    "heading": "आगे बढ़ने के लिए तैयार हैं?",
+    "description": "अपने प्रोजेक्ट के बारे में बताएं — हम सही प्लान सुझाएंगे।",
+    "primaryCta": "निःशुल्क परामर्श बुक करें",
+    "secondaryCta": "कस्टम कोटेशन का अनुरोध करें",
+    "trustNote": "कोई बाध्यता नहीं · 24 घंटे में जवाब"
+  }
+}

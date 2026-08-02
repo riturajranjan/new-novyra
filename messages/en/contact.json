@@ -1,0 +1,64 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Get In Touch",
+    "title": "Let's Build Your Project.",
+    "description": "Tell us what you're building — a website, a platform, or something more complex — and we'll help you scope it."
+  },
+  "heroCard": {
+    "title": "Tell Us About Your Project",
+    "description": "Share your goals and we'll recommend the right technology, timeline, and approach.",
+    "bookConsultation": "Book Free Consultation",
+    "requestQuote": "Request Custom Quote",
+    "scheduleCall": "Schedule Discovery Call"
+  },
+  "quickContactCards": {
+    "schedule-call": {
+      "title": "Schedule a Call",
+      "detail": "Book a free strategy session.",
+      "note": "Available Monday–Saturday"
+    },
+    "email": {
+      "title": "Email Us",
+      "detail": "hello@novyratech.in",
+      "note": "Typical response within 24 hours."
+    },
+    "call": {
+      "title": "Call Us",
+      "detail": "+91 7903724407",
+      "note": "Speak directly with our team."
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "detail": "Start a conversation instantly.",
+      "note": "Quick project discussion."
+    }
+  },
+  "opensInNewTab": " (opens in a new tab)",
+  "whyContact": {
+    "heading": "Why Contact Novyra?"
+  },
+  "contactValueCards": {
+    "free-discovery-session": {
+      "title": "Free Discovery Session",
+      "description": "Understand your requirements before spending anything."
+    },
+    "expert-consultation": {
+      "title": "Expert Consultation",
+      "description": "Receive recommendations from experienced developers."
+    },
+    "transparent-planning": {
+      "title": "Transparent Planning",
+      "description": "Clear pricing, realistic timelines, and defined milestones."
+    },
+    "long-term-partnership": {
+      "title": "Long-Term Partnership",
+      "description": "We continue supporting your product after launch."
+    }
+  },
+  "contactDetails": {
+    "business-email": { "label": "Business Email", "value": "hello@novyratech.in" },
+    "phone": { "label": "Phone", "value": "+91 7903724407" },
+    "location": { "label": "Location", "value": "India" },
+    "working-hours": { "label": "Working Hours", "value": "Monday – Saturday, 9:00 AM – 7:00 PM IST" }
+  }
+}

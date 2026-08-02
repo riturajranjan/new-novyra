@@ -1,0 +1,45 @@
+// Prisma schema for the Novyra Technologies enquiry system.
+// After adding DATABASE_URL to .env.local, run:
+//   npx prisma migrate dev --name init_enquiry
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EnquiryStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  CLOSED
+  SPAM
+}
+
+/// One submission of the consultation popup form. `email`/`phone` are
+/// indexed together since duplicate-submission detection queries by
+/// "same email or phone within the last N minutes".
+model Enquiry {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  company   String?
+  service   String
+  budget    String
+  message   String
+  source    String        @default("consultation-popup")
+  pageUrl   String
+  locale    String
+  status    EnquiryStatus @default(NEW)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([email])
+  @@index([phone])
+  @@index([status])
+  @@index([createdAt])
+}

@@ -1,0 +1,81 @@
+{
+  "badge": "Free Consultation",
+  "heading": {
+    "before": "Let's Build Your Next",
+    "highlight": "Digital Product"
+  },
+  "description": "Tell us about your project and we'll prepare a roadmap, timeline, and pricing.",
+  "illustration": {
+    "heading": "Let's Get Started",
+    "icons": {
+      "website": "Website",
+      "ai": "AI",
+      "hospital": "Hospital",
+      "growth": "Growth"
+    }
+  },
+  "form": {
+    "name": { "label": "Name", "error": "Please enter your name." },
+    "email": { "label": "Email", "error": "Enter a valid email address." },
+    "phone": { "label": "Phone Number", "error": "Enter a valid phone number." },
+    "company": { "label": "Company (optional)" },
+    "service": {
+      "label": "Service",
+      "error": "Please select a service.",
+      "options": {
+        "businessWebsite": "Business Website",
+        "webApplication": "Web Application",
+        "saasDevelopment": "SaaS Development",
+        "hospitalErp": "Hospital ERP",
+        "schoolErp": "School ERP",
+        "crm": "CRM",
+        "digitalMarketing": "Digital Marketing",
+        "graphicDesign": "Graphic Design"
+      }
+    },
+    "budget": {
+      "label": "Budget",
+      "error": "Please select a budget.",
+      "options": {
+        "b25to50k": "₹25K–50K",
+        "b50kTo1L": "₹50K–1L",
+        "b1LTo3L": "₹1L–3L",
+        "b3LPlus": "₹3L+"
+      }
+    },
+    "message": {
+      "label": "Message",
+      "minError": "Message must be at least 10 characters.",
+      "maxError": "Message must be under 1000 characters."
+    }
+  },
+  "cta": "Get Free Consultation",
+  "ctaSending": "Sending Enquiry...",
+  "trust": {
+    "freeConsultation": "Free Consultation",
+    "noHiddenCharges": "No Hidden Charges",
+    "response24h": "Response Within 24 Hours"
+  },
+  "urgentHelp": "Need urgent help?",
+  "whatsappChat": "WhatsApp Chat",
+  "whatsappMessageTemplate": "Hello Novyra Technologies,\n\nI am interested in {service}.\n\nMy name is {name}.\n\nMy estimated budget is {budget}.",
+  "success": {
+    "title": "Thank You!",
+    "message": "We've received your enquiry. Our team will contact you within 24 hours.",
+    "continueBrowsing": "Continue Browsing"
+  },
+  "error": {
+    "message": "We couldn't submit your enquiry. Please try again or contact us on WhatsApp.",
+    "retry": "Try Again"
+  },
+  "email": {
+    "confirmationSubject": "We received your enquiry — Novyra Technologies",
+    "confirmationGreeting": "Hi {name}, thank you for reaching out!",
+    "confirmationBody": "We've received your enquiry and our team will get back to you within 24 hours.",
+    "serviceLabel": "Service",
+    "phoneLabel": "Phone",
+    "websiteLabel": "Website",
+    "whatsappLabel": "Chat with us on WhatsApp"
+  },
+  "closeAriaLabel": "Close"
+}

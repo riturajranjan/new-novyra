@@ -1,0 +1,204 @@
+{
+  "eyebrow": "Pricing",
+  "heading": {
+    "line1": "Transparent Pricing That",
+    "highlight": "Grows With Your Business"
+  },
+  "description": "Choose the engagement model that fits your goals — every plan includes modern engineering, transparent milestones, and dedicated support.",
+  "radiogroupAriaLabel": "Choose a pricing plan",
+  "toggleAriaLabel": "Choose a billing mode",
+  "billingModes": {
+    "project": "Project Based",
+    "retainer": "Monthly Retainer"
+  },
+  "plans": {
+    "starter": {
+      "name": "Starter",
+      "tagline": "For startups and small businesses.",
+      "priceLabel": "Starting From",
+      "cta": "Get Started",
+      "features": {
+        "responsiveWebsite": "Responsive Website",
+        "modernUiDesign": "Modern UI Design",
+        "mobileOptimized": "Mobile Optimized",
+        "contactForms": "Contact Forms",
+        "basicSeo": "Basic SEO",
+        "cmsIntegration": "CMS Integration",
+        "performanceOptimized": "Performance Optimized",
+        "googleAnalytics": "Google Analytics",
+        "twoWeeksSupport": "2 Weeks Support"
+      }
+    },
+    "professional": {
+      "name": "Professional",
+      "tagline": "Most popular for scaling businesses.",
+      "priceLabel": "Starting From",
+      "cta": "Book Free Consultation",
+      "features": {
+        "premiumUiUx": "Premium UI/UX",
+        "customDevelopment": "Custom Development",
+        "advancedSeo": "Advanced SEO",
+        "blogSystem": "Blog System",
+        "dashboard": "Dashboard",
+        "apiIntegration": "API Integration",
+        "aiFeatures": "AI Features",
+        "authentication": "Authentication",
+        "analyticsDashboard": "Analytics Dashboard",
+        "performanceOptimization": "Performance Optimization",
+        "securityHardening": "Security Hardening",
+        "oneMonthSupport": "One Month Support"
+      }
+    },
+    "business": {
+      "name": "Business",
+      "tagline": "For growing businesses.",
+      "priceLabel": "Starting From",
+      "cta": "Schedule Consultation",
+      "features": {
+        "crm": "CRM",
+        "erp": "ERP",
+        "automation": "Automation",
+        "aiIntegration": "AI Integration",
+        "paymentGateway": "Payment Gateway",
+        "notifications": "Notifications",
+        "reports": "Reports",
+        "multiUserRoles": "Multi-user Roles",
+        "cloudDeployment": "Cloud Deployment",
+        "trainingSessions": "Training Sessions"
+      }
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "tagline": "Large organizations.",
+      "priceLabel": "",
+      "cta": "Talk To Sales",
+      "features": {
+        "dedicatedTeam": "Dedicated Team",
+        "architecturePlanning": "Architecture Planning",
+        "enterpriseSecurity": "Enterprise Security",
+        "devOps": "DevOps",
+        "monitoring": "Monitoring",
+        "slaSupport": "SLA Support",
+        "priorityDevelopment": "Priority Development",
+        "unlimitedScalability": "Unlimited Scalability",
+        "dedicatedProjectManager": "Dedicated Project Manager",
+        "ongoingMaintenance": "Ongoing Maintenance"
+      }
+    }
+  },
+  "featureCategories": {
+    "Design": "Design",
+    "Engineering": "Engineering",
+    "Integrations": "Integrations",
+    "AI": "AI",
+    "Security": "Security",
+    "Growth": "Growth",
+    "Support": "Support"
+  },
+  "bestValue": "Great Value",
+  "popular": "Most Popular",
+  "selected": "Selected",
+  "viewAllFeatures": "View all features (+{count})",
+  "showLess": "Show less",
+  "viewCompletePackage": "View Complete Package",
+  "priceNote": {
+    "oneTimePayment": "One-time payment",
+    "noHiddenCharges": "No hidden charges",
+    "billedMonthly": "Billed monthly",
+    "cancelAnytime": "Cancel anytime"
+  },
+  "spotlightTrust": {
+    "freeConsultation": "Free consultation"
+  },
+  "comparePanel": {
+    "title": "Compare All Plans",
+    "description": "Review every feature across Starter, Professional, Business, and Enterprise.",
+    "openLabel": "Open Full Comparison",
+    "closeLabel": "Close Comparison",
+    "featureColumnHeader": "Feature"
+  },
+  "compareRows": {
+    "responsiveDesign": { "label": "Responsive Design" },
+    "seo": {
+      "label": "SEO",
+      "values": { "starter": "Basic", "professional": "Advanced", "business": "Advanced", "enterprise": "Advanced" }
+    },
+    "cms": { "label": "CMS" },
+    "dashboard": { "label": "Dashboard" },
+    "aiIntegration": {
+      "label": "AI Integration",
+      "values": { "professional": "Basic" }
+    },
+    "paymentGateway": { "label": "Payment Gateway" },
+    "apiSupport": { "label": "API Support" },
+    "analytics": {
+      "label": "Analytics",
+      "values": { "starter": "Basic", "professional": "Advanced" }
+    },
+    "performance": { "label": "Performance" },
+    "security": {
+      "label": "Security",
+      "values": { "professional": "Hardened", "enterprise": "Enterprise-Grade" }
+    },
+    "hostingAssistance": { "label": "Hosting Assistance" },
+    "maintenance": {
+      "label": "Maintenance",
+      "values": { "starter": "2 Weeks", "professional": "1 Month", "business": "1 Month", "enterprise": "Ongoing" }
+    },
+    "training": { "label": "Training" }
+  },
+  "compareGroups": {
+    "essentials": { "title": "Essentials" },
+    "designAndDevelopment": { "title": "Design & Development" },
+    "growthAndAnalytics": { "title": "Growth & Analytics" },
+    "advancedFeatures": { "title": "Advanced Features" },
+    "supportAndDelivery": { "title": "Support & Delivery" }
+  },
+  "trustStrip": {
+    "milestonePayments": "Milestone Payments",
+    "sourceCodeOwnership": "Source Code Ownership",
+    "transparentScope": "Transparent Scope",
+    "postLaunchSupport": "Post-launch Support"
+  },
+  "timeline": {
+    "heading": "From First Call to Launch — and Beyond",
+    "steps": {
+      "discovery": "Discovery",
+      "planning": "Planning",
+      "design": "Design",
+      "development": "Development",
+      "testing": "Testing",
+      "launch": "Launch",
+      "support": "Support"
+    }
+  },
+  "whyItWorks": {
+    "heading": "Why Our Pricing Works",
+    "description": "A pricing model built around clarity, not surprises.",
+    "cards": {
+      "transparentPricing": {
+        "title": "Transparent Pricing",
+        "description": "No hidden charges — the quote you agree to is the quote you pay."
+      },
+      "scalablePackages": {
+        "title": "Scalable Packages",
+        "description": "Start where it makes sense and upgrade any time as your needs grow."
+      },
+      "dedicatedTeam": {
+        "title": "Dedicated Team",
+        "description": "Real engineers and designers on your project, not a rotating pool."
+      },
+      "postLaunchSupport": {
+        "title": "Post Launch Support",
+        "description": "We stay on after launch to fix issues and help things run smoothly."
+      }
+    }
+  },
+  "finalCta": {
+    "heading": "Ready to Move Forward?",
+    "description": "Tell us about your project — we'll recommend the right plan.",
+    "primaryCta": "Book Free Consultation",
+    "secondaryCta": "Request Custom Quote",
+    "trustNote": "No obligation · Response within 24 hours"
+  }
+}

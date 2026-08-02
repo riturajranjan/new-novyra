@@ -1,0 +1,86 @@
+import type { LucideIcon } from "lucide-react";
+import { Code, Code2, Compass, LayoutDashboard, LayoutTemplate, LifeBuoy, Megaphone, Palette, Rocket } from "lucide-react";
+import type { AccentColor } from "@/content/hero-screens";
+
+export type ServiceVisual = "website" | "development" | "saas" | "marketing" | "design";
+
+export interface ServiceCta {
+  href: string;
+}
+
+/** Structural data only — every label/subtitle/description/bestFor/
+ * keyBenefits/deliverables/timeline/cta-label string lives in
+ * messages/{locale}/services.json under `categories.<id>`, keyed by `id`, so
+ * this file doesn't change per locale. `technologies` stays here rather than
+ * in the message files: it's brand/tool names (Next.js, Figma, PostgreSQL...)
+ * which per the translation guidelines are not translated. `id` is also what
+ * drives active/selected state in the services components — translated text
+ * can't be used as a stable key or identity since it differs per locale. */
+export interface ServiceCategory {
+  id: string;
+  icon: LucideIcon;
+  accent: AccentColor;
+  /** Representative tools/stack for this service line — proper nouns, not translated. */
+  technologies: string[];
+  visual: ServiceVisual;
+  cta: ServiceCta;
+}
+
+export const serviceCategories: ServiceCategory[] = [
+  {
+    id: "web-design",
+    icon: LayoutTemplate,
+    accent: "blue",
+    technologies: ["Figma", "Next.js", "Tailwind CSS", "Framer Motion"],
+    visual: "website",
+    cta: { href: "/portfolio" },
+  },
+  {
+    id: "web-development",
+    icon: Code,
+    accent: "cyan",
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+    visual: "development",
+    cta: { href: "/services" },
+  },
+  {
+    id: "saas-development",
+    icon: LayoutDashboard,
+    accent: "purple",
+    technologies: ["Next.js", "Node.js", "PostgreSQL", "REST/GraphQL APIs"],
+    visual: "saas",
+    cta: { href: "/contact" },
+  },
+  {
+    id: "digital-marketing",
+    icon: Megaphone,
+    accent: "pink",
+    technologies: ["Google Ads", "Meta Ads Manager", "SEO Tooling", "Analytics"],
+    visual: "marketing",
+    cta: { href: "/contact" },
+  },
+  {
+    id: "graphic-design",
+    icon: Palette,
+    accent: "emerald",
+    technologies: ["Figma", "Adobe Illustrator", "Adobe Photoshop"],
+    visual: "design",
+    cta: { href: "/portfolio" },
+  },
+];
+
+export interface ProcessStep {
+  id: string;
+  icon: LucideIcon;
+}
+
+/** The horizontal delivery process below the service switcher — title/
+ * description text lives in messages/{locale}/services.json under
+ * `process.steps.<id>`, same split as everything else in this file. */
+export const serviceProcessSteps: ProcessStep[] = [
+  { id: "discovery", icon: Compass },
+  { id: "design", icon: Palette },
+  { id: "development", icon: Code2 },
+  { id: "launch", icon: Rocket },
+  { id: "support", icon: LifeBuoy },
+];

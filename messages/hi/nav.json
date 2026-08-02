@@ -1,0 +1,36 @@
+{
+  "about": {
+    "label": "परिचय",
+    "helper": "Novyra के बारे में और जानें।",
+    "explore": "About देखें",
+    "children": {
+      "aboutUs": { "label": "हमारे बारे में", "description": "हम कौन हैं।" },
+      "mission": { "label": "उद्देश्य और दृष्टिकोण", "description": "हमें क्या प्रेरित करता है।" },
+      "whyChooseUs": { "label": "हमें क्यों चुनें", "description": "व्यवसाय Novyra पर भरोसा क्यों करते हैं।" },
+      "faq": { "label": "सामान्य प्रश्न", "description": "तुरंत जवाब।" }
+    }
+  },
+  "services": {
+    "label": "सेवाएं",
+    "helper": "हम क्या बनाते हैं, देखें।",
+    "exploreAll": "सभी सेवाएं देखें",
+    "getRecommendation": "सुझाव पाएं",
+    "children": {
+      "webDesign": { "label": "वेब डिज़ाइन और डेवलपमेंट", "description": "प्रीमियम बिज़नेस वेबसाइटें।" },
+      "digitalMarketing": { "label": "डिजिटल मार्केटिंग", "description": "SEO, विज्ञापन और ग्रोथ।" },
+      "webApplications": { "label": "वेब एप्लिकेशन", "description": "स्केलेबल कस्टम प्लेटफ़ॉर्म।" },
+      "graphicDesign": { "label": "ग्राफ़िक और लोगो डिज़ाइन", "description": "ब्रांड पहचान और विज़ुअल्स।" },
+      "saasDevelopment": { "label": "SaaS डेवलपमेंट", "description": "स्केल के लिए बने क्लाउड प्रोडक्ट।" }
+    }
+  },
+  "recommendationCard": {
+    "title": "चुनने में मदद चाहिए?",
+    "body": "बताएं आप क्या बना रहे हैं और हम सही सेवा सुझाएंगे।"
+  },
+  "solutions": { "label": "समाधान" },
+  "products": { "label": "उत्पाद" },
+  "pricing": { "label": "प्राइसिंग" },
+  "blog": { "label": "ब्लॉग" },
+  "clients": { "label": "क्लाइंट्स" },
+  "contact": { "label": "संपर्क करें" }
+}

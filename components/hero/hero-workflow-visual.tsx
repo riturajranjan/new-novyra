@@ -1,24 +1,20 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { processSteps } from "@/content/process-steps";
 import { accentStroke, accentTint } from "@/lib/accent";
 
 /** The hero's centerpiece — what Novyra's own delivery workflow looks like,
- * not a stock product-dashboard render. Earlier this slot held a generic
- * purchased "SaaS dashboard" image complete with invented revenue and user
- * counts ($45,231, 12.4K users, an "AI Assistant" widget) — exactly the
- * fabricated-metrics problem this rebuild removes everywhere else, so it
- * had to go here too. This is real information instead: the same six
- * stages every engagement actually moves through, imported directly from
- * content/process-steps.ts (the homepage's own process section reads from
- * the same array) so this preview can't drift out of sync with it again —
- * connected by the same traveling-pulse rail technique already used there,
- * one visual language for "how Novyra works," not two competing ones. */
+ * not a stock product-dashboard render: the same six stages every engagement
+ * moves through, imported directly from content/process-steps.ts so this
+ * preview can't drift out of sync with the homepage's process section.
+ *
+ * Server-rendered. The card and its six rows paint immediately — the outer
+ * card's single entrance is owned by the hero's CSS timeline, so the rows no
+ * longer each run their own mount animation (previously six independent
+ * Framer entrances). The only motion here is the ambient traveling pulse on
+ * the rail, a CSS keyframe (`animate-hero-pulse`) disabled under
+ * prefers-reduced-motion via the global rule. */
 export function HeroWorkflowVisual() {
   const t = useTranslations("hero.workflow");
-  const reduceMotion = useReducedMotion();
 
   return (
     <div className="relative mx-auto flex w-full max-w-105 items-center justify-center py-6 md:max-w-115 lg:mx-0 lg:ml-auto lg:max-w-125">
@@ -28,12 +24,7 @@ export function HeroWorkflowVisual() {
         <div className="bg-brand-emerald absolute bottom-[6%] left-1/3 h-52 w-52 rounded-full opacity-[0.14] blur-[90px]" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="glass-strong shadow-card-hover relative w-full overflow-hidden rounded-[28px] p-6 sm:p-8"
-      >
+      <div className="glass-strong shadow-card-hover relative w-full overflow-hidden rounded-[28px] p-6 sm:p-8">
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/8 to-transparent" />
 
         <p className="text-caption text-foreground-secondary mb-6 font-semibold tracking-[0.14em] uppercase">{t("label")}</p>
@@ -44,25 +35,18 @@ export function HeroWorkflowVisual() {
             className="absolute top-5 bottom-5 left-[19px] w-px"
             style={{ background: "linear-gradient(to bottom, var(--color-brand-blue), var(--color-brand-cyan), var(--color-brand-purple), var(--color-brand-pink), var(--color-brand-amber), var(--color-brand-emerald))" }}
           />
-          {!reduceMotion ? (
-            <motion.span
-              aria-hidden
-              className="absolute left-[15px] h-8 w-8 rounded-full blur-md"
-              style={{ background: "var(--color-brand-blue)", opacity: 0.5 }}
-              animate={{ top: ["4%", "96%", "4%"] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-          ) : null}
+          <span
+            aria-hidden
+            className="animate-hero-pulse absolute left-[15px] top-[4%] h-8 w-8 rounded-full blur-md"
+            style={{ background: "var(--color-brand-blue)", opacity: 0.5 }}
+          />
 
-          {processSteps.map((stage, i) => {
+          {processSteps.map((stage) => {
             const Icon = stage.icon;
             const stroke = accentStroke[stage.accent];
             return (
-              <motion.div
+              <div
                 key={stage.id}
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.15 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="relative flex items-center gap-4 py-3"
               >
                 <span
@@ -75,11 +59,11 @@ export function HeroWorkflowVisual() {
                   <span className="text-body-sm text-foreground font-semibold">{t(`stages.${stage.id}.label`)}</span>
                   <span className="text-caption text-foreground-secondary">{t(`stages.${stage.id}.detail`)}</span>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

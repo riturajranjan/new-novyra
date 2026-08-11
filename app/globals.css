@@ -213,6 +213,17 @@
   --animate-glow-pulse: glow-pulse 3.2s ease-in-out infinite;
   --animate-mesh-a: mesh-drift-a 34s var(--ease-soft) infinite alternate;
   --animate-mesh-b: mesh-drift-b 42s var(--ease-soft) infinite alternate-reverse;
+
+  /* Hero entrance + ambient motion — CSS-driven so it plays at first paint,
+     never gated on the JS bundle (previously a post-hydration GSAP timeline
+     that hid the SSR-visible content, then re-revealed it). Every one is
+     neutralized by the global prefers-reduced-motion rule below. */
+  --animate-hero-line: hero-line-in 0.6s var(--ease-premium) both;
+  --animate-hero-word: hero-line-in 0.6s var(--ease-premium) both, text-gradient-flow 9s ease-in-out infinite;
+  --animate-hero-fade: hero-fade-up 0.5s var(--ease-premium) both;
+  --animate-hero-sparkle: hero-sparkle 3.2s ease-in-out infinite;
+  --animate-hero-particle: hero-particle 6s ease-in-out infinite;
+  --animate-hero-pulse: hero-pulse-travel 6s ease-in-out infinite;
 }
 
 @keyframes drift {
@@ -289,6 +300,62 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+/* Headline lines slide up from behind their overflow-hidden mask —
+   transform-only (GPU-cheap), no opacity/blur on the LCP text. */
+@keyframes hero-line-in {
+  from {
+    transform: translateY(115%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-particle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes hero-pulse-travel {
+  0%,
+  100% {
+    top: 4%;
+  }
+  50% {
+    top: 96%;
   }
 }
 

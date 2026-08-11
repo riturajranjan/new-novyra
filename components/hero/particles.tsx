@@ -1,8 +1,4 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
-
-/** Fixed (not random-at-render) so server and client markup match exactly. */
+/** Fixed (not random-at-render) so the markup is deterministic. */
 const particles = [
   { x: 12, y: 20, size: 3, delay: 0, duration: 6 },
   { x: 28, y: 65, size: 2, delay: 0.6, duration: 7.5 },
@@ -16,33 +12,27 @@ const particles = [
   { x: 50, y: 90, size: 2, delay: 1.1, duration: 6.8 },
 ];
 
-/** Subtle drifting particles for atmospheric depth. */
+/** Subtle drifting particles for atmospheric depth. Server-rendered; the
+ * drift is a CSS keyframe (`animate-hero-particle`), disabled under
+ * prefers-reduced-motion via the global rule. */
 export function Particles() {
-  const reduceMotion = useReducedMotion();
-
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
       {particles.map((p, i) => (
-        <motion.span
+        <span
           key={i}
-          className="bg-brand-cyan absolute rounded-full"
+          className="animate-hero-particle bg-brand-cyan absolute rounded-full"
           style={{
             left: `${p.x}%`,
             top: `${p.y}%`,
             width: p.size,
             height: p.size,
-          }}
-          initial={{ opacity: 0 }}
-          animate={
-            reduceMotion
-              ? { opacity: 0.35 }
-              : { opacity: [0, 0.5, 0], y: [0, -18, 0] }
-          }
-          transition={{
-            duration: p.duration,
-            delay: p.delay,
-            repeat: reduceMotion ? 0 : Infinity,
-            ease: "easeInOut",
+            // Idle base for when the keyframe is neutralized under
+            // prefers-reduced-motion — matches the prior static value
+            // instead of reverting to a solid opacity:1 dot.
+            opacity: 0.35,
+            animationDelay: `${p.delay}s`,
+            animationDuration: `${p.duration}s`,
           }}
         />
       ))}

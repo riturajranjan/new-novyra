@@ -38,7 +38,7 @@ function SocialCard({ link, index, label }: { link: (typeof socialLinks)[number]
     return (
       <span
         aria-disabled
-        className="border-border-subtle bg-surface/40 text-foreground-secondary/40 flex h-10 w-10 shrink-0 cursor-not-allowed items-center justify-center rounded-xl border"
+        className="border-border-subtle bg-surface/40 text-foreground-secondary/40 flex h-10 w-10 shrink-0 cursor-not-allowed items-center justify-center rounded-full border"
         title={label}
       >
         <Glyph className="h-4.5 w-4.5" aria-hidden />
@@ -56,10 +56,10 @@ function SocialCard({ link, index, label }: { link: (typeof socialLinks)[number]
       initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "150px" }}
-      whileHover={{ y: -3, scale: 1.05 }}
-      transition={{ duration: 0.35, delay: index * 0.04, ease: easePremium }}
+      whileHover={{ y: -2 }}
+      transition={{ duration: 0.2, delay: index * 0.04, ease: easePremium }}
       aria-label={label}
-      className="group border-border-subtle bg-surface/60 relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border backdrop-blur-md transition-[box-shadow,border-color] duration-base hover:border-transparent hover:shadow-[0_0_16px_-4px_var(--color-brand-blue),0_0_0_1px_var(--color-brand-purple)]"
+      className="group border-border-subtle bg-surface/60 focus-visible:ring-brand-blue relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full border backdrop-blur-md transition-[box-shadow,border-color] duration-base hover:border-transparent hover:shadow-[0_0_16px_-4px_var(--color-brand-blue),0_0_0_1px_var(--color-brand-purple)] focus-visible:ring-2 focus-visible:outline-none"
     >
       <motion.span aria-hidden className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: highlight }} />
       <Glyph className="text-foreground-secondary group-hover:text-foreground relative h-4.5 w-4.5 transition-colors duration-base" aria-hidden />

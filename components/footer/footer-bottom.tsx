@@ -15,15 +15,17 @@ export function FooterBottom() {
     <div className="border-border-subtle flex flex-col items-center gap-4 border-t pt-5 sm:flex-row sm:justify-between">
       <p className="text-caption text-foreground-secondary text-center sm:text-left">{t("copyright")}</p>
 
-      <nav aria-label={t("legalNavLabel")} className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5">
-        {legalLinks.map((link) => (
-          <Link
-            key={link.id}
-            href={link.href}
-            className="text-caption text-foreground-secondary hover:text-foreground transition-colors duration-fast"
-          >
-            {t(`legal.${link.id}`)}
-          </Link>
+      <nav aria-label={t("legalNavLabel")} className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
+        {legalLinks.map((link, i) => (
+          <span key={link.id} className="flex items-center gap-3">
+            {i > 0 ? <span className="text-foreground-secondary/30" aria-hidden>|</span> : null}
+            <Link
+              href={link.href}
+              className="text-caption text-foreground-secondary hover:text-foreground focus-visible:ring-brand-blue rounded-sm transition-colors duration-fast focus-visible:ring-2 focus-visible:outline-none"
+            >
+              {t(`legal.${link.id}`)}
+            </Link>
+          </span>
         ))}
       </nav>
 

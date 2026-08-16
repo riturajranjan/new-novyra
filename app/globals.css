@@ -214,6 +214,14 @@
   --animate-mesh-a: mesh-drift-a 34s var(--ease-soft) infinite alternate;
   --animate-mesh-b: mesh-drift-b 42s var(--ease-soft) infinite alternate-reverse;
 
+  /* ---- Footer / Project CTA orbital motif — extremely slow, GPU-cheap
+     (transform-only), neutralized by the global prefers-reduced-motion
+     rule below. ---- */
+  --animate-spin-slow: spin-slow 44s linear infinite;
+  --animate-spin-slow-reverse: spin-slow-reverse 60s linear infinite;
+  --animate-node-drift: node-drift 9s var(--ease-soft) infinite alternate;
+  --animate-tiny-pulse: line-pulse 4s ease-in-out infinite;
+
   /* Hero entrance + ambient motion — CSS-driven so it plays at first paint,
      never gated on the JS bundle (previously a post-hydration GSAP timeline
      that hid the SSR-visible content, then re-revealed it). Every one is
@@ -290,6 +298,43 @@
   }
   100% {
     transform: translate3d(-5%, -6%, 0) rotate(-10deg) scale(1);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes node-drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(3px, -4px, 0);
+  }
+}
+
+@keyframes line-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.85;
   }
 }
 

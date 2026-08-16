@@ -1,22 +1,26 @@
 {
   "cta": {
-    "label": "Have a Project?",
-    "heading": "Let's build something worth remembering.",
-    "tagline": "Websites • SaaS • AI • Digital Products"
+    "label": "Have a Project in Mind?",
+    "headingBefore": "Let's build something",
+    "headingHighlight": "remarkable",
+    "headingAfter": "together.",
+    "tagline": "We turn ambitious ideas into fast, scalable and thoughtfully engineered digital products."
   },
   "ctas": {
-    "startProject": "Start a Project",
+    "startProject": "Start Your Project",
     "whatsapp": "WhatsApp Us"
   },
   "brand": {
     "description": "We design and engineer digital products that help businesses move forward."
   },
   "contactBlock": {
-    "heading": "Start a conversation",
+    "heading": "Let's Connect",
     "email": "Email",
     "phone": "Phone",
     "whatsapp": "WhatsApp",
-    "location": "Location"
+    "location": "Location",
+    "available": "Available for new projects",
+    "basedIn": "Based in Muzaffarpur, working globally."
   },
   "companyInfo": {
     "description": "An engineering-led studio building websites, applications, and automation for growing businesses.",
@@ -30,13 +34,7 @@
         "services": "Services",
         "industries": "Industries",
         "work": "Work",
-        "pricing": "Pricing"
-      }
-    },
-    "company": {
-      "title": "Company",
-      "links": {
-        "about": "About",
+        "pricing": "Pricing",
         "contact": "Contact"
       }
     },
@@ -48,6 +46,34 @@
         "aiAutomation": "AI & Automation",
         "digitalGrowth": "Digital Growth"
       }
+    },
+    "industries": {
+      "title": "Industries"
+    },
+    "company": {
+      "title": "Company",
+      "links": {
+        "about": "About Us",
+        "process": "Our Process"
+      }
+    }
+  },
+  "values": {
+    "productThinking": {
+      "title": "Product Thinking",
+      "description": "We solve real problems with user-first, outcome-driven product strategy."
+    },
+    "engineeringDiscipline": {
+      "title": "Engineering Discipline",
+      "description": "Clean code, best practices and rigorous quality in everything we build."
+    },
+    "performanceFirst": {
+      "title": "Performance First",
+      "description": "Speed, security and scalability are built in — not added afterwards."
+    },
+    "builtToScale": {
+      "title": "Built to Scale",
+      "description": "We architect solutions that grow with your business and future needs."
     }
   },
   "bottom": {

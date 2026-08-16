@@ -1,42 +1,58 @@
 "use client";
 
+import { Building2, Compass, Send, SquareCode } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { FooterBackground } from "@/components/footer/footer-background";
-import { FooterWordmark } from "@/components/footer/footer-wordmark";
-import { FooterCta } from "@/components/footer/footer-cta";
+import { ProjectCta } from "@/components/footer/project-cta";
 import { BrandBlock } from "@/components/footer/brand-block";
 import { ContactBlock } from "@/components/footer/contact-block";
 import { FooterNavColumn } from "@/components/footer/footer-nav-column";
+import { FooterIndustriesColumn } from "@/components/footer/footer-industries-column";
+import { FooterValues } from "@/components/footer/footer-values";
 import { FooterBottom } from "@/components/footer/footer-bottom";
 import { footerColumns } from "@/content/footer";
 
-/** The site's closing scene, in three layers — a compact CTA, an editorial
- * nav grid (no card shells), and a thin bottom bar — with a huge low-
- * opacity "NOVYRA" wordmark as the brand signature. Deliberately not one
- * giant glass-strong card: thin `border-t` dividers between layers instead,
- * so the footer reads as a distinct closing experience rather than another
- * bordered container like the sections above it. Lives in the root layout
- * (like the navbar), so it appears on every page. */
+const explore = footerColumns.find((c) => c.id === "explore")!;
+const services = footerColumns.find((c) => c.id === "services")!;
+const company = footerColumns.find((c) => c.id === "company")!;
+
+/** The site's closing scene, in two connected blocks — a compact "Project
+ * CTA" panel (its own rounded, bordered surface) directly above the main
+ * footer panel (brand / explore / services / industries / company /
+ * connect, a compact value strip, then a thin bottom bar). Lives in the
+ * root layout (like the navbar), so it appears on every page. This is
+ * deliberately not the same CTA as `components/sections/contact-cta.tsx`
+ * (the homepage/`/services` hero-style glass card with its own `#contact`
+ * anchor, left untouched) — this is the footer's own, sitewide echo of it,
+ * matching the approved reference composition. */
 export function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden pt-14 pb-8 sm:pt-16">
+    <footer className="bg-section-deep relative isolate overflow-hidden py-8 sm:py-10">
       <FooterBackground />
-      <FooterWordmark />
 
-      <Container className="flex flex-col gap-8">
-        <FooterCta />
+      <Container size="wide" className="flex flex-col gap-6">
+        <ProjectCta />
 
-        <div className="border-border-subtle grid grid-cols-1 gap-8 border-t pt-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          <div className="flex flex-col gap-8 sm:col-span-2 lg:col-span-1">
-            <BrandBlock />
-            <ContactBlock />
+        <div
+          className="relative isolate flex flex-col gap-8 overflow-hidden rounded-3xl border p-6 sm:p-9"
+          style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "#07101f" }}
+        >
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr_0.8fr_1.15fr] lg:gap-x-6">
+            <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+              <BrandBlock />
+            </div>
+            <FooterNavColumn column={explore} index={0} icon={Compass} />
+            <FooterNavColumn column={services} index={1} icon={SquareCode} />
+            <FooterIndustriesColumn />
+            <FooterNavColumn column={company} index={3} icon={Building2} />
+            <div className="col-span-2 sm:col-span-1">
+              <ContactBlock icon={Send} />
+            </div>
           </div>
-          {footerColumns.map((column, i) => (
-            <FooterNavColumn key={column.id} column={column} index={i} />
-          ))}
-        </div>
 
-        <FooterBottom />
+          <FooterValues />
+          <FooterBottom />
+        </div>
       </Container>
     </footer>
   );

@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Code2, MessageCircle, ShieldCheck, TrendingUp, Zap } from "lucide-react";
+import type { AccentColor } from "@/content/hero-screens";
 
 export interface FooterCta {
   id: string;
@@ -48,12 +49,6 @@ export const footerColumns: FooterColumn[] = [
       { id: "industries", href: "/industries" },
       { id: "work", href: "/work" },
       { id: "pricing", href: "/pricing" },
-    ],
-  },
-  {
-    id: "company",
-    links: [
-      { id: "about", href: "/about" },
       { id: "contact", href: "/#contact" },
     ],
   },
@@ -66,6 +61,30 @@ export const footerColumns: FooterColumn[] = [
       { id: "digitalGrowth", href: "/services" },
     ],
   },
+  {
+    id: "company",
+    links: [
+      { id: "about", href: "/about" },
+      { id: "process", href: "/#process" },
+    ],
+  },
+];
+
+/** The footer's compact value strip — distinct ids/copy from the homepage
+ * Trusted Partner section's `differentiators` (content/trusted-partner.ts),
+ * which stays untouched. Structural data only — title/description text
+ * lives in messages/{locale}/footer.json under `values.<id>`. */
+export interface FooterValue {
+  id: string;
+  icon: LucideIcon;
+  accent: AccentColor;
+}
+
+export const footerValues: FooterValue[] = [
+  { id: "productThinking", icon: ShieldCheck, accent: "blue" },
+  { id: "engineeringDiscipline", icon: Code2, accent: "purple" },
+  { id: "performanceFirst", icon: Zap, accent: "cyan" },
+  { id: "builtToScale", icon: TrendingUp, accent: "pink" },
 ];
 
 export interface SocialLink {

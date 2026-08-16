@@ -5,6 +5,66 @@
     "supportingCopy": "A selection of platforms, digital products and experiences designed and engineered by Novyra.",
     "description": "Each concept below explores a real operational problem, the approach we'd take, and the technical decisions behind it — not a client outcome, since none of these shipped for a paying client."
   },
+  "stage": {
+    "eyebrow": "Selected Work",
+    "heading": "Selected work built around real problems.",
+    "description": "A selection of digital products, platforms and experiences where thoughtful design meets production-ready engineering.",
+    "supportingCopy": "Product thinking, design and engineering brought together into focused digital systems.",
+    "statusLabel": "Concept",
+    "typeLabel": "Product",
+    "disciplinesLabel": "Product Design · Engineering",
+    "metaLabel": "{number} / {category} / {type}",
+    "chromeLabel": "NV / Product",
+    "interfaceStudyLabel": "Interface Study",
+    "previewLabel": "Preview",
+    "progressLabel": "{current} / {total}",
+    "viewProjectCta": "View project",
+    "viewProjectLabel": "View {product}",
+    "viewAllCta": "View all work"
+  },
+  "visuals": {
+    "school-erp": {
+      "metric1Label": "Students",
+      "metric2Label": "Attendance",
+      "caption": "Today's Attendance"
+    },
+    "hospital-platform": {
+      "step1": "Appointment",
+      "step2": "Consultation",
+      "step3": "Follow-up",
+      "queueLabel": "Queue"
+    },
+    "ai-saas-dashboard": {
+      "metric1Label": "API",
+      "metric1Value": "Healthy",
+      "metric2Label": "Latency",
+      "metric3Label": "Deployments"
+    },
+    "real-estate-crm": {
+      "stage1": "New",
+      "stage2": "Qualified",
+      "stage3": "Viewing",
+      "stage4": "Deal"
+    }
+  },
+  "principles": {
+    "eyebrow": "Built With Intent",
+    "heading": "Products shaped by design and engineering.",
+    "items": {
+      "product-thinking": {
+        "title": "Product Thinking",
+        "description": "Built around real workflows and user needs."
+      },
+      "engineering-discipline": {
+        "title": "Engineering Discipline",
+        "description": "Production-ready systems with scalable foundations."
+      },
+      "designed-to-perform": {
+        "title": "Designed to Perform",
+        "description": "Clear interfaces, focused experiences and measurable goals."
+      }
+    }
+  },
   "filters": {
     "All": "All",
     "Healthcare": "Healthcare",
@@ -22,6 +82,10 @@
     "hospital-platform": {
       "industryLabel": "Healthcare",
       "title": "Healthcare Operations Concept",
+      "productName": "Novyra Care OS",
+      "tagline": "Connected digital workflows for modern healthcare operations.",
+      "capabilities": ["Healthcare", "Web Platform", "Operations"],
+      "statement": "A shared operations platform for multi-department hospitals — one patient record, role-based dashboards, and coordinated scheduling.",
       "description": "The problem explored: a multi-department hospital tracking patient records, scheduling, and staff access across disconnected spreadsheets and paper logs.",
       "highlights": [
         "One patient record shared across departments instead of re-entered at each desk",
@@ -34,6 +98,10 @@
     "school-erp": {
       "industryLabel": "Education",
       "title": "Education Management Concept",
+      "productName": "Novyra Campus OS",
+      "tagline": "Connected school operations across academics, attendance, fees and communication.",
+      "capabilities": ["Education", "SaaS", "School Operations"],
+      "statement": "A connected school operations platform bringing attendance, fees and parent communication into one shared system.",
       "description": "The problem explored: attendance, fees, and parent communication handled through separate tools that don't talk to each other.",
       "highlights": [
         "A single attendance record that drives fee status and parent notifications automatically",
@@ -58,6 +126,10 @@
     "real-estate-crm": {
       "industryLabel": "Real Estate",
       "title": "Real Estate Operations Concept",
+      "productName": "Novyra Realty CRM",
+      "tagline": "A connected property workflow from lead capture through deal management.",
+      "capabilities": ["Real Estate", "CRM", "Workflow"],
+      "statement": "A shared pipeline for real estate teams — one view of every lead, listing and follow-up, with nothing sitting untouched.",
       "description": "The problem explored: a sales team losing track of which lead was last contacted, and by whom, across a shared inbox and a spreadsheet.",
       "highlights": [
         "One pipeline view so no lead sits untouched without the team noticing",
@@ -82,6 +154,10 @@
     "ai-saas-dashboard": {
       "industryLabel": "SaaS",
       "title": "SaaS Administration Concept",
+      "productName": "Novyra Cloud Console",
+      "tagline": "A focused command center for complex SaaS systems and operational data.",
+      "capabilities": ["SaaS", "Infrastructure", "Analytics"],
+      "statement": "A multi-tenant admin console with isolated customer data and AI-assisted actions scoped to what each tenant actually owns.",
       "description": "The problem explored: an admin dashboard for a multi-tenant product where every customer's data has to stay isolated while the AI features stay useful.",
       "highlights": [
         "Tenant isolation enforced at the data layer, not just hidden in the UI",

@@ -15,6 +15,14 @@ export interface ConceptBuild {
   techStack: string[];
   icon: LucideIcon;
   accent: AccentColor;
+  /** GENERATED IMAGE — left unset. No image-generation capability is
+   * available in this environment (checked directly), so no photo was
+   * fabricated for the homepage's Selected Work carousel. Set this once a
+   * real generated/photographed asset exists (e.g.
+   * "/work/campus-os.jpg", dropped into public/work/) — see
+   * components/case-studies/project-visual.tsx, which renders an
+   * honestly-abstract embedded composition until then. */
+  image?: string;
 }
 
 /** Structural data only — industryLabel/title/description/highlights/timeline

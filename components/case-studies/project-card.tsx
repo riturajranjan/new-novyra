@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { ProjectVisual } from "@/components/case-studies/project-visual";
+import { CardMotif, getCardTheme } from "@/components/case-studies/card-theme";
 import type { ConceptBuild } from "@/content/case-studies";
 import { accentStroke, accentTint } from "@/lib/accent";
 
@@ -14,11 +15,11 @@ interface ProjectCardProps {
   priority?: boolean;
 }
 
-/** One 2×2 grid card — number badge + status top-left, category icon
- * top-right, title/statement/capabilities/CTA bottom-left, visual embedded
- * and bled toward the right edge. All essential info (title, statement,
- * CTA) is always visible — hover only adds restrained motion, nothing is
- * revealed exclusively on hover. */
+/** One card in the 3×2 grid — number badge + status top-left, category icon
+ * top-right, title/tagline/capabilities/CTA bottom-left, real image as a
+ * small fixed tile in the bottom-right corner. All essential info (title,
+ * tagline, CTA) is always visible — hover only adds restrained motion,
+ * nothing is revealed exclusively on hover. */
 export function ProjectCard({ build, index, priority }: ProjectCardProps) {
   const tBuild = useTranslations(`caseStudies.builds.${build.id}`);
   const tStage = useTranslations("caseStudies.stage");
@@ -26,51 +27,68 @@ export function ProjectCard({ build, index, priority }: ProjectCardProps) {
   const number = String(index + 1).padStart(2, "0");
   const productName = tBuild("productName");
   const capabilities = tBuild.raw("capabilities") as string[];
+  const theme = getCardTheme(build.id);
 
   return (
     <RippleLink
       href="/work"
       aria-label={tStage("viewProjectLabel", { product: productName })}
-      className="group relative isolate flex h-[300px] flex-col justify-between overflow-hidden rounded-2xl border p-6 transition-colors duration-[400ms] sm:h-[300px] sm:p-7"
-      style={{ borderColor: "rgba(255,255,255,0.07)", backgroundColor: "#070a16" }}
+      className="group relative isolate flex h-[300px] flex-col justify-between overflow-hidden rounded-2xl border p-5 transition-colors duration-[400ms] md:h-[276px] md:p-6"
+      style={{ borderColor: theme.borderTint, background: theme.background }}
     >
+      {/* Thin top-edge accent highlight — always faintly visible, not hover-only. */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{ backgroundImage: `linear-gradient(90deg, transparent, ${theme.line}, transparent)`, opacity: 0.22 }}
+      />
+
+      <CardMotif build={build} />
+
+      {/* Directional overlay keeping the left text zone readable regardless of the background gradient. */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{ backgroundImage: "linear-gradient(90deg, rgba(5,8,18,.85) 0%, rgba(5,8,18,.55) 48%, transparent 75%)" }}
+      />
+
       <span
         aria-hidden
         className="pointer-events-none absolute inset-0 rounded-2xl border opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100"
-        style={{ borderColor: accentTint(build.accent, 30) }}
+        style={{ borderColor: accentTint(build.accent, 42) }}
       />
 
-      <div className="pointer-events-none absolute inset-0 transition-transform duration-[400ms] ease-out group-hover:scale-[1.025] group-hover:-translate-y-[2px]">
+      <div className="pointer-events-none absolute inset-0 transition-transform duration-[400ms] ease-out group-hover:scale-[1.03] group-hover:-translate-y-[3px]">
         <ProjectVisual build={build} priority={priority} />
       </div>
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-70 transition-opacity duration-[400ms] group-hover:opacity-100"
-        style={{ backgroundImage: `radial-gradient(55% 75% at 82% 45%, ${accentTint(build.accent, 7)}, transparent 70%)` }}
+        className="pointer-events-none absolute inset-0 -z-10 opacity-50 transition-opacity duration-[400ms] group-hover:opacity-70 md:opacity-60"
+        style={{ backgroundImage: `radial-gradient(38% 48% at 86% 84%, ${theme.glow}, transparent 72%)` }}
       />
 
       <div className="relative z-10 flex items-start justify-between">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           <span
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border text-[13px] font-semibold text-white/75"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border text-[12px] font-semibold text-white/75"
             style={{ borderColor: accentTint(build.accent, 42), backgroundColor: accentTint(build.accent, 5) }}
           >
             {number}
           </span>
           <span className="text-[10px] font-semibold tracking-[0.1em] text-white/35 uppercase">{tStage("statusLabel")}</span>
         </div>
-        <Icon className="h-[22px] w-[22px] shrink-0 transition-colors duration-300" style={{ color: accentTint(build.accent, 55) }} aria-hidden />
+        <Icon className="h-[21px] w-[21px] shrink-0 transition-colors duration-300" style={{ color: accentTint(build.accent, 55) }} aria-hidden />
       </div>
 
-      <div className="relative z-10 flex max-w-[300px] flex-col gap-2.5">
+      <div className="relative z-10 flex max-w-[62%] flex-col gap-1.5 md:max-w-[54%]">
         <h3
-          className="text-[24px] leading-tight font-semibold text-white transition-transform duration-300 group-hover:translate-x-0.5 sm:text-[26px]"
-          style={{ fontWeight: 620 }}
+          className="line-clamp-2 text-[19px] leading-[1.2] font-semibold text-white transition-transform duration-300 group-hover:translate-x-0.5 md:text-[21px]"
+          style={{ fontWeight: 630 }}
         >
           {productName}
         </h3>
-        <p className="text-[14.5px] leading-relaxed text-white/[0.74] sm:text-[15px]">{tBuild("tagline")}</p>
-        <p className="text-[12.5px] font-medium tracking-[0.01em]" style={{ color: accentTint(build.accent, 75) }}>
+        <p className="line-clamp-2 text-[13px] leading-[1.5] text-white/[0.74] md:text-[13.5px]">{tBuild("tagline")}</p>
+        <p className="line-clamp-2 text-[11px] leading-snug font-medium tracking-[0.01em]" style={{ color: accentTint(build.accent, 75) }}>
           {capabilities.join(" · ")}
         </p>
         <span
@@ -79,7 +97,7 @@ export function ProjectCard({ build, index, priority }: ProjectCardProps) {
         >
           {tStage("viewProjectCta")}
           <span
-            className="h-px w-6 transition-[width] duration-300 group-hover:w-9"
+            className="h-px w-5 transition-[width] duration-300 group-hover:w-8"
             style={{ backgroundColor: accentTint(build.accent, 60) }}
             aria-hidden
           />

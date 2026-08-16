@@ -12,6 +12,7 @@ interface RippleLinkProps {
   target?: string;
   rel?: string;
   style?: CSSProperties;
+  "aria-label"?: string;
   onMouseEnter?: (e: MouseEvent<HTMLAnchorElement>) => void;
   onFocus?: (e: FocusEvent<HTMLAnchorElement>) => void;
 }
@@ -20,7 +21,7 @@ let rippleId = 0;
 
 /** A Link with a Material-style click ripple — purely a visual click
  * acknowledgment layered inside the existing button, no size/layout change. */
-export function RippleLink({ href, className, children, target, rel, style, onMouseEnter, onFocus }: RippleLinkProps) {
+export function RippleLink({ href, className, children, target, rel, style, "aria-label": ariaLabel, onMouseEnter, onFocus }: RippleLinkProps) {
   const reduceMotion = useReducedMotion();
   const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
 
@@ -37,6 +38,7 @@ export function RippleLink({ href, className, children, target, rel, style, onMo
       target={target}
       rel={rel}
       style={style}
+      aria-label={ariaLabel}
       className={cn("relative overflow-hidden", className)}
       onPointerDown={handlePointerDown}
       onMouseEnter={onMouseEnter}

@@ -1,13 +1,24 @@
 import type { LucideIcon } from "lucide-react";
-import { Building2, Globe, GraduationCap, HeartPulse, LayoutDashboard, UtensilsCrossed } from "lucide-react";
+import { Building2, GraduationCap, Globe, HeartPulse, Landmark, LayoutDashboard, Plane, ShoppingCart, UtensilsCrossed } from "lucide-react";
 import type { AccentColor } from "@/content/hero-screens";
 
-export type CaseStudyFilter = "All" | "Healthcare" | "Education" | "Business" | "SaaS" | "eCommerce" | "CRM" | "AI";
+export type CaseStudyFilter = "All" | "Healthcare" | "Education" | "Business" | "SaaS" | "eCommerce" | "CRM" | "AI" | "Travel" | "Finance";
 
 /** These values are stable ids used for filtering/comparison, not display
  * text — the visible filter label comes from messages/{locale}/caseStudies.json
  * under `filters`, keyed by the same value. */
-export const filters: CaseStudyFilter[] = ["All", "Healthcare", "Education", "Business", "SaaS", "eCommerce", "CRM", "AI"];
+export const filters: CaseStudyFilter[] = [
+  "All",
+  "Healthcare",
+  "Education",
+  "Business",
+  "SaaS",
+  "eCommerce",
+  "CRM",
+  "Travel",
+  "Finance",
+  "AI",
+];
 
 export interface ConceptBuild {
   id: string;
@@ -15,13 +26,11 @@ export interface ConceptBuild {
   techStack: string[];
   icon: LucideIcon;
   accent: AccentColor;
-  /** GENERATED IMAGE — left unset. No image-generation capability is
-   * available in this environment (checked directly), so no photo was
-   * fabricated for the homepage's Selected Work carousel. Set this once a
-   * real generated/photographed asset exists (e.g.
-   * "/work/campus-os.jpg", dropped into public/work/) — see
-   * components/case-studies/project-visual.tsx, which renders an
-   * honestly-abstract embedded composition until then. */
+  /** Real image asset path under public/work/ (e.g. "/work/education.png"),
+   * rendered via next/image in components/case-studies/project-visual.tsx.
+   * Left unset for concept builds that don't have one yet, in which case
+   * that component falls back to an honestly-abstract embedded
+   * composition instead of fabricating a screenshot. */
   image?: string;
 }
 
@@ -43,13 +52,15 @@ export const conceptBuilds: ConceptBuild[] = [
     techStack: ["Next.js", "Node.js", "PostgreSQL"],
     icon: HeartPulse,
     accent: "cyan",
+    image: "/work/healthcare.png",
   },
   {
     id: "school-erp",
     category: "Education",
     techStack: ["Next.js", "Node.js", "PostgreSQL"],
     icon: GraduationCap,
-    accent: "emerald",
+    accent: "purple",
+    image: "/work/education.png",
   },
   {
     id: "restaurant-website",
@@ -78,17 +89,51 @@ export const conceptBuilds: ConceptBuild[] = [
     techStack: ["Next.js", "Node.js", "OpenAI", "PostgreSQL"],
     icon: LayoutDashboard,
     accent: "pink",
+    image: "/work/professional-services.png",
+  },
+  {
+    id: "ecommerce-platform",
+    category: "eCommerce",
+    techStack: ["Next.js", "Node.js", "PostgreSQL"],
+    icon: ShoppingCart,
+    accent: "amber",
+    image: "/work/commerce.png",
+  },
+  {
+    id: "travel-platform",
+    category: "Travel",
+    techStack: ["Next.js", "Node.js", "PostgreSQL"],
+    icon: Plane,
+    accent: "emerald",
+    image: "/work/travel.png",
+  },
+  {
+    id: "fintech-platform",
+    category: "Finance",
+    techStack: ["Next.js", "Node.js", "PostgreSQL"],
+    icon: Landmark,
+    accent: "blue",
+    image: "/work/finance.png",
   },
 ];
 
-/** The four shown in the homepage's single-project "Selected Work" stage
- * (see components/sections/case-studies.tsx) — Education first (matches
- * the stage's default active project), then Healthcare, SaaS, Real Estate.
- * The full six, including these four, live on the dedicated /work page
+/** The six shown in the homepage's "Selected Work" grid (see
+ * components/sections/case-studies.tsx), in display order: Education,
+ * Healthcare, Retail & eCommerce, Travel & Hospitality, Finance,
+ * Professional Services/SaaS. Each has a real image under public/work/.
+ * The full nine (these six plus restaurant-website, real-estate-crm,
+ * business-website) live on the dedicated /work page
  * (app/[locale]/work/page.tsx), which uses the original FeaturedConcept/
  * ConceptCard components untouched — the homepage stage uses its own
  * separate components instead of modifying those. */
-export const homepageStageIds = ["school-erp", "hospital-platform", "ai-saas-dashboard", "real-estate-crm"] as const;
+export const homepageStageIds = [
+  "school-erp",
+  "hospital-platform",
+  "ecommerce-platform",
+  "travel-platform",
+  "fintech-platform",
+  "ai-saas-dashboard",
+] as const;
 
 /** Structural ids only — labels live in messages/{locale}/caseStudies.json
  * under `processSteps`, keyed by `id`. Same six stages, same order, as the

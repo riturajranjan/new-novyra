@@ -22,31 +22,6 @@
     "viewProjectLabel": "View {product}",
     "viewAllCta": "View all work"
   },
-  "visuals": {
-    "school-erp": {
-      "metric1Label": "Students",
-      "metric2Label": "Attendance",
-      "caption": "Today's Attendance"
-    },
-    "hospital-platform": {
-      "step1": "Appointment",
-      "step2": "Consultation",
-      "step3": "Follow-up",
-      "queueLabel": "Queue"
-    },
-    "ai-saas-dashboard": {
-      "metric1Label": "API",
-      "metric1Value": "Healthy",
-      "metric2Label": "Latency",
-      "metric3Label": "Deployments"
-    },
-    "real-estate-crm": {
-      "stage1": "New",
-      "stage2": "Qualified",
-      "stage3": "Viewing",
-      "stage4": "Deal"
-    }
-  },
   "principles": {
     "eyebrow": "Built With Intent",
     "heading": "Products shaped by design and engineering.",
@@ -73,6 +48,8 @@
     "SaaS": "SaaS",
     "eCommerce": "eCommerce",
     "CRM": "CRM",
+    "Travel": "Travel",
+    "Finance": "Finance",
     "AI": "AI"
   },
   "filterBar": {
@@ -165,6 +142,54 @@
         "Usage analytics built as a first-class feature, not an afterthought query"
       ],
       "demonstrates": "How we'd approach multi-tenant data isolation and where AI features should — and shouldn't — have access.",
+      "timeline": "6–9 weeks"
+    },
+    "ecommerce-platform": {
+      "industryLabel": "Retail & eCommerce",
+      "title": "Retail & eCommerce Concept",
+      "productName": "Novyra Commerce",
+      "tagline": "A commerce platform built around product discovery, checkout and everyday operations.",
+      "capabilities": ["eCommerce", "Product Catalog", "Checkout"],
+      "statement": "A unified commerce platform where catalog, checkout and order data share one source of truth instead of three disconnected tools.",
+      "description": "The problem explored: a growing retail business managing products, orders and payments across a storefront, a spreadsheet and a separate payment dashboard that don't share data.",
+      "highlights": [
+        "One product catalog powering the storefront, inventory and checkout together",
+        "A checkout flow designed around conversion, not just payment processing",
+        "Order and customer data unified in one place instead of split across spreadsheets"
+      ],
+      "demonstrates": "How we'd structure a single commerce data model that keeps catalog, checkout and fulfillment in sync.",
+      "timeline": "5–7 weeks"
+    },
+    "travel-platform": {
+      "industryLabel": "Travel & Hospitality",
+      "title": "Travel & Hospitality Concept",
+      "productName": "Novyra Travel",
+      "tagline": "A booking platform built around guest journeys, from search to stay.",
+      "capabilities": ["Travel", "Booking", "Guest Experience"],
+      "statement": "A booking and itinerary platform that keeps guest details, availability and communication tied to one shared record.",
+      "description": "The problem explored: a travel or hospitality business managing bookings, guest communication and availability across a booking inbox, a spreadsheet and manual follow-ups.",
+      "highlights": [
+        "A single booking flow that captures guest details once and reuses them everywhere",
+        "Real-time availability shared across the team instead of a manually updated spreadsheet",
+        "Itinerary and guest communication tied to the same booking record"
+      ],
+      "demonstrates": "How we'd design a booking system that stays accurate without manual double-entry between tools.",
+      "timeline": "5–7 weeks"
+    },
+    "fintech-platform": {
+      "industryLabel": "Finance",
+      "title": "Finance & FinTech Concept",
+      "productName": "Novyra Finance",
+      "tagline": "A secure product for modern financial workflows and reporting.",
+      "capabilities": ["FinTech", "Dashboards", "Secure Workflows"],
+      "statement": "A secure financial operations product with clear reporting, workflow-based approvals and an audit trail built in from day one.",
+      "description": "The problem explored: a financial services team managing reporting, approvals and compliance across spreadsheets, email threads and manual review.",
+      "highlights": [
+        "Clear, real-time dashboards for financial reporting and analytics",
+        "Workflow-based approvals in place of email-driven sign-off chains",
+        "Audit-ready activity logs built in from the start, not added later"
+      ],
+      "demonstrates": "How we'd approach secure data handling, approvals and reporting for a financial workflow.",
       "timeline": "6–9 weeks"
     }
   },

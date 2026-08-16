@@ -36,8 +36,8 @@ export function IndustriesPreview() {
         <div className="flex flex-col items-start gap-4 text-left md:items-center md:text-center">
           <span className="text-gradient-brand text-[13px] font-bold tracking-[0.16em] uppercase">{t("eyebrow")}</span>
           <h2
-            className="text-foreground max-w-[1150px] text-balance font-semibold"
-            style={{ fontSize: "clamp(2.125rem, 4.5vw, 4.25rem)", lineHeight: 1.08, letterSpacing: "-0.02em" }}
+            className="text-headline sm:text-display-lg font-semibold text-foreground text-balance"
+            
           >
             {t("heading")}
           </h2>

@@ -27,9 +27,12 @@ export function FooterBottom() {
         ))}
       </nav>
 
-      <div className="flex items-center gap-2">
-        <LanguageSwitcher />
-        <ThemeToggle />
+      <div className="flex items-center gap-4">
+        <span className="text-caption text-foreground-secondary/60 hidden font-medium tracking-wide sm:inline">{t("tagline")}</span>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );

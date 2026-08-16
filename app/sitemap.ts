@@ -10,7 +10,7 @@ const SITE_URL = "https://novyratech.in";
  * pages that exist, not the other way around). Anchor sections on the
  * homepage (`/#services`, `/#pricing`, etc.) aren't separate routes and
  * don't belong here. */
-const routes = ["", "/about", "/work", "/privacy", "/terms", "/cookies", "/accessibility"];
+const routes = ["", "/about", "/work", "/services", "/industries", "/pricing", "/privacy", "/terms", "/cookies", "/accessibility"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({

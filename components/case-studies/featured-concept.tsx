@@ -40,13 +40,36 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
         className="pointer-events-none absolute -inset-24 -z-10 rounded-full blur-3xl"
         style={{ backgroundColor: accentTint(build.accent, 16) }}
       />
+      <span
+        aria-hidden
+        className="text-foreground/[0.05] pointer-events-none absolute top-3 right-6 -z-10 text-[7rem] leading-none font-bold select-none sm:text-[9rem]"
+      >
+        01
+      </span>
 
-      <div className="grid grid-cols-1 gap-5 p-5 md:gap-8 md:p-10 lg:grid-cols-2 lg:items-stretch lg:gap-10">
-        <div className="aspect-[16/10] lg:aspect-auto lg:min-h-[420px]">
-          <ConceptPreview accent={build.accent} />
+      <div className="grid grid-cols-1 gap-5 p-5 md:gap-8 md:p-10 lg:grid-cols-[3fr_2fr] lg:items-stretch lg:gap-10">
+        <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[440px]">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] opacity-60 blur-2xl"
+            style={{ backgroundColor: accentTint(build.accent, 22) }}
+          />
+          <div
+            className="h-full w-full overflow-hidden rounded-2xl border"
+            style={{
+              borderColor: accentTint(build.accent, 45),
+              transform: "perspective(1400px) rotateY(2deg) rotateX(0.5deg)",
+              boxShadow: `0 30px 80px -30px ${accentTint(build.accent, 45)}`,
+            }}
+          >
+            <ConceptPreview accent={build.accent} />
+          </div>
         </div>
 
         <div className="flex flex-col justify-center gap-5 md:gap-6">
+          <span className="text-caption text-foreground-secondary/60 font-semibold tracking-[0.14em] uppercase">
+            01 / {t("featuredLabel")}
+          </span>
           <div className="flex flex-wrap items-center gap-2">
             <span
               className="text-caption inline-flex w-fit items-center gap-1.5 rounded-full border px-3 py-1 font-semibold tracking-wide uppercase"
@@ -107,7 +130,7 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
               {tCard("startSimilarProject")}
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
             </RippleLink>
-            <RippleLink href="/#services" className={cn(buttonVariants({ variant: "outline", size: "md" }), "flex-1")}>
+            <RippleLink href="/services" className={cn(buttonVariants({ variant: "outline", size: "md" }), "flex-1")}>
               {tCard("seeFullApproach")}
             </RippleLink>
           </div>

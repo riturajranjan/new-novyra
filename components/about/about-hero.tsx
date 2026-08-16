@@ -123,7 +123,7 @@ export function AboutHero() {
             <div className="w-full min-[430px]:w-auto">
               <Magnetic className="w-full min-[430px]:w-auto">
                 <RippleLink
-                  href="/#services"
+                  href="/services"
                   className={cn(
                     buttonVariants({ variant: "glass", size: "lg" }),
                     "group min-h-13 w-full min-w-0 min-[430px]:w-auto min-[430px]:min-w-52.5",

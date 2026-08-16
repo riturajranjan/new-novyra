@@ -13,13 +13,15 @@ interface ConceptCardProps {
   build: ConceptBuild;
   index: number;
   wide?: boolean;
+  className?: string;
 }
 
-/** One bento card for the "more concepts" grid — a compact abstract
- * preview, industry badge, title, description, tech badges, and a single
- * qualitative highlight. Tagged "Concept" rather than a launch year, since
- * nothing here has actually shipped for a client yet. */
-export function ConceptCard({ build, index, wide = false }: ConceptCardProps) {
+/** One editorial card for the "more concepts" row — a compact abstract
+ * preview, industry badge, title, description, tech badges, a single
+ * qualitative highlight, and an oversized translucent index number.
+ * Tagged "Concept" rather than a launch year, since nothing here has
+ * actually shipped for a client yet. */
+export function ConceptCard({ build, index, wide = false, className }: ConceptCardProps) {
   const t = useTranslations("caseStudies");
   const tBuild = useTranslations(`caseStudies.builds.${build.id}`);
   const Icon = build.icon;
@@ -36,6 +38,7 @@ export function ConceptCard({ build, index, wide = false }: ConceptCardProps) {
       className={cn(
         "group border-border-subtle bg-surface/70 shadow-card relative flex flex-col gap-3 overflow-hidden rounded-hero border p-5 backdrop-blur-xl transition-shadow duration-base hover:shadow-card-hover md:gap-4 md:p-6",
         wide && "lg:col-span-2",
+        className,
       )}
     >
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/8 to-transparent" />
@@ -44,6 +47,12 @@ export function ConceptCard({ build, index, wide = false }: ConceptCardProps) {
         className="pointer-events-none absolute -inset-10 -z-10 rounded-[40px] opacity-0 blur-3xl transition-opacity duration-slow group-hover:opacity-100"
         style={{ backgroundColor: accentTint(build.accent, 20) }}
       />
+      <span
+        aria-hidden
+        className="text-foreground/[0.06] pointer-events-none absolute -top-3 -right-1 -z-10 text-7xl font-bold select-none"
+      >
+        {String(index + 1).padStart(2, "0")}
+      </span>
 
       <div className="h-36 overflow-hidden rounded-2xl transition-transform duration-slow group-hover:scale-[1.02]">
         <ConceptPreview accent={build.accent} />

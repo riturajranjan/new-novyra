@@ -72,7 +72,7 @@ function SocialCard({ link, index, label }: { link: (typeof socialLinks)[number]
  * live yet. */
 export function SocialGrid() {
   return (
-    <div className={cn("flex flex-wrap items-center justify-center gap-2")}>
+    <div className={cn("flex flex-wrap items-center gap-2")}>
       {socialLinks.map((link, i) => (
         <SocialCard key={link.id} link={link} index={i} label={socialNames[link.id]} />
       ))}

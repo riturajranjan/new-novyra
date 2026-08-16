@@ -1,0 +1,27 @@
+{
+  "sectionHeading": {
+    "eyebrow": "Why Novyra",
+    "titleBefore": "A technology partner,",
+    "titleHighlight": "not just another agency.",
+    "description": "Most agencies hand off a design file or a repo and disappear. We stay in the build — from first idea to launch, optimization, and everything after."
+  },
+  "items": {
+    "product-first-thinking": {
+      "title": "Product-first thinking",
+      "description": "We understand business requirements before writing code."
+    },
+    "design-engineering-together": {
+      "title": "Design + engineering together",
+      "description": "No disconnect between beautiful UI and production-quality development."
+    },
+    "built-to-scale": {
+      "title": "Built to scale",
+      "description": "Modern architecture, reusable systems and production-ready engineering."
+    },
+    "long-term-partnership": {
+      "title": "Long-term partnership",
+      "description": "From first idea to launch, optimization and ongoing growth."
+    }
+  },
+  "cta": "Start a Project"
+}

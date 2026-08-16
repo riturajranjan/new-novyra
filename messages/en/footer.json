@@ -1,52 +1,59 @@
 {
-  "hero": {
-    "heading": "Have a project in mind?",
-    "description": "Tell us what you're building. We'll reply with next steps, not a sales pitch."
+  "cta": {
+    "label": "Have a Project?",
+    "heading": "Let's build something worth remembering.",
+    "tagline": "Websites • SaaS • AI • Digital Products"
   },
   "ctas": {
-    "bookConsultation": "Book Free Consultation",
-    "scheduleCall": "Schedule Discovery Call",
-    "whatsapp": "WhatsApp"
+    "startProject": "Start a Project",
+    "whatsapp": "WhatsApp Us"
+  },
+  "brand": {
+    "description": "We design and engineer digital products that help businesses move forward."
+  },
+  "contactBlock": {
+    "heading": "Start a conversation",
+    "email": "Email",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "location": "Location"
   },
   "companyInfo": {
     "description": "An engineering-led studio building websites, applications, and automation for growing businesses.",
-    "location": "India",
+    "location": "Muzaffarpur, Bihar, India",
     "whatsapp": "WhatsApp"
   },
   "columns": {
+    "explore": {
+      "title": "Explore",
+      "links": {
+        "services": "Services",
+        "industries": "Industries",
+        "work": "Work",
+        "pricing": "Pricing"
+      }
+    },
     "company": {
       "title": "Company",
       "links": {
         "about": "About",
-        "process": "Process",
-        "work": "Work",
         "contact": "Contact"
       }
     },
     "services": {
       "title": "Services",
       "links": {
-        "websites": "Websites",
-        "webApplications": "Applications",
-        "saasProducts": "SaaS",
-        "automationAi": "Automation",
-        "digitalGrowth": "Digital Growth",
-        "brandDesign": "Brand Design"
-      }
-    },
-    "resources": {
-      "title": "Resources",
-      "links": {
-        "pricing": "Pricing",
-        "faq": "FAQ",
-        "privacyPolicy": "Privacy Policy",
-        "termsConditions": "Terms"
+        "webDevelopment": "Web Development",
+        "saasDevelopment": "SaaS Development",
+        "aiAutomation": "AI & Automation",
+        "digitalGrowth": "Digital Growth"
       }
     }
   },
   "bottom": {
     "copyright": "© 2026 Novyra Technologies. All Rights Reserved.",
     "legalNavLabel": "Legal",
+    "tagline": "Innovate · Build · Elevate",
     "legal": {
       "privacyPolicy": "Privacy Policy",
       "terms": "Terms",

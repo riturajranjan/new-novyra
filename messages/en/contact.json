@@ -1,15 +1,15 @@
 {
   "sectionHeading": {
     "eyebrow": "Get In Touch",
-    "title": "Start Your Project.",
-    "description": "Tell us what you're building — a website, a platform, or something more complex — and we'll help you scope it."
+    "title": "Have an idea? Let's build it.",
+    "description": "Tell us what you're building and we'll help you turn it into a fast, scalable digital product."
   },
   "heroCard": {
-    "title": "Tell Us About Your Project",
-    "description": "Share your goals and we'll recommend the right technology, timeline, and approach.",
-    "bookConsultation": "Book Free Consultation",
-    "requestQuote": "Request Custom Quote",
-    "scheduleCall": "Schedule Discovery Call"
+    "title": "Have an idea? Let's build it.",
+    "description": "Tell us what you're building and we'll help you turn it into a fast, scalable digital product.",
+    "startProject": "Start Your Project",
+    "whatsappUs": "WhatsApp Us",
+    "trustNote": "Typically within 24 hours"
   },
   "quickContactCards": {
     "schedule-call": {
@@ -58,7 +58,7 @@
   "contactDetails": {
     "business-email": { "label": "Business Email", "value": "hello@novyratech.in" },
     "phone": { "label": "Phone", "value": "+91 7903724407" },
-    "location": { "label": "Location", "value": "India" },
+    "location": { "label": "Location", "value": "Muzaffarpur, Bihar, India" },
     "working-hours": { "label": "Working Hours", "value": "Monday – Saturday, 9:00 AM – 7:00 PM IST" }
   }
 }

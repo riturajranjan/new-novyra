@@ -33,6 +33,7 @@
     "body": "Tell us what you're building and we'll recommend the right service."
   },
   "work": { "label": "Work" },
+  "industries": { "label": "Industries" },
   "process": { "label": "Process" },
   "pricing": { "label": "Pricing" },
   "contact": { "label": "Contact" }

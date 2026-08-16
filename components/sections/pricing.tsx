@@ -17,8 +17,10 @@ import { PlanSelectorCard } from "@/components/pricing/plan-selector-card";
 import { PlanSpotlight } from "@/components/pricing/plan-spotlight";
 import { ComparePanel } from "@/components/pricing/compare-panel";
 import { TrustStrip } from "@/components/pricing/trust-strip";
+import { CustomProjectCta } from "@/components/pricing/custom-project-cta";
 import { PricingTimeline } from "@/components/pricing/pricing-timeline";
 import { ValueCard } from "@/components/pricing/value-card";
+import { PricingFaq } from "@/components/pricing/pricing-faq";
 import { pricingPlans, valueCards, type BillingMode } from "@/content/pricing";
 import { easePremium } from "@/lib/motion";
 import { cn } from "@/lib/utils";
@@ -134,6 +136,8 @@ export function Pricing() {
           </div>
         </div>
 
+        <CustomProjectCta />
+
         <PricingTimeline />
 
         {/* why our pricing works */}
@@ -156,6 +160,8 @@ export function Pricing() {
             ))}
           </div>
         </div>
+
+        <PricingFaq />
 
         {/* final CTA */}
         <div className="glass-strong shadow-card relative flex flex-col items-center gap-5 overflow-hidden rounded-hero p-6 text-center sm:flex-row sm:justify-between sm:p-10 sm:text-left md:gap-6">

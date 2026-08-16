@@ -1,10 +1,18 @@
 {
+  "meta": {
+    "title": "Pricing | Novyra Technologies",
+    "description": "Transparent starting prices for websites, web applications, SaaS products, and enterprise platforms — with a custom quote for larger builds."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Pricing"
+  },
   "eyebrow": "Pricing",
   "heading": {
-    "line1": "Transparent Pricing That",
-    "highlight": "Grows With Your Business"
+    "line1": "Flexible Plans for",
+    "highlight": "Ambitious Digital Products."
   },
-  "description": "Choose the engagement model that fits your goals — every plan includes modern engineering, transparent milestones, and dedicated support.",
+  "description": "Start with the package that fits your current stage. Every project can be customized around your goals, scope and technical requirements.",
   "radiogroupAriaLabel": "Choose a pricing plan",
   "toggleAriaLabel": "Choose a billing mode",
   "billingModes": {
@@ -195,10 +203,35 @@
     }
   },
   "finalCta": {
-    "heading": "Ready to Move Forward?",
-    "description": "Tell us about your project — we'll recommend the right plan.",
-    "primaryCta": "Book Free Consultation",
-    "secondaryCta": "Request Custom Quote",
+    "heading": "Not Sure Which Option Fits?",
+    "description": "Tell us what you need and we'll recommend the right approach.",
+    "primaryCta": "Get a Free Consultation",
+    "secondaryCta": "WhatsApp Us",
     "trustNote": "No obligation · Typically within 24 hours"
+  },
+  "customProject": {
+    "eyebrow": "Custom Projects",
+    "heading": "Building something bigger?",
+    "description": "For SaaS products, AI systems and complex applications, we'll scope the project around your requirements and recommend the right architecture, timeline and engagement model.",
+    "primaryCta": "Request Custom Proposal",
+    "secondaryCta": "Talk to an Expert"
+  },
+  "faqSection": {
+    "eyebrow": "Pricing FAQ",
+    "heading": "Questions About Pricing",
+    "description": "Short, direct answers to what people ask most before a project starts."
+  },
+  "homeTeaser": {
+    "eyebrow": "Pricing",
+    "heading": "Clear pricing. Built around your next stage.",
+    "description": "Start with a focused website or talk to us about a larger SaaS, AI, or custom software project.",
+    "startingFrom": "Starting from",
+    "viewFullCta": "View Full Pricing",
+    "trustItems": {
+      "transparent": "Transparent starting prices",
+      "scoped": "Scope tailored to your requirements",
+      "noBundles": "No hidden feature bundles"
+    },
+    "mostPopular": "Most Popular"
   }
 }

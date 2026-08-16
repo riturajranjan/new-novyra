@@ -73,8 +73,8 @@ export function MobileHeader() {
             className="flex h-[68px] items-center justify-between rounded-[26px] px-4"
             style={{
               backgroundImage: "linear-gradient(145deg, rgba(9,16,40,0.90), rgba(13,21,51,0.82))",
-              backdropFilter: "blur(24px) saturate(150%)",
-              WebkitBackdropFilter: "blur(24px) saturate(150%)",
+              backdropFilter: "blur(12px) saturate(140%)",
+              WebkitBackdropFilter: "blur(12px) saturate(140%)",
               border: "1px solid rgba(255,255,255,0.09)",
               boxShadow: "0 14px 45px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.08)",
             }}

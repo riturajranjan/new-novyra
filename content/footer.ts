@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { CalendarClock, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 export interface FooterCta {
   id: string;
@@ -8,11 +8,12 @@ export interface FooterCta {
   variant: "gradient" | "glass" | "outline";
 }
 
-/** Structural data only — labels/descriptions live in
- * messages/{locale}/footer.json, keyed by `id`. */
+/** The footer's compact CTA layer — two real actions, not three, matching
+ * the homepage's other compact final-CTA pattern (mailto + WhatsApp).
+ * Structural data only — labels live in messages/{locale}/footer.json,
+ * keyed by `id`. */
 export const footerCtas: FooterCta[] = [
-  { id: "bookConsultation", icon: Sparkles, href: "/#contact", variant: "gradient" },
-  { id: "scheduleCall", icon: CalendarClock, href: "/#contact", variant: "glass" },
+  { id: "startProject", icon: ArrowUpRight, href: "mailto:hello@novyratech.in", variant: "gradient" },
   { id: "whatsapp", icon: MessageCircle, href: "https://wa.me/917903724407", variant: "outline" },
 ];
 
@@ -21,6 +22,7 @@ export const companyInfo = {
   email: "hello@novyratech.in",
   phone: "+91 7903724407",
   whatsapp: "https://wa.me/917903724407",
+  location: "Muzaffarpur, Bihar, India",
 };
 
 export interface FooterLink {
@@ -34,39 +36,34 @@ export interface FooterColumn {
   links: FooterLink[];
 }
 
-/** Every link here is either a real page or an in-page anchor to a section
- * that actually exists on the homepage — the site has no standalone
- * `/services`, `/solutions`, or `/blog` routes, so this column no longer
- * pretends otherwise. Labels live in messages/{locale}/footer.json under
+/** Every link here is a real route or an in-page anchor to a section that
+ * actually exists — curated on purpose (3 short columns, not a 30-link
+ * sitemap dump). Labels live in messages/{locale}/footer.json under
  * `columns.{id}.links.{linkId}`. */
 export const footerColumns: FooterColumn[] = [
+  {
+    id: "explore",
+    links: [
+      { id: "services", href: "/services" },
+      { id: "industries", href: "/industries" },
+      { id: "work", href: "/work" },
+      { id: "pricing", href: "/pricing" },
+    ],
+  },
   {
     id: "company",
     links: [
       { id: "about", href: "/about" },
-      { id: "process", href: "/#process" },
-      { id: "work", href: "/work" },
       { id: "contact", href: "/#contact" },
     ],
   },
   {
     id: "services",
     links: [
-      { id: "websites", href: "/#services" },
-      { id: "webApplications", href: "/#services" },
-      { id: "saasProducts", href: "/#services" },
-      { id: "automationAi", href: "/#services" },
-      { id: "digitalGrowth", href: "/#services" },
-      { id: "brandDesign", href: "/#services" },
-    ],
-  },
-  {
-    id: "resources",
-    links: [
-      { id: "pricing", href: "/#pricing" },
-      { id: "faq", href: "/#faq" },
-      { id: "privacyPolicy", href: "/privacy" },
-      { id: "termsConditions", href: "/terms" },
+      { id: "webDevelopment", href: "/services" },
+      { id: "saasDevelopment", href: "/services" },
+      { id: "aiAutomation", href: "/services" },
+      { id: "digitalGrowth", href: "/services" },
     ],
   },
 ];

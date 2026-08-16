@@ -18,9 +18,9 @@ export function SmoothScrollProvider() {
     function setup() {
       if (media.matches) return;
       lenis = new Lenis({
-        duration: 1.2,
-        easing: (t: number) => 1 - Math.pow(1 - t, 4),
-        wheelMultiplier: 0.9,
+        duration: 0.9,
+        easing: (t: number) => 1 - Math.pow(1 - t, 3),
+        wheelMultiplier: 1,
         touchMultiplier: 1.2,
         anchors: true,
         autoRaf: true,

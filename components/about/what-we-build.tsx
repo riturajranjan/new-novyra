@@ -12,9 +12,8 @@ import { accentStroke, accentTint } from "@/lib/accent";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
-/** Same 6-column asymmetric-span convention as content/why-choose.ts's
- * featureCards (see components/why-choose/feature-card.tsx) — reused here
- * so the two bento grids on the site share one visual language. */
+/** A 6-column asymmetric-span bento grid — spans map directly onto Tailwind
+ * grid-span classes below. */
 const SPAN_CLASS: Record<number, string> = {
   2: "sm:col-span-3 lg:col-span-2",
   3: "sm:col-span-6 lg:col-span-3",

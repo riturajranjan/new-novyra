@@ -94,8 +94,8 @@ export const visionPanel = { icon: Telescope, accent: "purple" as AccentColor };
  * `missionVision.mission.chips` / `missionVision.vision.chips` (arrays). */
 
 /** ---- Section 4: What We Build — asymmetric bento (spans out of 6 cols) ----
- * Mirrors the honest, no-inflated-claims approach already established in
- * content/why-choose.ts's featureCards. */
+ * Honest, no-inflated-claims approach — capability descriptions only, no
+ * invented stats. */
 export interface BentoItem {
   id: string;
   icon: LucideIcon;
@@ -105,12 +105,12 @@ export interface BentoItem {
 }
 
 export const whatWeBuildItems: BentoItem[] = [
-  { id: "web-design", icon: Code2, accent: "blue", span: 3, href: "/#services" },
-  { id: "digital-marketing", icon: Megaphone, accent: "pink", span: 3, href: "/#services" },
-  { id: "web-applications", icon: AppWindow, accent: "cyan", span: 2, href: "/#services" },
-  { id: "graphic-design", icon: Palette, accent: "purple", span: 2, href: "/#services" },
-  { id: "saas-development", icon: Layers, accent: "emerald", span: 2, href: "/#services" },
-  { id: "ai-solutions", icon: Sparkles, accent: "amber", span: 6, href: "/#services" },
+  { id: "web-design", icon: Code2, accent: "blue", span: 3, href: "/services" },
+  { id: "digital-marketing", icon: Megaphone, accent: "pink", span: 3, href: "/services" },
+  { id: "web-applications", icon: AppWindow, accent: "cyan", span: 2, href: "/services" },
+  { id: "graphic-design", icon: Palette, accent: "purple", span: 2, href: "/services" },
+  { id: "saas-development", icon: Layers, accent: "emerald", span: 2, href: "/services" },
+  { id: "ai-solutions", icon: Sparkles, accent: "amber", span: 6, href: "/services" },
 ];
 
 /** ---- Section 5: Core Principles ---- */
@@ -173,9 +173,9 @@ export const industryItems: IndustryItem[] = [
 
 /** ---- Section 9: Technology Philosophy ----
  * Frontend/backend/cloud entries are real proper nouns (never translated,
- * per the project's convention — see content/why-choose.ts techCategories).
- * The AI category lists practical capabilities rather than product names,
- * kept here as short labels for the same visual treatment. */
+ * per the project's convention). The AI category lists practical
+ * capabilities rather than product names, kept here as short labels for the
+ * same visual treatment. */
 export interface TechEntry {
   name: string;
   color: string;

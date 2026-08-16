@@ -1,13 +1,14 @@
 "use client";
 
 import { useRef, type PointerEvent } from "react";
-import { ArrowRight, CalendarClock, FileText } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { motion, useMotionTemplate, useMotionValue, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Magnetic } from "@/components/ui/magnetic";
 import { buttonVariants } from "@/components/ui/button";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { GlassOrb } from "@/components/contact-cta/glass-orb";
+import { companyInfo } from "@/content/footer";
 import { easePremium } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
@@ -18,6 +19,8 @@ export function HeroGlassCard() {
   const t = useTranslations("contact.heroCard");
   const reduceMotion = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
+  const whatsappHref = companyInfo.whatsapp;
+  const isExternal = whatsappHref.startsWith("http");
   const mouseX = useMotionValue(50);
   const mouseY = useMotionValue(50);
   const highlight = useMotionTemplate`radial-gradient(480px circle at ${mouseX}% ${mouseY}%, color-mix(in oklab, var(--color-brand-blue) 14%, transparent), transparent 70%)`;
@@ -74,30 +77,31 @@ export function HeroGlassCard() {
         <div className="flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
           <Magnetic className="w-full sm:w-auto">
             <RippleLink
-              href="/#contact"
+              href="mailto:hello@novyratech.in"
               className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
             >
               <span
                 aria-hidden
                 className="bg-gradient-shimmer pointer-events-none absolute inset-0 -translate-x-full transition-transform duration-700 ease-out group-hover:translate-x-full"
               />
-              {t("bookConsultation")}
+              {t("startProject")}
               <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
             </RippleLink>
           </Magnetic>
           <Magnetic className="w-full sm:w-auto">
-            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "glass", size: "lg" }), "w-full sm:w-auto")}>
-              <FileText className="h-4 w-4" aria-hidden />
-              {t("requestQuote")}
-            </RippleLink>
-          </Magnetic>
-          <Magnetic className="w-full sm:w-auto">
-            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
-              <CalendarClock className="h-4 w-4" aria-hidden />
-              {t("scheduleCall")}
+            <RippleLink
+              href={whatsappHref}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden />
+              {t("whatsappUs")}
             </RippleLink>
           </Magnetic>
         </div>
+
+        <p className="text-caption text-foreground-secondary/70 font-medium">{t("trustNote")}</p>
       </div>
     </motion.div>
   );

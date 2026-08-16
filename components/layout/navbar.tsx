@@ -30,7 +30,7 @@ export function Navbar() {
         className="fixed inset-x-0 top-0 z-[100] hidden w-full max-w-full lg:block">
         <div className="mx-auto max-w-[90rem] px-3 md:px-5 pt-4 transition-[padding] duration-base ease-soft sm:px-6 sm:pt-[18px] lg:px-7">
           <div
-            style={{ backdropFilter: `blur(${scrolled ? 28 : 20}px) saturate(180%)`, WebkitBackdropFilter: `blur(${scrolled ? 28 : 20}px) saturate(180%)` }}
+            style={{ backdropFilter: `blur(${scrolled ? 14 : 10}px) saturate(140%)`, WebkitBackdropFilter: `blur(${scrolled ? 14 : 10}px) saturate(140%)` }}
             className={cn(
               "flex items-center justify-between gap-4 rounded-hero border px-4 transition-all duration-base ease-soft sm:px-6 lg:rounded-2xl lg:px-8",
               scrolled

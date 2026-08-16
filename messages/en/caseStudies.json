@@ -1,8 +1,8 @@
 {
   "section": {
-    "eyebrow": "Product Concepts and Internal Builds",
-    "titleLine1": "How We Think Through",
-    "titleLine2": "a Real Product Problem.",
+    "eyebrow": "Selected Work",
+    "heading": "Ideas turned into products people can use.",
+    "supportingCopy": "A selection of platforms, digital products and experiences designed and engineered by Novyra.",
     "description": "Each concept below explores a real operational problem, the approach we'd take, and the technical decisions behind it — not a client outcome, since none of these shipped for a paying client."
   },
   "filters": {
@@ -102,6 +102,7 @@
     "launch": "Launch"
   },
   "conceptBadge": "Concept — Not a Live Project",
+  "featuredLabel": "Featured",
   "preview": {
     "label": "Concept Preview",
     "illustrativeData": "Illustrative Data"

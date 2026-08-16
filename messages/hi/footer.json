@@ -1,52 +1,59 @@
 {
-  "hero": {
-    "heading": "कोई प्रोजेक्ट सोच रहे हैं?",
-    "description": "बताएं आप क्या बना रहे हैं। हम सेल्स पिच नहीं, अगला कदम बताएंगे।"
+  "cta": {
+    "label": "कोई प्रोजेक्ट है?",
+    "heading": "चलिए कुछ यादगार बनाते हैं।",
+    "tagline": "वेबसाइट • SaaS • AI • डिजिटल प्रोडक्ट्स"
   },
   "ctas": {
-    "bookConsultation": "मुफ़्त परामर्श बुक करें",
-    "scheduleCall": "डिस्कवरी कॉल शेड्यूल करें",
-    "whatsapp": "WhatsApp"
+    "startProject": "प्रोजेक्ट शुरू करें",
+    "whatsapp": "WhatsApp करें"
+  },
+  "brand": {
+    "description": "हम डिजिटल प्रोडक्ट्स डिज़ाइन और इंजीनियर करते हैं जो बिज़नेस को आगे बढ़ाने में मदद करते हैं।"
+  },
+  "contactBlock": {
+    "heading": "बातचीत शुरू करें",
+    "email": "ईमेल",
+    "phone": "फ़ोन",
+    "whatsapp": "WhatsApp",
+    "location": "लोकेशन"
   },
   "companyInfo": {
     "description": "एक इंजीनियरिंग-केंद्रित स्टूडियो जो बढ़ते व्यवसायों के लिए वेबसाइट, एप्लिकेशन और ऑटोमेशन बनाता है।",
-    "location": "भारत",
+    "location": "मुज़फ़्फ़रपुर, बिहार, भारत",
     "whatsapp": "व्हाट्सएप"
   },
   "columns": {
+    "explore": {
+      "title": "एक्सप्लोर",
+      "links": {
+        "services": "सेवाएं",
+        "industries": "इंडस्ट्रीज़",
+        "work": "वर्क",
+        "pricing": "प्राइसिंग"
+      }
+    },
     "company": {
       "title": "कंपनी",
       "links": {
         "about": "परिचय",
-        "process": "प्रोसेस",
-        "work": "वर्क",
         "contact": "संपर्क करें"
       }
     },
     "services": {
       "title": "सेवाएं",
       "links": {
-        "websites": "वेबसाइटें",
-        "webApplications": "एप्लिकेशन",
-        "saasProducts": "SaaS",
-        "automationAi": "ऑटोमेशन",
-        "digitalGrowth": "डिजिटल ग्रोथ",
-        "brandDesign": "ब्रांड डिज़ाइन"
-      }
-    },
-    "resources": {
-      "title": "संसाधन",
-      "links": {
-        "pricing": "प्राइसिंग",
-        "faq": "सामान्य प्रश्न",
-        "privacyPolicy": "गोपनीयता नीति",
-        "termsConditions": "नियम व शर्तें"
+        "webDevelopment": "वेब डेवलपमेंट",
+        "saasDevelopment": "SaaS डेवलपमेंट",
+        "aiAutomation": "AI और ऑटोमेशन",
+        "digitalGrowth": "डिजिटल ग्रोथ"
       }
     }
   },
   "bottom": {
     "copyright": "© 2026 Novyra Technologies. सर्वाधिकार सुरक्षित।",
     "legalNavLabel": "कानूनी",
+    "tagline": "इनोवेट · बिल्ड · एलिवेट",
     "legal": {
       "privacyPolicy": "गोपनीयता नीति",
       "terms": "नियम व शर्तें",

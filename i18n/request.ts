@@ -19,17 +19,16 @@ const namespaces = [
   "advisor",
   "faq",
   "caseStudies",
-  "whyChoose",
   "process",
-  "promise",
   "contact",
   "metadata",
   "leadPopup",
   "about",
   "mobileCta",
   "legal",
-  "coreServices",
   "work",
+  "industries",
+  "trustedPartner",
 ] as const;
 
 async function loadMessages(locale: string) {

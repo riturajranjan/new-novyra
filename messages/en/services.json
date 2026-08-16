@@ -1,4 +1,52 @@
 {
+  "meta": {
+    "title": "Services | Novyra Technologies",
+    "description": "Website design and development, SaaS and web applications, AI and automation, and digital growth services from Novyra Technologies."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Services"
+  },
+  "home": {
+    "eyebrow": "What We Do",
+    "heading": "Digital products built for real business growth.",
+    "description": "From conversion-focused websites to scalable SaaS platforms and AI-powered products, we design and engineer digital experiences built to perform.",
+    "viewAllCta": "View All Services"
+  },
+  "homeCategories": {
+    "website-design-development": {
+      "title": "Website Design & Development",
+      "description": "Premium, conversion-focused websites and marketing platforms."
+    },
+    "saas-web-applications": {
+      "title": "SaaS & Web Applications",
+      "description": "Scalable products, dashboards, and internal tools."
+    },
+    "ai-automation": {
+      "title": "AI & Automation",
+      "description": "AI agents and workflow automation that remove manual work."
+    },
+    "digital-marketing": {
+      "title": "Digital Marketing",
+      "description": "SEO, campaigns, and growth built on real data."
+    },
+    "ui-ux-branding": {
+      "title": "UI/UX & Branding",
+      "description": "Interface design and identity systems that hold up."
+    },
+    "custom-business-software": {
+      "title": "Custom Business Software",
+      "description": "CRM, ERP, and bespoke platforms built around your workflow."
+    }
+  },
+  "hub": {
+    "label": "Services"
+  },
+  "page": {
+    "eyebrow": "Our Services",
+    "heading": "Everything Novyra builds, in one place.",
+    "description": "Explore each service line in detail, see how it works, and find the right recommendation for your project."
+  },
   "showcase": {
     "eyebrow": "Our Services",
     "title": "From Design to Deployment.",

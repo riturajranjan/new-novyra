@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type CSSProperties, type PointerEvent, type ReactNode } from "react";
+import { useState, type CSSProperties, type FocusEvent, type MouseEvent, type PointerEvent, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
@@ -12,13 +12,15 @@ interface RippleLinkProps {
   target?: string;
   rel?: string;
   style?: CSSProperties;
+  onMouseEnter?: (e: MouseEvent<HTMLAnchorElement>) => void;
+  onFocus?: (e: FocusEvent<HTMLAnchorElement>) => void;
 }
 
 let rippleId = 0;
 
 /** A Link with a Material-style click ripple — purely a visual click
  * acknowledgment layered inside the existing button, no size/layout change. */
-export function RippleLink({ href, className, children, target, rel, style }: RippleLinkProps) {
+export function RippleLink({ href, className, children, target, rel, style, onMouseEnter, onFocus }: RippleLinkProps) {
   const reduceMotion = useReducedMotion();
   const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
 
@@ -30,7 +32,16 @@ export function RippleLink({ href, className, children, target, rel, style }: Ri
   }
 
   return (
-    <Link href={href} target={target} rel={rel} style={style} className={cn("relative overflow-hidden", className)} onPointerDown={handlePointerDown}>
+    <Link
+      href={href}
+      target={target}
+      rel={rel}
+      style={style}
+      className={cn("relative overflow-hidden", className)}
+      onPointerDown={handlePointerDown}
+      onMouseEnter={onMouseEnter}
+      onFocus={onFocus}
+    >
       {children}
       <AnimatePresence>
         {ripples.map((r) => (

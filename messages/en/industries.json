@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Industries | Novyra Technologies",
+    "description": "How Novyra builds for education, healthcare, retail & eCommerce, travel & hospitality, finance, and professional services."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Industries"
+  },
+  "home": {
+    "eyebrow": "Industries",
+    "heading": "Technology shaped around your industry.",
+    "description": "We combine product thinking, design and engineering to build digital experiences around how your business actually works.",
+    "viewAllCta": "Explore Industry Solutions",
+    "listAriaLabel": "Industries"
+  },
+  "page": {
+    "eyebrow": "Industries",
+    "heading": "Built around the way your industry works.",
+    "description": "A closer look at how Novyra approaches each industry — the workflows, users, and outcomes that shape the build."
+  },
+  "items": {
+    "education": {
+      "title": "Education",
+      "outcome": "School websites, learning platforms and campus management systems.",
+      "descriptor": "School websites • Learning platforms • Campus systems"
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "outcome": "Hospital websites, patient platforms and digital operations.",
+      "descriptor": "Hospital websites • Patient experiences • Digital operations"
+    },
+    "retail-ecommerce": {
+      "title": "Retail & eCommerce",
+      "outcome": "Storefronts, catalog systems and checkout experiences that convert.",
+      "descriptor": "Commerce platforms • Customer experiences • Growth"
+    },
+    "travel-hospitality": {
+      "title": "Travel & Hospitality",
+      "outcome": "Booking-ready websites and guest experience platforms.",
+      "descriptor": "Booking experiences • Travel platforms • Digital operations"
+    },
+    "finance": {
+      "title": "Finance",
+      "outcome": "Secure, compliant platforms for financial services and reporting.",
+      "descriptor": "FinTech products • Dashboards • Secure workflows"
+    },
+    "professional-services": {
+      "title": "Professional Services",
+      "outcome": "Client portals, scheduling and lead-focused websites for firms.",
+      "descriptor": "Web platforms • Automation • Business systems"
+    }
+  },
+  "cta": {
+    "heading": "Don't see your industry?",
+    "description": "We build around the way your business actually works, not a fixed template — tell us about it.",
+    "primaryCta": "Start a Project",
+    "secondaryCta": "Talk to Us"
+  }
+}

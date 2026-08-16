@@ -89,7 +89,7 @@ export function Hero() {
             <div className="w-full min-[430px]:w-auto">
               <Magnetic className="w-full min-[430px]:w-auto">
                 <RippleLink
-                  href="/#process"
+                  href="/work"
                   className={cn(
                     buttonVariants({ variant: "glass", size: "lg" }),
                     "group min-h-13 w-full min-w-0 transition-[transform,box-shadow] duration-base ease-soft hover:scale-[1.015] hover:shadow-card-hover min-[430px]:w-auto min-[430px]:min-w-55",

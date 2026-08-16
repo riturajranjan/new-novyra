@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Magnetic } from "@/components/ui/magnetic";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { OrbitalMark } from "@/components/footer/orbital-mark";
+import { OrbitalField } from "@/components/visual-backgrounds/orbital-field";
 import { footerCtas } from "@/content/footer";
 import { easePremium } from "@/lib/motion";
 import { cn } from "@/lib/utils";
@@ -16,9 +17,11 @@ const PARTICLES = [
   { top: "80%", left: "88%" },
 ];
 
-/** A very dark, understated backdrop for the CTA panel — a faint grid,
- * three restrained glows (blue left, violet center, blue right), and a
- * handful of tiny particles. Clipped to the panel only. */
+/** "Orbital Communication Field" — a very dark, understated backdrop: a
+ * faint grid, three restrained glows, a handful of tiny particles, and one
+ * large orbital ring system anchored toward the CTA buttons (partially
+ * bleeding past the panel's own edge) so the composition quietly points at
+ * "Start Your Project" instead of sitting there as pure decoration. */
 function ProjectCtaBackground() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-[inherit]">
@@ -33,6 +36,22 @@ function ProjectCtaBackground() {
       <div className="bg-brand-blue/14 absolute top-1/2 left-0 h-64 w-64 -translate-y-1/2 rounded-full blur-[110px]" />
       <div className="bg-brand-purple/12 absolute top-1/2 left-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[120px]" />
       <div className="bg-brand-blue/10 absolute top-1/2 right-0 h-64 w-64 -translate-y-1/2 rounded-full blur-[110px]" />
+
+      <OrbitalField size={340} opacity={0.14} className="top-1/2 right-[-8%] -translate-y-1/2" />
+
+      <svg aria-hidden viewBox="0 0 400 200" preserveAspectRatio="none" className="absolute top-1/2 right-0 hidden h-[60%] w-[30%] -translate-y-1/2 opacity-[0.14] sm:block">
+        <line x1="0" y1="30" x2="380" y2="100" stroke="var(--color-brand-blue)" strokeWidth="0.75" className="animate-tiny-pulse" />
+        <line
+          x1="0"
+          y1="170"
+          x2="380"
+          y2="100"
+          stroke="var(--color-brand-purple)"
+          strokeWidth="0.75"
+          className="animate-tiny-pulse"
+          style={{ animationDelay: "1.4s" }}
+        />
+      </svg>
 
       {PARTICLES.map((p, i) => (
         <span

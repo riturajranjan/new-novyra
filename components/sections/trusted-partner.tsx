@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { buttonVariants } from "@/components/ui/button";
 import { RippleLink } from "@/components/ui/ripple-link";
+import { TrustedPartnerBackground } from "@/components/trusted-partner/trusted-partner-background";
 import { differentiators } from "@/content/trusted-partner";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { easePremium, fadeInUp } from "@/lib/motion";
@@ -18,7 +19,8 @@ export function TrustedPartner() {
   const t = useTranslations("trustedPartner");
 
   return (
-    <section id="trusted-partner" className="relative isolate scroll-mt-24 py-14 md:py-18">
+    <section id="trusted-partner" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-18">
+      <TrustedPartnerBackground />
       <Container className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
         <motion.div
           initial="hidden"

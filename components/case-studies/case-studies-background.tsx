@@ -1,41 +1,30 @@
-const particles = [
-  { top: "12%", left: "8%", size: "h-1 w-1", delay: "0s" },
-  { top: "24%", left: "90%", size: "h-1.5 w-1.5", delay: "1.3s" },
-  { top: "55%", left: "4%", size: "h-1 w-1", delay: "2.5s" },
-  { top: "72%", left: "76%", size: "h-1.5 w-1.5", delay: "0.7s" },
-  { top: "88%", left: "40%", size: "h-1 w-1", delay: "1.9s" },
-];
+import { AmbientGlow } from "@/components/visual-backgrounds/ambient-glow";
+import { GiantNumber } from "@/components/visual-backgrounds/background-label";
+import { SectionNoise } from "@/components/visual-backgrounds/section-noise";
 
-/** Layered decorative backdrop for the Case Studies section — aurora
- * glows, a faint grid, fine noise, and floating particles. Theme-reactive,
- * matching Our Services / Our Process / Why Choose Novyra. */
+/** Selected Work's signature motif — "Cinematic Project Gallery": large
+ * soft directional light (upper-left blue, center violet, lower-right
+ * magenta — never circular blobs), two cropped giant numeral fragments
+ * bleeding off-frame, faint diagonal composition lines, and grain — reads
+ * as "light entering a dark studio," not a dashboard. The most visually
+ * memorable background after Hero, but restrained enough that the six
+ * project cards stay dominant. */
 export function CaseStudiesBackground() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      <div className="bg-brand-blue/14 animate-drift absolute top-[-6rem] right-[-6rem] h-[30rem] w-[30rem] rounded-full blur-[130px]" />
-      <div className="bg-brand-purple/14 animate-drift-slow absolute bottom-[10%] left-[-8rem] h-[28rem] w-[28rem] rounded-full blur-[130px]" />
-      <div className="bg-brand-pink/10 absolute top-1/2 left-1/2 h-[24rem] w-[24rem] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[130px]" />
+      <AmbientGlow top="-15%" left="-10%" width="55%" height="60%" color="var(--color-brand-blue)" opacity={0.13} blur="160px" rotate="-12deg" />
+      <AmbientGlow top="20%" left="35%" width="45%" height="55%" color="var(--color-brand-purple)" opacity={0.09} blur="160px" />
+      <AmbientGlow bottom="-20%" right="-10%" width="48%" height="55%" color="var(--color-brand-pink)" opacity={0.07} blur="160px" rotate="10deg" />
 
-      {particles.map((p, i) => (
-        <span
-          key={i}
-          className={`bg-brand-cyan/40 animate-drift-slow absolute rounded-full ${p.size}`}
-          style={{ top: p.top, left: p.left, animationDelay: p.delay }}
-        />
-      ))}
+      <GiantNumber value="01" top="-6%" left="-3%" size="20rem" opacity={0.025} />
+      <GiantNumber value="06" top="42%" left="78%" size="18rem" opacity={0.02} />
 
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(120,140,180,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(120,140,180,0.8) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage: "radial-gradient(65% 60% at 50% 30%, black, transparent)",
-          WebkitMaskImage: "radial-gradient(65% 60% at 50% 30%, black, transparent)",
-        }}
-      />
+      <svg aria-hidden viewBox="0 0 1200 700" preserveAspectRatio="none" className="absolute inset-0 h-full w-full opacity-[0.05]">
+        <line x1="0" y1="80" x2="1200" y2="560" stroke="var(--color-brand-blue)" strokeWidth="1" />
+        <line x1="0" y1="640" x2="1200" y2="140" stroke="var(--color-brand-purple)" strokeWidth="1" />
+      </svg>
 
-      <div className="bg-noise absolute inset-0 opacity-[0.03] mix-blend-overlay" />
+      <SectionNoise opacity={0.035} />
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { RippleLink } from "@/components/ui/ripple-link";
+import { WhatWeDoBackground } from "@/components/what-we-do/what-we-do-background";
 import { whatWeDoCategories, type WhatWeDoCategory } from "@/content/what-we-do";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { easePremium } from "@/lib/motion";
@@ -26,7 +27,8 @@ export function WhatWeDo() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="what-we-do" className="relative isolate scroll-mt-24 py-14 md:py-18">
+    <section id="what-we-do" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-18">
+      <WhatWeDoBackground />
       <Container className="flex flex-col gap-10 md:gap-12">
         <SectionHeading eyebrow={t("home.eyebrow")} title={t("home.heading")} description={t("home.description")} />
 

@@ -7,7 +7,6 @@ import { IndustriesPreview } from "@/components/sections/industries-preview";
 import { TrustedPartner } from "@/components/sections/trusted-partner";
 import { CaseStudies } from "@/components/sections/case-studies";
 import { PricingTeaser } from "@/components/sections/pricing-teaser";
-import { ContactCta } from "@/components/sections/contact-cta";
 import { OurProcess } from "@/components/sections/our-process";
 
 const SITE_URL = "https://novyratech.in";
@@ -91,7 +90,6 @@ export default async function HomePage({ params }: PageProps) {
       <CaseStudies />
       <OurProcess />
       <PricingTeaser />
-      <ContactCta />
     </main>
   );
 }

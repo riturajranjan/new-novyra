@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { buttonVariants } from "@/components/ui/button";
 import { RippleLink } from "@/components/ui/ripple-link";
+import { PricingTeaserBackground } from "@/components/pricing/pricing-teaser-background";
 import { companyInfo } from "@/content/footer";
 import { pricingPlans, type PricingPlan } from "@/content/pricing";
 import { accentStroke, accentTint } from "@/lib/accent";
@@ -26,7 +27,8 @@ export function PricingTeaser() {
   const whatsappHref = companyInfo.whatsapp;
 
   return (
-    <section className="relative isolate py-14 md:py-18">
+    <section className="relative isolate overflow-hidden py-14 md:py-18">
+      <PricingTeaserBackground />
       <Container className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
         <motion.div
           initial="hidden"

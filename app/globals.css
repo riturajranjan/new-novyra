@@ -214,13 +214,22 @@
   --animate-mesh-a: mesh-drift-a 34s var(--ease-soft) infinite alternate;
   --animate-mesh-b: mesh-drift-b 42s var(--ease-soft) infinite alternate-reverse;
 
-  /* ---- Footer / Project CTA orbital motif — extremely slow, GPU-cheap
-     (transform-only), neutralized by the global prefers-reduced-motion
-     rule below. ---- */
+  /* ---- Shared homepage-background motion system — every section's ambient
+     backdrop draws from these same timing bands so the page reads as one
+     intentional rhythm rather than random independent durations. All
+     transform/opacity/background-position only (GPU-cheap), all
+     neutralized by the global prefers-reduced-motion rule below.
+     Ambient: 16-30s · Signal: 8-16s · Pulse: 4-7s · One-time: 600-1200ms. */
   --animate-spin-slow: spin-slow 44s linear infinite;
   --animate-spin-slow-reverse: spin-slow-reverse 60s linear infinite;
   --animate-node-drift: node-drift 9s var(--ease-soft) infinite alternate;
   --animate-tiny-pulse: line-pulse 4s ease-in-out infinite;
+  --animate-flow-drift: flow-drift 22s ease-in-out infinite;
+  --animate-flow-drift-slow: flow-drift 28s ease-in-out infinite reverse;
+  --animate-scan-sweep: scan-sweep 14s ease-in-out infinite;
+  --animate-ribbon-breathe: ribbon-breathe 18s ease-in-out infinite;
+  --animate-contour-breathe: contour-breathe 12s ease-in-out infinite;
+  --animate-signal-travel: signal-travel 10s ease-in-out infinite;
 
   /* Hero entrance + ambient motion — CSS-driven so it plays at first paint,
      never gated on the JS bundle (previously a post-hydration GSAP timeline
@@ -335,6 +344,77 @@
   }
   50% {
     opacity: 0.85;
+  }
+}
+
+@keyframes flow-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(14px, -6px, 0);
+  }
+}
+
+@keyframes scan-sweep {
+  0% {
+    background-position: -30% -30%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    background-position: 130% 130%;
+    opacity: 0;
+  }
+}
+
+@keyframes ribbon-breathe {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(0, 6px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes contour-breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.015);
+  }
+}
+
+@keyframes signal-travel {
+  0%,
+  100% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 0;
+  }
+  100% {
+    offset-distance: 100%;
   }
 }
 

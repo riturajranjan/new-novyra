@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ServicesShowcase } from "@/components/sections/services-showcase";
 import { SolutionAdvisor } from "@/components/sections/solution-advisor";
 import { OurProcess } from "@/components/sections/our-process";
-import { ContactCta } from "@/components/sections/contact-cta";
 import { companyInfo } from "@/content/footer";
 
 const SITE_URL = "https://novyratech.in";
@@ -12,7 +11,9 @@ interface ServicesPageProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: ServicesPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ServicesPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services.meta" });
   const path = `/${locale}/services`;
@@ -22,7 +23,11 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
     description: t("description"),
     alternates: {
       canonical: path,
-      languages: { en: "/en/services", hi: "/hi/services", "x-default": "/en/services" },
+      languages: {
+        en: "/en/services",
+        hi: "/hi/services",
+        "x-default": "/en/services",
+      },
     },
     openGraph: {
       title: t("title"),
@@ -55,18 +60,30 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: t("breadcrumb.home"), item: `${SITE_URL}/${locale}` },
-      { "@type": "ListItem", position: 2, name: t("breadcrumb.current"), item: `${SITE_URL}/${locale}/services` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: t("breadcrumb.home"),
+        item: `${SITE_URL}/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t("breadcrumb.current"),
+        item: `${SITE_URL}/${locale}/services`,
+      },
     ],
   };
 
   return (
     <main className="relative w-full max-w-full min-w-0 flex-1 overflow-x-clip">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ServicesShowcase />
       <SolutionAdvisor />
       <OurProcess />
-      <ContactCta />
     </main>
   );
 }

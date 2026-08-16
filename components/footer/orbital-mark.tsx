@@ -52,7 +52,7 @@ export function OrbitalMark() {
             alt="Novyra Technologies"
             width={800}
             height={330}
-            className="absolute top-1/2 left-0 h-auto w-[260px] max-w-none -translate-y-1/2 sm:w-[300px]"
+            className="absolute top-[35px] left-[8px] h-auto w-[260px] max-w-none -translate-y-1/2 sm:w-[165px]"
           />
         </span>
       </span>

@@ -63,7 +63,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: Rocket,
     accent: "blue",
     hasPriceLabel: true,
-    price: { project: "₹29,999", retainer: "₹17,999" },
+    price: { project: "₹29,999/Year", retainer: "₹17,999/Month" },
     priceSuffix: { project: "+", retainer: "+/mo" },
     features: [
       "responsiveWebsite",
@@ -84,7 +84,7 @@ export const pricingPlans: PricingPlan[] = [
     accent: "purple",
     featured: true,
     hasPriceLabel: true,
-    price: { project: "₹79,999", retainer: "₹49,999" },
+    price: { project: "₹49,999/Year", retainer: "₹29,999" },
     priceSuffix: { project: "+", retainer: "+/mo" },
     inheritsFrom: "starter",
     features: [
@@ -108,7 +108,7 @@ export const pricingPlans: PricingPlan[] = [
     icon: Briefcase,
     accent: "cyan",
     hasPriceLabel: true,
-    price: { project: "₹1,49,999", retainer: "₹74,999" },
+    price: { project: "₹74,999/Year", retainer: "₹49,999/Month" },
     priceSuffix: { project: "+", retainer: "+/mo" },
     inheritsFrom: "professional",
     features: [

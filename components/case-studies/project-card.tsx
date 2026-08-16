@@ -82,17 +82,17 @@ export function ProjectCard({ build, index, priority }: ProjectCardProps) {
 
       <div className="relative z-10 flex max-w-[62%] flex-col gap-1.5 md:max-w-[54%]">
         <h3
-          className="line-clamp-2 text-[19px] leading-[1.2] font-semibold text-white transition-transform duration-300 group-hover:translate-x-0.5 md:text-[21px]"
-          style={{ fontWeight: 630 }}
+          className="line-clamp-2 text-[20px] leading-[1.2] font-semibold text-white transition-transform duration-300 group-hover:translate-x-0.5 md:text-[22px]"
+          style={{ fontWeight: 630, letterSpacing: "-0.02em" }}
         >
           {productName}
         </h3>
-        <p className="line-clamp-2 text-[13px] leading-[1.5] text-white/[0.74] md:text-[13.5px]">{tBuild("tagline")}</p>
-        <p className="line-clamp-2 text-[11px] leading-snug font-medium tracking-[0.01em]" style={{ color: accentTint(build.accent, 75) }}>
+        <p className="line-clamp-2 text-[14px] leading-[1.55] text-white/[0.74]">{tBuild("tagline")}</p>
+        <p className="line-clamp-2 text-[12px] leading-snug font-medium tracking-[0.01em]" style={{ color: accentTint(build.accent, 75) }}>
           {capabilities.join(" · ")}
         </p>
         <span
-          className="relative mt-1 inline-flex w-fit items-center gap-2 text-[13px] font-semibold text-white transition-colors duration-300 group-hover:text-[var(--cta-accent)]"
+          className="relative mt-1 inline-flex w-fit items-center gap-2 text-[14px] font-semibold text-white transition-colors duration-300 group-hover:text-[var(--cta-accent)]"
           style={{ "--cta-accent": accentStroke[build.accent] } as CSSProperties}
         >
           {tStage("viewProjectCta")}

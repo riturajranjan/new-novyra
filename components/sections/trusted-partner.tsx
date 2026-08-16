@@ -19,9 +19,9 @@ export function TrustedPartner() {
   const t = useTranslations("trustedPartner");
 
   return (
-    <section id="trusted-partner" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-18">
+    <section id="trusted-partner" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16 lg:py-20">
       <TrustedPartnerBackground />
-      <Container className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+      <Container size="wide" className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
         <motion.div
           initial="hidden"
           whileInView="visible"

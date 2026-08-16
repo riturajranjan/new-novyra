@@ -27,9 +27,9 @@ export function PricingTeaser() {
   const whatsappHref = companyInfo.whatsapp;
 
   return (
-    <section className="relative isolate overflow-hidden py-14 md:py-18">
+    <section className="relative isolate overflow-hidden py-14 md:py-16 lg:py-20">
       <PricingTeaserBackground />
-      <Container className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+      <Container size="wide" className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -110,7 +110,7 @@ function TeaserPlanCard({ plan, index, t }: { plan: PricingPlan; index: number; 
       whileHover={{ y: -3 }}
       transition={{ duration: 0.45, delay: index * 0.08 }}
       className={cn(
-        "relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl p-5",
+        "relative isolate flex flex-col gap-4 overflow-hidden rounded-2xl p-6 sm:p-7",
         featured ? "sm:-translate-y-3" : "border-border-subtle bg-surface/60 border backdrop-blur-md",
       )}
       style={
@@ -139,23 +139,32 @@ function TeaserPlanCard({ plan, index, t }: { plan: PricingPlan; index: number; 
         </span>
       ) : null}
 
-      <div className="flex flex-col gap-1">
-        <h3 className={cn("text-body-lg font-semibold", featured ? "text-white" : "text-foreground")}>{t(`plans.${plan.id}.name`)}</h3>
-        <p className={cn("text-caption", featured ? "text-white/55" : "text-foreground-secondary")}>{t(`plans.${plan.id}.tagline`)}</p>
+      <div className="flex flex-col gap-1.5">
+        <h3
+          className={cn(
+            "text-[13px] font-bold tracking-[0.08em] uppercase",
+            featured ? "text-white" : "text-foreground",
+          )}
+        >
+          {t(`plans.${plan.id}.name`)}
+        </h3>
+        <p className={cn("text-[14px] leading-[1.5]", featured ? "text-white/55" : "text-foreground-secondary")}>
+          {t(`plans.${plan.id}.tagline`)}
+        </p>
       </div>
 
-      <p className={cn("text-title-lg font-semibold", featured ? "text-white" : "text-foreground")}>
-        {plan.price.project}
-        <span className={cn("text-caption font-normal", featured ? "text-white/50" : "text-foreground-secondary")}>
+      <p className={cn("flex items-baseline font-semibold", featured ? "text-white" : "text-foreground")}>
+        <span style={{ fontSize: "28px", lineHeight: 1.1 }}>{plan.price.project}</span>
+        <span className={cn("text-[15px] font-normal", featured ? "text-white/50" : "text-foreground-secondary")}>
           {plan.priceSuffix.project}
         </span>
       </p>
 
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-2.5">
         {topFeatures.map((feature) => (
           <li
             key={feature}
-            className={cn("text-caption flex items-center gap-2", featured ? "text-white/75" : "text-foreground-secondary")}
+            className={cn("flex items-center gap-2 text-[14px]", featured ? "text-white/75" : "text-foreground-secondary")}
           >
             <Check className="h-3.5 w-3.5 shrink-0" style={{ color: stroke }} aria-hidden />
             <span className="truncate">{t(`plans.${plan.id}.features.${feature}`)}</span>
@@ -166,7 +175,7 @@ function TeaserPlanCard({ plan, index, t }: { plan: PricingPlan; index: number; 
       <RippleLink
         href={plan.ctaHref}
         className={cn(
-          buttonVariants({ variant: featured ? "gradient" : "outline", size: "md" }),
+          buttonVariants({ variant: featured ? "gradient" : "outline", size: "lg" }),
           "group mt-auto w-full",
         )}
       >

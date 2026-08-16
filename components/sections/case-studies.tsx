@@ -16,7 +16,7 @@ const stageBuilds = homepageStageIds.map((id) => conceptBuilds.find((build) => b
  * visible on every card. */
 export function CaseStudies() {
   return (
-    <section id="work" className="relative isolate scroll-mt-24 overflow-hidden py-12 md:py-14">
+    <section id="work" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16 lg:py-20">
       <CaseStudiesBackground />
 
       <Container size="wide" className="flex flex-col gap-7 md:gap-8">

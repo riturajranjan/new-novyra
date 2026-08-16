@@ -28,15 +28,15 @@ export function FooterValues() {
             className="flex items-start gap-3 lg:px-6 lg:first:pl-0 lg:last:pr-0"
           >
             <span
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border text-[11px] font-semibold text-white/60"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border text-[12px] font-semibold text-white/60"
               style={{ borderColor: accentTint(value.accent, 30), backgroundColor: accentTint(value.accent, 5) }}
             >
               {String(i + 1).padStart(2, "0")}
             </span>
             <div className="flex min-w-0 flex-col gap-1">
               <div className="flex items-center gap-1.5">
-                <Icon className="h-3.5 w-3.5 shrink-0" style={{ color: stroke }} aria-hidden />
-                <span className="text-body-sm text-foreground font-semibold">{t(`${value.id}.title`)}</span>
+                <Icon className="h-[18px] w-[18px] shrink-0" style={{ color: stroke }} aria-hidden />
+                <span className="text-body text-foreground font-semibold">{t(`${value.id}.title`)}</span>
               </div>
               <p className="text-caption text-foreground-secondary leading-snug text-pretty">{t(`${value.id}.description`)}</p>
             </div>

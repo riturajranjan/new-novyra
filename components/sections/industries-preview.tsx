@@ -30,9 +30,9 @@ export function IndustriesPreview() {
   const active = industries[activeIndex];
 
   return (
-    <section id="industries" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16">
+    <section id="industries" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16 lg:py-20">
       <IndustriesBackground />
-      <Container className="flex flex-col gap-9 md:gap-11">
+      <Container size="wide" className="flex flex-col gap-9 md:gap-11">
         <div className="flex flex-col items-start gap-4 text-left md:items-center md:text-center">
           <span className="text-gradient-brand text-[13px] font-bold tracking-[0.16em] uppercase">{t("eyebrow")}</span>
           <h2

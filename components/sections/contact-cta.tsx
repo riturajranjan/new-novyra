@@ -11,10 +11,10 @@ import { HeroGlassCard } from "@/components/contact-cta/hero-glass-card";
  * footer, so nothing is lost — this section just stops repeating them. */
 export function ContactCta() {
   return (
-    <section id="contact" className="relative isolate scroll-mt-24 py-14 md:py-16">
+    <section id="contact" className="relative isolate scroll-mt-24 overflow-hidden py-12 md:py-14 lg:py-16">
       <ContactCtaBackground />
 
-      <Container>
+      <Container size="wide">
         <HeroGlassCard />
       </Container>
     </section>

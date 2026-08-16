@@ -27,14 +27,14 @@ const company = footerColumns.find((c) => c.id === "company")!;
  * matching the approved reference composition. */
 export function Footer() {
   return (
-    <footer className="bg-section-deep relative isolate overflow-hidden py-8 sm:py-10">
+    <footer className="relative isolate overflow-hidden py-12 sm:py-14" style={{ backgroundColor: "#03050d" }}>
       <FooterBackground />
 
       <Container size="wide" className="flex flex-col gap-6">
         <ProjectCta />
 
         <div
-          className="relative isolate flex flex-col gap-8 overflow-hidden rounded-3xl border p-6 sm:p-9"
+          className="relative isolate flex flex-col gap-8 overflow-hidden rounded-[20px] border p-6 sm:p-8"
           style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "#07101f" }}
         >
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.8fr_0.8fr_1.15fr] lg:gap-x-6">

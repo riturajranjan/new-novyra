@@ -85,7 +85,7 @@ export function ProjectCta() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "150px" }}
       transition={{ duration: 0.6, ease: easePremium }}
-      className="relative isolate flex flex-col items-start gap-8 overflow-hidden rounded-3xl border p-6 sm:p-9 lg:flex-row lg:items-center lg:justify-between lg:gap-10"
+      className="relative isolate flex flex-col items-start gap-8 overflow-hidden rounded-[20px] border p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10"
       style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "#050816" }}
     >
       <ProjectCtaBackground />

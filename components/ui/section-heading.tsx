@@ -27,23 +27,23 @@ export function SectionHeading({
       viewport={{ once: true, margin: "150px" }}
       variants={fadeInUp}
       className={cn(
-        "flex flex-col gap-4",
+        "flex flex-col gap-6",
         align === "center" ? "items-center text-center" : "items-start text-left",
         className,
       )}
     >
       {eyebrow ? (
-        <span className="text-gradient-brand text-sm font-semibold uppercase tracking-[0.14em]">
+        <span className="text-gradient-brand text-[12px] font-semibold tracking-[0.14em] uppercase sm:text-[13px] sm:tracking-[0.16em]">
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="text-headline sm:text-display-lg font-semibold text-foreground text-balance">
+      <h2 className="text-headline sm:text-display-lg lg:text-display-2xl font-semibold text-foreground text-balance">
         {title}
       </h2>
       {description ? (
         <p
           className={cn(
-            "text-body-lg text-foreground-secondary max-w-2xl text-pretty",
+            "text-body-lg text-foreground-secondary max-w-[840px] text-pretty",
             align === "center" && "mx-auto",
           )}
         >

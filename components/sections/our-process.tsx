@@ -57,12 +57,10 @@ export function OurProcess() {
   const t = useTranslations("process");
 
   return (
-    <section
-      id="process"
-      className="relative isolate scroll-mt-24 py-14 md:py-20">
+    <section id="process" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16 lg:py-20">
       <ProcessBackground />
 
-      <Container>
+      <Container size="wide">
         <div className="relative mx-auto mb-10 flex max-w-[820px] flex-col items-center gap-5 text-center md:mb-18">
           <div
             aria-hidden

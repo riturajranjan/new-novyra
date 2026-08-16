@@ -27,9 +27,9 @@ export function WhatWeDo() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="what-we-do" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-18">
+    <section id="what-we-do" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16 lg:py-20">
       <WhatWeDoBackground />
-      <Container className="flex flex-col gap-10 md:gap-12">
+      <Container size="wide" className="flex flex-col gap-10 md:gap-12">
         <SectionHeading eyebrow={t("home.eyebrow")} title={t("home.heading")} description={t("home.description")} />
 
         {/* mobile / tablet — static hub, no connectors */}

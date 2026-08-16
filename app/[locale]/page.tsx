@@ -8,6 +8,7 @@ import { TrustedPartner } from "@/components/sections/trusted-partner";
 import { CaseStudies } from "@/components/sections/case-studies";
 import { PricingTeaser } from "@/components/sections/pricing-teaser";
 import { ContactCta } from "@/components/sections/contact-cta";
+import { OurProcess } from "@/components/sections/our-process";
 
 const SITE_URL = "https://novyratech.in";
 
@@ -15,7 +16,9 @@ interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
   const title = t("title");
@@ -36,7 +39,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: companyInfo.name,
       locale,
       type: "website",
-      images: [{ url: "/logo.png", width: 512, height: 512, alt: companyInfo.name }],
+      images: [
+        { url: "/logo.png", width: 512, height: 512, alt: companyInfo.name },
+      ],
     },
     twitter: {
       card: "summary",
@@ -75,12 +80,16 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <main className="relative w-full max-w-full min-w-0 flex-1 overflow-x-clip">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <Hero />
       <WhatWeDo />
       <IndustriesPreview />
       <TrustedPartner />
       <CaseStudies />
+      <OurProcess />
       <PricingTeaser />
       <ContactCta />
     </main>

@@ -73,11 +73,14 @@ export const conceptBuilds: ConceptBuild[] = [
   },
 ];
 
-/** The three shown on the homepage teaser (see components/sections/case-
- * studies.tsx) — matching the brief's "Healthcare Operations, Education
- * Management, SaaS Administration" set. The full six, including these
- * three, live on the dedicated /work page (app/[locale]/work/page.tsx). */
-export const homepageConceptIds = ["hospital-platform", "school-erp", "ai-saas-dashboard"] as const;
+/** The four shown in the homepage's single-project "Selected Work" stage
+ * (see components/sections/case-studies.tsx) — Education first (matches
+ * the stage's default active project), then Healthcare, SaaS, Real Estate.
+ * The full six, including these four, live on the dedicated /work page
+ * (app/[locale]/work/page.tsx), which uses the original FeaturedConcept/
+ * ConceptCard components untouched — the homepage stage uses its own
+ * separate components instead of modifying those. */
+export const homepageStageIds = ["school-erp", "hospital-platform", "ai-saas-dashboard", "real-estate-crm"] as const;
 
 /** Structural ids only — labels live in messages/{locale}/caseStudies.json
  * under `processSteps`, keyed by `id`. Same six stages, same order, as the

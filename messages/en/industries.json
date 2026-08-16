@@ -9,10 +9,13 @@
   },
   "home": {
     "eyebrow": "Industries",
-    "heading": "Technology shaped around your industry.",
-    "description": "We combine product thinking, design and engineering to build digital experiences around how your business actually works.",
-    "viewAllCta": "Explore Industry Solutions",
-    "listAriaLabel": "Industries"
+    "heading": "Digital solutions built around how your industry works.",
+    "description": "From education and healthcare to commerce and finance, we design and engineer digital systems around real workflows, users and business goals.",
+    "viewAllCta": "Explore all industries",
+    "listAriaLabel": "Industries",
+    "exploreLabel": "Explore {industry}",
+    "capabilitiesLabel": "Capabilities",
+    "counterLabel": "{current} / {total}"
   },
   "page": {
     "eyebrow": "Industries",
@@ -23,32 +26,44 @@
     "education": {
       "title": "Education",
       "outcome": "School websites, learning platforms and campus management systems.",
-      "descriptor": "School websites • Learning platforms • Campus systems"
+      "headline": "Digital infrastructure for modern education.",
+      "description": "From school websites and admissions to learning platforms and campus systems, we create digital experiences around students, parents, educators and administrators.",
+      "capabilities": ["School Websites", "Learning Platforms", "Campus Systems", "Admissions"]
     },
     "healthcare": {
       "title": "Healthcare",
       "outcome": "Hospital websites, patient platforms and digital operations.",
-      "descriptor": "Hospital websites • Patient experiences • Digital operations"
+      "headline": "Connected digital experiences for better care.",
+      "description": "We design patient-facing experiences and operational platforms that simplify healthcare journeys, communication and digital workflows.",
+      "capabilities": ["Hospital Websites", "Patient Experiences", "Healthcare Platforms", "Digital Operations"]
     },
     "retail-ecommerce": {
       "title": "Retail & eCommerce",
       "outcome": "Storefronts, catalog systems and checkout experiences that convert.",
-      "descriptor": "Commerce platforms • Customer experiences • Growth"
+      "headline": "Commerce experiences engineered for growth.",
+      "description": "From product discovery to checkout and business operations, we build digital commerce experiences that make buying easier and managing growth simpler.",
+      "capabilities": ["eCommerce", "Product Platforms", "Checkout", "Integrations"]
     },
     "travel-hospitality": {
       "title": "Travel & Hospitality",
       "outcome": "Booking-ready websites and guest experience platforms.",
-      "descriptor": "Booking experiences • Travel platforms • Digital operations"
+      "headline": "Digital journeys from discovery to destination.",
+      "description": "We create booking experiences, guest portals and digital platforms that connect travelers with seamless hospitality experiences.",
+      "capabilities": ["Booking Experiences", "Travel Platforms", "Guest Portals", "Operations"]
     },
     "finance": {
       "title": "Finance",
       "outcome": "Secure, compliant platforms for financial services and reporting.",
-      "descriptor": "FinTech products • Dashboards • Secure workflows"
+      "headline": "Secure digital products for modern finance.",
+      "description": "We build clear, secure interfaces and business systems for financial products, analytics, reporting and operational workflows.",
+      "capabilities": ["FinTech", "Dashboards", "Secure Workflows", "Reporting"]
     },
     "professional-services": {
       "title": "Professional Services",
       "outcome": "Client portals, scheduling and lead-focused websites for firms.",
-      "descriptor": "Web platforms • Automation • Business systems"
+      "headline": "Turn complex workflows into simpler systems.",
+      "description": "We help service businesses replace fragmented processes with connected portals, automation and scalable digital platforms.",
+      "capabilities": ["Business Platforms", "Automation", "Client Portals", "SaaS"]
     }
   },
   "cta": {

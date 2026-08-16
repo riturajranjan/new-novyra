@@ -12,7 +12,11 @@ import { ProcessBackground } from "@/components/process/process-background";
 import { ProcessTimeline } from "@/components/process/process-timeline";
 import { cn } from "@/lib/utils";
 
-const trustPointIds = ["transparent-process", "regular-updates", "post-launch-support"];
+const trustPointIds = [
+  "transparent-process",
+  "regular-updates",
+  "post-launch-support",
+];
 
 /** Small magnetic wrapper for the CTA buttons — nudges toward the pointer
  * within a subtle range and springs back on leave. Mouse-driven only;
@@ -34,7 +38,11 @@ function MagneticButton({ children }: { children: ReactNode }) {
   }
 
   return (
-    <motion.div style={{ x: springX, y: springY }} onMouseMove={handleMove} onMouseLeave={handleLeave} className="w-full">
+    <motion.div
+      style={{ x: springX, y: springY }}
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+      className="w-full">
       {children}
     </motion.div>
   );
@@ -49,7 +57,9 @@ export function OurProcess() {
   const t = useTranslations("process");
 
   return (
-    <section id="process" className="relative isolate scroll-mt-24 py-14 md:py-20">
+    <section
+      id="process"
+      className="relative isolate scroll-mt-24 py-14 md:py-20">
       <ProcessBackground />
 
       <Container>
@@ -64,14 +74,18 @@ export function OurProcess() {
               <>
                 {t("sectionHeading.titleLine1")}
                 <br className="hidden sm:block" />{" "}
-                <span className="text-gradient-brand">{t("sectionHeading.titleHighlight")}</span>
+                <span className="text-gradient-brand">
+                  {t("sectionHeading.titleHighlight")}
+                </span>
               </>
             }
             description={t("sectionHeading.description")}
           />
           <div className="flex flex-wrap items-center justify-center gap-2">
             {trustPointIds.map((id) => (
-              <span key={id} className="glass text-caption text-foreground-secondary rounded-full px-3.5 py-1.5">
+              <span
+                key={id}
+                className="glass text-caption text-foreground-secondary rounded-full px-3.5 py-1.5">
                 {t(`trustPoints.${id}`)}
               </span>
             ))}
@@ -80,16 +94,14 @@ export function OurProcess() {
 
         <ProcessTimeline />
 
-        <div className="relative mx-auto mt-10 w-full max-w-[760px] md:mt-18">
+        {/* <div className="relative mx-auto mt-10 w-full max-w-[760px] md:mt-18">
           <div
             aria-hidden
             className="bg-gradient-brand pointer-events-none absolute -inset-16 -z-10 rounded-[48px] opacity-25 blur-3xl"
           />
           <div className="relative overflow-hidden rounded-2xl p-px">
             <div aria-hidden className="bg-gradient-brand absolute inset-0 -z-10 opacity-60" />
-            {/* 31px = the 2xl (32px) outer wrapper's radius minus the 1px
-                gradient-border inset — keeps the inner and outer corners
-                concentric. Documented exception to the radius scale. */}
+            
             <div className="glass-strong relative flex flex-col items-center gap-6 rounded-[31px] p-8 text-center sm:p-10">
               <span aria-hidden className="text-foreground-secondary/40 flex items-center gap-2">
                 <span className="via-foreground-secondary/40 h-px w-16 bg-gradient-to-r from-transparent to-transparent" />
@@ -126,7 +138,7 @@ export function OurProcess() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </Container>
     </section>
   );

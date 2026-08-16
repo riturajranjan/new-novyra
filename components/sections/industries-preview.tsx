@@ -1,154 +1,134 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { RippleLink } from "@/components/ui/ripple-link";
-import { buttonVariants } from "@/components/ui/button";
-import { IndustryVisual } from "@/components/industries/industry-visual";
+import { IndustryPanel } from "@/components/industries/industry-panel";
+import { IndustryPanelVisual } from "@/components/industries/industry-panel-visual";
 import { IndustriesBackground } from "@/components/industries/industries-background";
 import { industries } from "@/content/industries";
-import { accentStroke } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 
 const total = industries.length;
+const EASE = [0.22, 1, 0.36, 1] as const;
 
-/** Industries as an interactive navigator, not a card grid — an editorial
- * left column (sticky via native CSS, no JS scroll-pinning) alongside a
- * hoverable row list and a floating abstract visual that swaps per active
- * industry. Mobile drops the row-list/sticky geometry for a horizontal
- * chip selector driving the same shared state. */
+/** Industries as a compact horizontal expanding-panel rail (>=1100px) —
+ * one wide image-led active panel plus five narrow vertical panels that
+ * expand in place on click, panels never reordering. Below 1100px this
+ * collapses to a horizontal tab strip over a single active card instead of
+ * squeezing the same geometry into a cramped tablet width. One shared data
+ * source (`content/industries.ts` + `messages/{locale}/industries.json`)
+ * drives both. */
 export function IndustriesPreview() {
   const t = useTranslations("industries.home");
   const tItems = useTranslations("industries.items");
+  const reduceMotion = useReducedMotion();
   const [activeIndex, setActiveIndex] = useState(0);
   const active = industries[activeIndex];
 
   return (
-    <section id="industries" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-18">
+    <section id="industries" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16">
       <IndustriesBackground />
-      <Container>
-        {/* mobile / tablet */}
-        <div className="flex flex-col gap-6 lg:hidden">
-          <div className="flex flex-col gap-3">
-            <span className="text-gradient-brand text-sm font-semibold uppercase tracking-[0.14em]">{t("eyebrow")}</span>
-            <h2 className="text-headline text-foreground text-balance font-semibold">{t("heading")}</h2>
-          </div>
-
-          <div className="-mx-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {industries.map((industry, i) => (
-              <button
-                key={industry.id}
-                type="button"
-                onClick={() => setActiveIndex(i)}
-                className={cn(
-                  "text-caption shrink-0 snap-start rounded-pill border px-3.5 py-2 font-semibold whitespace-nowrap transition-colors duration-fast",
-                  i === activeIndex
-                    ? "border-transparent text-white"
-                    : "border-border-subtle text-foreground-secondary",
-                )}
-                style={i === activeIndex ? { backgroundColor: accentStroke[industry.accent] } : undefined}
-              >
-                {String(i + 1).padStart(2, "0")} {tItems(`${industry.id}.title`)}
-              </button>
-            ))}
-          </div>
-
-          <div className="aspect-[4/3] w-full">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active.id}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="h-full w-full"
-              >
-                <IndustryVisual layout={active.layout} accent={active.accent} label={tItems(`${active.id}.title`)} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <h3 className="text-title-lg text-foreground font-semibold">{tItems(`${active.id}.title`)}</h3>
-            <p className="text-body-sm text-foreground-secondary">{tItems(`${active.id}.descriptor`)}</p>
-          </div>
-
-          <RippleLink href="/industries" className={cn(buttonVariants({ variant: "outline", size: "md" }), "group w-fit")}>
+      <Container className="flex flex-col gap-9 md:gap-11">
+        <div className="flex flex-col items-start gap-4 text-left md:items-center md:text-center">
+          <span className="text-gradient-brand text-[13px] font-bold tracking-[0.16em] uppercase">{t("eyebrow")}</span>
+          <h2
+            className="text-foreground max-w-[1150px] text-balance font-semibold"
+            style={{ fontSize: "clamp(2.125rem, 4.5vw, 4.25rem)", lineHeight: 1.08, letterSpacing: "-0.02em" }}
+          >
+            {t("heading")}
+          </h2>
+          <p className="text-foreground-secondary max-w-[840px] text-pretty" style={{ fontSize: "17px", lineHeight: 1.6 }}>
+            {t("description")}
+          </p>
+          <RippleLink
+            href="/industries"
+            className="group before:bg-gradient-brand relative mt-1 inline-flex w-fit items-center gap-1.5 text-[15px] font-semibold text-white before:absolute before:-bottom-0.5 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
+          >
             {t("viewAllCta")}
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
           </RippleLink>
         </div>
 
-        {/* desktop */}
-        <div className="hidden lg:grid lg:grid-cols-[2fr_2fr_1.3fr] lg:items-start lg:gap-8">
-          <div className="sticky top-28 flex flex-col gap-5 self-start">
-            <span className="text-gradient-brand text-sm font-semibold uppercase tracking-[0.14em]">{t("eyebrow")}</span>
-            <h2 className="text-display-lg text-foreground text-balance font-semibold">{t("heading")}</h2>
-            <p className="text-body text-foreground-secondary max-w-sm text-pretty">{t("description")}</p>
-            <RippleLink href="/industries" className="group text-body-sm inline-flex w-fit items-center gap-1.5 font-semibold text-foreground">
-              {t("viewAllCta")}
-              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
-            </RippleLink>
-            <span className="text-caption text-foreground-secondary/60 font-medium tabular-nums">
-              {String(activeIndex + 1).padStart(2, "0")} — {String(total).padStart(2, "0")}
-            </span>
-          </div>
+        {/* desktop — expanding panel rail */}
+        <div className="hidden min-[1100px]:flex min-[1100px]:h-[460px] min-[1100px]:gap-2">
+          {industries.map((industry, i) => (
+            <IndustryPanel
+              key={industry.id}
+              industry={industry}
+              index={i}
+              total={total}
+              isActive={activeIndex === i}
+              onActivate={setActiveIndex}
+            />
+          ))}
+        </div>
 
-          <nav aria-label={t("listAriaLabel")} className="border-border-subtle flex flex-col border-t">
+        {/* mobile / tablet — horizontal tabs + single active card */}
+        <div className="flex flex-col gap-4 min-[1100px]:hidden">
+          <div className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {industries.map((industry, i) => {
               const isActive = i === activeIndex;
               return (
-                <RippleLink
+                <button
                   key={industry.id}
-                  href="/industries"
-                  onMouseEnter={() => setActiveIndex(i)}
-                  onFocus={() => setActiveIndex(i)}
+                  type="button"
+                  onClick={() => setActiveIndex(i)}
                   className={cn(
-                    "group border-border-subtle relative flex items-center gap-4 border-b py-4 pl-3 transition-[opacity,padding] duration-300",
-                    isActive ? "opacity-100" : "opacity-55 hover:opacity-90",
+                    "shrink-0 border-b-2 px-3 py-2 text-[13px] font-semibold whitespace-nowrap transition-colors duration-300",
+                    isActive ? "border-brand-blue text-foreground" : "border-transparent text-foreground-secondary/60",
                   )}
                 >
-                  <span
-                    className="absolute top-0 left-0 h-full w-0.5 origin-top scale-y-0 transition-transform duration-300"
-                    style={{ backgroundColor: accentStroke[industry.accent], transform: isActive ? "scaleY(1)" : undefined }}
-                    aria-hidden
-                  />
-                  <span className="text-caption text-foreground-secondary/60 font-semibold tabular-nums">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="flex min-w-0 flex-1 flex-col gap-0.5">
-                    <span className={cn("text-title font-semibold transition-colors duration-300", isActive ? "text-foreground" : "text-foreground-secondary")}>
-                      {tItems(`${industry.id}.title`)}
-                    </span>
-                    <span className="text-caption text-foreground-secondary/70 truncate">{tItems(`${industry.id}.descriptor`)}</span>
-                  </div>
-                  <ArrowRight
-                    className={cn(
-                      "h-4 w-4 shrink-0 text-foreground-secondary transition-transform duration-300",
-                      isActive && "translate-x-2",
-                    )}
-                    aria-hidden
-                  />
-                </RippleLink>
+                  {String(i + 1).padStart(2, "0")} {tItems(`${industry.id}.title`)}
+                </button>
               );
             })}
-          </nav>
+          </div>
 
-          <div className="sticky top-28 aspect-[4/5] self-start">
-            <AnimatePresence mode="wait">
+          <div className="relative h-[420px] w-full overflow-hidden rounded-xl sm:h-[440px]">
+            <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={active.id}
-                initial={{ opacity: 0, scale: 0.97 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="h-full w-full"
-                style={{ transform: "perspective(1200px) rotateY(-4deg)" }}
+                initial={reduceMotion ? false : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={reduceMotion ? undefined : { opacity: 0 }}
+                transition={{ duration: 0.35, ease: EASE }}
+                className="absolute inset-0"
               >
-                <IndustryVisual layout={active.layout} accent={active.accent} label={tItems(`${active.id}.title`)} />
+                <IndustryPanelVisual industry={active} priority={activeIndex === 0} />
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(0deg, rgba(5,8,18,0.96) 0%, rgba(5,8,18,0.86) 45%, rgba(5,8,18,0.3) 100%)",
+                  }}
+                />
+                <motion.div
+                  initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.08, ease: EASE }}
+                  className="absolute inset-x-0 bottom-0 flex flex-col gap-2.5 p-5 sm:p-7"
+                >
+                  <span className="text-[11px] font-semibold tracking-[0.14em] text-white/50 uppercase">
+                    {String(activeIndex + 1).padStart(2, "0")} / {tItems(`${active.id}.title`)}
+                  </span>
+                  <h3 className="text-[22px] leading-[1.15] font-semibold text-white sm:text-[26px]">
+                    {tItems(`${active.id}.headline`)}
+                  </h3>
+                  <p className="text-[13px] leading-relaxed text-white/60 sm:text-[14px]">{tItems(`${active.id}.description`)}</p>
+                  <p className="text-[12px] text-white/40">{(tItems.raw(`${active.id}.capabilities`) as string[]).join(" · ")}</p>
+                  <RippleLink
+                    href={active.href}
+                    className="group/cta mt-1 inline-flex w-fit items-center gap-1.5 text-[13px] font-semibold text-brand-blue"
+                  >
+                    {t("exploreLabel", { industry: tItems(`${active.id}.title`) })}
+                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" aria-hidden />
+                  </RippleLink>
+                </motion.div>
               </motion.div>
             </AnimatePresence>
           </div>

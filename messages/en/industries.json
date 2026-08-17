@@ -17,10 +17,80 @@
     "capabilitiesLabel": "Capabilities",
     "counterLabel": "{current} / {total}"
   },
-  "page": {
+  "hero": {
     "eyebrow": "Industries",
-    "heading": "Built around the way your industry works.",
-    "description": "A closer look at how Novyra approaches each industry — the workflows, users, and outcomes that shape the build."
+    "headingLine1": "Different Industries.",
+    "headingLine2": "Different Challenges.",
+    "headingLine3": "Built Around You.",
+    "description": "From education and healthcare to commerce, finance and hospitality, we design digital systems around how each industry actually works.",
+    "primaryCta": "Explore Industries",
+    "secondaryCta": "Discuss Your Industry"
+  },
+  "visualBadge": "Interface Study",
+  "explorer": {
+    "eyebrow": "Explore Industries",
+    "headingLine1": "Built for the way",
+    "headingLine2": "your industry works.",
+    "description": "Different industries have different users, workflows and constraints. Explore how we approach each one.",
+    "navAriaLabel": "Industries",
+    "whatWeCanBuild": "What We Can Build",
+    "illustrativeNote": "Illustrative composition — not a real client interface"
+  },
+  "howWeThink": {
+    "eyebrow": "How We Think",
+    "headingLine1": "We don't start",
+    "headingLine2": "with software.",
+    "headingLine3": "We start with",
+    "headingLine4": "how your business works.",
+    "scenarios": {
+      "school": {
+        "label": "School",
+        "steps": {
+          "context": "Admissions",
+          "workflow": "Manual forms",
+          "friction": "Disconnected data",
+          "system": "Digital admission system",
+          "outcome": "Faster parent experience"
+        }
+      },
+      "hospital": {
+        "label": "Hospital",
+        "steps": {
+          "context": "Appointments",
+          "workflow": "Manual coordination",
+          "friction": "Disconnected departments",
+          "system": "Unified patient workflow",
+          "outcome": "Better operations"
+        }
+      },
+      "retail": {
+        "label": "Retail",
+        "steps": {
+          "context": "Checkout & Inventory",
+          "workflow": "Manual stock updates",
+          "friction": "Stockouts & lost sales",
+          "system": "Connected commerce platform",
+          "outcome": "Reliable buying experience"
+        }
+      }
+    }
+  },
+  "spotlights": {
+    "eyebrow": "Industry Spotlights",
+    "heading": "Three industries, a closer look.",
+    "exploreCta": "Explore {industry}"
+  },
+  "capabilityRail": {
+    "headingLine1": "Different industries.",
+    "headingLine2": "One engineering standard.",
+    "exploreCta": "Explore Services",
+    "stages": {
+      "discover": { "title": "Discover", "phrase": "Understand the workflow." },
+      "design": { "title": "Design", "phrase": "Shape the right experience." },
+      "engineer": { "title": "Engineer", "phrase": "Build reliable systems." },
+      "integrate": { "title": "Integrate", "phrase": "Connect the ecosystem." },
+      "scale": { "title": "Scale", "phrase": "Grow without rebuilding." }
+    }
   },
   "items": {
     "education": {
@@ -67,9 +137,11 @@
     }
   },
   "cta": {
-    "heading": "Don't see your industry?",
-    "description": "We build around the way your business actually works, not a fixed template — tell us about it.",
-    "primaryCta": "Start a Project",
-    "secondaryCta": "Talk to Us"
+    "eyebrow": "Your Industry Isn't Listed?",
+    "headingLine1": "Let's understand how",
+    "headingLine2": "your business works.",
+    "description": "Tell us about your workflows, challenges and goals. We'll help identify where better digital systems can create the most impact.",
+    "primaryCta": "Discuss Your Business",
+    "secondaryCta": "WhatsApp Us"
   }
 }

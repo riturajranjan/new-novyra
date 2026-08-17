@@ -3,8 +3,6 @@ import {
   Accessibility,
   AppWindow,
   Braces,
-  Briefcase,
-  Building2,
   CircleCheckBig,
   Cloud,
   Code2,
@@ -12,23 +10,15 @@ import {
   FileCode2,
   Gauge,
   Gem,
-  GraduationCap,
   Handshake,
-  HeartPulse,
   Layers,
-  LifeBuoy,
   Megaphone,
   MessageCircle,
-  MessagesSquare,
   Palette,
-  Rocket,
   Server,
   ShieldCheck,
-  ShoppingCart,
   Shuffle,
-  Smartphone,
   Sparkles,
-  Store,
   Target,
   Telescope,
   TrendingUp,
@@ -93,24 +83,20 @@ export const visionPanel = { icon: Telescope, accent: "purple" as AccentColor };
 /** Chip label text lives in messages/{locale}/about.json under
  * `missionVision.mission.chips` / `missionVision.vision.chips` (arrays). */
 
-/** ---- Section 4: What We Build — asymmetric bento (spans out of 6 cols) ----
- * Honest, no-inflated-claims approach — capability descriptions only, no
- * invented stats. */
-export interface BentoItem {
+/** ---- Section 7: Compact Capabilities Strip — one restrained row instead
+ * of the old six-tile bento. Label text lives in messages/{locale}/about.json
+ * under `capabilities.services.items.<id>`. */
+export interface CapabilityStripItem {
   id: string;
   icon: LucideIcon;
-  accent: AccentColor;
-  span: number;
-  href: string;
 }
 
-export const whatWeBuildItems: BentoItem[] = [
-  { id: "web-design", icon: Code2, accent: "blue", span: 3, href: "/services" },
-  { id: "digital-marketing", icon: Megaphone, accent: "pink", span: 3, href: "/services" },
-  { id: "web-applications", icon: AppWindow, accent: "cyan", span: 2, href: "/services" },
-  { id: "graphic-design", icon: Palette, accent: "purple", span: 2, href: "/services" },
-  { id: "saas-development", icon: Layers, accent: "emerald", span: 2, href: "/services" },
-  { id: "ai-solutions", icon: Sparkles, accent: "amber", span: 6, href: "/services" },
+export const capabilityStripItems: CapabilityStripItem[] = [
+  { id: "web-experiences", icon: Code2 },
+  { id: "web-applications", icon: AppWindow },
+  { id: "saas", icon: Layers },
+  { id: "product-design", icon: Palette },
+  { id: "digital-growth", icon: TrendingUp },
 ];
 
 /** ---- Section 5: Core Principles ---- */
@@ -127,48 +113,6 @@ export const principleModules: PrincipleModule[] = [
   { id: "business-value", number: "03", icon: TrendingUp, accent: "cyan" },
   { id: "built-to-scale", number: "04", icon: Layers, accent: "emerald" },
   { id: "partnership", number: "05", icon: Handshake, accent: "pink" },
-];
-
-/** ---- Section 7: Why Choose Novyra — six honest, capability-based reasons ---- */
-export interface WhyChooseReason {
-  id: string;
-  icon: LucideIcon;
-  accent: AccentColor;
-}
-
-export const whyChooseReasons: WhyChooseReason[] = [
-  { id: "custom-ui", icon: Palette, accent: "purple" },
-  { id: "modern-stack", icon: Server, accent: "blue" },
-  { id: "responsive", icon: Smartphone, accent: "cyan" },
-  { id: "performance-seo", icon: Gauge, accent: "emerald" },
-  { id: "communication", icon: MessagesSquare, accent: "pink" },
-  { id: "post-launch-support", icon: LifeBuoy, accent: "amber" },
-];
-
-/** ---- Section 8: Industries We Support — "Industry Constellation" ----
- * Positions are hand-placed (an asymmetric constellation, not a perfect
- * regular octagon) to match the approved layout; `color` is a standalone
- * hex per industry rather than the shared `AccentColor` token set, since
- * the brief calls for two shades (indigo, violet) the sitewide accent
- * system doesn't have — kept local here rather than expanding the global
- * theme for a single section. */
-export interface IndustryItem {
-  id: string;
-  icon: LucideIcon;
-  color: string;
-  top: string;
-  left: string;
-}
-
-export const industryItems: IndustryItem[] = [
-  { id: "healthcare", icon: HeartPulse, color: "#F43F5E", top: "4%", left: "50%" },
-  { id: "education", icon: GraduationCap, color: "#3B82F6", top: "20%", left: "80%" },
-  { id: "startups", icon: Rocket, color: "#8B5CF6", top: "50%", left: "94%" },
-  { id: "local-businesses", icon: Store, color: "#F59E0B", top: "80%", left: "74%" },
-  { id: "professional-services", icon: Briefcase, color: "#06B6D4", top: "94%", left: "50%" },
-  { id: "ecommerce", icon: ShoppingCart, color: "#10B981", top: "80%", left: "26%" },
-  { id: "saas", icon: Layers, color: "#6366F1", top: "50%", left: "6%" },
-  { id: "growing-enterprises", icon: Building2, color: "#D946EF", top: "20%", left: "20%" },
 ];
 
 /** ---- Section 9: Technology Philosophy ----

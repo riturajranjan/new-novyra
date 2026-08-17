@@ -13,49 +13,41 @@ import { fadeInUp } from "@/lib/motion";
 interface PanelProps {
   icon: LucideIcon;
   accent: AccentColor;
+  number: string;
   label: string;
   headline: string;
   paragraph: string;
   chips: string[];
 }
 
-function Panel({ icon: Icon, accent, label, headline, paragraph, chips }: PanelProps) {
+function Panel({ icon: Icon, accent, number, label, headline, paragraph, chips }: PanelProps) {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "120px" }}
       variants={fadeInUp}
-      className="glass-strong shadow-card flex flex-1 flex-col gap-5 rounded-hero p-7 sm:p-9"
+      className="flex flex-1 flex-col gap-5 p-2 sm:p-4"
     >
-      <span
-        className="flex h-14 w-14 items-center justify-center rounded-2xl"
-        style={{ background: accentTint(accent, 18) }}
-      >
-        <Icon className="h-7 w-7" style={{ color: accentStroke[accent] }} aria-hidden />
-      </span>
-      <div>
+      <div className="flex items-center gap-3">
         <span
-          className="text-caption font-semibold tracking-[0.14em] uppercase"
-          style={{ color: accentStroke[accent] }}
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border"
+          style={{ borderColor: accentTint(accent, 30), backgroundColor: accentTint(accent, 6) }}
         >
-          {label}
+          <Icon className="h-5 w-5" style={{ color: accentStroke[accent] }} aria-hidden />
         </span>
-        <h2 className="text-title-lg sm:text-headline mt-2 font-semibold tracking-[-0.02em] text-foreground">
-          {headline}
-        </h2>
+        <span className="text-[13px] font-semibold tracking-[0.1em] uppercase" style={{ color: accentStroke[accent] }}>
+          {label} <span className="text-white/25">{number}</span>
+        </span>
       </div>
-      <p className="text-body text-foreground-secondary max-w-[500px] text-pretty leading-[1.65]">{paragraph}</p>
+      <h2 className="text-title-lg sm:text-headline font-semibold tracking-[-0.02em] text-foreground">{headline}</h2>
+      <p className="text-body text-foreground-secondary max-w-[480px] text-pretty leading-[1.65]">{paragraph}</p>
       <div className="mt-auto flex flex-wrap gap-2 pt-2">
         {chips.map((chip) => (
           <span
             key={chip}
             className="text-caption rounded-pill px-3 py-1.5 font-medium"
-            style={{
-              background: accentTint(accent, 12),
-              color: accentStroke[accent],
-              border: `1px solid ${accentTint(accent, 30)}`,
-            }}
+            style={{ background: accentTint(accent, 8), color: accentStroke[accent], border: `1px solid ${accentTint(accent, 26)}` }}
           >
             {chip}
           </span>
@@ -65,25 +57,27 @@ function Panel({ icon: Icon, accent, label, headline, paragraph, chips }: PanelP
   );
 }
 
-/** Mission & Vision — a distinct dual-panel layout (not two generic equal
- * cards): a thin animated light beam travels the vertical seam between them
- * on desktop, visually joining "why we build" to "where we're headed".
- * Kept in the "strong" visual tier, between the calm intro and the calm
- * process strip. */
+/** Mission & Vision — one connected split composition (not two equal glass
+ * cards): a thin animated light beam travels the vertical seam between
+ * them on desktop, joining "why we build" to "where we're headed". */
 export function MissionVision() {
   const t = useTranslations("about.missionVision");
   const missionChips = t.raw("mission.chips") as string[];
   const visionChips = t.raw("vision.chips") as string[];
 
   return (
-    <section id="mission" className="relative isolate scroll-mt-24 py-14 md:py-20">
+    <section id="mission" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-18">
       <AboutBackground variant="strong" />
 
       <Container>
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-0">
+        <div
+          className="flex flex-col gap-6 rounded-2xl border lg:flex-row lg:items-stretch lg:gap-0"
+          style={{ borderColor: "rgba(255,255,255,0.07)", backgroundColor: "#0a0e1e" }}
+        >
           <Panel
             icon={missionPanel.icon}
             accent={missionPanel.accent}
+            number="01"
             label={t("mission.label")}
             headline={t("mission.headline")}
             paragraph={t("mission.paragraph")}
@@ -91,7 +85,7 @@ export function MissionVision() {
           />
 
           <div aria-hidden className="relative mx-6 hidden w-px shrink-0 lg:block">
-            <div className="via-foreground-secondary/25 absolute inset-0 bg-gradient-to-b from-transparent to-transparent" />
+            <div className="absolute inset-0" style={{ backgroundColor: "rgba(255,255,255,0.07)" }} />
             <motion.div
               className="via-brand-blue absolute inset-x-0 h-28 bg-gradient-to-b from-transparent to-transparent"
               animate={{ top: ["-15%", "115%"] }}
@@ -102,6 +96,7 @@ export function MissionVision() {
           <Panel
             icon={visionPanel.icon}
             accent={visionPanel.accent}
+            number="02"
             label={t("vision.label")}
             headline={t("vision.headline")}
             paragraph={t("vision.paragraph")}

@@ -1,57 +1,88 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { principleModules } from "@/content/about";
 import { accentStroke, accentTint } from "@/lib/accent";
-import { fadeInUp, staggerContainer } from "@/lib/motion";
+import { easePremium } from "@/lib/motion";
 
-/** Core Principles — five compact modules laid out as a horizontal
- * timeline on desktop (a numeral + thin accent line above each icon) and a
- * simple vertical spine on mobile. Deliberately lighter-weight than the
- * homepage's process timeline (no SVG rail) — this is five short
- * statements, not a six-step project workflow. */
+/** Principles — an editorial interactive layout: a large number on the
+ * left, the title in the center, a short explanation on the right, and a
+ * thin progress line that shifts to the active row. Hovering (desktop) or
+ * focusing a row makes it visually dominant; the rest recede. Mobile falls
+ * back to clean stacked rows — no cards. */
 export function CorePrinciples() {
   const t = useTranslations("about.principles");
+  const [active, setActive] = useState(0);
+  const activeModule = principleModules[active];
 
   return (
-    <section className="relative isolate py-14 md:py-20">
-      <Container className="flex flex-col gap-10 md:gap-14">
+    <section className="relative isolate overflow-hidden py-14 md:py-18">
+      <Container className="flex flex-col gap-10 md:gap-12">
         <SectionHeading eyebrow={t("eyebrow")} title={t("title")} />
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "120px" }}
-          variants={staggerContainer}
-          className="hidden md:grid md:grid-cols-5 md:gap-6"
+        <div
+          className="hidden overflow-hidden rounded-2xl border md:flex md:flex-col"
+          style={{ borderColor: "rgba(255,255,255,0.07)", backgroundColor: "#0a0e1e" }}
+          onMouseLeave={() => setActive(0)}
         >
-          {principleModules.map((module) => {
-            const Icon = module.icon;
+          {principleModules.map((module, i) => {
+            const isActive = i === active;
             return (
-              <motion.div key={module.id} variants={fadeInUp} className="flex flex-col gap-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-caption text-foreground-secondary/50 font-semibold">{module.number}</span>
-                  <span className="h-px flex-1" style={{ background: accentTint(module.accent, 35) }} />
-                </div>
+              <div
+                key={module.id}
+                role="button"
+                tabIndex={0}
+                onMouseEnter={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                className="group relative grid cursor-default grid-cols-[80px_1fr_1.3fr] items-center gap-6 border-t px-7 py-5 outline-none transition-colors duration-300 first:border-t-0"
+                style={{ borderColor: "rgba(255,255,255,0.07)" }}
+              >
                 <span
-                  className="flex h-10 w-10 items-center justify-center rounded-xl"
-                  style={{ background: accentTint(module.accent, 16) }}
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300"
+                  style={{
+                    backgroundImage: `radial-gradient(60% 130% at 0% 50%, ${accentTint(module.accent, 7)}, transparent 75%)`,
+                    opacity: isActive ? 1 : 0,
+                  }}
+                />
+
+                <span
+                  className="relative z-10 text-[34px] leading-none font-bold tabular-nums transition-colors duration-300"
+                  style={{ color: isActive ? accentStroke[module.accent] : "rgba(255,255,255,0.18)" }}
                 >
-                  <Icon className="h-5 w-5" style={{ color: accentStroke[module.accent] }} aria-hidden />
+                  {module.number}
                 </span>
-                <h3 className="text-body-lg font-semibold tracking-[-0.01em] text-foreground">
+
+                <h3
+                  className="relative z-10 text-[19px] leading-tight font-semibold transition-colors duration-300"
+                  style={{ color: isActive ? "#ffffff" : "rgba(255,255,255,0.62)" }}
+                >
                   {t(`items.${module.id}.title`)}
                 </h3>
-                <p className="text-body-sm text-foreground-secondary text-pretty">
+
+                <p
+                  className="relative z-10 text-body-sm text-pretty transition-colors duration-300"
+                  style={{ color: isActive ? "rgba(226,231,240,0.8)" : "rgba(226,231,240,0.4)" }}
+                >
                   {t(`items.${module.id}.statement`)}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+
+          <div className="relative h-[2px] w-full" style={{ backgroundColor: "rgba(255,255,255,0.06)" }}>
+            <motion.div
+              className="absolute inset-y-0 rounded-full"
+              style={{ backgroundColor: accentStroke[activeModule.accent] }}
+              animate={{ left: `${(active / principleModules.length) * 100}%`, width: `${100 / principleModules.length}%` }}
+              transition={{ duration: 0.35, ease: easePremium }}
+            />
+          </div>
+        </div>
 
         <ol className="flex flex-col gap-5 md:hidden">
           {principleModules.map((module, i) => {
@@ -59,10 +90,10 @@ export function CorePrinciples() {
             return (
               <motion.li
                 key={module.id}
-                initial="hidden"
-                whileInView="visible"
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "120px" }}
-                variants={fadeInUp}
+                transition={{ duration: 0.4, delay: i * 0.05, ease: easePremium }}
                 className="relative flex gap-4"
               >
                 {i < principleModules.length - 1 ? (
@@ -77,9 +108,7 @@ export function CorePrinciples() {
                 <div className="flex flex-col gap-1 pt-1">
                   <span className="text-caption text-foreground-secondary/50 font-semibold">{module.number}</span>
                   <h3 className="text-body font-semibold text-foreground">{t(`items.${module.id}.title`)}</h3>
-                  <p className="text-body-sm text-foreground-secondary text-pretty">
-                    {t(`items.${module.id}.statement`)}
-                  </p>
+                  <p className="text-body-sm text-foreground-secondary text-pretty">{t(`items.${module.id}.statement`)}</p>
                 </div>
               </motion.li>
             );

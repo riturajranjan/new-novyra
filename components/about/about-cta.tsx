@@ -28,7 +28,7 @@ export function AboutCta() {
   const t = useTranslations("about.cta");
 
   return (
-    <section className="relative isolate py-14 md:py-20">
+    <section className="relative isolate py-12 md:py-16">
       <Container>
         <motion.div
           initial="hidden"

@@ -11,7 +11,7 @@
       "after": "That Help Businesses Move Forward."
     },
     "description": "Novyra Technologies designs and develops premium websites, SaaS platforms, AI-powered products, web applications, and digital growth systems for modern businesses.",
-    "cta": { "primary": "Start a Project", "secondary": "Explore Our Services" },
+    "cta": { "primary": "Start a Project" },
     "trust": {
       "full-stack-engineering": "Full-Stack Engineering",
       "scalable-solutions": "Scalable Solutions",
@@ -59,38 +59,6 @@
       "chips": ["Scalable", "Intelligent", "Maintainable"]
     }
   },
-  "whatWeBuild": {
-    "eyebrow": "What We Build",
-    "titleLine1": "From Business Websites",
-    "titleHighlight": "To Scalable Digital Platforms.",
-    "explore": "Explore",
-    "items": {
-      "web-design": {
-        "label": "Web Design & Development",
-        "description": "Premium websites designed to build trust and generate enquiries."
-      },
-      "digital-marketing": {
-        "label": "Digital Marketing",
-        "description": "SEO, content, campaigns, and digital growth systems."
-      },
-      "web-applications": {
-        "label": "Web Applications",
-        "description": "Custom platforms that simplify workflows and business operations."
-      },
-      "graphic-design": {
-        "label": "Graphic & Logo Design",
-        "description": "Visual identities that help brands look clear and professional."
-      },
-      "saas-development": {
-        "label": "SaaS Development",
-        "description": "Scalable cloud products built for real users and growing teams."
-      },
-      "ai-solutions": {
-        "label": "AI-Powered Solutions",
-        "description": "Practical AI features that automate, assist, and improve decisions."
-      }
-    }
-  },
   "principles": {
     "eyebrow": "What Guides Us",
     "title": "Principles Behind Every Build.",
@@ -102,83 +70,37 @@
       "partnership": { "title": "Long-Term Partnership", "statement": "We stay involved after launch — support doesn't end at handover." }
     }
   },
-  "howWeWork": {
-    "eyebrow": "Our Approach",
-    "title": "How Novyra Works."
-  },
-  "whyChoose": {
-    "eyebrow": "Why Choose Novyra",
-    "title": "Built Around Your Business, Not Around Templates.",
-    "reasons": {
-      "custom-ui": "Custom UI, Not Templates",
-      "modern-stack": "Modern Technology Stack",
-      "responsive": "Responsive by Default",
-      "performance-seo": "Performance and SEO Focused",
-      "communication": "Clear Communication",
-      "post-launch-support": "Post-launch Support"
-    }
-  },
-  "industries": {
-    "eyebrow": "Industries We Support",
-    "titleLine1": "Solutions Built Around",
-    "titleLine2": "Real Business Needs.",
-    "description": "We adapt strategy, design, and technology to the way each industry operates.",
-    "solutionsLabel": "Solutions",
-    "explore": "Explore {industry} Solutions",
-    "tablistLabel": "Industries",
-    "items": {
-      "healthcare": {
-        "label": "Healthcare",
-        "description": "Digital platforms for patient communication and healthcare operations.",
-        "solutions": ["Hospital Website", "Appointment System", "Hospital ERP", "Patient Enquiries"]
+  "capabilities": {
+    "services": {
+      "eyebrow": "What We Build",
+      "items": {
+        "web-experiences": "Web Experiences",
+        "web-applications": "Web Applications",
+        "saas": "SaaS",
+        "product-design": "Product Design",
+        "digital-growth": "Digital Growth"
       },
-      "education": {
-        "label": "Education",
-        "description": "Modern platforms for schools, institutes, and digital learning.",
-        "solutions": ["School Website", "School ERP", "Student Portal", "AI Learning Tools"]
-      },
-      "startups": {
-        "label": "Startups",
-        "description": "Fast, scalable digital products for validating and launching ideas.",
-        "solutions": ["MVP", "SaaS Platform", "Landing Page", "Product Design"]
-      },
-      "local-businesses": {
-        "label": "Local Businesses",
-        "description": "Professional digital presence and lead-generation systems.",
-        "solutions": ["Business Website", "Local SEO", "WhatsApp Enquiries", "Digital Marketing"]
-      },
-      "professional-services": {
-        "label": "Professional Services",
-        "description": "Trust-focused websites and workflow tools for service businesses.",
-        "solutions": ["Corporate Website", "Lead Management", "Client Portal", "CRM"]
-      },
-      "ecommerce": {
-        "label": "eCommerce",
-        "description": "Conversion-focused online stores and commerce operations.",
-        "solutions": ["Online Store", "Payments", "Order Management", "Analytics"]
-      },
-      "saas": {
-        "label": "SaaS",
-        "description": "Scalable subscription platforms built for real product growth.",
-        "solutions": ["Dashboard", "Authentication", "Billing", "Multi-role Access"]
-      },
-      "growing-enterprises": {
-        "label": "Growing Enterprises",
-        "description": "Integrated applications and automation for expanding teams.",
-        "solutions": ["ERP", "CRM", "Automation", "Analytics"]
-      }
-    }
-  },
-  "techPhilosophy": {
-    "eyebrow": "Technology Philosophy",
-    "title": "Modern Technology. Practical Business Value.",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud",
-      "ai": "AI"
+      "explore": "Explore Services"
     },
-    "statement": "We choose technology based on product needs — not trends alone."
+    "approach": {
+      "eyebrow": "Our Approach",
+      "line": "Discovery → Strategy → Design → Development → Launch"
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "statement": "Building digital experiences across education, healthcare, retail, finance and growing businesses.",
+      "explore": "Explore Industries"
+    },
+    "technology": {
+      "eyebrow": "Technology",
+      "statement": "Technology should enable the product — not become the product."
+    }
+  },
+  "founderNote": {
+    "eyebrow": "Founder's Note",
+    "quote": "Great digital products aren't created by adding more features. They're created by understanding the problem deeply, removing unnecessary complexity, and building experiences people actually enjoy using.",
+    "supporting": "At Novyra, our goal isn't simply to deliver a website or application. We want to understand the business behind it, challenge weak ideas, improve strong ones, and build digital products capable of creating measurable value.",
+    "signatureRole": "Founder, Novyra Technologies"
   },
   "founder": {
     "eyebrow": "Founder",

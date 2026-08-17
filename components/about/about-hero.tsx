@@ -51,8 +51,24 @@ export function AboutHero() {
   );
 
   return (
-    <section ref={sectionRef} className="relative isolate overflow-hidden pt-28 pb-12 md:pt-32 md:pb-16">
+    <section
+      ref={sectionRef}
+      className="relative isolate flex min-h-[70svh] items-center overflow-hidden pt-24 pb-10 md:min-h-[76svh] md:pt-28 md:pb-12"
+    >
       <AboutBackground variant="strong" />
+
+      <span
+        aria-hidden
+        className="pointer-events-none absolute top-1/2 right-[-4%] -z-10 leading-none font-bold whitespace-nowrap text-white select-none"
+        style={{
+          fontSize: "clamp(140px, 16vw, 260px)",
+          letterSpacing: "-0.06em",
+          opacity: 0.03,
+          transform: "translateY(-50%)",
+        }}
+      >
+        NOVYRA
+      </span>
 
       <Container
         size="wide"
@@ -99,44 +115,16 @@ export function AboutHero() {
             {t("description")}
           </p>
 
-          <div
-            data-about-cta
-            className="flex w-full max-w-md flex-col items-stretch gap-3.5 min-[430px]:max-w-none min-[430px]:flex-row min-[430px]:flex-wrap min-[430px]:items-center min-[430px]:justify-center lg:justify-start"
-          >
-            <div className="w-full min-[430px]:w-auto">
-              <Magnetic className="w-full min-[430px]:w-auto">
-                <RippleLink
-                  href="/#contact"
-                  className={cn(
-                    buttonVariants({ variant: "gradient", size: "lg" }),
-                    "group min-h-13 w-full min-w-0 min-[430px]:w-auto min-[430px]:min-w-52.5",
-                  )}
-                >
-                  {t("cta.primary")}
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1"
-                    aria-hidden
-                  />
-                </RippleLink>
-              </Magnetic>
-            </div>
-            <div className="w-full min-[430px]:w-auto">
-              <Magnetic className="w-full min-[430px]:w-auto">
-                <RippleLink
-                  href="/services"
-                  className={cn(
-                    buttonVariants({ variant: "glass", size: "lg" }),
-                    "group min-h-13 w-full min-w-0 min-[430px]:w-auto min-[430px]:min-w-52.5",
-                  )}
-                >
-                  {t("cta.secondary")}
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1"
-                    aria-hidden
-                  />
-                </RippleLink>
-              </Magnetic>
-            </div>
+          <div data-about-cta className="flex w-full max-w-md flex-col items-center min-[430px]:max-w-none min-[430px]:items-start lg:items-start">
+            <Magnetic className="w-full min-[430px]:w-auto">
+              <RippleLink
+                href="/#contact"
+                className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group min-h-13 w-full min-w-0 min-[430px]:w-auto min-[430px]:min-w-52.5")}
+              >
+                {t("cta.primary")}
+                <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
+              </RippleLink>
+            </Magnetic>
           </div>
 
           <div data-about-trust className="flex flex-wrap items-center justify-center gap-2 lg:justify-start">

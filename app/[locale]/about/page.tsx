@@ -3,13 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AboutHero } from "@/components/about/about-hero";
 import { CompanyIntro } from "@/components/about/company-intro";
 import { MissionVision } from "@/components/about/mission-vision";
-import { WhatWeBuild } from "@/components/about/what-we-build";
 import { CorePrinciples } from "@/components/about/core-principles";
-import { HowNovyraWorks } from "@/components/about/how-novyra-works";
-import { AboutWhyChoose } from "@/components/about/about-why-choose";
-import { Industries } from "@/components/about/industries";
-import { TechPhilosophy } from "@/components/about/tech-philosophy";
 import { FounderDirection } from "@/components/about/founder-direction";
+import { FounderNote } from "@/components/about/founder-note";
+import { AboutCapabilities } from "@/components/about/about-capabilities";
 import { AboutCta } from "@/components/about/about-cta";
 import { companyInfo } from "@/content/footer";
 
@@ -56,13 +53,19 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
   };
 }
 
-/** The About page — an 11-section product story (hero through final CTA),
- * assembled from components/about/*. Every section pulls its copy from
- * messages/{locale}/about.json and its structural data (icons, accents,
- * spans) from content/about.ts, matching the rest of the site's
- * content/message split. Breadcrumb + Organization JSON-LD use only real,
- * already-public facts (name, url, logo, email, phone from
- * content/footer.ts) — no invented founding date, headcount, or awards. */
+/** The About page — a compact 8-section story (hero → who we are → mission
+ * & vision → principles → founder → founder's note → capabilities strip →
+ * final CTA), assembled from components/about/*. Compressed from the
+ * previous 11-section version: What We Build, Our Approach, Why Choose
+ * Novyra, Industries, and Technology Philosophy were each a full section
+ * duplicating content that already has a dedicated homepage section or
+ * page (Services, Process, Industries) — they're now one compact
+ * `AboutCapabilities` strip that links out instead of repeating. Every
+ * section pulls its copy from messages/{locale}/about.json and its
+ * structural data (icons, accents) from content/about.ts. Breadcrumb +
+ * Organization JSON-LD use only real, already-public facts (name, url,
+ * logo, email, phone from content/footer.ts) — no invented founding date,
+ * headcount, or awards. */
 export default async function AboutPage({ params }: AboutPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -102,13 +105,10 @@ export default async function AboutPage({ params }: AboutPageProps) {
       <AboutHero />
       <CompanyIntro />
       <MissionVision />
-      <WhatWeBuild />
       <CorePrinciples />
-      <HowNovyraWorks />
-      <AboutWhyChoose />
-      <Industries />
-      <TechPhilosophy />
       <FounderDirection />
+      <FounderNote />
+      <AboutCapabilities />
       <AboutCta />
     </main>
   );

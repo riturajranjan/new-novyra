@@ -24,18 +24,36 @@ export function FounderDirection() {
           whileInView="visible"
           viewport={{ once: true, margin: "120px" }}
           variants={fadeInUp}
-          className="relative mx-auto flex w-full max-w-100 flex-col items-center gap-4 lg:mx-0"
+          className="relative mx-auto flex w-full max-w-100 flex-col items-center gap-5 lg:mx-0"
         >
-          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-            <div className="bg-brand-blue absolute top-[10%] left-[10%] h-40 w-40 rounded-full opacity-20 blur-[80px]" />
-            <div className="bg-brand-purple absolute right-[10%] bottom-[10%] h-44 w-44 rounded-full opacity-20 blur-[90px]" />
-          </div>
-          <span
-            className="text-display-lg flex h-32 w-32 shrink-0 items-center justify-center rounded-full font-semibold text-white sm:h-36 sm:w-36"
-            style={{ backgroundImage: "linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-purple) 55%, var(--color-brand-pink))" }}
+          <div
+            className="relative flex aspect-[4/5] w-full max-w-80 items-center justify-center overflow-hidden rounded-[20px] border"
+            style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "#0a0e1e" }}
           >
-            {founderProfile.initials}
-          </span>
+            <div
+              className="absolute inset-0 opacity-[0.06]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(150,170,220,0.9) 1px, transparent 1px), linear-gradient(90deg, rgba(150,170,220,0.9) 1px, transparent 1px)",
+                backgroundSize: "28px 28px",
+              }}
+            />
+            <span className="bg-brand-blue pointer-events-none absolute -top-10 -left-10 h-48 w-48 rounded-full opacity-20 blur-[90px]" />
+            <span className="bg-brand-purple pointer-events-none absolute -right-10 -bottom-10 h-52 w-52 rounded-full opacity-20 blur-[100px]" />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-40"
+              style={{ backgroundImage: "linear-gradient(90deg, transparent, var(--color-brand-blue), var(--color-brand-purple), transparent)" }}
+            />
+
+            <span
+              className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full text-[42px] font-semibold text-white shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] sm:h-32 sm:w-32"
+              style={{ backgroundImage: "linear-gradient(135deg, var(--color-brand-blue), var(--color-brand-purple) 55%, var(--color-brand-pink))" }}
+            >
+              {founderProfile.initials}
+            </span>
+          </div>
+
           <div className="flex flex-col items-center gap-0.5 text-center">
             <span className="text-title-lg text-foreground font-semibold">{founderProfile.name}</span>
             <span className="text-body-sm text-foreground-secondary">{t("role")}</span>

@@ -4,10 +4,11 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/ui/container";
-import { TechnicalGrid } from "@/components/visual-backgrounds/technical-grid";
 import { accentStroke } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 import type { AccentColor } from "@/content/hero-screens";
+
+const SIGNAL_PATH = "M-40,120 C220,40 380,220 640,90 C820,10 940,150 1120,70";
 
 const scenarios: { id: string; accent: AccentColor }[] = [
   { id: "school", accent: "blue" },
@@ -32,15 +33,31 @@ export function HowWeThink() {
   const stroke = accentStroke[active.accent];
 
   return (
-    <section className="relative isolate overflow-hidden py-16 md:py-20 lg:py-24" style={{ backgroundColor: "#070810" }}>
-      <TechnicalGrid opacity={0.035} size={52} mask="radial-gradient(80% 70% at 50% 50%, black, transparent)" />
+    <section className="relative isolate overflow-hidden py-16 md:py-20 lg:py-24" style={{ backgroundColor: "#040509" }}>
+      {/* No grid here — Section 02 already owns "blueprint." This section's
+          motif is FLOW: one large curved path traveling across the whole
+          section with a slow signal riding it, standing in for "an idea
+          moving from a fragmented process toward a connected system." */}
       <span
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 leading-none font-bold whitespace-nowrap text-white select-none"
-        style={{ fontSize: "clamp(140px, 15vw, 260px)", letterSpacing: "-0.05em", opacity: 0.028, transform: "translate(-50%, -50%)" }}
+        style={{ fontSize: "clamp(140px, 15vw, 260px)", letterSpacing: "-0.05em", opacity: 0.018, transform: "translate(-50%, -50%)" }}
       >
-        WORKFLOW
+        PROCESS
       </span>
+      <svg aria-hidden viewBox="0 0 1080 260" preserveAspectRatio="none" className="pointer-events-none absolute inset-0 h-full w-full opacity-30">
+        <path d={SIGNAL_PATH} fill="none" stroke="rgba(120,150,255,0.35)" strokeWidth={1} />
+        {!reduceMotion ? (
+          <motion.circle
+            r={2.4}
+            fill={stroke}
+            initial={false}
+            animate={{ cx: [-40, 280, 640, 900, 1120], cy: [120, 150, 90, 100, 70] }}
+            transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+            style={{ filter: `drop-shadow(0 0 6px ${stroke})` }}
+          />
+        ) : null}
+      </svg>
 
       <Container className="relative flex flex-col gap-10 md:gap-14">
         <div className="flex flex-col gap-4">

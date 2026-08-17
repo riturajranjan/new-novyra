@@ -44,6 +44,16 @@ function SpotlightRow({ id, index }: { id: string; index: number }) {
             : `radial-gradient(50% 70% at 15% 50%, ${accentTint(industry.accent, 10)}, transparent 70%)`,
         }}
       />
+      <span
+        aria-hidden
+        className={cn(
+          "pointer-events-none absolute top-1/2 -z-10 leading-none font-bold text-white select-none",
+          reversed ? "left-0" : "right-0",
+        )}
+        style={{ fontSize: "clamp(120px, 14vw, 220px)", opacity: 0.025, transform: "translateY(-50%)" }}
+      >
+        {String(index + 1).padStart(2, "0")}
+      </span>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center md:gap-12 lg:min-h-115">
         <div className={cn("h-64 overflow-hidden rounded-2xl sm:h-80 lg:h-full", reversed && "md:order-2")}>
@@ -90,6 +100,7 @@ export function IndustrySpotlights() {
 
       <Container className="flex flex-col gap-8 md:gap-10">
         <div className="flex flex-col gap-4">
+          <span className="text-[10px] font-mono font-semibold tracking-[0.2em] text-white/25 uppercase">{t("featuredLabel")}</span>
           <span className="text-caption inline-flex w-fit items-center gap-2 font-mono font-medium tracking-[0.2em] text-white/40 uppercase">
             <span className="h-px w-6 bg-white/25" aria-hidden />
             {t("eyebrow")}

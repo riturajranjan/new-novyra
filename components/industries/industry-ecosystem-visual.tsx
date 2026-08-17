@@ -173,8 +173,19 @@ export function IndustryEcosystemVisual() {
               boxShadow: isHovered ? `0 12px 30px -12px ${accentTint(industry.accent, 55)}` : undefined,
             }}
             initial={reduceMotion ? undefined : { opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.35, delay: 0.55 + i * 0.06, ease: "easeOut" }}
+            animate={
+              reduceMotion
+                ? { opacity: 1, scale: 1 }
+                : { opacity: 1, scale: [1, 1.05, 1] }
+            }
+            transition={
+              reduceMotion
+                ? { duration: 0.35 }
+                : {
+                    opacity: { duration: 0.35, delay: 0.55 + i * 0.06, ease: "easeOut" },
+                    scale: { duration: 7 + i * 0.8, repeat: Infinity, ease: "easeInOut", delay: 1 + i * 0.4 },
+                  }
+            }
           >
             <Icon className="h-4 w-4" style={{ color: stroke }} aria-hidden />
             <MicroGlyph id={industry.id} color={stroke} />
@@ -182,9 +193,11 @@ export function IndustryEcosystemVisual() {
         );
       })}
 
-      <div
+      <motion.div
         className="glass-strong shadow-card-hover absolute z-20 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 rounded-2xl px-6 py-5 text-center"
         style={{ top: CENTER.top, left: CENTER.left }}
+        animate={reduceMotion ? undefined : { boxShadow: ["0 0 0px 0px rgba(124,92,255,0)", "0 0 32px 4px rgba(124,92,255,0.22)", "0 0 0px 0px rgba(124,92,255,0)"] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
       >
         <span className="text-[22px] leading-tight font-semibold tracking-[-0.03em] text-gradient-brand">NOVYRA</span>
         <span className="text-[10px] leading-snug font-medium text-foreground-secondary uppercase">
@@ -192,7 +205,7 @@ export function IndustryEcosystemVisual() {
           <br />
           built around your world.
         </span>
-      </div>
+      </motion.div>
 
       <div className="pointer-events-none absolute inset-x-0 -bottom-2 z-30 flex justify-center">
         <motion.div

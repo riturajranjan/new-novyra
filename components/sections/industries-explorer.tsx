@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { RippleLink } from "@/components/ui/ripple-link";
 import { IndustriesExplorerBackground } from "@/components/industries/industries-explorer-background";
 import { IndustryNav } from "@/components/industries/industry-nav";
 import { IndustryVisual } from "@/components/industries/industry-visual";
@@ -11,12 +13,12 @@ import { industries } from "@/content/industries";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { easePowerOut } from "@/lib/motion";
 
-/** Section 02 — an editorial Industry Explorer: a persistent vertical
- * numbered nav (≈22%) driving a content column (≈34%) and a large dynamic
- * visual canvas (≈44%) side by side — real headline/description/
- * capability copy plus a genuinely distinct visual per industry, never a
- * 6-card grid. Content and visual cross-fade together (opacity + blur +
- * scale) so switching reads as one transition, not two. */
+/** Section 02 — a compact Industry Navigator: pick one of six, see its
+ * number/name, one strong sentence, a handful of capability tags and a
+ * compact visual. Deliberately shorter than it used to be — the deep
+ * storytelling now belongs to the three Spotlights below, so this
+ * section only has to answer "which industries does Novyra work with,"
+ * not "how does Novyra think about each one." */
 export function IndustriesExplorer() {
   const t = useTranslations("industries");
   const reduceMotion = useReducedMotion();
@@ -24,7 +26,7 @@ export function IndustriesExplorer() {
   const active = industries.find((i) => i.id === activeId) ?? industries[0];
   const activeIndex = industries.findIndex((i) => i.id === activeId);
   const stroke = accentStroke[active.accent];
-  const capabilities = t.raw(`items.${active.id}.capabilities`) as string[];
+  const capabilities = (t.raw(`items.${active.id}.capabilities`) as string[]).slice(0, 4);
 
   const panelVariants = {
     initial: { opacity: 0, y: 10, scale: reduceMotion ? 1 : 0.985, filter: reduceMotion ? "none" : "blur(4px)" },
@@ -35,7 +37,7 @@ export function IndustriesExplorer() {
 
   return (
     <section id="industry-explorer" className="relative isolate scroll-mt-24 overflow-hidden py-14 md:py-16 lg:py-20">
-      <IndustriesExplorerBackground />
+      <IndustriesExplorerBackground accent={active.accent} />
 
       <Container className="flex flex-col gap-8 md:gap-10">
         <div className="flex flex-col gap-4">
@@ -65,40 +67,42 @@ export function IndustriesExplorer() {
               animate="animate"
               exit="exit"
               transition={transition}
-              className="flex flex-col gap-6"
+              className="flex flex-col gap-5"
             >
-              <div className="flex flex-col gap-3.5">
+              <div className="flex flex-col gap-3">
                 <span className="text-caption font-mono font-medium tracking-[0.2em] uppercase" style={{ color: stroke }}>
                   {String(activeIndex + 1).padStart(2, "0")} / {t(`items.${active.id}.title`)}
                 </span>
                 <h3
                   className="text-foreground max-w-md font-semibold text-balance"
-                  style={{ fontSize: "clamp(26px, 2.2vw, 34px)", lineHeight: 1.14, letterSpacing: "-0.02em" }}
+                  style={{ fontSize: "clamp(24px, 2vw, 30px)", lineHeight: 1.16, letterSpacing: "-0.02em" }}
                 >
                   {t(`items.${active.id}.headline`)}
                 </h3>
-                <p className="text-body-sm text-foreground-secondary max-w-md">{t(`items.${active.id}.description`)}</p>
               </div>
 
-              <div className="flex flex-col gap-3">
-                <p className="text-caption text-foreground-secondary/70 font-semibold tracking-wide uppercase">
-                  {t("explorer.whatWeCanBuild")}
-                </p>
-                <ul className="flex flex-col gap-2">
-                  {capabilities.map((cap, i) => (
-                    <motion.li
-                      key={cap}
-                      initial={{ opacity: 0, x: -6 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.08 + i * 0.05 }}
-                      className="text-body-sm text-foreground flex items-center gap-2.5"
-                    >
-                      <span aria-hidden className="h-1 w-1 rounded-full" style={{ backgroundColor: stroke }} />
-                      {cap}
-                    </motion.li>
-                  ))}
-                </ul>
+              <div className="flex flex-wrap gap-2">
+                {capabilities.map((cap, i) => (
+                  <motion.span
+                    key={cap}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25, delay: 0.08 + i * 0.05 }}
+                    className="text-caption rounded-full px-3 py-1.5 font-medium text-foreground"
+                    style={{ backgroundColor: accentTint(active.accent, 10), border: `1px solid ${accentTint(active.accent, 24)}` }}
+                  >
+                    {cap}
+                  </motion.span>
+                ))}
               </div>
+
+              <RippleLink
+                href="/#contact"
+                className="group text-body-sm mt-1 flex w-fit items-center gap-1.5 font-semibold text-white/75 transition-colors duration-base hover:text-white"
+              >
+                {t("explorer.exploreCta", { industry: t(`items.${active.id}.title`) })}
+                <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
+              </RippleLink>
             </motion.div>
           </AnimatePresence>
 
@@ -115,7 +119,7 @@ export function IndustriesExplorer() {
               aria-labelledby={`industry-tab-${active.id}`}
               className="flex flex-col gap-3"
             >
-              <div className="h-80 min-w-0 sm:h-90 lg:h-100">
+              <div className="h-72 min-w-0 sm:h-80">
                 <IndustryVisual industry={active} />
               </div>
               <span

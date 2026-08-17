@@ -5,6 +5,8 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Compass, Link2, PenTool, Code2, TrendingUp } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { RippleLink } from "@/components/ui/ripple-link";
+import { TechnicalGrid } from "@/components/visual-backgrounds/technical-grid";
+import { BackgroundLabel } from "@/components/visual-backgrounds/background-label";
 import { easePremium } from "@/lib/motion";
 
 const stages = [
@@ -27,15 +29,16 @@ export function IndustriesCapabilityRail() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden py-16 md:py-20" style={{ backgroundColor: "#050710" }}>
-      <div
+    <section className="relative isolate overflow-hidden py-16 md:py-20" style={{ backgroundColor: "#070a16" }}>
+      <TechnicalGrid opacity={0.05} size={44} mask="radial-gradient(85% 75% at 50% 40%, black, transparent)" />
+      <span
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.05]"
-        style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px)",
-          backgroundSize: "100% 96px",
-        }}
-      />
+        className="pointer-events-none absolute top-1/2 right-[-2%] leading-none font-bold whitespace-nowrap text-white select-none"
+        style={{ fontSize: "clamp(120px, 13vw, 220px)", letterSpacing: "-0.05em", opacity: 0.02, transform: "translateY(-50%)" }}
+      >
+        SYSTEM
+      </span>
+      <BackgroundLabel text="01 / DISCOVER — 05 / SCALE" top="10%" left="6%" opacity={0.08} />
 
       <Container className="relative flex flex-col gap-12 md:gap-16">
         <h2

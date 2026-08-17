@@ -4,21 +4,21 @@ import { Rocket } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 const satellites = [
-  { angle: 20, radius: 78, size: "h-2.5 w-2.5", color: "bg-brand-blue" },
-  { angle: 150, radius: 90, size: "h-2 w-2", color: "bg-brand-purple" },
-  { angle: 260, radius: 70, size: "h-1.5 w-1.5", color: "bg-brand-cyan" },
+  { angle: 20, radius: 36, size: "h-2 w-2", color: "bg-brand-blue" },
+  { angle: 150, radius: 41, size: "h-1.5 w-1.5", color: "bg-brand-purple" },
+  { angle: 260, radius: 32, size: "h-1.5 w-1.5", color: "bg-brand-cyan" },
 ];
 
-/** The largest, most elaborate abstract glass object on the page — layered
- * rotating rings, a glowing core, and orbiting satellite lights — standing
- * in for a 3D render without needing one. */
+/** A compact orbital rocket motif — rotating rings, a glowing core, and
+ * orbiting satellite lights — the Final CTA's visual anchor, sized to fit
+ * a 220-300px-tall compact section rather than a large hero-style panel. */
 export function GlassOrb() {
   const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
-      className="relative flex h-44 w-44 shrink-0 items-center justify-center sm:h-52 sm:w-52"
-      animate={reduceMotion ? undefined : { y: [0, -5, 0] }}
+      className="relative flex h-20 w-20 shrink-0 items-center justify-center sm:h-24 sm:w-24"
+      animate={reduceMotion ? undefined : { y: [0, -3, 0] }}
       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
     >
       {satellites.map((s, i) => {
@@ -45,27 +45,21 @@ export function GlassOrb() {
       />
       <motion.div
         aria-hidden
-        className="border-brand-purple/25 absolute inset-6 rounded-full border border-dashed"
+        className="border-brand-purple/25 absolute inset-2.5 rounded-full border border-dashed"
         animate={reduceMotion ? undefined : { rotate: -360 }}
         transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-      />
-      <motion.div
-        aria-hidden
-        className="border-brand-cyan/20 absolute inset-12 rounded-full border"
-        animate={reduceMotion ? undefined : { rotate: 360 }}
-        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       />
 
       <motion.div
         aria-hidden
-        className="bg-gradient-brand absolute inset-14 rounded-full opacity-30 blur-2xl"
+        className="bg-gradient-brand absolute inset-5 rounded-full opacity-30 blur-xl"
         animate={reduceMotion ? undefined : { scale: [1, 1.15, 1], opacity: [0.25, 0.45, 0.25] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="glass-strong shadow-card relative flex h-20 w-20 items-center justify-center rounded-hero sm:h-24 sm:w-24">
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-[28px] bg-gradient-to-b from-white/15 to-transparent" />
-        <Rocket className="text-brand-blue h-8 w-8 sm:h-10 sm:w-10" aria-hidden />
+      <div className="glass-strong shadow-card relative flex h-9 w-9 items-center justify-center rounded-xl sm:h-11 sm:w-11">
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1/2 rounded-t-xl bg-gradient-to-b from-white/15 to-transparent" />
+        <Rocket className="text-brand-blue h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
       </div>
     </motion.div>
   );

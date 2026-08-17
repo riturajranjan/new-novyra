@@ -6,6 +6,7 @@ import { WhatWeDo } from "@/components/sections/what-we-do";
 import { IndustriesPreview } from "@/components/sections/industries-preview";
 import { TrustedPartner } from "@/components/sections/trusted-partner";
 import { CaseStudies } from "@/components/sections/case-studies";
+import { BlogSection } from "@/components/sections/blog-section";
 import { PricingTeaser } from "@/components/sections/pricing-teaser";
 import { OurProcess } from "@/components/sections/our-process";
 
@@ -88,6 +89,7 @@ export default async function HomePage({ params }: PageProps) {
       <IndustriesPreview />
       <TrustedPartner />
       <CaseStudies />
+      <BlogSection />
       <OurProcess />
       <PricingTeaser />
     </main>

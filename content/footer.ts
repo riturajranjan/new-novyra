@@ -1,22 +1,6 @@
 import type { LucideIcon } from "lucide-react";
-import { ArrowUpRight, Code2, MessageCircle, ShieldCheck, TrendingUp, Zap } from "lucide-react";
+import { Code2, ShieldCheck, TrendingUp, Zap } from "lucide-react";
 import type { AccentColor } from "@/content/hero-screens";
-
-export interface FooterCta {
-  id: string;
-  icon: LucideIcon;
-  href: string;
-  variant: "gradient" | "glass" | "outline";
-}
-
-/** The footer's compact CTA layer — two real actions, not three, matching
- * the homepage's other compact final-CTA pattern (mailto + WhatsApp).
- * Structural data only — labels live in messages/{locale}/footer.json,
- * keyed by `id`. */
-export const footerCtas: FooterCta[] = [
-  { id: "startProject", icon: ArrowUpRight, href: "mailto:hello@novyratech.in", variant: "gradient" },
-  { id: "whatsapp", icon: MessageCircle, href: "https://wa.me/917903724407", variant: "outline" },
-];
 
 export const companyInfo = {
   name: "Novyra Technologies",

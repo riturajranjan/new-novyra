@@ -1,0 +1,35 @@
+{
+  "section": {
+    "eyebrow": "Insights",
+    "heading": "Ideas and insights for building better digital products.",
+    "description": "Practical perspectives on engineering, SaaS, AI, product design and digital growth."
+  },
+  "categories": {
+    "engineering": "Engineering",
+    "aiAutomation": "AI & Automation",
+    "webDevelopment": "Web Development",
+    "productDesign": "Product Design"
+  },
+  "posts": {
+    "scaling-saas-beyond-mvp": {
+      "title": "Building SaaS Products That Scale Beyond the MVP",
+      "description": "A practical look at the architecture, product decisions and engineering foundations behind scalable SaaS platforms."
+    },
+    "ai-value-in-workflows": {
+      "title": "Where AI Actually Creates Value in Business Workflows",
+      "description": "How thoughtful automation can reduce repetitive work and improve digital operations without adding unnecessary complexity."
+    },
+    "modern-website-performance": {
+      "title": "What Makes a Modern Business Website Perform?",
+      "description": "Beyond visual design — exploring performance, conversion, accessibility and the engineering decisions that shape effective websites."
+    },
+    "designing-around-user-problems": {
+      "title": "Designing Digital Products Around Real User Problems",
+      "description": "Why strong digital products start with workflows, user needs and business outcomes rather than features alone."
+    }
+  },
+  "featuredLabel": "Featured",
+  "readInsight": "Read article",
+  "exploreInsight": "Explore insight",
+  "comingSoon": "Insight pages are coming soon"
+}

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ServicesShowcase } from "@/components/sections/services-showcase";
+import { ServicesHero } from "@/components/sections/services-hero";
 import { SolutionAdvisor } from "@/components/sections/solution-advisor";
-import { OurProcess } from "@/components/sections/our-process";
+import { ServicesProcess } from "@/components/sections/services-process";
+import { SelectedServiceWork } from "@/components/sections/selected-service-work";
+import { ServicesPrinciples } from "@/components/sections/services-principles";
+import { ServicesCta } from "@/components/sections/services-cta";
 import { companyInfo } from "@/content/footer";
 
 const SITE_URL = "https://novyratech.in";
@@ -45,11 +48,18 @@ export async function generateMetadata({
   };
 }
 
-/** The full services explorer, relocated wholesale from the homepage:
- * ServicesShowcase (the interactive nav/preview/details explorer, which
- * carries its own section heading) → SolutionAdvisor (the "which service do
- * I need" recommendation tool) → OurProcess ("how a project moves") →
- * ContactCta. None of these three sections were rewritten — only moved. */
+/** The "Capability Architecture" — seven visible sections, each with its
+ * own background and identity rather than one reused hero/CTA/card
+ * template: ServicesHero (01 capability-orbit hero + 02 editorial service
+ * explorer, one component since both key off the same selected category)
+ * → SolutionAdvisor (03, reframed copy + a live "solution map" trail —
+ * same guided-recommendation logic underneath) → ServicesProcess (04, the
+ * real six-step build process, own interactive rail with an evolving
+ * product-story visual, distinct from the homepage's Our Process) →
+ * SelectedServiceWork (05, one large project at a time, 3 real concept
+ * builds) → ServicesPrinciples (06, four honest working principles) →
+ * ServicesCta (07, this page's own closing action) → the site's shared
+ * Footer, rendered once in the locale layout. */
 export default async function ServicesPage({ params }: ServicesPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -81,9 +91,12 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ServicesShowcase />
+      <ServicesHero />
       <SolutionAdvisor />
-      <OurProcess />
+      <ServicesProcess />
+      <SelectedServiceWork />
+      <ServicesPrinciples />
+      <ServicesCta />
     </main>
   );
 }

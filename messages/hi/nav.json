@@ -13,7 +13,7 @@
   "services": {
     "label": "सेवाएं",
     "helper": "हम क्या बनाते और सुधारते हैं।",
-    "exploreAll": "सेवाएं देखें",
+    "exploreAll": "सभी सेवाएं देखें",
     "getRecommendation": "सुझाव पाएं",
     "groups": {
       "build": "बनाएं",
@@ -33,7 +33,19 @@
     "body": "बताएं आप क्या बना रहे हैं और हम सही सेवा सुझाएंगे।"
   },
   "work": { "label": "वर्क" },
-  "industries": { "label": "इंडस्ट्रीज़" },
+  "industries": {
+    "label": "इंडस्ट्रीज़",
+    "helper": "आपकी इंडस्ट्री के अनुसार बनाया गया।",
+    "explore": "सभी इंडस्ट्रीज़ देखें",
+    "children": {
+      "education": { "label": "एजुकेशन" },
+      "healthcare": { "label": "हेल्थकेयर" },
+      "retailEcommerce": { "label": "रिटेल और eCommerce" },
+      "travelHospitality": { "label": "ट्रैवल और हॉस्पिटैलिटी" },
+      "finance": { "label": "फाइनेंस" },
+      "professionalServices": { "label": "प्रोफेशनल सर्विसेज़" }
+    }
+  },
   "process": { "label": "प्रोसेस" },
   "pricing": { "label": "प्राइसिंग" },
   "contact": { "label": "संपर्क करें" }

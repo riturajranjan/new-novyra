@@ -42,15 +42,21 @@
   "hub": {
     "label": "Services"
   },
-  "page": {
+  "hero": {
     "eyebrow": "Our Services",
-    "heading": "Everything Novyra builds, in one place.",
-    "description": "Explore each service line in detail, see how it works, and find the right recommendation for your project."
+    "headingLine1": "From Ideas",
+    "headingLine2": "To Digital Products",
+    "headingLine3": "Built To Perform.",
+    "description": "From high-converting websites to SaaS platforms, AI automation and digital growth — we design and engineer solutions around real business goals.",
+    "primaryCta": "Explore Services",
+    "secondaryCta": "Get a Recommendation"
+  },
+  "explorer": {
+    "eyebrow": "What We Build",
+    "heading": "Choose what you're building.",
+    "description": "Explore each capability, what it's best for, what you'll receive and how we approach it."
   },
   "showcase": {
-    "eyebrow": "Our Services",
-    "title": "From Design to Deployment.",
-    "description": "Pick a service to see how it works, what you'll get, and how long it takes.",
     "previewBadge": "Illustrative Preview — Not a Real Product"
   },
   "nav": {
@@ -74,8 +80,7 @@
         "Interactive Prototypes",
         "Design System Handoff"
       ],
-      "timeline": "2–4 Weeks",
-      "cta": "View Portfolio"
+      "timeline": "2–4 Weeks"
     },
     "web-development": {
       "label": "Web Application",
@@ -96,8 +101,7 @@
         "CMS",
         "Deployment"
       ],
-      "timeline": "3–8 Weeks",
-      "cta": "View Service"
+      "timeline": "3–8 Weeks"
     },
     "saas-development": {
       "label": "SaaS Product",
@@ -116,8 +120,7 @@
         "Reporting & Analytics",
         "Admin Console"
       ],
-      "timeline": "6–14 Weeks",
-      "cta": "Request a Quote"
+      "timeline": "6–14 Weeks"
     },
     "automation-ai": {
       "label": "Automation & AI",
@@ -136,8 +139,7 @@
         "AI-assisted Steps Where Useful",
         "Run Reports & Alerts"
       ],
-      "timeline": "3–6 Weeks",
-      "cta": "Book a Consultation"
+      "timeline": "3–6 Weeks"
     },
     "digital-marketing": {
       "label": "Digital Growth",
@@ -156,8 +158,7 @@
         "Content Calendar",
         "Performance Dashboard"
       ],
-      "timeline": "Ongoing — Monthly Retainer",
-      "cta": "Book a Consultation"
+      "timeline": "Ongoing — Monthly Retainer"
     },
     "graphic-design": {
       "label": "Brand Design",
@@ -177,33 +178,64 @@
         "Social Media Kit",
         "Editable Source Files"
       ],
-      "timeline": "1–3 Weeks",
-      "cta": "View Portfolio"
+      "timeline": "1–3 Weeks"
     }
   },
   "details": {
     "perfectFor": "Perfect For",
     "technologies": "Technologies",
     "timeline": "Timeline",
-    "deliverables": "Deliverables",
+    "deliverables": "What You Get",
     "requestQuote": "Request Free Quote",
-    "viewService": "View Service",
+    "viewSelectedWork": "View Relevant Work",
     "trust": {
       "freeConsultation": "Free Consultation",
-      "transparentPricing": "Transparent Pricing",
+      "transparentPricing": "Transparent Scope",
       "sourceCodeOwnership": "Source Code Ownership"
     }
   },
-  "finalCta": {
-    "heading": "Found What You're Looking For?",
-    "description": "Book a free consultation — no obligation, no pressure.",
-    "primaryCta": "Book Free Consultation",
-    "secondaryCta": "Chat on WhatsApp",
-    "trust": {
-      "freeConsultation": "Free Consultation",
-      "transparentPricing": "Transparent Pricing",
-      "directDeveloperAccess": "Direct Developer Access"
+  "process": {
+    "eyebrow": "How We Build",
+    "headingLine1": "From problem",
+    "headingLine2": "to production.",
+    "description": "Select a step to see what happens, and what you get at the end of it."
+  },
+  "selectedWork": {
+    "eyebrow": "Proof of Work",
+    "headingLine1": "Built ideas,",
+    "headingLine2": "made tangible.",
+    "description": "A closer look at three concepts we've designed and engineered end to end.",
+    "viewProject": "View Project"
+  },
+  "principles": {
+    "headingLine1": "Built around clarity,",
+    "headingLine2": "ownership and outcomes.",
+    "items": {
+      "clearScope": {
+        "title": "Clear Scope",
+        "description": "You always know what's being built, why, and what it costs."
+      },
+      "directCollaboration": {
+        "title": "Direct Collaboration",
+        "description": "You work directly with the person building your product — no handoffs."
+      },
+      "modernEngineering": {
+        "title": "Modern Engineering",
+        "description": "Production-grade code on a stack built to stay maintainable."
+      },
+      "builtForGrowth": {
+        "title": "Built For Growth",
+        "description": "Every system is designed to scale with your business, not against it."
+      }
     }
+  },
+  "cta": {
+    "eyebrow": "Start a Project",
+    "headingLine1": "Have something",
+    "headingLine2": "worth building?",
+    "description": "Tell us what you're trying to create, improve or automate. We'll help define the right next step.",
+    "primary": "Start a Project",
+    "secondary": "Get a Recommendation"
   },
   "mockups": {
     "saas": {

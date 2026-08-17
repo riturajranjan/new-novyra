@@ -58,6 +58,57 @@ function MagneticButton({ children }: { children: ReactNode }) {
   );
 }
 
+/** Compact "live solution map" — Goal / Requirement / Recommended
+ * Direction — that fills in as the visitor answers each question. This is
+ * the section's "solution builds progressively" signature: not a second
+ * split-screen layout competing with the already-elaborate per-step
+ * visuals below it (SolutionSelector / GoalPathway / StageTimeline), but a
+ * thin horizontal trail sitting above them that turns their choices into
+ * a readable, accumulating map. */
+function SolutionMapTrail({
+  needLabel,
+  goalLabel,
+  directionLabel,
+  accent,
+}: {
+  needLabel?: string;
+  goalLabel?: string;
+  directionLabel?: string;
+  accent: ReturnType<typeof getNeedAccent>;
+}) {
+  const t = useTranslations("advisor");
+  const segments = [
+    { label: t("solutionMap.goal"), value: needLabel },
+    { label: t("solutionMap.requirement"), value: goalLabel },
+    { label: t("solutionMap.direction"), value: directionLabel },
+  ];
+
+  return (
+    <div className="glass flex w-full max-w-2xl flex-col gap-0 rounded-2xl px-4 py-3 sm:flex-row sm:items-center sm:gap-0 sm:py-2.5">
+      {segments.map((seg, i) => (
+        <div key={seg.label} className="flex flex-1 items-center gap-3">
+          <div className="flex min-w-0 flex-1 flex-col gap-0.5 py-1.5">
+            <span className="text-[10px] font-semibold tracking-[0.14em] text-white/35 uppercase">{seg.label}</span>
+            <motion.span
+              key={seg.value ?? "empty"}
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+              className={cn("text-body-sm truncate font-semibold", seg.value ? "text-white" : "text-white/25")}
+              style={seg.value ? { color: accent.base } : undefined}
+            >
+              {seg.value ?? "—"}
+            </motion.span>
+          </div>
+          {i < segments.length - 1 ? (
+            <ArrowRight className={cn("h-3.5 w-3.5 shrink-0 transition-colors duration-300", seg.value ? "text-white/40" : "text-white/15")} aria-hidden />
+          ) : null}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /** A guided "Business Pathway" experience — a decision canvas the visitor
  * moves through rather than a service catalog. Recommends one of Novyra's
  * five real service lines, never a fabricated offering or a price. */
@@ -150,7 +201,17 @@ export function SolutionAdvisor() {
             aria-hidden
             className="bg-gradient-brand pointer-events-none absolute top-1/2 left-1/2 -z-10 h-72 w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.16] blur-[100px]"
           />
-          <SectionHeading eyebrow={t("eyebrow")} title={t("title")} description={t("description")} />
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={
+              <>
+                {t("titleLine1")}
+                <br />
+                {t("titleLine2")}
+              </>
+            }
+            description={t("description")}
+          />
           <div className="flex flex-wrap items-center justify-center gap-2">
             {(["freeConsultation", "personalizedRoadmap", "noCommitment"] as const).map((pointId) => (
               <span
@@ -165,6 +226,13 @@ export function SolutionAdvisor() {
 
         <div className="w-full">
           <div className="flex flex-col items-center gap-8 md:gap-16">
+            <SolutionMapTrail
+              needLabel={translatedNeedOptions.find((o) => o.id === answers.need)?.label}
+              goalLabel={translatedGoalOptions.find((o) => o.id === answers.goal)?.label}
+              directionLabel={result ? t(`recommendations.${result.needId}.service`) : undefined}
+              accent={accent}
+            />
+
             <JourneyProgress currentStep={step} accent={accent} />
 
             <AnimatePresence mode="wait">

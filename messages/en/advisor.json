@@ -1,7 +1,13 @@
 {
-  "eyebrow": "Smart Solution Advisor",
-  "title": "Find the Right Solution for Your Business",
+  "eyebrow": "Not Sure Where To Start?",
+  "titleLine1": "Tell us the problem.",
+  "titleLine2": "We'll help define the solution.",
   "description": "Answer three quick questions and get a solution matched to your goals, stage, and budget.",
+  "solutionMap": {
+    "goal": "Goal",
+    "requirement": "Requirement",
+    "direction": "Recommended Direction"
+  },
   "trustPoints": {
     "freeConsultation": "Free Consultation",
     "personalizedRoadmap": "Personalized Roadmap",

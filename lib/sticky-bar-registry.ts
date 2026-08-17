@@ -3,7 +3,7 @@ type Listener = () => void;
 /** Shared counter so the persistent mobile conversion dock can tell when a
  * section-local contextual sticky bar (pricing's plan-spotlight bar,
  * services' category bar — see components/sections/pricing.tsx and
- * services-showcase.tsx) is already occupying the same fixed
+ * services-hero.tsx) is already occupying the same fixed
  * bottom-of-viewport position, and hide itself rather than stack on top of
  * it. Deliberately a separate counter from `modal-registry.ts` — these bars
  * aren't modals, and coupling this to modal state would wrongly suppress

@@ -13,7 +13,7 @@
   "services": {
     "label": "Services",
     "helper": "What we build and improve.",
-    "exploreAll": "Explore Services",
+    "exploreAll": "View All Services",
     "getRecommendation": "Get a Recommendation",
     "groups": {
       "build": "Build",
@@ -33,7 +33,19 @@
     "body": "Tell us what you're building and we'll recommend the right service."
   },
   "work": { "label": "Work" },
-  "industries": { "label": "Industries" },
+  "industries": {
+    "label": "Industries",
+    "helper": "Built around your industry.",
+    "explore": "Explore All Industries",
+    "children": {
+      "education": { "label": "Education" },
+      "healthcare": { "label": "Healthcare" },
+      "retailEcommerce": { "label": "Retail & eCommerce" },
+      "travelHospitality": { "label": "Travel & Hospitality" },
+      "finance": { "label": "Finance" },
+      "professionalServices": { "label": "Professional Services" }
+    }
+  },
   "process": { "label": "Process" },
   "pricing": { "label": "Pricing" },
   "contact": { "label": "Contact" }

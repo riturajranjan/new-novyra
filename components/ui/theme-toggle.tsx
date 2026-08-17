@@ -38,7 +38,7 @@ export function ThemeToggle() {
             className={cn(
               "flex h-11 w-11 items-center justify-center rounded-pill transition-colors duration-fast",
               active
-                ? "bg-gradient-brand text-white"
+                ? "bg-brand-blue/12 text-brand-blue"
                 : "text-foreground-secondary hover:text-foreground",
             )}
           >

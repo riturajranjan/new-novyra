@@ -1,7 +1,26 @@
 import type { LucideIcon } from "lucide-react";
-import { AppWindow, Blocks, BadgePercent, Boxes, Building2, Code2, Globe, Landmark, Mail, Megaphone, Package, Palette, Sparkles } from "lucide-react";
+import {
+  AppWindow,
+  Blocks,
+  BadgePercent,
+  Boxes,
+  Briefcase,
+  Building2,
+  Code2,
+  GraduationCap,
+  Globe,
+  HeartPulse,
+  Landmark,
+  Mail,
+  Megaphone,
+  Package,
+  Palette,
+  Plane,
+  ShoppingCart,
+  Sparkles,
+} from "lucide-react";
 
-export type NavAccent = "blue" | "purple" | "cyan" | "pink" | "emerald";
+export type NavAccent = "blue" | "purple" | "cyan" | "pink" | "emerald" | "amber";
 
 export interface NavLeaf {
   id: string;
@@ -57,8 +76,20 @@ export const navItems: NavItem[] = [
     ],
     secondaryAction: { id: "getRecommendation", href: "/services#advisor" },
   },
+  {
+    id: "industries",
+    href: "/industries",
+    icon: Landmark,
+    children: [
+      { id: "education", href: "/industries", icon: GraduationCap, accent: "blue" },
+      { id: "healthcare", href: "/industries", icon: HeartPulse, accent: "cyan" },
+      { id: "retailEcommerce", href: "/industries", icon: ShoppingCart, accent: "emerald" },
+      { id: "travelHospitality", href: "/industries", icon: Plane, accent: "amber" },
+      { id: "finance", href: "/industries", icon: Landmark, accent: "purple" },
+      { id: "professionalServices", href: "/industries", icon: Briefcase, accent: "pink" },
+    ],
+  },
   { id: "work", href: "/work", icon: Package },
-  { id: "industries", href: "/industries", icon: Landmark },
   { id: "process", href: "/services#process", icon: Blocks },
   { id: "pricing", href: "/pricing", icon: BadgePercent },
   {

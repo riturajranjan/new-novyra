@@ -654,3 +654,77 @@ html.lenis body {
 .has-custom-cursor * {
   cursor: none !important;
 }
+
+/* components/blog-article/article-diagram.tsx — a small signal dot
+   travelling along each connector segment, in that segment's own local
+   coordinate space (0%/100% of the connector's own width or height) so
+   it works regardless of whether the diagram is laid out as a row
+   (desktop) or a column (mobile), with no JS/path math involved. */
+@keyframes diagram-signal-x {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(calc(var(--diagram-connector-length, 64px) - 6px));
+  }
+}
+
+@keyframes diagram-signal-y {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(calc(var(--diagram-connector-length, 40px) - 6px));
+  }
+}
+
+.diagram-signal-x {
+  animation: diagram-signal-x 2.6s ease-in-out infinite;
+}
+
+.diagram-signal-y {
+  animation: diagram-signal-y 2.6s ease-in-out infinite;
+}
+
+/* components/blog-article/article-hero-visual.tsx — a slow, small float
+   (4-8px) on the hero's floating panels. Plain CSS so the visual can stay
+   a server component. */
+@keyframes article-panel-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+.article-panel-float {
+  animation: article-panel-float 7s ease-in-out infinite;
+}
+
+.article-panel-float-slow {
+  animation: article-panel-float 9s ease-in-out infinite reverse;
+}

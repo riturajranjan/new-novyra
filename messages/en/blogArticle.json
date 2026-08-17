@@ -1,0 +1,227 @@
+{
+  "backToInsights": "All Insights",
+  "breadcrumb": {
+    "home": "Home",
+    "insights": "Insights"
+  },
+  "readingProgress": {
+    "label": "Reading Progress",
+    "minRead": "{count} min read"
+  },
+  "toc": {
+    "heading": "On This Page",
+    "mobileToggle": "On this page"
+  },
+  "conversionCard": {
+    "heading": "Have a similar challenge?",
+    "description": "We design and build digital products that scale.",
+    "cta": "Start Your Project"
+  },
+  "share": {
+    "heading": "Share This Article",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link Copied",
+    "linkedin": "LinkedIn",
+    "x": "X"
+  },
+  "details": {
+    "heading": "Article Details",
+    "category": "Category",
+    "readTime": "Read Time",
+    "published": "Published",
+    "updated": "Updated",
+    "author": "Author"
+  },
+  "related": {
+    "heading": "Related Articles"
+  },
+  "keyInsightLabel": "Key Insight",
+  "noteLabel": "Note",
+  "cta": {
+    "heading": "Turn your idea into a scalable product.",
+    "description": "From MVP to enterprise-grade, we build digital products that grow with your business.",
+    "primaryCta": "Start Your Project",
+    "secondaryCta": "View Our Work"
+  },
+  "authors": {
+    "novyraTeam": {
+      "name": "Novyra Team",
+      "role": "Engineering & Product"
+    }
+  },
+  "tags": {
+    "architecture": "Architecture",
+    "saas": "SaaS",
+    "scaling": "Scaling",
+    "performance": "Performance",
+    "ai": "AI",
+    "automation": "Automation",
+    "operations": "Operations",
+    "webDevelopment": "Web Development",
+    "seo": "SEO",
+    "productDesign": "Product Design",
+    "ux": "UX",
+    "strategy": "Strategy"
+  },
+  "articles": {
+    "scaling-saas-beyond-mvp": {
+      "chapters": {
+        "architectureFirst": {
+          "title": "Architecture First",
+          "p1": "Many SaaS products fail not because of weak features, but because of poor architecture decisions made early on. A product can look complete from the outside while the foundation underneath is quietly accumulating debt that slows every release that follows.",
+          "p2": "The teams that scale smoothly are rarely the ones who guessed right on day one. They're the ones who kept the system easy to change — separating concerns early, naming boundaries clearly, and resisting the shortcut that saves a day now but costs a month later.",
+          "insight": "Scaling is not just about infrastructure — it starts with the right boundaries in your code and your data.",
+          "list": [
+            "Separate what changes often from what stays stable",
+            "Name domain boundaries before you name folders",
+            "Treat every shortcut as a documented, revisited decision"
+          ]
+        },
+        "productBoundaries": {
+          "title": "Product Boundaries",
+          "p1": "As a product grows, the question stops being \"does this feature work?\" and becomes \"where does this feature belong?\" Without clear boundaries, every new capability gets bolted onto whatever module happens to be closest, and the codebase slowly turns into a single tangled surface.",
+          "sub1": "Modules, Not a Monolith of Convenience",
+          "p2": "A monolith isn't automatically wrong — plenty of scaled products run as one deployable unit. What matters is whether the code inside it is organized around real product boundaries (billing, auth, workspace, notifications) rather than around whichever file was open when a feature was added.",
+          "list": [
+            "Group code by business capability, not by technical layer alone",
+            "Keep cross-module communication explicit, never implicit",
+            "Let boundaries guide your team structure, not the other way around"
+          ]
+        },
+        "dataLayer": {
+          "title": "Data Layer",
+          "p1": "Every request your product handles eventually touches the data layer, which makes it the part of the system least forgiving of shortcuts. A clean request flow keeps each layer responsible for exactly one thing.",
+          "diagram": ["Client", "API Gateway", "Service Layer", "Data / Cache / Queue"],
+          "p2": "The service layer should own business logic; the data layer should own persistence and consistency. When those responsibilities blur — business rules leaking into database queries, or database concerns leaking into controllers — every future change gets harder to reason about safely.",
+          "quote": "A fast database with an inconsistent data model will always lose to a modest database with a clear one."
+        },
+        "performance": {
+          "title": "Performance",
+          "p1": "Performance work that starts after users complain is always more expensive than performance work built into the architecture from the start. The good news is that most of it comes down to a small set of repeatable priorities.",
+          "list": [
+            "Cache aggressively at the layer closest to the request",
+            "Push heavy or non-urgent work into background jobs and queues",
+            "Measure real user latency, not just server response time",
+            "Treat database indexes as part of the API contract, not an afterthought"
+          ],
+          "callout": "A product that stays fast under load is rarely lucky — it's usually just been measured honestly and often."
+        },
+        "scalingStrategy": {
+          "title": "Scaling Strategy",
+          "p1": "Scaling strategy is less about anticipating every future load pattern and more about keeping your options open. The goal isn't to build for ten million users on day one — it's to avoid decisions that make reaching a hundred thousand needlessly painful.",
+          "sub1": "Vertical First, Horizontal When It's Earned",
+          "p2": "Most products should scale vertically for as long as it's economical, and only reach for horizontal scaling, sharding, or service extraction once a specific, measured bottleneck justifies the added operational complexity — not because it sounds like the mature choice.",
+          "cta": "This is the kind of architecture and engineering work we do with founders from the first sprint — see how we approach it."
+        },
+        "keyTakeaways": {
+          "title": "Key Takeaways",
+          "list": [
+            "Architecture decisions compound — the earlier they're made deliberately, the cheaper they stay",
+            "Clear product boundaries matter more than picking the trendiest stack",
+            "Keep business logic and persistence concerns separate at the data layer",
+            "Build performance in as a habit, not a fire drill",
+            "Scale vertically until a measured bottleneck earns the added complexity"
+          ],
+          "closing": "None of this requires getting everything right on day one. It requires staying honest about trade-offs as the product grows — which is, in the end, the real difference between a product that scales and one that gets rebuilt from scratch."
+        }
+      }
+    },
+    "ai-value-in-workflows": {
+      "chapters": {
+        "theRealOpportunity": {
+          "title": "The Real Opportunity",
+          "p1": "Most of the value AI creates inside a business isn't glamorous. It rarely looks like a chatbot on a landing page — it looks like the three hours a week someone used to spend copying data between two systems, quietly disappearing.",
+          "p2": "The businesses getting real value from AI right now are the ones treating it as a tool for removing repetitive work, not as a headline feature. That framing changes which problems are worth automating first.",
+          "insight": "The best AI automation is invisible — it just means the tedious part of someone's job stops existing."
+        },
+        "whereItFits": {
+          "title": "Where It Fits",
+          "p1": "Before automating anything, it helps to separate work by two questions: is it repetitive, and does it require judgment? The highest-value automation lives in tasks that are repetitive but low-judgment.",
+          "list": [
+            "Data entry and reconciliation between disconnected systems",
+            "Drafting first-pass responses that a human still reviews",
+            "Summarizing long documents, tickets, or call notes",
+            "Routing and triaging requests based on their content"
+          ]
+        },
+        "avoidingComplexity": {
+          "title": "Avoiding Unnecessary Complexity",
+          "p1": "It's tempting to reach for the most sophisticated model or the most flexible pipeline available. In practice, the workflows that stay reliable are usually the ones built with the simplest approach that solves the actual problem.",
+          "quote": "The goal isn't to use AI everywhere it's possible — it's to use it exactly where it removes friction without adding new failure points.",
+          "callout": "An automation that fails silently is worse than no automation at all — visibility and fallbacks matter as much as the model itself."
+        },
+        "gettingStarted": {
+          "title": "Getting Started",
+          "p1": "The teams that succeed with automation tend to start narrow, prove the value on one workflow, and expand from there rather than automating everything at once.",
+          "list": [
+            "Pick one repetitive, low-judgment workflow to start with",
+            "Define what \"good enough\" output looks like before you build",
+            "Keep a human checkpoint until the system has earned trust",
+            "Measure time saved, not just whether it technically works"
+          ],
+          "cta": "We help teams identify where automation actually pays off — talk to us about your workflows."
+        }
+      }
+    },
+    "modern-website-performance": {
+      "chapters": {
+        "beyondVisualLayer": {
+          "title": "Beyond the Visual Layer",
+          "p1": "A modern business website is judged on more than how it looks in a screenshot. Load speed, accessibility, and how well it converts a visitor into an enquiry all shape whether the site actually does its job.",
+          "p2": "Design and engineering aren't separate concerns here — a beautifully designed page that loads slowly on mobile is, functionally, a badly designed page.",
+          "insight": "The fastest-loading version of your homepage is also, almost always, the version that converts best."
+        },
+        "theDeliveryPath": {
+          "title": "The Delivery Path",
+          "p1": "Every page a visitor loads travels a path, and each stop on that path is an opportunity to either save time or lose it.",
+          "diagram": ["Request", "CDN Edge", "Origin Server", "Cache Layer"],
+          "p2": "The sites that feel instant usually aren't doing anything exotic — they're just making sure as much of that path as possible is served from the edge, with the origin server only doing real work when it has to."
+        },
+        "whatMovesTheNeedle": {
+          "title": "What Actually Moves the Needle",
+          "p1": "Not every optimization is worth the same amount of effort. A handful of decisions account for most of the perceived speed difference between an average site and a genuinely fast one.",
+          "list": [
+            "Optimized, correctly sized images served in modern formats",
+            "Minimal blocking JavaScript on the initial page load",
+            "A CDN in front of static assets and cacheable routes",
+            "Semantic HTML that keeps accessibility and SEO aligned by default"
+          ],
+          "callout": "Performance and SEO aren't two separate checklists — a faster site is, structurally, a more crawlable and more accessible one too."
+        },
+        "closingThoughts": {
+          "title": "Closing Thoughts",
+          "p1": "Treat performance as a design constraint from the first wireframe, not a cleanup pass before launch, and most of the hard trade-offs disappear before they're ever made."
+        }
+      }
+    },
+    "designing-around-user-problems": {
+      "chapters": {
+        "startWithTheWorkflow": {
+          "title": "Start With the Workflow",
+          "p1": "Before any screen gets designed, the more useful question is: what is the person actually trying to get done, and what's currently in their way? A product built around that answer looks very different from one built around a feature list.",
+          "p2": "This is why the most effective early design work often has nothing to do with visuals — it's mapping the current workflow honestly, including the messy, manual parts nobody wants to admit still happen in a spreadsheet."
+        },
+        "featuresAreNotValue": {
+          "title": "Features Are Not Value",
+          "p1": "It's easy to mistake a long feature list for a strong product. But a feature only creates value if it removes friction from a real task — otherwise it's just surface area the team now has to maintain and the user has to learn.",
+          "insight": "A product doesn't need more features to feel more valuable — it needs fewer moments where the user has to think about the product instead of their own work.",
+          "list": [
+            "Every feature should map to a specific real task, not a hypothetical one",
+            "Cutting a feature is sometimes the highest-value design decision available",
+            "Value is measured by outcomes reached, not screens shipped"
+          ]
+        },
+        "designingWithConstraints": {
+          "title": "Designing With Constraints",
+          "p1": "Constraints — a small team, a tight timeline, a legacy system that has to stay integrated — aren't obstacles to good design. They're often what forces the clearest version of a solution to surface.",
+          "quote": "Unlimited time and budget rarely produce a better product. They usually just produce a longer list of things that seemed like good ideas at the time."
+        },
+        "bringingItTogether": {
+          "title": "Bringing It Together",
+          "p1": "Products built around real workflows, with disciplined feature choices and constraints treated as design input rather than obstacles, tend to need far less rework after launch — because they were solving the right problem from the start.",
+          "cta": "See how this thinking shows up in the products we've built."
+        }
+      }
+    }
+  }
+}

@@ -23,8 +23,8 @@ export async function ArticleCTA() {
           style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(8,13,28,0.6)" }}
         >
           <div className="flex flex-col items-center gap-3 lg:items-start">
-            <h2 className="text-title-lg text-foreground max-w-md font-semibold text-balance">{t("heading")}</h2>
-            <p className="text-body-sm text-foreground-secondary max-w-md text-pretty">{t("description")}</p>
+            <h2 className="text-title-lg max-w-md font-semibold text-balance text-white">{t("heading")}</h2>
+            <p className="text-body-sm max-w-md text-pretty text-white/60">{t("description")}</p>
 
             <div className="mt-2 flex w-full flex-col items-stretch gap-2.5 sm:w-auto sm:flex-row sm:items-center">
               <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}>

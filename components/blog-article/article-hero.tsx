@@ -65,7 +65,7 @@ export function ArticleHero({ article, post, edition, publishedLabel }: ArticleH
             </span>
           </div>
 
-          <h1 className="max-w-160 text-[clamp(2.5rem,4.6vw,4.25rem)] leading-[1.06] font-semibold tracking-[-0.03em] text-balance text-foreground">
+          <h1 className="max-w-160 text-[clamp(2.5rem,4.6vw,4.25rem)] leading-[1.06] font-semibold tracking-[-0.03em] text-balance text-white">
             <span className="block overflow-hidden">
               <span data-art-line className="block">
                 {t(`posts.${article.slug}.title`)}
@@ -73,7 +73,7 @@ export function ArticleHero({ article, post, edition, publishedLabel }: ArticleH
             </span>
           </h1>
 
-          <p data-art-description className="text-body-lg max-w-125 text-foreground-secondary text-pretty leading-[1.65]">
+          <p data-art-description className="text-body-lg max-w-125 text-pretty leading-[1.65] text-white/65">
             {t(`posts.${article.slug}.description`)}
           </p>
 

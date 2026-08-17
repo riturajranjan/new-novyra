@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { lenisInstance } from "@/lib/lenis-instance";
 
 /** Buttery inertia scrolling for wheel/trackpad/touch, mounted once at the
  * root. Renders nothing — Lenis hijacks the existing window scroll rather
@@ -25,11 +26,13 @@ export function SmoothScrollProvider() {
         anchors: true,
         autoRaf: true,
       });
+      lenisInstance.current = lenis;
     }
 
     function teardown() {
       lenis?.destroy();
       lenis = null;
+      lenisInstance.current = null;
     }
 
     function handleChange() {

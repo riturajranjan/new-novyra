@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { accentStroke } from "@/lib/accent";
 import type { AccentColor } from "@/content/hero-screens";
 import { cn } from "@/lib/utils";
+import { lenisInstance } from "@/lib/lenis-instance";
 
 export interface TocItem {
   id: string;
@@ -48,12 +49,19 @@ export function ArticleTableOfContents({ items, accent }: ArticleTableOfContents
     return () => observer.disconnect();
   }, [items]);
 
-  function scrollToChapter(id: string) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - 128;
-    window.scrollTo({ top: y, behavior: "smooth" });
+  function handleTocClick(id: string) {
     setMobileOpen(false);
+    // A plain <button> (not an `<a href="#...">`) deliberately — Lenis's
+    // global `anchors: true` option attaches its own click listener for
+    // every real hash link on the site and scrolls to its own (unoffset)
+    // target, which raced with our own offset-aware scrollTo below and
+    // produced an inconsistent resting position. Since there's no href
+    // here, Lenis's anchor handling never matches this control at all.
+    if (lenisInstance.current) {
+      lenisInstance.current.scrollTo(`#${id}`, { offset: -128 });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   const list = (
@@ -62,15 +70,12 @@ export function ArticleTableOfContents({ items, accent }: ArticleTableOfContents
         const isActive = item.id === activeId;
         return (
           <li key={item.id}>
-            <a
-              href={`#${item.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToChapter(item.id);
-              }}
+            <button
+              type="button"
+              onClick={() => handleTocClick(item.id)}
               aria-current={isActive ? "location" : undefined}
               className={cn(
-                "group flex items-start gap-2.5 rounded-lg px-2.5 py-2 text-[13px] leading-snug transition-colors duration-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue",
+                "group flex w-full items-start gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] leading-snug transition-colors duration-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue",
                 isActive ? "text-white" : "text-white/45 hover:text-white/75",
               )}
             >
@@ -83,7 +88,7 @@ export function ArticleTableOfContents({ items, accent }: ArticleTableOfContents
                   <span aria-hidden className="absolute -bottom-1 left-0 h-px w-full" style={{ backgroundColor: stroke }} />
                 ) : null}
               </span>
-            </a>
+            </button>
           </li>
         );
       })}

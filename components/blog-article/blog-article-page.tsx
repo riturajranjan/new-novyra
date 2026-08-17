@@ -9,6 +9,7 @@ import { ArticleBodyBackground } from "@/components/blog-article/article-body-ba
 import { ArticleDetails } from "@/components/blog-article/article-details";
 import { RelatedArticles } from "@/components/blog-article/related-articles";
 import { ArticleCTA } from "@/components/blog-article/article-cta";
+import { StickySidebar } from "@/components/blog-article/sticky-sidebar";
 import { Container } from "@/components/ui/container";
 import { Link } from "@/i18n/navigation";
 import { articles, getPostForArticle, type Article } from "@/content/blog-articles";
@@ -48,7 +49,12 @@ export async function BlogArticlePage({ article, locale }: BlogArticlePageProps)
       <article>
         <ArticleHero article={article} post={post} edition={edition} publishedLabel={publishedLabel} />
 
-        <div className="relative isolate overflow-hidden">
+        {/* No `overflow-hidden` here: ArticleBodyBackground already clips
+            its own decorative elements internally, and overflow other
+            than `visible` on any ancestor of a `position: sticky` element
+            breaks stickiness — the TOC/details sidebars below need to
+            stay sticky through the full length of the article body. */}
+        <div className="relative isolate">
           <ArticleBodyBackground />
 
           <ReadingProgress targetId="article-content" minutes={article.readTimeMinutes} />
@@ -61,19 +67,22 @@ export async function BlogArticlePage({ article, locale }: BlogArticlePageProps)
               ← {tArticle("backToInsights")}
             </Link>
 
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.72fr_2fr_0.78fr] lg:items-start lg:gap-8 xl:grid-cols-[220px_1fr_260px]">
-              <aside className="flex flex-col gap-6 lg:sticky lg:top-32">
+            <div
+              data-sticky-bounds
+              className="relative grid grid-cols-1 gap-10 lg:grid-cols-[0.72fr_2fr_0.78fr] lg:items-start lg:gap-8 xl:grid-cols-[220px_1fr_260px]"
+            >
+              <StickySidebar className="flex flex-col gap-6">
                 <ArticleTableOfContents items={tocItems} accent={post.accent} />
                 <ArticleConversionCard accent={post.accent} />
                 <ArticleShare url={articleUrl} title={articleTitle} />
-              </aside>
+              </StickySidebar>
 
               <ArticleContent article={article} accent={post.accent} />
 
-              <aside className="flex flex-col gap-6 lg:sticky lg:top-32">
+              <StickySidebar className="flex flex-col gap-6">
                 <ArticleDetails article={article} locale={locale} />
                 <RelatedArticles slug={article.slug} />
-              </aside>
+              </StickySidebar>
             </div>
           </Container>
         </div>

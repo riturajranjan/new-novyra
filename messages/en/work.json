@@ -6,6 +6,30 @@
   "eyebrow": "All Concepts",
   "heading": "Every Concept, Filterable by Industry",
   "description": "The same honest framing as the homepage — problem explored, approach taken, and what each concept demonstrates. None of these shipped for a paying client.",
+  "hero": {
+    "eyebrow": "Work / Selected Concepts",
+    "headingLine1": "Digital products designed",
+    "headingLine2": "around real problems.",
+    "description": "Explore how we approach complex workflows across healthcare, education, SaaS, commerce, finance and more.",
+    "primaryCta": "Explore Work",
+    "secondaryCta": "Start a Project",
+    "disclosure": "Selected work includes self-initiated product concepts created to demonstrate our approach to product design and engineering. They are not presented as commissioned client work."
+  },
+  "selected": {
+    "eyebrow": "Selected Concepts",
+    "heading": "The breadth of what we've explored."
+  },
+  "explorations": {
+    "heading": "More Explorations"
+  },
+  "cta": {
+    "indexLabel": "Your Project",
+    "headingLine1": "Have a problem",
+    "headingLine2": "worth solving?",
+    "description": "Tell us what you're building. We'll help turn the complexity into a clear digital product.",
+    "primaryCta": "Start Your Project",
+    "secondaryCta": "WhatsApp Us"
+  },
   "breadcrumb": {
     "home": "Home",
     "current": "Work"

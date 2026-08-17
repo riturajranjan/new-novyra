@@ -3,22 +3,26 @@
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { buttonVariants } from "@/components/ui/button";
-import { RippleLink } from "@/components/ui/ripple-link";
-import { CaseStudiesBackground } from "@/components/case-studies/case-studies-background";
+import { WorkHero } from "@/components/work/work-hero";
 import { FilterBar } from "@/components/case-studies/filter-bar";
 import { FeaturedConcept } from "@/components/case-studies/featured-concept";
 import { ConceptCard } from "@/components/case-studies/concept-card";
+import { ExplorationRow } from "@/components/case-studies/exploration-row";
+import { SelectedGalleryBackground } from "@/components/case-studies/selected-gallery-background";
+import { MoreExplorationsBackground } from "@/components/case-studies/more-explorations-background";
+import { WorkFinalCta } from "@/components/work/work-final-cta";
 import { conceptBuilds, type CaseStudyFilter } from "@/content/case-studies";
-import { cn } from "@/lib/utils";
 
-/** The full, filterable set of all six concepts — the homepage shows three
- * fixed picks with no filter (see components/sections/case-studies.tsx);
- * this page is where "View All Concepts" leads for anyone who wants the
- * complete, browsable set. */
+const SELECTED_GRID_SIZE = 6;
+
+/** The Work page's showcase — Filter → Featured → Selected Concepts (a
+ * 3×2 gallery) → More Explorations (compact index rows), all reacting to
+ * the same category filter. Within whatever the filter leaves, concepts
+ * with a real Novyra product identity (a translated `productName`) are
+ * prioritized into the Featured slot and the gallery grid; the plainer
+ * ones settle into the compact archive rows — computed from the real
+ * translation data, never hardcoded by id. */
 export function WorkShowcase() {
   const t = useTranslations("caseStudies");
   const tWork = useTranslations("work");
@@ -28,55 +32,76 @@ export function WorkShowcase() {
     () => (filter === "All" ? conceptBuilds : conceptBuilds.filter((build) => build.category === filter)),
     [filter],
   );
-  const [featured, ...rest] = filtered.length > 0 ? filtered : conceptBuilds;
+  const base = filtered.length > 0 ? filtered : conceptBuilds;
+
+  const ranked = useMemo(
+    () => [...base].sort((a, b) => Number(t.has(`builds.${b.id}.productName`)) - Number(t.has(`builds.${a.id}.productName`))),
+    [base, t],
+  );
+  const [featured, ...rest] = ranked;
+  const selected = rest.slice(0, SELECTED_GRID_SIZE);
+  const explorations = rest.slice(SELECTED_GRID_SIZE);
 
   return (
-    <section className="relative isolate overflow-hidden py-28 md:py-36">
-      <CaseStudiesBackground />
+    <>
+      <WorkHero />
 
-      <Container className="flex flex-col gap-10 md:gap-14">
-        <SectionHeading eyebrow={tWork("eyebrow")} title={tWork("heading")} description={tWork("description")} />
+      <section className="relative isolate overflow-hidden py-14 md:py-18 lg:py-20">
+        <Container className="flex flex-col gap-10 md:gap-14">
+          <FilterBar active={filter} onSelect={setFilter} />
 
-        <FilterBar active={filter} onSelect={setFilter} />
-
-        <AnimatePresence mode="wait">
-          <motion.div key={featured.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-            <FeaturedConcept build={featured} />
-          </motion.div>
-        </AnimatePresence>
-
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {rest.map((build, i) => (
-              <ConceptCard key={build.id} build={build} index={i} wide={i === 0} />
-            ))}
+          <AnimatePresence mode="wait">
+            <motion.div key={featured.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.35 }}>
+              <FeaturedConcept build={featured} />
+            </motion.div>
           </AnimatePresence>
-        </div>
+        </Container>
+      </section>
 
-        <div className="glass-strong shadow-card relative flex flex-col items-center gap-6 overflow-hidden rounded-hero p-8 text-center sm:flex-row sm:justify-between sm:p-10 sm:text-left">
-          <div aria-hidden className="bg-gradient-brand pointer-events-none absolute -inset-16 -z-10 rounded-full opacity-20 blur-3xl" />
-          <div className="flex flex-col gap-2">
-            <h3 className="text-title-lg text-foreground font-semibold">{t("cta.heading")}</h3>
-            <p className="text-body-sm text-foreground-secondary max-w-md">{t("cta.description")}</p>
-          </div>
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <RippleLink
-              href="/contact"
-              className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
-            >
-              <span
-                aria-hidden
-                className="bg-gradient-shimmer pointer-events-none absolute inset-0 -translate-x-full transition-transform duration-700 ease-out group-hover:translate-x-full"
-              />
-              {t("cta.bookConsultation")}
-              <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
-            </RippleLink>
-            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full sm:w-auto")}>
-              {t("cta.requestQuote")}
-            </RippleLink>
-          </div>
-        </div>
-      </Container>
-    </section>
+      {selected.length > 0 ? (
+        <section className="relative isolate overflow-hidden py-14 md:py-16 lg:py-18">
+          <SelectedGalleryBackground />
+          <Container className="flex flex-col gap-8 md:gap-10">
+            <div className="flex flex-col gap-2">
+              <span className="text-caption inline-flex w-fit items-center gap-2 font-mono font-medium tracking-[0.2em] text-white/40 uppercase">
+                <span className="h-px w-6 bg-white/25" aria-hidden />
+                {tWork("selected.eyebrow")}
+              </span>
+              <h2 className="text-foreground font-bold text-balance" style={{ fontSize: "clamp(28px, 2.8vw, 40px)", lineHeight: 1.12, letterSpacing: "-0.02em" }}>
+                {tWork("selected.heading")}
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <AnimatePresence mode="popLayout">
+                {selected.map((build, i) => (
+                  <ConceptCard key={build.id} build={build} index={i} />
+                ))}
+              </AnimatePresence>
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      {explorations.length > 0 ? (
+        <section className="relative isolate overflow-hidden py-12 md:py-14">
+          <MoreExplorationsBackground />
+          <Container className="flex flex-col gap-6 md:gap-8">
+            <span className="text-caption inline-flex w-fit items-center gap-2 font-mono font-medium tracking-[0.2em] text-white/40 uppercase">
+              <span className="h-px w-6 bg-white/25" aria-hidden />
+              {tWork("explorations.heading")}
+            </span>
+
+            <div className="grid grid-cols-1 gap-x-10 md:grid-cols-2 lg:grid-cols-3">
+              {explorations.map((build, i) => (
+                <ExplorationRow key={build.id} build={build} number={String(i + SELECTED_GRID_SIZE + 2).padStart(2, "0")} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      <WorkFinalCta />
+    </>
   );
 }

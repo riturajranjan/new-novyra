@@ -203,17 +203,22 @@
     "launch": "लॉन्च"
   },
   "conceptBadge": "कॉन्सेप्ट — लाइव प्रोजेक्ट नहीं",
+  "conceptTag": "कॉन्सेप्ट प्रोजेक्ट",
   "featuredLabel": "फ़ीचर्ड",
   "preview": {
     "label": "कॉन्सेप्ट प्रीव्यू",
     "illustrativeData": "उदाहरण डेटा"
+  },
+  "stack": {
+    "label": "चुने हुए प्रोडक्ट इंटरफ़ेस"
   },
   "card": {
     "buildHighlights": "मुख्य वर्कफ़्लो",
     "demonstrates": "यह क्या दर्शाता है",
     "estimatedTimeline": "अनुमानित {timeline}",
     "startSimilarProject": "ऐसा ही प्रोजेक्ट शुरू करें",
-    "seeFullApproach": "हम इसे कैसे बनाएंगे, देखें"
+    "seeFullApproach": "हम इसे कैसे बनाएंगे, देखें",
+    "viewLabel": "देखें"
   },
   "viewAll": "सभी कॉन्सेप्ट देखें",
   "cta": {

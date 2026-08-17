@@ -203,17 +203,22 @@
     "launch": "Launch"
   },
   "conceptBadge": "Concept — Not a Live Project",
+  "conceptTag": "Concept Project",
   "featuredLabel": "Featured",
   "preview": {
     "label": "Concept Preview",
     "illustrativeData": "Illustrative Data"
+  },
+  "stack": {
+    "label": "Selected Product Interfaces"
   },
   "card": {
     "buildHighlights": "Key Workflows",
     "demonstrates": "What This Demonstrates",
     "estimatedTimeline": "Est. {timeline}",
     "startSimilarProject": "Start a Similar Project",
-    "seeFullApproach": "See How We'd Build This"
+    "seeFullApproach": "See How We'd Build This",
+    "viewLabel": "View"
   },
   "viewAll": "View All Concepts",
   "cta": {

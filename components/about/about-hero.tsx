@@ -118,7 +118,7 @@ export function AboutHero() {
           <div data-about-cta className="flex w-full max-w-md flex-col items-center min-[430px]:max-w-none min-[430px]:items-start lg:items-start">
             <Magnetic className="w-full min-[430px]:w-auto">
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group min-h-13 w-full min-w-0 min-[430px]:w-auto min-[430px]:min-w-52.5")}
               >
                 {t("cta.primary")}

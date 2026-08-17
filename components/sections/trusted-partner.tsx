@@ -35,7 +35,7 @@ export function TrustedPartner() {
           </h2>
           <p className="text-body-lg text-foreground-secondary max-w-md text-pretty">{t("sectionHeading.description")}</p>
           <div className="pt-2">
-            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group w-fit")}>
+            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group w-fit")}>
               {t("cta")}
               <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
             </RippleLink>

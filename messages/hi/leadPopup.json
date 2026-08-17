@@ -30,7 +30,11 @@
         "schoolErp": "स्कूल ERP",
         "crm": "CRM",
         "digitalMarketing": "डिजिटल मार्केटिंग",
-        "graphicDesign": "ग्राफ़िक डिज़ाइन"
+        "graphicDesign": "ग्राफ़िक डिज़ाइन",
+        "aiAutomation": "AI और ऑटोमेशन",
+        "uiUxDesign": "UI/UX डिज़ाइन",
+        "existingProductImprovement": "मौजूदा प्रोडक्ट सुधार",
+        "other": "अन्य"
       }
     },
     "budget": {

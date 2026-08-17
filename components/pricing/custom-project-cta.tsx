@@ -29,7 +29,7 @@ export function CustomProjectCta() {
       </div>
       <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
         <RippleLink
-          href="/#contact"
+          href="/contact"
           className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
         >
           <span

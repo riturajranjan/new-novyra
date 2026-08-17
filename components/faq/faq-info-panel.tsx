@@ -88,7 +88,7 @@ export function FaqInfoPanel() {
       <div className="flex w-full flex-col gap-3 sm:flex-row lg:flex-col">
         <Magnetic className="w-full">
           <RippleLink
-            href="/#contact"
+            href="/contact"
             className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden")}
           >
             <span
@@ -100,7 +100,7 @@ export function FaqInfoPanel() {
           </RippleLink>
         </Magnetic>
         <Magnetic className="w-full">
-          <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full")}>
+          <RippleLink href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "w-full")}>
             {tCta("contactTeam")}
           </RippleLink>
         </Magnetic>

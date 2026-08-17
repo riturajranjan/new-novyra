@@ -529,7 +529,7 @@ export function MobileNavDrawer({ open, onClose, triggerRef }: MobileNavDrawerPr
               <MobileControlDock />
 
               <Link
-                href="/#contact"
+                href="/contact"
                 onClick={handleNavigate}
                 className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative flex-col gap-0 overflow-hidden py-2.5!")}
               >

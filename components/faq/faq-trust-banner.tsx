@@ -26,7 +26,7 @@ export function FaqTrustBanner() {
       <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
         <Magnetic className="w-full sm:w-auto">
           <RippleLink
-            href="/#contact"
+            href="/contact"
             className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative w-full overflow-hidden sm:w-auto")}
           >
             <span
@@ -38,7 +38,7 @@ export function FaqTrustBanner() {
           </RippleLink>
         </Magnetic>
         <Magnetic className="w-full sm:w-auto">
-          <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "group w-full sm:w-auto")}>
+          <RippleLink href="/contact" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "group w-full sm:w-auto")}>
             <CalendarClock className="h-4 w-4" aria-hidden />
             {tCta("scheduleCall")}
           </RippleLink>

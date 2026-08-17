@@ -98,7 +98,7 @@ export function IndustriesHero() {
               <ArrowDown className="h-4 w-4 transition-transform duration-fast group-hover:translate-y-0.5" aria-hidden />
             </RippleLink>
             <RippleLink
-              href="/#contact"
+              href="/contact"
               className={cn(buttonVariants({ variant: "outline", size: "lg" }), "group w-full min-w-0 min-[430px]:w-auto")}
             >
               {t("secondaryCta")}

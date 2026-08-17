@@ -97,7 +97,7 @@ export function IndustriesExplorer() {
               </div>
 
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className="group text-body-sm mt-1 flex w-fit items-center gap-1.5 font-semibold text-white/75 transition-colors duration-base hover:text-white"
               >
                 {t("explorer.exploreCta", { industry: t(`items.${active.id}.title`) })}

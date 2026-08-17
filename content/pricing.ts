@@ -76,7 +76,7 @@ export const pricingPlans: PricingPlan[] = [
       "googleAnalytics",
       "twoWeeksSupport",
     ],
-    ctaHref: "/#contact",
+    ctaHref: "/contact",
   },
   {
     id: "professional",
@@ -101,7 +101,7 @@ export const pricingPlans: PricingPlan[] = [
       "securityHardening",
       "oneMonthSupport",
     ],
-    ctaHref: "/#contact",
+    ctaHref: "/contact",
   },
   {
     id: "business",
@@ -123,7 +123,7 @@ export const pricingPlans: PricingPlan[] = [
       "cloudDeployment",
       "trainingSessions",
     ],
-    ctaHref: "/#contact",
+    ctaHref: "/contact",
   },
   {
     id: "enterprise",
@@ -144,7 +144,7 @@ export const pricingPlans: PricingPlan[] = [
       "dedicatedProjectManager",
       "ongoingMaintenance",
     ],
-    ctaHref: "/#contact",
+    ctaHref: "/contact",
   },
 ];
 

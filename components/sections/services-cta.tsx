@@ -75,7 +75,7 @@ export function ServicesCta() {
           <div className="relative z-10 mx-auto mt-8 grid w-full max-w-125 grid-cols-1 gap-3 sm:grid-cols-2">
             <Magnetic className="w-full">
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className={cn(buttonVariants({ variant: "glass", size: "lg" }), "group min-h-13 w-full !bg-white !text-[#141024] hover:!bg-white/90")}
               >
                 {t("primary")}

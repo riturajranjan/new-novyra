@@ -112,7 +112,7 @@ export function OurProcess() {
               <div className="mx-auto grid w-full max-w-[480px] grid-cols-1 gap-3 sm:grid-cols-2">
                 <MagneticButton>
                   <RippleLink
-                    href="/#contact"
+                    href="/contact"
                     className={cn(
                       buttonVariants({ variant: "gradient", size: "lg" }),
                       "group min-h-[50px] w-full px-5 whitespace-nowrap",
@@ -124,7 +124,7 @@ export function OurProcess() {
                 </MagneticButton>
                 <MagneticButton>
                   <RippleLink
-                    href="/#contact"
+                    href="/contact"
                     className={cn(
                       buttonVariants({ variant: "glass", size: "lg" }),
                       "min-h-[50px] w-full px-5 whitespace-nowrap",

@@ -33,7 +33,7 @@ export const footerColumns: FooterColumn[] = [
       { id: "industries", href: "/industries" },
       { id: "work", href: "/work" },
       { id: "pricing", href: "/pricing" },
-      { id: "contact", href: "/#contact" },
+      { id: "contact", href: "/contact" },
     ],
   },
   {

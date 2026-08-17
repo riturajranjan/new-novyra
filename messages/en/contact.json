@@ -1,64 +1,94 @@
 {
-  "sectionHeading": {
-    "eyebrow": "Get In Touch",
-    "title": "Have an idea? Let's build it.",
-    "description": "Tell us what you're building and we'll help you turn it into a fast, scalable digital product."
+  "meta": {
+    "title": "Contact Novyra Technologies | Start Your Digital Project",
+    "description": "Have a website, SaaS, web application or digital product idea? Talk to Novyra Technologies about designing and building your next digital experience."
   },
-  "heroCard": {
-    "title": "Have an idea? Let's build it.",
-    "description": "Tell us what you're building and we'll help you turn it into a fast, scalable digital product.",
-    "startProject": "Start Your Project",
-    "whatsappUs": "WhatsApp Us",
-    "trustNote": "Typically within 24 hours"
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Contact"
   },
-  "quickContactCards": {
-    "schedule-call": {
-      "title": "Schedule a Call",
-      "detail": "Book a free strategy session.",
-      "note": "Available Monday–Saturday"
+  "hero": {
+    "eyebrow": "Contact / Start a Project",
+    "headingLine1": "Let's turn your next idea",
+    "headingLine2": "into something remarkable.",
+    "description": "Tell us what you're building, improving or solving. We'll help you find the right digital approach.",
+    "trust": {
+      "quickResponse": { "title": "Quick Response", "description": "Usually within 24 hours" },
+      "confidential": { "title": "Confidential", "description": "Your project details stay private" }
     },
-    "email": {
-      "title": "Email Us",
-      "detail": "hello@novyratech.in",
-      "note": "Typical response within 24 hours."
-    },
-    "call": {
-      "title": "Call Us",
-      "detail": "+91 7903724407",
-      "note": "Speak directly with our team."
-    },
-    "whatsapp": {
-      "title": "WhatsApp",
-      "detail": "Start a conversation instantly.",
-      "note": "Quick project discussion."
+    "primaryCta": "Start Your Project",
+    "secondaryCta": "WhatsApp Us",
+    "visual": {
+      "centerLabel": "NOVYRA",
+      "nodes": {
+        "idea": "Idea",
+        "design": "Design",
+        "build": "Build",
+        "launch": "Launch"
+      }
     }
   },
-  "opensInNewTab": " (opens in a new tab)",
-  "whyContact": {
-    "heading": "Why Contact Novyra?"
-  },
-  "contactValueCards": {
-    "free-discovery-session": {
-      "title": "Free Discovery Session",
-      "description": "Understand your requirements before spending anything."
+  "workspace": {
+    "form": {
+      "eyebrow": "Tell Us About Your Project",
+      "heading": "What are you looking to build?",
+      "name": { "label": "Name", "error": "Please enter your name." },
+      "email": { "label": "Email", "error": "Enter a valid email address." },
+      "phone": { "label": "Phone Number", "error": "Enter a valid phone number." },
+      "company": { "label": "Company / Organization" },
+      "projectType": { "label": "Project Type", "error": "Please select a project type." },
+      "budget": { "label": "Budget Range" },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your idea, goals, challenges or existing product...",
+        "minError": "Message must be at least 10 characters.",
+        "maxError": "Message must be under 1000 characters."
+      },
+      "submitCta": "Send Project Details",
+      "submitting": "Sending...",
+      "trustNote": "No obligation · Confidential · Usually replies within 24 hours",
+      "success": {
+        "title": "Message received.",
+        "description": "Thanks for reaching out. We'll review your project and get back to you shortly.",
+        "backHome": "Back to Home",
+        "whatsapp": "WhatsApp Us"
+      },
+      "error": {
+        "message": "We couldn't submit your enquiry. Please try again or contact us on WhatsApp.",
+        "retry": "Try Again"
+      }
     },
-    "expert-consultation": {
-      "title": "Expert Consultation",
-      "description": "Receive recommendations from experienced developers."
-    },
-    "transparent-planning": {
-      "title": "Transparent Planning",
-      "description": "Clear pricing, realistic timelines, and defined milestones."
-    },
-    "long-term-partnership": {
-      "title": "Long-Term Partnership",
-      "description": "We continue supporting your product after launch."
+    "connect": {
+      "heading": "Prefer a direct conversation?",
+      "description": "Reach us using whichever channel works best for you.",
+      "channels": {
+        "email": { "label": "Email" },
+        "phone": { "label": "Phone" },
+        "whatsapp": { "label": "WhatsApp", "value": "Chat with our team" },
+        "location": { "label": "Location" }
+      },
+      "availability": {
+        "status": "Available for new projects",
+        "note": "Based in Muzaffarpur, working with businesses beyond geographical boundaries."
+      }
     }
   },
-  "contactDetails": {
-    "business-email": { "label": "Business Email", "value": "hello@novyratech.in" },
-    "phone": { "label": "Phone", "value": "+91 7903724407" },
-    "location": { "label": "Location", "value": "Muzaffarpur, Bihar, India" },
-    "working-hours": { "label": "Working Hours", "value": "Monday – Saturday, 9:00 AM – 7:00 PM IST" }
+  "process": {
+    "eyebrow": "What Happens Next",
+    "headingLine1": "Simple conversation.",
+    "headingLine2": "Clear next steps.",
+    "description": "No complicated sales process. We understand the requirement first, then recommend the right way forward.",
+    "steps": {
+      "tellUs": { "title": "Tell us about the project" },
+      "understand": { "title": "We understand the requirement" },
+      "recommend": { "title": "You receive the recommended approach" },
+      "plan": { "title": "We plan the next step" }
+    }
+  },
+  "cta": {
+    "heading": "Have a project in mind?",
+    "description": "Tell us what you're planning and let's find the right way to build it.",
+    "primaryCta": "Start Your Project",
+    "secondaryCta": "WhatsApp Us"
   }
 }

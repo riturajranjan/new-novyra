@@ -180,7 +180,7 @@ export function Pricing() {
           <div className="flex w-full flex-col items-center gap-3 sm:w-auto sm:items-end">
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className={cn(
                   buttonVariants({ variant: "gradient", size: "lg" }),
                   "group relative w-full overflow-hidden sm:w-auto",
@@ -196,7 +196,7 @@ export function Pricing() {
                 />
               </RippleLink>
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                   "group w-full sm:w-auto",

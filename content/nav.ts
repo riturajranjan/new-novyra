@@ -103,5 +103,5 @@ export const navItems: NavItem[] = [
       { id: "faq", href: "/pricing#pricing-faq", icon: AppWindow, accent: "pink" },
     ],
   },
-  { id: "contact", href: "/#contact", icon: Mail },
+  { id: "contact", href: "/contact", icon: Mail },
 ];

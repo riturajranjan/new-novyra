@@ -12,6 +12,10 @@ export const serviceOptionIds = [
   "crm",
   "digitalMarketing",
   "graphicDesign",
+  "aiAutomation",
+  "uiUxDesign",
+  "existingProductImprovement",
+  "other",
 ] as const;
 
 export type ServiceOptionId = (typeof serviceOptionIds)[number];

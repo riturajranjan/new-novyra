@@ -289,7 +289,7 @@ export function RoadmapResult({ result, accent, onRestart }: RoadmapResultProps)
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <RippleLink
-            href="/#contact"
+            href="/contact"
             className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group relative flex-1 overflow-hidden")}
           >
             <span
@@ -300,7 +300,7 @@ export function RoadmapResult({ result, accent, onRestart }: RoadmapResultProps)
             <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
           </RippleLink>
           <RippleLink
-            href="/#contact"
+            href="/contact"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
               "flex-1 border-white/20 text-white hover:border-white/30 hover:bg-white/5",

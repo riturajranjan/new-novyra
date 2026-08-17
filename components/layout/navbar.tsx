@@ -64,7 +64,7 @@ export function Navbar() {
               </div>
               <Magnetic className="inline-flex">
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className={cn(
                     buttonVariants({ variant: "gradient", size: "sm" }),
                     "inline-flex",

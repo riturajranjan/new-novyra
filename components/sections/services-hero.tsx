@@ -189,7 +189,7 @@ export function ServicesHero() {
                       {t(`categories.${activeCategory.id}.label`)}
                     </span>
                   </div>
-                  <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "shrink-0")}>
+                  <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "shrink-0")}>
                     {t("details.requestQuote")}
                     <ArrowRight className="h-4 w-4" aria-hidden />
                   </RippleLink>

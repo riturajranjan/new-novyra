@@ -96,7 +96,7 @@ export function ServiceDetails({ category }: { category: ServiceCategory }) {
           <div className="border-border-subtle flex flex-col gap-3.5 border-t pt-6">
             <div className="grid grid-cols-1 gap-2.5 min-[520px]:grid-cols-2">
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group min-h-[46px] w-full min-w-0 px-3 text-[14px]")}
               >
                 <span className="min-w-0 truncate">{t("details.requestQuote")}</span>

@@ -63,7 +63,7 @@ export function IndustriesCta() {
           <div className="mt-2 grid w-full max-w-115 grid-cols-1 gap-3 sm:grid-cols-2">
             <Magnetic className="w-full">
               <RippleLink
-                href="/#contact"
+                href="/contact"
                 className={cn(buttonVariants({ variant: "gradient", size: "lg" }), "group min-h-13 w-full")}
               >
                 {t("primaryCta")}

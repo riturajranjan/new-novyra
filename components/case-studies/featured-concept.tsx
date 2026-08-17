@@ -126,7 +126,7 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <RippleLink href="/#contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group flex-1")}>
+            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group flex-1")}>
               {tCard("startSimilarProject")}
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
             </RippleLink>

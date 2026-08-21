@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FlaskConical } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -42,7 +43,7 @@ const RIGHT_TITLE: Record<Variant, string> = {
  * the operations/admin side), not a generic browser-chrome bar chart.
  * Still explicitly labeled "Concept" — nothing here claims to be a real
  * client screenshot. */
-export function ProjectShowcaseVisual({ variant, accent }: { variant: Variant; accent: AccentColor }) {
+export function ProjectShowcaseVisual({ variant, accent, image, imageAlt }: { variant: Variant; accent: AccentColor; image?: string; imageAlt?: string }) {
   const t = useTranslations("caseStudies");
   const rows = ROWS[variant];
 
@@ -54,10 +55,15 @@ export function ProjectShowcaseVisual({ variant, accent }: { variant: Variant; a
         </span>
         <span className="border-brand-amber/50 bg-brand-amber/15 text-brand-amber inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-semibold">
           <FlaskConical className="h-2.5 w-2.5" aria-hidden />
-          {t("conceptBadge")}
+          {image ? t("conceptTag") : t("conceptBadge")}
         </span>
       </div>
 
+      {image ? (
+        <div className="relative flex-1">
+          <Image src={image} alt={imageAlt ?? ""} fill sizes="(min-width: 1024px) 700px, 100vw" className="object-cover object-top" />
+        </div>
+      ) : (
       <div className="grid flex-1 grid-cols-2 divide-x divide-white/8">
         {([LEFT_TITLE, RIGHT_TITLE] as const).map((titleMap, col) => (
           <div key={col} className="flex flex-col gap-2.5 p-3.5 sm:p-4">
@@ -82,6 +88,7 @@ export function ProjectShowcaseVisual({ variant, accent }: { variant: Variant; a
           </div>
         ))}
       </div>
+      )}
     </div>
   );
 }

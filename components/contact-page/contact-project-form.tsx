@@ -140,6 +140,7 @@ const defaultValues: EnquiryFieldValues = {
   message: "",
   service: "" as EnquiryFieldValues["service"],
   budget: budgetOptionIds[0],
+  existingWebsiteUrl: "",
 };
 
 /** The Contact page's own project form — same validated-and-real
@@ -319,6 +320,23 @@ export function ContactProjectForm() {
               onChange={field.onChange}
               onBlur={field.onBlur}
               options={budgetOptionIds.map((id) => ({ id, label: tPopup(`budget.options.${id}`) }))}
+            />
+          )}
+        />
+
+        <Controller
+          name="existingWebsiteUrl"
+          control={control}
+          render={({ field }) => (
+            <Field
+              id="contact-existing-website"
+              label={t("existingWebsiteUrl.label")}
+              type="url"
+              value={field.value ?? ""}
+              onChange={field.onChange}
+              onBlur={field.onBlur}
+              placeholder={t("existingWebsiteUrl.placeholder")}
+              autoComplete="url"
             />
           )}
         />

@@ -14,16 +14,18 @@ import { easePowerOut } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const featured: { id: string; variant: "education" | "healthcare" | "saas" }[] = [
-  { id: "school-erp", variant: "education" },
-  { id: "hospital-platform", variant: "healthcare" },
+  { id: "premium-school-website", variant: "education" },
+  { id: "modern-hospital-website", variant: "healthcare" },
   { id: "ai-saas-dashboard", variant: "saas" },
 ];
 
 /** Section 05 — a compact single-active-project showcase (one large visual
  * + info block, switched via a small numbered rail) instead of the old
- * tall alternating-row list. Three real concept builds only, no fabricated
- * stats, no generic bar-chart placeholder — a domain-specific composition
- * per project via `ProjectShowcaseVisual`. */
+ * tall alternating-row list. Website Design & Development is shown with
+ * its two strongest real, live-demo builds (real screenshots via
+ * `ProjectShowcaseVisual`'s `image` prop); SaaS/Web Applications keeps the
+ * honest abstract illustration since no real SaaS demo exists yet — no
+ * fabricated stats either way. */
 export function SelectedServiceWork() {
   const t = useTranslations("services");
   const [activeIndex, setActiveIndex] = useState(0);
@@ -63,7 +65,7 @@ export function SelectedServiceWork() {
             transition={{ duration: 0.32, ease: easePowerOut }}
             className="h-80 overflow-hidden rounded-2xl sm:h-95 md:h-105"
           >
-            <ProjectShowcaseVisual variant={active.variant} accent={build.accent} />
+            <ProjectShowcaseVisual variant={active.variant} accent={build.accent} image={build.image} imageAlt={tBuild("title")} />
           </motion.div>
         </AnimatePresence>
 
@@ -99,7 +101,7 @@ export function SelectedServiceWork() {
             </div>
 
             <RippleLink
-              href="/work"
+              href={build.demoUrl ? `/work/${build.id}` : "/work"}
               className="group text-body-sm flex shrink-0 items-center gap-1.5 font-semibold text-white/80 transition-colors duration-base hover:text-white"
             >
               {t("selectedWork.viewProject")}

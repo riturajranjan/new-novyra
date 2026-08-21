@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { RippleLink } from "@/components/ui/ripple-link";
 import type { ConceptBuild } from "@/content/case-studies";
@@ -27,7 +27,8 @@ export function ConceptCard({ build, index, className }: ConceptCardProps) {
   const Icon = build.icon;
   const stroke = accentStroke[build.accent];
   const hasProductName = tBuild.has("productName");
-  const capabilities = hasProductName ? (tBuild.raw("capabilities") as string[]).slice(0, 3) : [];
+  const hasTagline = tBuild.has("tagline");
+  const capabilities = tBuild.has("capabilities") ? (tBuild.raw("capabilities") as string[]).slice(0, 3) : [];
 
   return (
     <motion.div
@@ -77,7 +78,7 @@ export function ConceptCard({ build, index, className }: ConceptCardProps) {
 
         <div className="flex flex-col gap-1">
           <h4 className="text-title text-foreground font-semibold">{hasProductName ? tBuild("productName") : tBuild("title")}</h4>
-          <p className="text-body-sm text-foreground-secondary line-clamp-2">{hasProductName ? tBuild("tagline") : tBuild("description")}</p>
+          <p className="text-body-sm text-foreground-secondary line-clamp-2">{hasTagline ? tBuild("tagline") : tBuild("description")}</p>
         </div>
 
         {capabilities.length > 0 ? (
@@ -90,13 +91,34 @@ export function ConceptCard({ build, index, className }: ConceptCardProps) {
           </div>
         ) : null}
 
-        <RippleLink
-          href="/contact"
-          className="group/cta text-caption mt-2 flex w-fit items-center gap-1.5 font-semibold text-white/70 transition-colors duration-base hover:text-white"
-        >
-          {t("card.startSimilarProject")}
-          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover/cta:translate-x-1" aria-hidden />
-        </RippleLink>
+        {build.demoUrl ? (
+          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5">
+            <RippleLink
+              href={`/work/${build.id}`}
+              className="group/cta text-caption flex w-fit items-center gap-1.5 font-semibold text-white/70 transition-colors duration-base hover:text-white"
+            >
+              {t("card.viewCaseStudy")}
+              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover/cta:translate-x-1" aria-hidden />
+            </RippleLink>
+            <RippleLink
+              href={build.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/cta text-caption flex w-fit items-center gap-1.5 font-semibold text-white/50 transition-colors duration-base hover:text-white"
+            >
+              {t("card.viewLiveDemo")}
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" aria-hidden />
+            </RippleLink>
+          </div>
+        ) : (
+          <RippleLink
+            href="/contact"
+            className="group/cta text-caption mt-2 flex w-fit items-center gap-1.5 font-semibold text-white/70 transition-colors duration-base hover:text-white"
+          >
+            {t("card.startSimilarProject")}
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover/cta:translate-x-1" aria-hidden />
+          </RippleLink>
+        )}
       </div>
     </motion.div>
   );

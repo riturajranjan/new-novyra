@@ -1,18 +1,68 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { IndustryVisual } from "@/components/industries/industry-visual";
 import { IndustriesSpotlightsBackground } from "@/components/industries/industries-spotlights-background";
 import { industries } from "@/content/industries";
+import { conceptBuilds } from "@/content/case-studies";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { easePremium } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const spotlightIds = ["education", "healthcare", "retail-ecommerce"] as const;
+
+/** Real, live-demo builds relevant to each industry spotlight — used to
+ * surface contextual proof ("Built for challenges like yours") right where
+ * a prospect is already reading about their own industry, instead of
+ * making them hunt for it on the Work page. Only industries with a real
+ * matching build get a strip; Retail & eCommerce has none yet, so it gets
+ * none rather than irrelevant filler. */
+const proofByIndustry: Record<string, string[]> = {
+  education: ["premium-school-website", "admission-focused-school-website", "preschool-website"],
+  healthcare: ["modern-hospital-website"],
+};
+
+function IndustryProof({ industryId, stroke }: { industryId: string; stroke: string }) {
+  const t = useTranslations("caseStudies");
+  const tSpotlights = useTranslations("industries.spotlights");
+  const ids = proofByIndustry[industryId];
+  if (!ids) return null;
+  const builds = ids.map((id) => conceptBuilds.find((b) => b.id === id)!).filter((b) => b.image);
+  if (builds.length === 0) return null;
+
+  return (
+    <div className="mt-2 flex flex-col gap-3">
+      <span className="text-caption font-semibold tracking-[0.14em] text-white/35 uppercase">{tSpotlights("selectedWork")}</span>
+      <div className="flex flex-wrap gap-2.5">
+        {builds.map((b) => {
+          const tBuild = t.raw(`builds.${b.id}`) as { title?: string };
+          return (
+            <RippleLink
+              key={b.id}
+              href={`/work/${b.id}`}
+              className="group/proof relative flex h-16 w-24 shrink-0 overflow-hidden rounded-lg border transition-transform duration-base hover:-translate-y-0.5"
+              style={{ borderColor: accentTint(b.accent, 30) }}
+              aria-label={tBuild.title}
+            >
+              <Image src={b.image!} alt="" fill sizes="100px" className="object-cover object-top" />
+              <span className="pointer-events-none absolute inset-0 bg-black/10 opacity-0 transition-opacity duration-base group-hover/proof:opacity-100" />
+            </RippleLink>
+          );
+        })}
+      </div>
+      <RippleLink href="/contact" className="group text-caption inline-flex w-fit items-center gap-1.5 font-semibold" style={{ color: stroke }}>
+        <Sparkles className="h-3 w-3" aria-hidden />
+        {tSpotlights("freeAudit")} {tSpotlights("freeAuditCta")}
+        <ArrowUpRight className="h-3 w-3 transition-transform duration-fast group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
+      </RippleLink>
+    </div>
+  );
+}
 
 /** One spotlight row — visual and text swap sides on every other row, and
  * each carries its own quiet accent-tinted ambient wash (blue/violet for
@@ -80,6 +130,8 @@ function SpotlightRow({ id, index }: { id: string; index: number }) {
             {tSpotlights("exploreCta", { industry: t("title") })}
             <ArrowRight className="h-4 w-4 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
           </RippleLink>
+
+          <IndustryProof industryId={id} stroke={stroke} />
         </div>
       </div>
     </motion.div>

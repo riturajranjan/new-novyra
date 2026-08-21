@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { FeaturedStageBackground } from "@/components/case-studies/featured-stage-background";
@@ -28,7 +28,8 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
   const Icon = build.icon;
   const stroke = accentStroke[build.accent];
   const hasProductName = tBuild.has("productName");
-  const capabilities = hasProductName ? (tBuild.raw("capabilities") as string[]) : [];
+  const hasTagline = tBuild.has("tagline");
+  const capabilities = tBuild.has("capabilities") ? (tBuild.raw("capabilities") as string[]) : [];
 
   return (
     <motion.div
@@ -62,7 +63,7 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
               {hasProductName ? tBuild("productName") : tBuild("title")}
             </h3>
             <p className="text-body-sm sm:text-body font-medium text-balance" style={{ color: stroke }}>
-              {hasProductName ? tBuild("tagline") : tBuild("description")}
+              {hasTagline ? tBuild("tagline") : tBuild("description")}
             </p>
             <p className="text-body-sm text-foreground-secondary text-pretty">{tBuild("description")}</p>
           </div>
@@ -77,10 +78,28 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
             </div>
           ) : null}
 
-          <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group w-fit")}>
-            {t("card.startSimilarProject")}
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
-          </RippleLink>
+          {build.demoUrl ? (
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2.5">
+              <RippleLink href={`/work/${build.id}`} className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group w-fit")}>
+                {t("card.viewCaseStudy")}
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
+              </RippleLink>
+              <RippleLink
+                href={build.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group text-body-sm flex w-fit items-center gap-1.5 font-semibold text-white/80 transition-colors duration-base hover:text-white"
+              >
+                {t("card.viewLiveDemo")}
+                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
+              </RippleLink>
+            </div>
+          ) : (
+            <RippleLink href="/contact" className={cn(buttonVariants({ variant: "gradient", size: "md" }), "group w-fit")}>
+              {t("card.startSimilarProject")}
+              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-0.5" aria-hidden />
+            </RippleLink>
+          )}
         </div>
 
         <div className="relative aspect-[16/11] lg:aspect-auto lg:min-h-[460px]">
@@ -100,6 +119,15 @@ export function FeaturedConcept({ build }: FeaturedConceptProps) {
             )}
             <div className="pointer-events-none absolute inset-0" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.1), transparent 30%, rgba(0,0,0,0.3))" }} />
           </div>
+
+          {build.mobileImage ? (
+            <div
+              className="absolute bottom-4 left-4 h-40 w-20 overflow-hidden rounded-xl border-4 shadow-[0_20px_50px_-16px_rgba(0,0,0,0.65)] sm:h-48 sm:w-24"
+              style={{ borderColor: "rgba(10,14,26,0.9)", backgroundColor: "#0b0e1a" }}
+            >
+              <Image src={build.mobileImage} alt="" fill sizes="140px" className="object-cover object-top" />
+            </div>
+          ) : null}
         </div>
       </div>
     </motion.div>

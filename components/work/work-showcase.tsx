@@ -34,10 +34,11 @@ export function WorkShowcase() {
   );
   const base = filtered.length > 0 ? filtered : conceptBuilds;
 
-  const ranked = useMemo(
-    () => [...base].sort((a, b) => Number(t.has(`builds.${b.id}.productName`)) - Number(t.has(`builds.${a.id}.productName`))),
-    [base, t],
-  );
+  // Real, live, clickable builds outrank abstract SaaS/ERP explorations,
+  // which outrank the plainer concepts with no product identity — a real
+  // screenshot is stronger proof than an illustration.
+  const rank = (build: (typeof base)[number]) => (build.demoUrl ? 2 : t.has(`builds.${build.id}.productName`) ? 1 : 0);
+  const ranked = useMemo(() => [...base].sort((a, b) => rank(b) - rank(a)), [base, t]);
   const [featured, ...rest] = ranked;
   const selected = rest.slice(0, SELECTED_GRID_SIZE);
   const explorations = rest.slice(SELECTED_GRID_SIZE);

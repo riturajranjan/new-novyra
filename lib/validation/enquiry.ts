@@ -40,6 +40,11 @@ export function buildEnquiryFieldsSchema(messages: EnquiryMessages) {
     service: z.enum(serviceOptionIds, messages.serviceError),
     budget: z.enum(budgetOptionIds, messages.budgetError),
     message: z.string().trim().min(10, messages.messageMinError).max(1000, messages.messageMaxError),
+    // Optional — most useful for a Website Redesign / Free Audit enquiry.
+    // No dedicated DB column exists for this yet, so the API route folds
+    // it into the stored `message` text rather than requiring a schema
+    // migration for one optional field.
+    existingWebsiteUrl: z.string().trim().max(300).optional(),
   });
 }
 
@@ -58,7 +63,12 @@ export const enquiryMetaSchema = z.object({
   formRenderedAt: z.number().int().positive(),
   pageUrl: z.string().trim().min(1).max(2048),
   locale: z.enum(["en", "hi"]),
-  source: z.literal("consultation-popup"),
+  // "consultation-popup" (the lead popup) and "contact-page" (the
+  // dedicated Contact page form) are the two real submission sources today
+  // — this was previously a single literal locked to "consultation-popup",
+  // which meant every Contact page submission failed this validation and
+  // was silently rejected with a 400 before ever reaching the database.
+  source: z.enum(["consultation-popup", "contact-page"]),
 });
 
 export type EnquiryMeta = z.infer<typeof enquiryMetaSchema>;

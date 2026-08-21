@@ -80,7 +80,10 @@
     "featuredLabel": "Featured Industries",
     "eyebrow": "Industry Spotlights",
     "heading": "Three industries, a closer look.",
-    "exploreCta": "Explore {industry}"
+    "exploreCta": "Explore {industry}",
+    "selectedWork": "Built for challenges like yours",
+    "freeAudit": "Not sure what your website needs?",
+    "freeAuditCta": "Get a Free Website Audit"
   },
   "capabilityRail": {
     "headingLine1": "Different industries.",

@@ -176,6 +176,105 @@
       "demonstrates": "How we'd design a booking system that stays accurate without manual double-entry between tools.",
       "timeline": "5–7 weeks"
     },
+    "premium-school-website": {
+      "industryLabel": "Education",
+      "title": "Premium K–12 School Website",
+      "shortTitle": "School Digital Experience",
+      "metaTitle": "Premium K–12 School Website Concept | Novyra Technologies",
+      "metaDescription": "Explore a premium K–12 school website concept by Novyra Technologies, designed around admissions, academics, facilities, campus life and a modern parent experience.",
+      "tagline": "A parent-first digital experience that makes admissions, academics, facilities and school life easier to discover.",
+      "capabilities": ["Education", "Website Design & Development", "Admissions"],
+      "description": "A premium parent-first K–12 school website concept designed around admissions, academics, learning stages, facilities, campus life and clear parent communication.",
+      "highlights": [
+        "A hero built around the parent's real question — classes offered, admissions status and one clear enquiry action",
+        "Trust signals (CBSE affiliation, safe campus, future-ready learning) placed where the decision actually happens, not buried in an About page",
+        "Class-range navigation and a campus-visit path designed for a five-minute evaluation, not a full read"
+      ],
+      "demonstrates": "How we'd structure a school's public website around the parent decision journey instead of an internal staff-first sitemap.",
+      "timeline": "3–4 weeks",
+      "challenge": "Schools often have large amounts of information, but parents need a clear path to understand the school and reach admission information.",
+      "approach": "The experience organizes information around one path — Discover the school, Understand its academics and stages, Explore facilities and campus life, then Enquire. A hero states curriculum and admissions status immediately, a learning-stage picker (Nursery through Class 12) gets a parent to relevant information in one tap, and every section leads back to the same enquiry action.",
+      "keyAreas": [
+        "Admission-Focused Journey",
+        "Nursery–Class 12 Learning Stages",
+        "Academics & Senior Secondary Streams",
+        "Facilities Showcase",
+        "Student Life & Activities",
+        "Faculty Presentation",
+        "News & Events",
+        "Parent-Focused FAQ",
+        "Admission Enquiry Experience",
+        "Responsive, Mobile-First Design"
+      ],
+      "gallery": {
+        "learning": { "label": "Learning Stages", "alt": "Nursery to Class 12 learning-stage explorer on the school website concept, showing a stage picker and a Pre-Primary detail panel" },
+        "academics": { "label": "Academics", "alt": "Academics section of the school website concept showing learning pathways from Pre-Primary through Senior Secondary" },
+        "facilities": { "label": "Facilities", "alt": "Facilities section of the school website concept showing a Smart Classrooms feature among the campus facility categories" },
+        "admissions": { "label": "Admission Journey", "alt": "Admissions section of the school website concept showing the five-step Enquire, Visit, Apply, Interaction, Admission journey" },
+        "mobile": { "label": "Mobile Admission Journey", "alt": "Mobile view of the admission journey steps on the school website concept" }
+      },
+      "admissionJourney": {
+        "heading": "The admission journey",
+        "steps": [
+          { "title": "Enquire" },
+          { "title": "Visit" },
+          { "title": "Apply" },
+          { "title": "Interaction" },
+          { "title": "Admission" }
+        ]
+      }
+    },
+    "admission-focused-school-website": {
+      "industryLabel": "Education",
+      "title": "Admission-Focused School Website",
+      "tagline": "A cinematic, admissions-first school experience built to turn campus interest into applications.",
+      "capabilities": ["Education", "Website Design & Development", "Admissions"],
+      "description": "The problem explored: competing schools all claim excellence in text — an admissions page needs to make the case visually and immediately, or it blends into every other school site a parent has open in another tab.",
+      "highlights": [
+        "Full-bleed campus photography and an 'Admissions Open' status badge doing the credibility work a paragraph usually tries to",
+        "A virtual tour placed as an equal option next to 'Apply Now,' for parents who aren't ready to commit yet",
+        "Track-record numbers (years of excellence, board pass rate) placed directly in the hero, not several scrolls down"
+      ],
+      "demonstrates": "How we'd design an admissions-first hero that leads with visual credibility instead of a wall of claims.",
+      "timeline": "3–4 weeks",
+      "challenge": "Every school claims small class sizes and strong results — an admissions page has to earn belief in seconds, before a parent reads a single paragraph.",
+      "approach": "Led with cinematic campus photography and a live admissions-cycle badge, paired an 'Apply Now' action with a lower-commitment 'Virtual Tour' path, and surfaced track-record numbers directly in the hero rather than in a separate stats section.",
+      "keyAreas": ["Admissions", "Academics", "Facilities", "Parent Experience", "Responsive UI"]
+    },
+    "preschool-website": {
+      "industryLabel": "Education",
+      "title": "Preschool & Early Learning Website",
+      "tagline": "A warm, playful digital experience designed for parents choosing early childhood care.",
+      "capabilities": ["Education", "Website Design", "Early Childhood"],
+      "description": "The problem explored: parents choosing a preschool are evaluating warmth and trust as much as curriculum — a generic corporate template undersells the caregiving experience a young child actually needs.",
+      "highlights": [
+        "Soft, rounded visual language and a playful color and type system that reads as childcare, not corporate SaaS",
+        "Low teacher-to-child ratio and care-first messaging surfaced in the hero, ahead of curriculum detail",
+        "Real parent trust signals (family photos, a simple rating line) placed next to the primary enrollment action"
+      ],
+      "demonstrates": "How we'd design for a caregiving decision rather than a features comparison — warmth first, curriculum second.",
+      "timeline": "2–3 weeks",
+      "challenge": "A preschool's website is often the first impression a parent forms of how a school treats young children — a stiff, corporate layout undermines that before a single word is read.",
+      "approach": "Used a soft, rounded visual language and a warm color system built for the audience (parents of children under 6), led the hero with care-first messaging and low teacher-to-child ratios, and placed enrollment and trust signals side by side rather than trust signals buried below the fold.",
+      "keyAreas": ["Curriculum & Play-Based Learning", "Facilities", "Parent Trust Signals", "Enrollment Flow", "Responsive Design"]
+    },
+    "modern-hospital-website": {
+      "industryLabel": "Healthcare",
+      "title": "Modern Hospital Website",
+      "tagline": "A trust-first hospital experience built around emergency access, Ayushman eligibility and appointment booking.",
+      "capabilities": ["Healthcare", "Website Design & Development", "Local SEO"],
+      "description": "The problem explored: in an urgent-care decision, a visitor needs emergency contact, government-scheme eligibility and an appointment path within seconds — not buried three menu levels down.",
+      "highlights": [
+        "A persistent emergency call action and a live '24/7 Open Now' status, not a hidden contact page",
+        "Ayushman Bharat eligibility given its own dedicated section instead of a single line in the FAQ",
+        "Department and doctor directory plus a WhatsApp path built for one-thumb mobile use, since most urgent visits start on a phone"
+      ],
+      "demonstrates": "How we'd prioritize emergency and eligibility information architecture for a healthcare site where seconds matter.",
+      "timeline": "3–4 weeks",
+      "challenge": "Hospital websites tend to organize around internal departments; a visitor in an urgent-care moment needs emergency contact and eligibility information immediately, not the hospital's org chart.",
+      "approach": "Put a 24/7 emergency call action and live status badge in the hero alongside appointment booking, gave Ayushman Bharat eligibility its own trust-building section with a 'Check My Eligibility' path, and built the department/doctor directory and WhatsApp contact for fast mobile use.",
+      "keyAreas": ["Emergency Access", "Departments", "Doctors", "Ayushman Bharat", "Appointments", "Mobile Experience"]
+    },
     "fintech-platform": {
       "industryLabel": "Finance",
       "title": "Finance & FinTech Concept",
@@ -218,7 +317,10 @@
     "estimatedTimeline": "Est. {timeline}",
     "startSimilarProject": "Start a Similar Project",
     "seeFullApproach": "See How We'd Build This",
-    "viewLabel": "View"
+    "viewLabel": "View",
+    "viewCaseStudy": "View Case Study",
+    "viewLiveDemo": "View Live Demo",
+    "liveTag": "Interactive Demo"
   },
   "viewAll": "View All Concepts",
   "cta": {
@@ -226,5 +328,33 @@
     "description": "Tell us what you're working on and we'll show you how we'd approach it.",
     "bookConsultation": "Book Free Consultation",
     "requestQuote": "Request Custom Quote"
+  },
+  "caseStudyPage": {
+    "breadcrumb": { "home": "Home", "work": "Work" },
+    "backToWork": "Back to Work",
+    "liveDemoBadge": "Concept Project",
+    "liveDemoDisclosure": "An interactive concept designed and engineered by Novyra Technologies to demonstrate our approach to modern digital experiences. Not commissioned by a paying client.",
+    "viewLiveDemo": "View Live Demo",
+    "overview": { "eyebrow": "Overview", "heading": "What this concept explores" },
+    "challenge": { "eyebrow": "The Challenge", "heading": "The problem" },
+    "approach": { "eyebrow": "Our Approach", "heading": "How we approached it" },
+    "experience": { "eyebrow": "The Experience", "heading": "A closer look" },
+    "admissionJourney": { "eyebrow": "Admission Journey" },
+    "responsiveExperience": { "eyebrow": "Responsive Experience", "heading": "Desktop and mobile", "desktopLabel": "Desktop", "mobileLabel": "Mobile" },
+    "keyAreas": { "eyebrow": "Key Areas", "heading": "What the concept covers" },
+    "relatedWork": { "eyebrow": "Related Work", "heading": "More from Novyra" },
+    "technology": { "eyebrow": "Technology", "heading": "Built with" },
+    "outcome": {
+      "eyebrow": "Outcome",
+      "heading": "What this demonstrates",
+      "statement": "The final concept demonstrates how a modern digital experience can simplify information discovery and create a clearer path to enquiry."
+    },
+    "cta": {
+      "heading": "Have a similar project in mind?",
+      "description": "Tell us what you're building and we'll show you how we'd approach it.",
+      "primary": "Start a Project",
+      "secondary": "Get a Free Website Audit"
+    },
+    "notFound": { "title": "Project not found", "description": "This case study doesn't exist or may have moved.", "cta": "View All Work" }
   }
 }

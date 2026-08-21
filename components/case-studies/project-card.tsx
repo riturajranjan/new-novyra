@@ -5,9 +5,11 @@ import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { ProjectVisual } from "@/components/case-studies/project-visual";
+import { LiveProjectVisual } from "@/components/case-studies/live-project-visual";
 import { CardMotif, getCardTheme } from "@/components/case-studies/card-theme";
 import type { ConceptBuild } from "@/content/case-studies";
 import { accentStroke, accentTint } from "@/lib/accent";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   build: ConceptBuild;
@@ -25,13 +27,14 @@ export function ProjectCard({ build, index, priority }: ProjectCardProps) {
   const tStage = useTranslations("caseStudies.stage");
   const Icon = build.icon;
   const number = String(index + 1).padStart(2, "0");
-  const productName = tBuild("productName");
+  const hasProductName = tBuild.has("productName");
+  const productName = hasProductName ? tBuild("productName") : tBuild("title");
   const capabilities = tBuild.raw("capabilities") as string[];
   const theme = getCardTheme(build.id);
 
   return (
     <RippleLink
-      href="/work"
+      href={build.demoUrl ? `/work/${build.id}` : "/work"}
       aria-label={tStage("viewProjectLabel", { product: productName })}
       className="group relative isolate flex h-[300px] flex-col justify-between overflow-hidden rounded-2xl border p-5 transition-colors duration-[400ms] md:h-[276px] md:p-6"
       style={{ borderColor: theme.borderTint, background: theme.background }}
@@ -59,7 +62,7 @@ export function ProjectCard({ build, index, priority }: ProjectCardProps) {
       />
 
       <div className="pointer-events-none absolute inset-0 transition-transform duration-[400ms] ease-out group-hover:scale-[1.03] group-hover:-translate-y-[3px]">
-        <ProjectVisual build={build} priority={priority} />
+        {build.demoUrl ? <LiveProjectVisual build={build} priority={priority} /> : <ProjectVisual build={build} priority={priority} />}
       </div>
       <span
         aria-hidden
@@ -80,7 +83,7 @@ export function ProjectCard({ build, index, priority }: ProjectCardProps) {
         <Icon className="h-[21px] w-[21px] shrink-0 transition-colors duration-300" style={{ color: accentTint(build.accent, 55) }} aria-hidden />
       </div>
 
-      <div className="relative z-10 flex max-w-[62%] flex-col gap-1.5 md:max-w-[54%]">
+      <div className={cn("relative z-10 flex flex-col gap-1.5", build.demoUrl ? "max-w-[54%] md:max-w-[46%]" : "max-w-[62%] md:max-w-[54%]")}>
         <h3
           className="line-clamp-2 text-[20px] leading-[1.2] font-semibold text-white transition-transform duration-300 group-hover:translate-x-0.5 md:text-[22px]"
           style={{ fontWeight: 630, letterSpacing: "-0.02em" }}

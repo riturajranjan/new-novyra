@@ -30,7 +30,7 @@ export function ExplorationRow({ build, number }: ExplorationRowProps) {
       transition={{ duration: 0.35, ease: easePremium }}
       className="border-t border-white/8 py-4 first:border-t-0 sm:py-5"
     >
-      <RippleLink href="/contact" className="group flex items-center gap-4">
+      <RippleLink href={build.demoUrl ? `/work/${build.id}` : "/contact"} className="group flex items-center gap-4">
         <span className="text-caption w-8 shrink-0 font-mono font-semibold text-white/25">{number}</span>
         <span className="text-caption w-24 shrink-0 font-semibold tracking-wide uppercase sm:w-32" style={{ color: stroke }}>
           {tBuild("industryLabel")}

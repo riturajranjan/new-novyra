@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { articles } from "@/content/blog-articles";
+import { caseStudySlugs } from "@/content/case-studies";
 
 const SITE_URL = "https://novyratech.in";
 
@@ -9,8 +11,24 @@ const SITE_URL = "https://novyratech.in";
  * content/footer.ts and content/nav.ts, which intentionally only link
  * pages that exist, not the other way around). Anchor sections on the
  * homepage (`/#services`, `/#pricing`, etc.) aren't separate routes and
- * don't belong here. */
-const routes = ["", "/about", "/work", "/services", "/industries", "/pricing", "/privacy", "/terms", "/cookies", "/accessibility"];
+ * don't belong here. `/contact` and `/blog` were previously missing here
+ * despite being real, indexable routes. */
+const routes = [
+  "",
+  "/about",
+  "/work",
+  "/services",
+  "/industries",
+  "/pricing",
+  "/contact",
+  "/blog",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/accessibility",
+  ...caseStudySlugs.map((slug) => `/work/${slug}`),
+  ...articles.map((article) => `/blog/${article.slug}`),
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({

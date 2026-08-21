@@ -38,6 +38,7 @@
       "company": { "label": "Company / Organization" },
       "projectType": { "label": "Project Type", "error": "Please select a project type." },
       "budget": { "label": "Budget Range" },
+      "existingWebsiteUrl": { "label": "Existing Website URL (optional)", "placeholder": "https://yourcompany.com" },
       "message": {
         "label": "Message",
         "placeholder": "Tell us about your idea, goals, challenges or existing product...",
@@ -71,6 +72,10 @@
         "status": "Available for new projects",
         "note": "Based in Muzaffarpur, working with businesses beyond geographical boundaries."
       }
+    },
+    "proof": {
+      "heading": "See what we can build.",
+      "cta": "Explore Selected Work"
     }
   },
   "process": {

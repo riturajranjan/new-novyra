@@ -6,7 +6,7 @@ export const companyInfo = {
   name: "Novyra Technologies",
   email: "hello@novyratech.in",
   phone: "+91 7903724407",
-  whatsapp: "https://wa.me/917903724407",
+  whatsapp: "https://wa.me/917547825187",
   location: "Muzaffarpur, Bihar, India",
 };
 

@@ -29,6 +29,7 @@ const requestSchema = z.object({
   service: z.string(),
   budget: z.string(),
   message: z.string(),
+  existingWebsiteUrl: z.string().optional(),
   honeypot: z.string().optional().default(""),
   formRenderedAt: z.number().optional().default(0),
   pageUrl: z.string(),
@@ -103,6 +104,7 @@ export async function POST(request: NextRequest) {
     service: body.service,
     budget: body.budget,
     message: body.message,
+    existingWebsiteUrl: body.existingWebsiteUrl,
   });
 
   if (!parsedFields.success) {
@@ -115,6 +117,11 @@ export async function POST(request: NextRequest) {
   }
 
   const fields = parsedFields.data;
+  // No dedicated `existingWebsiteUrl` column exists — fold it into the
+  // stored message text instead of requiring a schema migration for one
+  // optional qualification field.
+  const cleanMessage = stripTags(fields.message);
+  const existingWebsiteUrl = fields.existingWebsiteUrl ? stripTags(fields.existingWebsiteUrl) : "";
   const sanitized = {
     name: stripTags(fields.name),
     email: stripTags(fields.email),
@@ -122,7 +129,7 @@ export async function POST(request: NextRequest) {
     company: fields.company ? stripTags(fields.company) : null,
     service: fields.service,
     budget: fields.budget,
-    message: stripTags(fields.message),
+    message: existingWebsiteUrl ? `${cleanMessage}\n\nExisting website: ${existingWebsiteUrl}` : cleanMessage,
   };
 
   const existing = await prisma.enquiry.findFirst({

@@ -80,7 +80,10 @@
     "featuredLabel": "फ़ीचर्ड इंडस्ट्रीज़",
     "eyebrow": "इंडस्ट्री स्पॉटलाइट्स",
     "heading": "तीन इंडस्ट्रीज़, एक नज़दीकी नज़र।",
-    "exploreCta": "{industry} देखें"
+    "exploreCta": "{industry} देखें",
+    "selectedWork": "आपकी जैसी चुनौतियों के लिए बनाया गया",
+    "freeAudit": "पक्का नहीं कि आपकी वेबसाइट को क्या चाहिए?",
+    "freeAuditCta": "मुफ़्त वेबसाइट ऑडिट पाएं"
   },
   "capabilityRail": {
     "headingLine1": "अलग इंडस्ट्रीज़।",

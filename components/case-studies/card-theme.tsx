@@ -70,6 +70,38 @@ export const cardThemes: Record<string, CardTheme> = {
     glow: "rgba(226,90,184,0.16)",
     motif: "nodes",
   },
+  "premium-school-website": {
+    background:
+      "radial-gradient(circle at 78% 60%, rgba(124,58,237,0.16), transparent 45%), linear-gradient(135deg, #0b0817 0%, #0a0918 55%, #0e0b1f 100%)",
+    borderTint: "rgba(124,58,237,.17)",
+    line: "rgba(147,90,240,0.9)",
+    glow: "rgba(147,90,240,0.16)",
+    motif: "grid",
+  },
+  "admission-focused-school-website": {
+    background:
+      "radial-gradient(circle at 78% 58%, rgba(217,158,26,0.15), transparent 46%), linear-gradient(135deg, #120e07 0%, #130f08 58%, #14100a 100%)",
+    borderTint: "rgba(217,158,26,.16)",
+    line: "rgba(230,178,64,0.9)",
+    glow: "rgba(230,178,64,0.16)",
+    motif: "nodes",
+  },
+  "preschool-website": {
+    background:
+      "radial-gradient(circle at 80% 60%, rgba(236,72,153,0.15), transparent 45%), linear-gradient(135deg, #130a10 0%, #100910 55%, #140b12 100%)",
+    borderTint: "rgba(236,72,153,.16)",
+    line: "rgba(244,114,182,0.9)",
+    glow: "rgba(244,114,182,0.16)",
+    motif: "route",
+  },
+  "modern-hospital-website": {
+    background:
+      "radial-gradient(circle at 78% 58%, rgba(6,182,212,0.15), transparent 46%), linear-gradient(135deg, #061418 0%, #071519 58%, #071619 100%)",
+    borderTint: "rgba(6,182,212,.16)",
+    line: "rgba(45,212,231,0.9)",
+    glow: "rgba(45,212,231,0.16)",
+    motif: "pulse",
+  },
 };
 
 const fallbackTheme: CardTheme = {

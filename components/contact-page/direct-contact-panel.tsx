@@ -1,13 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { RippleLink } from "@/components/ui/ripple-link";
 import { contactChannels } from "@/content/contact-page";
 import { companyInfo } from "@/content/footer";
+import { conceptBuilds } from "@/content/case-studies";
 import { accentStroke, accentTint } from "@/lib/accent";
 import { easePremium } from "@/lib/motion";
+
+const proofIds = ["premium-school-website", "modern-hospital-website", "ai-saas-dashboard"];
 
 function channelHref(id: string): { href: string; external: boolean } {
   switch (id) {
@@ -41,6 +45,8 @@ function channelValue(id: string, t: (key: string) => string): string {
  * closed with a subtle availability signal. */
 export function DirectContactPanel() {
   const t = useTranslations("contact.workspace.connect");
+  const tProof = useTranslations("contact.workspace.proof");
+  const proofBuilds = proofIds.map((id) => conceptBuilds.find((b) => b.id === id)!).filter((b) => b.image);
 
   return (
     <div className="flex flex-col gap-5">
@@ -105,6 +111,28 @@ export function DirectContactPanel() {
           <span className="text-foreground font-semibold">{t("availability.status")}</span> — {t("availability.note")}
         </span>
       </motion.div>
+
+      {proofBuilds.length > 0 ? (
+        <div className="border-border-subtle flex flex-col gap-3 border-t pt-5">
+          <span className="text-caption text-foreground-secondary font-semibold">{tProof("heading")}</span>
+          <div className="flex gap-2.5">
+            {proofBuilds.map((b) => (
+              <RippleLink
+                key={b.id}
+                href={b.demoUrl ? `/work/${b.id}` : "/work"}
+                className="group/proof relative h-14 flex-1 overflow-hidden rounded-lg border transition-transform duration-base hover:-translate-y-0.5"
+                style={{ borderColor: accentTint(b.accent, 28) }}
+              >
+                <Image src={b.image!} alt="" fill sizes="100px" className="object-cover object-top" />
+              </RippleLink>
+            ))}
+          </div>
+          <RippleLink href="/work" className="group text-caption inline-flex w-fit items-center gap-1.5 font-semibold text-white/70 transition-colors duration-base hover:text-white">
+            {tProof("cta")}
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-fast group-hover:translate-x-1" aria-hidden />
+          </RippleLink>
+        </div>
+      ) : null}
     </div>
   );
 }

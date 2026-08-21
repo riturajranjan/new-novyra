@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { PricingHero } from "@/components/pricing/pricing-hero";
 import { Pricing } from "@/components/sections/pricing";
 import { companyInfo } from "@/content/footer";
 
@@ -55,6 +56,7 @@ export default async function PricingPage({ params }: PricingPageProps) {
   return (
     <main className="relative w-full max-w-full min-w-0 flex-1 overflow-x-clip">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <PricingHero />
       <Pricing />
     </main>
   );

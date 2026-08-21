@@ -13,6 +13,14 @@
     "highlight": "Ambitious Digital Products."
   },
   "description": "Start with the package that fits your current stage. Every project can be customized around your goals, scope and technical requirements.",
+  "hero": {
+    "secondaryCta": "Get Custom Quote"
+  },
+  "heroVisual": {
+    "starter": "Website Essentials",
+    "professional": "Premium Digital Experience",
+    "business": "Advanced Business Platform"
+  },
   "radiogroupAriaLabel": "Choose a pricing plan",
   "toggleAriaLabel": "Choose a billing mode",
   "billingModes": {
